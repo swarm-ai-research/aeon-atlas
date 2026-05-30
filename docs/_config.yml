@@ -19,6 +19,8 @@ header_pages:
   - atlas.md
   - innovations.md
   - disabled-defaults.md
+  - ecosystem.md
+  - skill-packs.md
 
 # Permalinks
 permalink: /articles/:year/:month/:day/:title/

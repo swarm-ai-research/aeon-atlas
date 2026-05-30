@@ -15,6 +15,8 @@ title: "Aeon Atlas"
     <a class="btn btn-outline" href="atlas/">Digest</a>
     <a class="btn btn-outline" href="innovations/">Innovations</a>
     <a class="btn btn-outline" href="disabled-defaults/">Disabled defaults</a>
+    <a class="btn btn-outline" href="ecosystem/">Ecosystem</a>
+    <a class="btn btn-outline" href="skill-packs/">Skill packs</a>
     <a class="btn btn-outline" href="https://github.com/rsavitt/aeon-atlas" target="_blank" rel="noopener">Source on GitHub</a>
   </div>
 </div>
