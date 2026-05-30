@@ -25,9 +25,23 @@ The script writes:
 
 It prints a one-line summary like `atlas: 142 repos · 139 with aeon.yml · 141 fork edges · 394 skill-overlap edges · 10 ★`. Capture for the verdict.
 
+It also emits per-entity markdown into `quartz/content/` (gated on `quartz/` existing — present in CI by design). This is the source for the universe view; the build step below converts it to HTML.
+
 The GitHub API calls use the workflow's `GITHUB_TOKEN` automatically (`gh api`). Public-only data; no secrets needed.
 
-### 2. Diff against the prior run
+### 2. Rebuild the Quartz universe view
+
+```bash
+scripts/build-universe.sh
+```
+
+Bootstraps the Quartz upstream scaffold (gitignored, pulled from `github.com/jackyzha0/quartz.git` at the version pinned in the script, default `v5.0.0`), runs `npm install` in `quartz/` if needed, then `quartz plugin install` + `quartz build --output docs/universe`. Idempotent — Quartz builds are deterministic for the same input, so a run with no `quartz/content/` change produces a byte-identical `docs/universe/`.
+
+Wall-clock cost: ~30 s cold (npm install + bootstrap), ~15 s warm (just the build). Worth it on the weekly cadence; the alternative is a stale `/universe/` until the next manual run.
+
+If the build fails (Quartz upstream API drift, npm registry hiccup, etc.), capture the stderr in the PR body's `**Universe build failed:**` section, do not abort the atlas regen, and skip the universe-related parts of step 3.
+
+### 3. Diff against the prior run
 
 Compare new `atlas.json` against `HEAD:atlas.json`. Compute:
 
@@ -46,11 +60,11 @@ Build `verdict_one_line`:
 
 If `git diff --quiet atlas.json docs/atlas.{md,html}` reports no change, exit silently — no PR, no notify.
 
-### 3. Open PR
+### 4. Open PR
 
 ```bash
 git checkout -b atlas/${today} 2>/dev/null || git checkout atlas/${today}
-git add atlas.json docs/atlas.md docs/atlas.html
+git add atlas.json docs/atlas.md docs/atlas.html docs/atlas.json docs/innovations.md docs/disabled-defaults.md docs/ecosystem.md docs/skill-packs.md quartz/content/ docs/universe/
 git commit -m "atlas: ${verdict_one_line}"
 git push -u origin atlas/${today}
 gh pr create --title "atlas: ${verdict_one_line}" --body "Weekly ecosystem refresh — ${current.stats.repos} repos, ${current.stats.forkEdges} fork edges, ${current.stats.skillEdges} skill-overlap edges, ${current.stats.totalStars} ★ across the fork network.
@@ -62,7 +76,7 @@ $( [ -n \"$dormant_now_active\" ] && echo \"**Resumed activity:** $dormant_now_a
 Interactive map: \`docs/atlas.html\`. Digest: \`docs/atlas.md\`."
 ```
 
-### 4. Notify
+### 5. Notify
 
 ```bash
 ./notify "*Atlas updated* — ${verdict_one_line}. PR: ${pr_url}"
