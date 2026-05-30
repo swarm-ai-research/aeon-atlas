@@ -41,7 +41,11 @@ defaults:
 # Exclude from processing
 exclude:
   - "*.sh"
-  - universe
+  # NB: `universe/` is intentionally NOT excluded. Jekyll's `exclude`
+  # removes paths from the published output entirely (not just from
+  # Jekyll-processing), which 404'd the Quartz site. Jekyll passes through
+  # .html files without YAML frontmatter unchanged, so the Quartz output
+  # coexists safely without an exclude entry.
   - Gemfile
   - Gemfile.lock
   - node_modules/
