@@ -49,6 +49,22 @@ const OUT_SKILL_PACKS = resolve(ROOT, "docs/skill-packs.md");
 const CACHE_DIR = resolve(ROOT, ".atlas-cache");
 const CACHE_TTL_MS = 24 * 60 * 60 * 1000;
 
+// ── safe inline-JSON escape (XSS prevention for embedded graph data) ──
+// Fork descriptions are externally-derived — a malicious fork owner can
+// set a description containing `</script>` and inject script into the
+// published atlas page when their fork is enumerated. Standard escape
+// pattern: 5 replacements covering script termination (<), attribute /
+// comment vectors (>, &), and U+2028/U+2029 line separators (legal in
+// JSON, illegal in JS string literals). Matches what Webpack, lodash,
+// and most server-render libs do.
+function safeJsonForScript(value) {
+  return JSON.stringify(value)
+    .replace(/</g, "\\u003c")
+    .replace(/>/g, "\\u003e")
+    .replace(/&/g, "\\u0026")
+    .replace(/[\u2028\u2029]/g, (c) => c === "\u2028" ? "\\u2028" : "\\u2029");
+}
+
 // ── argv ───────────────────────────────────────────────────────────────────
 function parseArgv(argv) {
   const opts = { upstream: DEFAULT_UPSTREAM, depth: 1, json: false, cache: false };
@@ -92,20 +108,28 @@ function ghRaw(repoFullName, ref, path) {
 // commit SHA so the response is cacheable. Returns [] on any failure.
 function fetchSkillSlugs(repoFullName, ref) {
   if (!ref) return [];
-  // Resolve branch → commit SHA so the tree API call is stable.
-  const branch = ghApi(`/repos/${repoFullName}/branches/${encodeURIComponent(ref)}`);
-  const sha = branch?.commit?.sha;
-  if (!sha) return [];
-  const tree = ghApi(`/repos/${repoFullName}/git/trees/${sha}?recursive=1`);
-  if (!tree || !Array.isArray(tree.tree)) return [];
-  const slugs = new Set();
-  for (const node of tree.tree) {
-    // Only paths matching `skills/<slug>/SKILL.md` — drop nested dirs and
-    // unrelated files. Same convention as upstream's skill layout.
-    const m = node.path && node.path.match(/^skills\/([a-z0-9][a-z0-9_-]*)\/SKILL\.md$/i);
-    if (m) slugs.add(m[1]);
+  // Wrap the whole thing — a deleted default branch, transient 5xx, or
+  // rate-limit blowup on ONE fork should not abort the entire weekly run.
+  // ghApi throws on any error except 404 (which it returns as null), so a
+  // catch here gives us per-fork resilience.
+  try {
+    const branch = ghApi(`/repos/${repoFullName}/branches/${encodeURIComponent(ref)}`);
+    const sha = branch?.commit?.sha;
+    if (!sha) return [];
+    const tree = ghApi(`/repos/${repoFullName}/git/trees/${sha}?recursive=1`);
+    if (!tree || !Array.isArray(tree.tree)) return [];
+    const slugs = new Set();
+    for (const node of tree.tree) {
+      // Only paths matching `skills/<slug>/SKILL.md` — drop nested dirs and
+      // unrelated files. Same convention as upstream's skill layout.
+      const m = node.path && node.path.match(/^skills\/([a-z0-9][a-z0-9_-]*)\/SKILL\.md$/i);
+      if (m) slugs.add(m[1]);
+    }
+    return [...slugs].sort();
+  } catch (err) {
+    console.warn(`  skill-tree fetch failed for ${repoFullName}: ${err.message}`);
+    return [];
   }
-  return [...slugs].sort();
 }
 
 // ── parse upstream ECOSYSTEM.md table (curated projects built on Aeon) ────
@@ -638,7 +662,7 @@ function renderSkillPacks(graph) {
 }
 
 function renderHtml(graph) {
-  const json = JSON.stringify(graph);
+  const json = safeJsonForScript(graph);
   return `<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><title>Aeon Atlas — fork ecosystem map</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
