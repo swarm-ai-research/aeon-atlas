@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-30T18:21:39.333Z",
+  "generatedAt": "2026-05-30T18:39:02.248Z",
   "upstream": "aaronjmars/aeon",
   "stats": {
     "repos": 143,
@@ -10,7 +10,12 @@
     "archived": 0,
     "forkEdges": 142,
     "skillEdges": 394,
-    "totalStars": 10
+    "totalStars": 10,
+    "ecosystemProjects": 47,
+    "ecosystemMatched": 9,
+    "skillPacks": 16,
+    "skillPacksWithFork": 14,
+    "forksNotPubliclyListed": 129
   },
   "skillPopularity": [
     {
@@ -1535,7 +1540,7 @@
       "name": "aeon-atlas",
       "stars": 0,
       "forks": 0,
-      "pushedAt": "2026-05-30T17:58:25Z",
+      "pushedAt": "2026-05-30T18:26:50Z",
       "defaultBranch": "main",
       "parentFullName": "aaronjmars/aeon",
       "isRoot": false,
@@ -10643,7 +10648,7 @@
       "name": "aeon",
       "stars": 0,
       "forks": 0,
-      "pushedAt": "2026-05-30T17:34:50Z",
+      "pushedAt": "2026-05-30T18:34:13Z",
       "defaultBranch": "main",
       "parentFullName": "aaronjmars/aeon",
       "isRoot": false,
@@ -12827,7 +12832,7 @@
       "name": "aeon",
       "stars": 0,
       "forks": 0,
-      "pushedAt": "2026-05-30T18:13:11Z",
+      "pushedAt": "2026-05-30T18:33:44Z",
       "defaultBranch": "main",
       "parentFullName": "aaronjmars/aeon",
       "isRoot": false,
@@ -26802,6 +26807,797 @@
         "-fleet-skill-adoption",
         "-skill-enabler"
       ]
+    }
+  ],
+  "ecosystemProjects": [
+    {
+      "name": "aeonbook",
+      "links": [
+        {
+          "label": "@aeonbook_",
+          "url": "https://x.com/aeonbook_",
+          "x_handle": "aeonbook_"
+        }
+      ],
+      "matchedFork": null
+    },
+    {
+      "name": "AgentBounty",
+      "links": [
+        {
+          "label": "@agentbountydev",
+          "url": "https://x.com/agentbountydev",
+          "x_handle": "agentbountydev"
+        }
+      ],
+      "matchedFork": null
+    },
+    {
+      "name": "Amper",
+      "links": [
+        {
+          "label": "@helloamper",
+          "url": "https://x.com/helloamper",
+          "x_handle": "helloamper"
+        }
+      ],
+      "matchedFork": "happycamper-stix/aeon"
+    },
+    {
+      "name": "AntFleet",
+      "links": [
+        {
+          "label": "@AntFleetDev",
+          "url": "https://x.com/AntFleetDev",
+          "x_handle": "AntFleetDev"
+        }
+      ],
+      "matchedFork": "AntFleet/aeon"
+    },
+    {
+      "name": "Autonomopoly",
+      "links": [
+        {
+          "label": "@AUTONOMOPOLY_",
+          "url": "https://x.com/AUTONOMOPOLY_",
+          "x_handle": "AUTONOMOPOLY_"
+        }
+      ],
+      "matchedFork": null
+    },
+    {
+      "name": "Bankr",
+      "links": [
+        {
+          "label": "@bankrbot",
+          "url": "https://x.com/bankrbot",
+          "x_handle": "bankrbot"
+        }
+      ],
+      "matchedFork": null
+    },
+    {
+      "name": "Bankrsynth",
+      "links": [
+        {
+          "label": "@bankrsynth",
+          "url": "https://x.com/bankrsynth",
+          "x_handle": "bankrsynth"
+        }
+      ],
+      "matchedFork": null
+    },
+    {
+      "name": "BaseHouse",
+      "links": [
+        {
+          "label": "@basehouse_org",
+          "url": "https://x.com/basehouse_org",
+          "x_handle": "basehouse_org"
+        }
+      ],
+      "matchedFork": null
+    },
+    {
+      "name": "Baseline",
+      "links": [
+        {
+          "label": "@BaselineMarkets",
+          "url": "https://x.com/BaselineMarkets",
+          "x_handle": "BaselineMarkets"
+        }
+      ],
+      "matchedFork": null
+    },
+    {
+      "name": "Bean",
+      "links": [
+        {
+          "label": "@minebean_",
+          "url": "https://x.com/minebean_",
+          "x_handle": "minebean_"
+        }
+      ],
+      "matchedFork": "damo-nu11/aeon-minebean"
+    },
+    {
+      "name": "Blue Agent",
+      "links": [
+        {
+          "label": "@blueagent_",
+          "url": "https://x.com/blueagent_",
+          "x_handle": "blueagent_"
+        }
+      ],
+      "matchedFork": "madebyshun/blueagent-aeon"
+    },
+    {
+      "name": "Capacitr",
+      "links": [
+        {
+          "label": "@capacitr_",
+          "url": "https://x.com/capacitr_",
+          "x_handle": "capacitr_"
+        }
+      ],
+      "matchedFork": null
+    },
+    {
+      "name": "Claw Harbor",
+      "links": [
+        {
+          "label": "@ClawHarbor",
+          "url": "https://x.com/ClawHarbor",
+          "x_handle": "ClawHarbor"
+        }
+      ],
+      "matchedFork": null
+    },
+    {
+      "name": "ClawBank",
+      "links": [
+        {
+          "label": "@ClawBankHQ",
+          "url": "https://x.com/ClawBankHQ",
+          "x_handle": "ClawBankHQ"
+        }
+      ],
+      "matchedFork": null
+    },
+    {
+      "name": "Clerk",
+      "links": [
+        {
+          "label": "@clerk",
+          "url": "https://x.com/clerk",
+          "x_handle": "clerk"
+        }
+      ],
+      "matchedFork": null
+    },
+    {
+      "name": "Cobot",
+      "links": [
+        {
+          "label": "@cobotgg",
+          "url": "https://x.com/cobotgg",
+          "x_handle": "cobotgg"
+        }
+      ],
+      "matchedFork": null
+    },
+    {
+      "name": "GitBlock",
+      "links": [
+        {
+          "label": "@gitblock_",
+          "url": "https://x.com/gitblock_",
+          "x_handle": "gitblock_"
+        }
+      ],
+      "matchedFork": null
+    },
+    {
+      "name": "GitBounty",
+      "links": [
+        {
+          "label": "@Gitlawbounty",
+          "url": "https://x.com/Gitlawbounty",
+          "x_handle": "Gitlawbounty"
+        }
+      ],
+      "matchedFork": "gitlawbounty/aeon"
+    },
+    {
+      "name": "GitKernal",
+      "links": [
+        {
+          "label": "@gitkernal",
+          "url": "https://x.com/gitkernal",
+          "x_handle": "gitkernal"
+        }
+      ],
+      "matchedFork": null
+    },
+    {
+      "name": "Gitlawb Terminal",
+      "links": [
+        {
+          "label": "@Gitlawbterminal",
+          "url": "https://x.com/Gitlawbterminal",
+          "x_handle": "Gitlawbterminal"
+        }
+      ],
+      "matchedFork": null
+    },
+    {
+      "name": "LawbWorld",
+      "links": [
+        {
+          "label": "@LawbWorld",
+          "url": "https://x.com/LawbWorld",
+          "x_handle": "LawbWorld"
+        }
+      ],
+      "matchedFork": "lawbworld-tech/aeon"
+    },
+    {
+      "name": "LiquidPad",
+      "links": [
+        {
+          "label": "@LiquidPadBot",
+          "url": "https://x.com/LiquidPadBot",
+          "x_handle": "LiquidPadBot"
+        },
+        {
+          "label": "liquidpad.site",
+          "url": "https://www.liquidpad.site"
+        }
+      ],
+      "matchedFork": "liquidpadbot/aeon"
+    },
+    {
+      "name": "Liq",
+      "links": [
+        {
+          "label": "@_proxystudio",
+          "url": "https://x.com/_proxystudio",
+          "x_handle": "_proxystudio"
+        }
+      ],
+      "matchedFork": null
+    },
+    {
+      "name": "Mei",
+      "links": [
+        {
+          "label": "@MeiMighty1",
+          "url": "https://x.com/MeiMighty1",
+          "x_handle": "MeiMighty1"
+        }
+      ],
+      "matchedFork": null
+    },
+    {
+      "name": "MiroShark",
+      "links": [
+        {
+          "label": "@miroshark_",
+          "url": "https://x.com/miroshark_",
+          "x_handle": "miroshark_"
+        }
+      ],
+      "matchedFork": null
+    },
+    {
+      "name": "MythosForge",
+      "links": [
+        {
+          "label": "@mythosforgebot",
+          "url": "https://x.com/mythosforgebot",
+          "x_handle": "mythosforgebot"
+        }
+      ],
+      "matchedFork": null
+    },
+    {
+      "name": "Noctel",
+      "links": [
+        {
+          "label": "@noctelxbt",
+          "url": "https://x.com/noctelxbt",
+          "x_handle": "noctelxbt"
+        },
+        {
+          "label": "noctel.xyz",
+          "url": "https://www.noctel.xyz"
+        }
+      ],
+      "matchedFork": "NoctelXBT/aeon"
+    },
+    {
+      "name": "NoelClaw",
+      "links": [
+        {
+          "label": "@noelclawfun",
+          "url": "https://x.com/noelclawfun",
+          "x_handle": "noelclawfun"
+        }
+      ],
+      "matchedFork": "noelclaw/aeon"
+    },
+    {
+      "name": "PancakeSwap",
+      "links": [
+        {
+          "label": "@PancakeSwap",
+          "url": "https://x.com/PancakeSwap",
+          "x_handle": "PancakeSwap"
+        }
+      ],
+      "matchedFork": null
+    },
+    {
+      "name": "Powerloom",
+      "links": [
+        {
+          "label": "@Powerloom",
+          "url": "https://x.com/Powerloom",
+          "x_handle": "Powerloom"
+        }
+      ],
+      "matchedFork": null
+    },
+    {
+      "name": "Precog",
+      "links": [
+        {
+          "label": "@precog",
+          "url": "https://x.com/precog",
+          "x_handle": "precog"
+        }
+      ],
+      "matchedFork": null
+    },
+    {
+      "name": "Reg Terminal",
+      "links": [
+        {
+          "label": "@regterminal",
+          "url": "https://x.com/regterminal",
+          "x_handle": "regterminal"
+        }
+      ],
+      "matchedFork": null
+    },
+    {
+      "name": "ResearchSwarm",
+      "links": [
+        {
+          "label": "@ResearchSwarmAI",
+          "url": "https://x.com/ResearchSwarmAI",
+          "x_handle": "ResearchSwarmAI"
+        }
+      ],
+      "matchedFork": null
+    },
+    {
+      "name": "Revault",
+      "links": [
+        {
+          "label": "@revaultdrops",
+          "url": "https://x.com/revaultdrops",
+          "x_handle": "revaultdrops"
+        }
+      ],
+      "matchedFork": null
+    },
+    {
+      "name": "RootAi",
+      "links": [
+        {
+          "label": "@rootaichad",
+          "url": "https://x.com/rootaichad",
+          "x_handle": "rootaichad"
+        }
+      ],
+      "matchedFork": null
+    },
+    {
+      "name": "SAM",
+      "links": [
+        {
+          "label": "@prmrsamm",
+          "url": "https://x.com/prmrsamm",
+          "x_handle": "prmrsamm"
+        }
+      ],
+      "matchedFork": null
+    },
+    {
+      "name": "Signa",
+      "links": [
+        {
+          "label": "@Signa_Agent",
+          "url": "https://x.com/Signa_Agent",
+          "x_handle": "Signa_Agent"
+        },
+        {
+          "label": "signaagent.xyz",
+          "url": "https://www.signaagent.xyz"
+        }
+      ],
+      "matchedFork": null
+    },
+    {
+      "name": "Solvr",
+      "links": [
+        {
+          "label": "@solvrbot",
+          "url": "https://x.com/solvrbot",
+          "x_handle": "solvrbot"
+        }
+      ],
+      "matchedFork": null
+    },
+    {
+      "name": "Spoon",
+      "links": [
+        {
+          "label": "@Spoonautobot",
+          "url": "https://x.com/Spoonautobot",
+          "x_handle": "Spoonautobot"
+        }
+      ],
+      "matchedFork": null
+    },
+    {
+      "name": "SyntheticsAI",
+      "links": [
+        {
+          "label": "@SyntheticsAI_",
+          "url": "https://x.com/SyntheticsAI_",
+          "x_handle": "SyntheticsAI_"
+        }
+      ],
+      "matchedFork": null
+    },
+    {
+      "name": "Tachi",
+      "links": [
+        {
+          "label": "@smolekoma",
+          "url": "https://x.com/smolekoma",
+          "x_handle": "smolekoma"
+        }
+      ],
+      "matchedFork": null
+    },
+    {
+      "name": "USIC",
+      "links": [
+        {
+          "label": "@USICAI",
+          "url": "https://x.com/USICAI",
+          "x_handle": "USICAI"
+        }
+      ],
+      "matchedFork": null
+    },
+    {
+      "name": "Venice Kernel",
+      "links": [
+        {
+          "label": "@VeniceKernel",
+          "url": "https://x.com/VeniceKernel",
+          "x_handle": "VeniceKernel"
+        }
+      ],
+      "matchedFork": null
+    },
+    {
+      "name": "Vexor",
+      "links": [
+        {
+          "label": "@Vexora_x",
+          "url": "https://x.com/Vexora_x",
+          "x_handle": "Vexora_x"
+        }
+      ],
+      "matchedFork": null
+    },
+    {
+      "name": "Wake",
+      "links": [
+        {
+          "label": "@WakeOnBase",
+          "url": "https://x.com/WakeOnBase",
+          "x_handle": "WakeOnBase"
+        }
+      ],
+      "matchedFork": null
+    },
+    {
+      "name": "x402Books",
+      "links": [
+        {
+          "label": "@x402Books",
+          "url": "https://x.com/x402Books",
+          "x_handle": "x402Books"
+        }
+      ],
+      "matchedFork": null
+    },
+    {
+      "name": "zer0",
+      "links": [
+        {
+          "label": "@atzer0_BOT",
+          "url": "https://x.com/atzer0_BOT",
+          "x_handle": "atzer0_BOT"
+        }
+      ],
+      "matchedFork": null
+    }
+  ],
+  "skillPacks": [
+    {
+      "repo": "AntFleet/aeon-skills",
+      "name": "AntFleet aeon-skills",
+      "description": "On-demand two-model-consensus PR review (Claude Opus + GPT) with on-chain USDC payment channel on Base. Pull-mode counterpart to AntFleet's auto-review GitHub App.",
+      "author": "AntFleet",
+      "license": "MIT",
+      "homepage": "https://www.antfleet.dev",
+      "category": "dev",
+      "trust_level": "trusted",
+      "skills": [
+        "pr-review-antfleet"
+      ],
+      "authorFork": "AntFleet/aeon"
+    },
+    {
+      "repo": "baseddevoloper/aeon-skill-pack-vvvkernel",
+      "name": "aeon-skill-pack-vvvkernel",
+      "description": "Venice AI inference via VVVKernel — onchain, audit, growth, narrative, image gen, monitoring.",
+      "author": "baseddevoloper",
+      "license": "MIT",
+      "homepage": "https://github.com/baseddevoloper/aeon-skill-pack-vvvkernel",
+      "category": "crypto",
+      "trust_level": "community",
+      "skills": [
+        "vvvkernel",
+        "vvvkernel-audit",
+        "vvvkernel-brief",
+        "vvvkernel-digest",
+        "vvvkernel-growth",
+        "vvvkernel-image",
+        "vvvkernel-monitor",
+        "vvvkernel-narrative",
+        "vvvkernel-onchain"
+      ],
+      "authorFork": "baseddevoloper/vvvkernel-skills"
+    },
+    {
+      "repo": "danbuildss/luca-aeon-skills",
+      "name": "luca-aeon-skills",
+      "description": "Financial intelligence via x402Books AI — wallet scanning, treasury monitoring, financial reports, agent registry on Base.",
+      "author": "danbuildss",
+      "license": "MIT",
+      "homepage": "https://github.com/danbuildss/luca-aeon-skills",
+      "category": "crypto",
+      "trust_level": "community",
+      "skills": [
+        "check-agent",
+        "get-report",
+        "scan-wallet",
+        "treasury-monitor"
+      ],
+      "authorFork": "danbuildss/aeon"
+    },
+    {
+      "repo": "0xShak/zer0-skill-pack",
+      "name": "zer0-skill-pack",
+      "description": "Polymarket intelligence — daily theses, mispricing scans, contrarian fades, narrative-vs-markets gaps, paper-trade PnL journal, alpha comment curation.",
+      "author": "ZER0 LABS",
+      "license": "MIT",
+      "homepage": "https://atzer0.xyz",
+      "category": "crypto",
+      "trust_level": "community",
+      "skills": [
+        "prediction-journal",
+        "polymarket-thesis",
+        "polymarket-edge",
+        "polymarket-contrarian",
+        "narrative-vs-markets",
+        "polymarket-alpha-comments"
+      ],
+      "authorFork": null
+    },
+    {
+      "repo": "gitlawbounty/gitbounty-skill-pack",
+      "name": "GitBounty Skill Pack",
+      "description": "Bounty hunting on the gitlawb network — discovers open bounties via the gitbounty firehose, scouts the best fit, drafts a PR plan with a confidence score.",
+      "author": "gitlawbounty",
+      "license": "MIT",
+      "homepage": "https://github.com/gitlawbounty/gitbounty-skill-pack",
+      "category": "dev",
+      "trust_level": "community",
+      "skills": [
+        "bounty-hunter"
+      ],
+      "authorFork": "gitlawbounty/aeon"
+    },
+    {
+      "repo": "liquidpadbot/aeon-skill-pack-liquidpad",
+      "name": "LiquidPad",
+      "description": "Track LiquidPad on Base — $LPAD burn cycle alerts, new token launches with onchain provenance, daily protocol digest, and fee-accrual tracking on every launched token.",
+      "author": "liquidpadbot",
+      "license": "MIT",
+      "homepage": "https://www.liquidpad.site",
+      "category": "crypto",
+      "trust_level": "community",
+      "skills": [
+        "liquidpad-burn-monitor",
+        "liquidpad-stats-digest",
+        "liquidpad-token-alert",
+        "liquidpad-fee-tracker"
+      ],
+      "authorFork": "liquidpadbot/aeon"
+    },
+    {
+      "repo": "ryjin111/aeon-skill-pack-mythosforge",
+      "name": "aeon-skill-pack-mythosforge",
+      "description": "Read-only MythosForge monitoring — ops/backlog/jury/payout health, proof-of-creation integrity on Base, theme/round guard against silent relabels, jury-drift detection, and live gallery/proof-page QA.",
+      "author": "ryjin111",
+      "license": "MIT",
+      "homepage": "https://mythosforge.xyz",
+      "category": "dev",
+      "trust_level": "community",
+      "skills": [
+        "mythosforge-ops-report",
+        "mythosforge-proof-integrity",
+        "mythosforge-theme-round-guard",
+        "mythosforge-jury-drift-watcher",
+        "mythosforge-gallery-qa-watcher"
+      ],
+      "authorFork": "ryjin111/aeon-pack-pr"
+    },
+    {
+      "repo": "sparkleware/demo-pack",
+      "name": "demo-pack",
+      "description": "Holographic demo skill — proves the Sparkleware registry install pipeline works.",
+      "author": "sparkleware",
+      "license": "MIT",
+      "homepage": "https://github.com/sparkleware/demo-pack",
+      "category": "meta",
+      "trust_level": "community",
+      "skills": [
+        "sparkle-status"
+      ],
+      "authorFork": "sparkleware/aeon"
+    },
+    {
+      "repo": "sparkleware/aeon-pulse",
+      "name": "aeon-pulse",
+      "description": "Daily activity summary for the Aeon framework — recent commits, releases, and open issues.",
+      "author": "sparkleware",
+      "license": "MIT",
+      "homepage": "https://github.com/sparkleware/aeon-pulse",
+      "category": "dev",
+      "trust_level": "community",
+      "skills": [
+        "aeon-activity"
+      ],
+      "authorFork": "sparkleware/aeon"
+    },
+    {
+      "repo": "sparkleware/registry-watch",
+      "name": "registry-watch",
+      "description": "Daily digest of new packs added to the Sparkleware registry — discover community skills without manually browsing.",
+      "author": "sparkleware",
+      "license": "MIT",
+      "homepage": "https://github.com/sparkleware/registry-watch",
+      "category": "meta",
+      "trust_level": "community",
+      "skills": [
+        "new-packs-digest"
+      ],
+      "authorFork": "sparkleware/aeon"
+    },
+    {
+      "repo": "sparkleware/arxiv-digest",
+      "name": "arxiv-digest",
+      "description": "Daily digest of newest AI / autonomous-agent papers on arXiv — top submissions in cs.AI, cs.LG, cs.MA.",
+      "author": "sparkleware",
+      "license": "MIT",
+      "homepage": "https://github.com/sparkleware/arxiv-digest",
+      "category": "research",
+      "trust_level": "community",
+      "skills": [
+        "daily-papers"
+      ],
+      "authorFork": "sparkleware/aeon"
+    },
+    {
+      "repo": "sparkleware/hn-top",
+      "name": "hn-top",
+      "description": "Daily digest of HackerNews top stories — dev / startup / AI conversation in one screen.",
+      "author": "sparkleware",
+      "license": "MIT",
+      "homepage": "https://github.com/sparkleware/hn-top",
+      "category": "social",
+      "trust_level": "community",
+      "skills": [
+        "hn-daily"
+      ],
+      "authorFork": "sparkleware/aeon"
+    },
+    {
+      "repo": "sparkleware/eth-gas-watch",
+      "name": "eth-gas-watch",
+      "description": "Ethereum gas-price status check on a schedule — flags cheap windows for batching on-chain ops.",
+      "author": "sparkleware",
+      "license": "MIT",
+      "homepage": "https://github.com/sparkleware/eth-gas-watch",
+      "category": "crypto",
+      "trust_level": "community",
+      "skills": [
+        "gas-status"
+      ],
+      "authorFork": "sparkleware/aeon"
+    },
+    {
+      "repo": "sparkleware/morning-briefing",
+      "name": "morning-briefing",
+      "description": "Daily morning briefing — date, day-of-week, current weather, and a sparkly closer. No API key required.",
+      "author": "sparkleware",
+      "license": "MIT",
+      "homepage": "https://github.com/sparkleware/morning-briefing",
+      "category": "productivity",
+      "trust_level": "community",
+      "skills": [
+        "morning-briefing"
+      ],
+      "authorFork": "sparkleware/aeon"
+    },
+    {
+      "repo": "noelclaw/aeon-skill-pack-noelclaw",
+      "name": "aeon-skill-pack-noelclaw",
+      "description": "Persistent versioned memory and multi-agent swarm coordination — save typed artifacts to Noel Vault and manage shared agent session state across runs.",
+      "author": "noelclaw",
+      "license": "MIT",
+      "homepage": "https://noelclaw.com",
+      "category": "dev",
+      "trust_level": "community",
+      "skills": [
+        "noelvault",
+        "noel-swarm"
+      ],
+      "authorFork": "noelclaw/aeon"
+    },
+    {
+      "repo": "codexvritra/signa",
+      "path": "aeon-skills",
+      "name": "signa",
+      "description": "The full SIGNA skill suite — wallet-signed cross-platform agent messaging, multi-agent coordination (broadcast and delegate across the network), plus integrations with Aeon ecosystem partners already on Base: Bankr resolver and recent launches, gitlawb activity for any wallet, MiroShark sim stats and wallet-signed sim fire. Lives at aeon-skills/ inside the SIGNA monorepo so the wire format, SDKs, and skill pack all version together.",
+      "author": "signa-agent",
+      "license": "MIT",
+      "homepage": "https://www.signaagent.xyz/partners",
+      "category": "messaging",
+      "trust_level": "community",
+      "skills": [
+        "signa-message",
+        "signa-inbox",
+        "signa-discover",
+        "signa-broadcast",
+        "signa-delegate",
+        "bankr-resolve",
+        "bankr-launches",
+        "gitlawb-stats",
+        "miroshark-stats",
+        "miroshark-fire"
+      ],
+      "authorFork": null
     }
   ]
 }
