@@ -28289,11 +28289,11 @@
         }
       ],
       "root": "aaronjmars/aeon",
-      "matchedFork": null,
       "roots": [
         "aaronjmars/aeon",
         "aaronjmars/aeon-agent"
-      ]
+      ],
+      "matchedFork": null
     },
     {
       "name": "AgentBounty",
@@ -28305,11 +28305,11 @@
         }
       ],
       "root": "aaronjmars/aeon",
-      "matchedFork": null,
       "roots": [
         "aaronjmars/aeon",
         "aaronjmars/aeon-agent"
-      ]
+      ],
+      "matchedFork": null
     },
     {
       "name": "Amper",
@@ -28318,14 +28318,19 @@
           "label": "@helloamper",
           "url": "https://x.com/helloamper",
           "x_handle": "helloamper"
+        },
+        {
+          "label": "@ampera_xyze",
+          "url": "https://x.com/ampera_xyze",
+          "x_handle": "ampera_xyze"
         }
       ],
       "root": "aaronjmars/aeon",
-      "matchedFork": "happycamper-stix/aeon",
       "roots": [
         "aaronjmars/aeon",
         "aaronjmars/aeon-agent"
-      ]
+      ],
+      "matchedFork": "happycamper-stix/aeon"
     },
     {
       "name": "AntFleet",
@@ -28337,11 +28342,11 @@
         }
       ],
       "root": "aaronjmars/aeon",
-      "matchedFork": "AntFleet/aeon",
       "roots": [
         "aaronjmars/aeon",
         "aaronjmars/aeon-agent"
-      ]
+      ],
+      "matchedFork": "AntFleet/aeon"
     },
     {
       "name": "Autonomopoly",
@@ -28353,11 +28358,11 @@
         }
       ],
       "root": "aaronjmars/aeon",
-      "matchedFork": null,
       "roots": [
         "aaronjmars/aeon",
         "aaronjmars/aeon-agent"
-      ]
+      ],
+      "matchedFork": null
     },
     {
       "name": "Bankr",
@@ -28369,11 +28374,11 @@
         }
       ],
       "root": "aaronjmars/aeon",
-      "matchedFork": null,
       "roots": [
         "aaronjmars/aeon",
         "aaronjmars/aeon-agent"
-      ]
+      ],
+      "matchedFork": null
     },
     {
       "name": "Bankrsynth",
@@ -28385,11 +28390,11 @@
         }
       ],
       "root": "aaronjmars/aeon",
-      "matchedFork": null,
       "roots": [
         "aaronjmars/aeon",
         "aaronjmars/aeon-agent"
-      ]
+      ],
+      "matchedFork": null
     },
     {
       "name": "BaseHouse",
@@ -28401,11 +28406,11 @@
         }
       ],
       "root": "aaronjmars/aeon",
-      "matchedFork": null,
       "roots": [
         "aaronjmars/aeon",
         "aaronjmars/aeon-agent"
-      ]
+      ],
+      "matchedFork": null
     },
     {
       "name": "Baseline",
@@ -28417,11 +28422,11 @@
         }
       ],
       "root": "aaronjmars/aeon",
-      "matchedFork": null,
       "roots": [
         "aaronjmars/aeon",
         "aaronjmars/aeon-agent"
-      ]
+      ],
+      "matchedFork": null
     },
     {
       "name": "Bean",
@@ -28433,11 +28438,11 @@
         }
       ],
       "root": "aaronjmars/aeon",
-      "matchedFork": "damo-nu11/aeon-minebean",
       "roots": [
         "aaronjmars/aeon",
         "aaronjmars/aeon-agent"
-      ]
+      ],
+      "matchedFork": "damo-nu11/aeon-minebean"
     },
     {
       "name": "Blue Agent",
@@ -28449,11 +28454,11 @@
         }
       ],
       "root": "aaronjmars/aeon",
-      "matchedFork": "madebyshun/blueagent-aeon",
       "roots": [
         "aaronjmars/aeon",
         "aaronjmars/aeon-agent"
-      ]
+      ],
+      "matchedFork": "madebyshun/blueagent-aeon"
     },
     {
       "name": "Capacitr",
@@ -28465,11 +28470,11 @@
         }
       ],
       "root": "aaronjmars/aeon",
-      "matchedFork": null,
       "roots": [
         "aaronjmars/aeon",
         "aaronjmars/aeon-agent"
-      ]
+      ],
+      "matchedFork": null
     },
     {
       "name": "Claw Harbor",
@@ -28481,11 +28486,11 @@
         }
       ],
       "root": "aaronjmars/aeon",
-      "matchedFork": null,
       "roots": [
         "aaronjmars/aeon",
         "aaronjmars/aeon-agent"
-      ]
+      ],
+      "matchedFork": null
     },
     {
       "name": "ClawBank",
@@ -28497,11 +28502,11 @@
         }
       ],
       "root": "aaronjmars/aeon",
-      "matchedFork": null,
       "roots": [
         "aaronjmars/aeon",
         "aaronjmars/aeon-agent"
-      ]
+      ],
+      "matchedFork": null
     },
     {
       "name": "Clerk",
@@ -28513,11 +28518,11 @@
         }
       ],
       "root": "aaronjmars/aeon",
-      "matchedFork": null,
       "roots": [
         "aaronjmars/aeon",
         "aaronjmars/aeon-agent"
-      ]
+      ],
+      "matchedFork": null
     },
     {
       "name": "Cobot",
@@ -28529,11 +28534,11 @@
         }
       ],
       "root": "aaronjmars/aeon",
-      "matchedFork": null,
       "roots": [
         "aaronjmars/aeon",
         "aaronjmars/aeon-agent"
-      ]
+      ],
+      "matchedFork": null
     },
     {
       "name": "GitBlock",
@@ -28545,11 +28550,11 @@
         }
       ],
       "root": "aaronjmars/aeon",
-      "matchedFork": null,
       "roots": [
         "aaronjmars/aeon",
         "aaronjmars/aeon-agent"
-      ]
+      ],
+      "matchedFork": null
     },
     {
       "name": "GitBounty",
@@ -28558,14 +28563,19 @@
           "label": "@Gitlawbounty",
           "url": "https://x.com/Gitlawbounty",
           "x_handle": "Gitlawbounty"
+        },
+        {
+          "label": "@Git_Bounty",
+          "url": "https://x.com/Git_Bounty",
+          "x_handle": "Git_Bounty"
         }
       ],
       "root": "aaronjmars/aeon",
-      "matchedFork": "gitlawbounty/aeon",
       "roots": [
         "aaronjmars/aeon",
         "aaronjmars/aeon-agent"
-      ]
+      ],
+      "matchedFork": "gitlawbounty/aeon"
     },
     {
       "name": "GitKernal",
@@ -28577,11 +28587,11 @@
         }
       ],
       "root": "aaronjmars/aeon",
-      "matchedFork": null,
       "roots": [
         "aaronjmars/aeon",
         "aaronjmars/aeon-agent"
-      ]
+      ],
+      "matchedFork": null
     },
     {
       "name": "Gitlawb Terminal",
@@ -28593,11 +28603,11 @@
         }
       ],
       "root": "aaronjmars/aeon",
-      "matchedFork": null,
       "roots": [
         "aaronjmars/aeon",
         "aaronjmars/aeon-agent"
-      ]
+      ],
+      "matchedFork": null
     },
     {
       "name": "LawbWorld",
@@ -28609,11 +28619,11 @@
         }
       ],
       "root": "aaronjmars/aeon",
-      "matchedFork": "lawbworld-tech/aeon",
       "roots": [
         "aaronjmars/aeon",
         "aaronjmars/aeon-agent"
-      ]
+      ],
+      "matchedFork": "lawbworld-tech/aeon"
     },
     {
       "name": "LiquidPad",
@@ -28629,11 +28639,11 @@
         }
       ],
       "root": "aaronjmars/aeon",
-      "matchedFork": "liquidpadbot/aeon",
       "roots": [
         "aaronjmars/aeon",
         "aaronjmars/aeon-agent"
-      ]
+      ],
+      "matchedFork": "liquidpadbot/aeon"
     },
     {
       "name": "Liq",
@@ -28645,11 +28655,11 @@
         }
       ],
       "root": "aaronjmars/aeon",
-      "matchedFork": null,
       "roots": [
         "aaronjmars/aeon",
         "aaronjmars/aeon-agent"
-      ]
+      ],
+      "matchedFork": null
     },
     {
       "name": "Mei",
@@ -28661,11 +28671,11 @@
         }
       ],
       "root": "aaronjmars/aeon",
-      "matchedFork": null,
       "roots": [
         "aaronjmars/aeon",
         "aaronjmars/aeon-agent"
-      ]
+      ],
+      "matchedFork": null
     },
     {
       "name": "MiroShark",
@@ -28677,11 +28687,11 @@
         }
       ],
       "root": "aaronjmars/aeon",
-      "matchedFork": null,
       "roots": [
         "aaronjmars/aeon",
         "aaronjmars/aeon-agent"
-      ]
+      ],
+      "matchedFork": null
     },
     {
       "name": "MythosForge",
@@ -28693,11 +28703,11 @@
         }
       ],
       "root": "aaronjmars/aeon",
-      "matchedFork": null,
       "roots": [
         "aaronjmars/aeon",
         "aaronjmars/aeon-agent"
-      ]
+      ],
+      "matchedFork": null
     },
     {
       "name": "Noctel",
@@ -28713,10 +28723,10 @@
         }
       ],
       "root": "aaronjmars/aeon",
-      "matchedFork": "NoctelXBT/aeon",
       "roots": [
         "aaronjmars/aeon"
-      ]
+      ],
+      "matchedFork": "NoctelXBT/aeon"
     },
     {
       "name": "NoelClaw",
@@ -28728,11 +28738,11 @@
         }
       ],
       "root": "aaronjmars/aeon",
-      "matchedFork": "noelclaw/aeon",
       "roots": [
         "aaronjmars/aeon",
         "aaronjmars/aeon-agent"
-      ]
+      ],
+      "matchedFork": "noelclaw/aeon"
     },
     {
       "name": "PancakeSwap",
@@ -28744,11 +28754,11 @@
         }
       ],
       "root": "aaronjmars/aeon",
-      "matchedFork": null,
       "roots": [
         "aaronjmars/aeon",
         "aaronjmars/aeon-agent"
-      ]
+      ],
+      "matchedFork": null
     },
     {
       "name": "Powerloom",
@@ -28760,11 +28770,11 @@
         }
       ],
       "root": "aaronjmars/aeon",
-      "matchedFork": null,
       "roots": [
         "aaronjmars/aeon",
         "aaronjmars/aeon-agent"
-      ]
+      ],
+      "matchedFork": null
     },
     {
       "name": "Precog",
@@ -28776,11 +28786,11 @@
         }
       ],
       "root": "aaronjmars/aeon",
-      "matchedFork": null,
       "roots": [
         "aaronjmars/aeon",
         "aaronjmars/aeon-agent"
-      ]
+      ],
+      "matchedFork": null
     },
     {
       "name": "Reg Terminal",
@@ -28792,11 +28802,11 @@
         }
       ],
       "root": "aaronjmars/aeon",
-      "matchedFork": null,
       "roots": [
         "aaronjmars/aeon",
         "aaronjmars/aeon-agent"
-      ]
+      ],
+      "matchedFork": null
     },
     {
       "name": "ResearchSwarm",
@@ -28808,11 +28818,11 @@
         }
       ],
       "root": "aaronjmars/aeon",
-      "matchedFork": null,
       "roots": [
         "aaronjmars/aeon",
         "aaronjmars/aeon-agent"
-      ]
+      ],
+      "matchedFork": null
     },
     {
       "name": "Revault",
@@ -28824,11 +28834,11 @@
         }
       ],
       "root": "aaronjmars/aeon",
-      "matchedFork": null,
       "roots": [
         "aaronjmars/aeon",
         "aaronjmars/aeon-agent"
-      ]
+      ],
+      "matchedFork": null
     },
     {
       "name": "RootAi",
@@ -28840,11 +28850,11 @@
         }
       ],
       "root": "aaronjmars/aeon",
-      "matchedFork": null,
       "roots": [
         "aaronjmars/aeon",
         "aaronjmars/aeon-agent"
-      ]
+      ],
+      "matchedFork": null
     },
     {
       "name": "SAM",
@@ -28856,11 +28866,11 @@
         }
       ],
       "root": "aaronjmars/aeon",
-      "matchedFork": null,
       "roots": [
         "aaronjmars/aeon",
         "aaronjmars/aeon-agent"
-      ]
+      ],
+      "matchedFork": null
     },
     {
       "name": "Signa",
@@ -28876,11 +28886,11 @@
         }
       ],
       "root": "aaronjmars/aeon",
-      "matchedFork": null,
       "roots": [
         "aaronjmars/aeon",
         "aaronjmars/aeon-agent"
-      ]
+      ],
+      "matchedFork": null
     },
     {
       "name": "Solvr",
@@ -28892,11 +28902,11 @@
         }
       ],
       "root": "aaronjmars/aeon",
-      "matchedFork": null,
       "roots": [
         "aaronjmars/aeon",
         "aaronjmars/aeon-agent"
-      ]
+      ],
+      "matchedFork": null
     },
     {
       "name": "Spoon",
@@ -28908,11 +28918,11 @@
         }
       ],
       "root": "aaronjmars/aeon",
-      "matchedFork": null,
       "roots": [
         "aaronjmars/aeon",
         "aaronjmars/aeon-agent"
-      ]
+      ],
+      "matchedFork": null
     },
     {
       "name": "SyntheticsAI",
@@ -28924,11 +28934,11 @@
         }
       ],
       "root": "aaronjmars/aeon",
-      "matchedFork": null,
       "roots": [
         "aaronjmars/aeon",
         "aaronjmars/aeon-agent"
-      ]
+      ],
+      "matchedFork": null
     },
     {
       "name": "Tachi",
@@ -28940,11 +28950,11 @@
         }
       ],
       "root": "aaronjmars/aeon",
-      "matchedFork": null,
       "roots": [
         "aaronjmars/aeon",
         "aaronjmars/aeon-agent"
-      ]
+      ],
+      "matchedFork": null
     },
     {
       "name": "USIC",
@@ -28956,11 +28966,11 @@
         }
       ],
       "root": "aaronjmars/aeon",
-      "matchedFork": null,
       "roots": [
         "aaronjmars/aeon",
         "aaronjmars/aeon-agent"
-      ]
+      ],
+      "matchedFork": null
     },
     {
       "name": "Venice Kernel",
@@ -28972,11 +28982,11 @@
         }
       ],
       "root": "aaronjmars/aeon",
-      "matchedFork": null,
       "roots": [
         "aaronjmars/aeon",
         "aaronjmars/aeon-agent"
-      ]
+      ],
+      "matchedFork": null
     },
     {
       "name": "Vexor",
@@ -28988,11 +28998,11 @@
         }
       ],
       "root": "aaronjmars/aeon",
-      "matchedFork": null,
       "roots": [
         "aaronjmars/aeon",
         "aaronjmars/aeon-agent"
-      ]
+      ],
+      "matchedFork": null
     },
     {
       "name": "Wake",
@@ -29004,11 +29014,11 @@
         }
       ],
       "root": "aaronjmars/aeon",
-      "matchedFork": null,
       "roots": [
         "aaronjmars/aeon",
         "aaronjmars/aeon-agent"
-      ]
+      ],
+      "matchedFork": null
     },
     {
       "name": "x402Books",
@@ -29020,11 +29030,11 @@
         }
       ],
       "root": "aaronjmars/aeon",
-      "matchedFork": null,
       "roots": [
         "aaronjmars/aeon",
         "aaronjmars/aeon-agent"
-      ]
+      ],
+      "matchedFork": null
     },
     {
       "name": "zer0",
@@ -29033,14 +29043,19 @@
           "label": "@atzer0_BOT",
           "url": "https://x.com/atzer0_BOT",
           "x_handle": "atzer0_BOT"
+        },
+        {
+          "label": "@Jaineon0G",
+          "url": "https://x.com/Jaineon0G",
+          "x_handle": "Jaineon0G"
         }
       ],
       "root": "aaronjmars/aeon",
-      "matchedFork": null,
       "roots": [
         "aaronjmars/aeon",
         "aaronjmars/aeon-agent"
-      ]
+      ],
+      "matchedFork": null
     }
   ],
   "skillPacks": [
@@ -29057,11 +29072,11 @@
         "pr-review-antfleet"
       ],
       "root": "aaronjmars/aeon",
-      "authorFork": "AntFleet/aeon",
       "roots": [
         "aaronjmars/aeon",
         "aaronjmars/aeon-agent"
-      ]
+      ],
+      "authorFork": "AntFleet/aeon"
     },
     {
       "repo": "baseddevoloper/aeon-skill-pack-vvvkernel",
@@ -29084,11 +29099,11 @@
         "vvvkernel-onchain"
       ],
       "root": "aaronjmars/aeon",
-      "authorFork": "baseddevoloper/vvvkernel-skills",
       "roots": [
         "aaronjmars/aeon",
         "aaronjmars/aeon-agent"
-      ]
+      ],
+      "authorFork": "baseddevoloper/vvvkernel-skills"
     },
     {
       "repo": "danbuildss/luca-aeon-skills",
@@ -29106,11 +29121,11 @@
         "treasury-monitor"
       ],
       "root": "aaronjmars/aeon",
-      "authorFork": "danbuildss/aeon",
       "roots": [
         "aaronjmars/aeon",
         "aaronjmars/aeon-agent"
-      ]
+      ],
+      "authorFork": "danbuildss/aeon"
     },
     {
       "repo": "0xShak/zer0-skill-pack",
@@ -29130,11 +29145,11 @@
         "polymarket-alpha-comments"
       ],
       "root": "aaronjmars/aeon",
-      "authorFork": null,
       "roots": [
         "aaronjmars/aeon",
         "aaronjmars/aeon-agent"
-      ]
+      ],
+      "authorFork": null
     },
     {
       "repo": "gitlawbounty/gitbounty-skill-pack",
@@ -29149,11 +29164,11 @@
         "bounty-hunter"
       ],
       "root": "aaronjmars/aeon",
-      "authorFork": "gitlawbounty/aeon",
       "roots": [
         "aaronjmars/aeon",
         "aaronjmars/aeon-agent"
-      ]
+      ],
+      "authorFork": "gitlawbounty/aeon"
     },
     {
       "repo": "liquidpadbot/aeon-skill-pack-liquidpad",
@@ -29171,11 +29186,11 @@
         "liquidpad-fee-tracker"
       ],
       "root": "aaronjmars/aeon",
-      "authorFork": "liquidpadbot/aeon",
       "roots": [
         "aaronjmars/aeon",
         "aaronjmars/aeon-agent"
-      ]
+      ],
+      "authorFork": "liquidpadbot/aeon"
     },
     {
       "repo": "ryjin111/aeon-skill-pack-mythosforge",
@@ -29194,10 +29209,10 @@
         "mythosforge-gallery-qa-watcher"
       ],
       "root": "aaronjmars/aeon",
-      "authorFork": "ryjin111/aeon-pack-pr",
       "roots": [
         "aaronjmars/aeon"
-      ]
+      ],
+      "authorFork": "ryjin111/aeon-pack-pr"
     },
     {
       "repo": "sparkleware/demo-pack",
@@ -29212,10 +29227,10 @@
         "sparkle-status"
       ],
       "root": "aaronjmars/aeon",
-      "authorFork": "sparkleware/aeon",
       "roots": [
         "aaronjmars/aeon"
-      ]
+      ],
+      "authorFork": "sparkleware/aeon"
     },
     {
       "repo": "sparkleware/aeon-pulse",
@@ -29230,10 +29245,10 @@
         "aeon-activity"
       ],
       "root": "aaronjmars/aeon",
-      "authorFork": "sparkleware/aeon",
       "roots": [
         "aaronjmars/aeon"
-      ]
+      ],
+      "authorFork": "sparkleware/aeon"
     },
     {
       "repo": "sparkleware/registry-watch",
@@ -29248,10 +29263,10 @@
         "new-packs-digest"
       ],
       "root": "aaronjmars/aeon",
-      "authorFork": "sparkleware/aeon",
       "roots": [
         "aaronjmars/aeon"
-      ]
+      ],
+      "authorFork": "sparkleware/aeon"
     },
     {
       "repo": "sparkleware/arxiv-digest",
@@ -29266,10 +29281,10 @@
         "daily-papers"
       ],
       "root": "aaronjmars/aeon",
-      "authorFork": "sparkleware/aeon",
       "roots": [
         "aaronjmars/aeon"
-      ]
+      ],
+      "authorFork": "sparkleware/aeon"
     },
     {
       "repo": "sparkleware/hn-top",
@@ -29284,10 +29299,10 @@
         "hn-daily"
       ],
       "root": "aaronjmars/aeon",
-      "authorFork": "sparkleware/aeon",
       "roots": [
         "aaronjmars/aeon"
-      ]
+      ],
+      "authorFork": "sparkleware/aeon"
     },
     {
       "repo": "sparkleware/eth-gas-watch",
@@ -29302,10 +29317,10 @@
         "gas-status"
       ],
       "root": "aaronjmars/aeon",
-      "authorFork": "sparkleware/aeon",
       "roots": [
         "aaronjmars/aeon"
-      ]
+      ],
+      "authorFork": "sparkleware/aeon"
     },
     {
       "repo": "sparkleware/morning-briefing",
@@ -29320,10 +29335,10 @@
         "morning-briefing"
       ],
       "root": "aaronjmars/aeon",
-      "authorFork": "sparkleware/aeon",
       "roots": [
         "aaronjmars/aeon"
-      ]
+      ],
+      "authorFork": "sparkleware/aeon"
     },
     {
       "repo": "noelclaw/aeon-skill-pack-noelclaw",
@@ -29339,10 +29354,10 @@
         "noel-swarm"
       ],
       "root": "aaronjmars/aeon",
-      "authorFork": "noelclaw/aeon",
       "roots": [
         "aaronjmars/aeon"
-      ]
+      ],
+      "authorFork": "noelclaw/aeon"
     },
     {
       "repo": "codexvritra/signa",
@@ -29367,10 +29382,10 @@
         "miroshark-fire"
       ],
       "root": "aaronjmars/aeon",
-      "authorFork": null,
       "roots": [
         "aaronjmars/aeon"
-      ]
+      ],
+      "authorFork": null
     }
   ]
 }

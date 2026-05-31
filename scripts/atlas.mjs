@@ -201,6 +201,13 @@ function fetchSkillPacks(upstreamRepo) {
 // identifier (project name for ecosystem, pack repo for packs), keeps the
 // first occurrence, and accumulates every root that lists it in `roots`.
 // `root` (singular) is preserved as the first root for back-compat.
+//
+// Later copies are NOT discarded wholesale: their link aliases and any
+// metadata the first copy lacked are merged in (see mergeCuratedFields).
+// matchEcosystemToFork keys off `links`/`x_handle`, so dropping a later
+// root's link cell could lose the X handle that identifies a fork —
+// undercounting `ecosystemMatched` and making the result depend on the
+// order roots are passed in. Merging keeps the union, which is order-stable.
 export function dedupeByRoot(items, keyOf) {
   const byKey = new Map();
   const out = [];
@@ -209,6 +216,7 @@ export function dedupeByRoot(items, keyOf) {
     const existing = byKey.get(key);
     if (existing) {
       if (item.root && !existing.roots.includes(item.root)) existing.roots.push(item.root);
+      mergeCuratedFields(existing, item);
       continue;
     }
     const entry = { ...item, roots: item.root ? [item.root] : [] };
@@ -218,10 +226,30 @@ export function dedupeByRoot(items, keyOf) {
   return out;
 }
 
+// Fold a duplicate's fields into the kept entry. Unions `links` by URL (so
+// every root's aliases survive for the matcher) and backfills any scalar /
+// array field the kept copy left empty, without overwriting data already
+// present. `root`/`roots` are handled by the caller.
+function mergeCuratedFields(target, extra) {
+  if (Array.isArray(extra.links) && extra.links.length) {
+    const seen = new Set((target.links || []).map((l) => l.url));
+    target.links = [...(target.links || [])];
+    for (const l of extra.links) {
+      if (!seen.has(l.url)) { target.links.push(l); seen.add(l.url); }
+    }
+  }
+  const isEmpty = (v) =>
+    v === undefined || v === null || v === "" || (Array.isArray(v) && v.length === 0);
+  for (const [k, v] of Object.entries(extra)) {
+    if (k === "root" || k === "roots" || k === "links") continue;
+    if (isEmpty(target[k]) && !isEmpty(v)) target[k] = v;
+  }
+}
+
 // Fuzzy match an ecosystem project name against the fork list. Lowercase
 // + alpha-only token comparison against owner name, repo name, and
 // description. Returns the best matching fork id or null.
-function matchEcosystemToFork(project, nodes) {
+export function matchEcosystemToFork(project, nodes) {
   const norm = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
   const projectNorm = norm(project.name);
   if (projectNorm.length < 3) return null;

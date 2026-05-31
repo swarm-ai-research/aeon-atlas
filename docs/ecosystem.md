@@ -16,11 +16,11 @@ These projects publicly identify as built on Aeon AND have a GitHub fork we can 
 
 | Project | Links | Public fork | ★ | Last push |
 |---|---|---|---:|---|
-| **Amper** | [@helloamper](https://x.com/helloamper) | [happycamper-stix/aeon](https://github.com/happycamper-stix/aeon) | 0 | 2026-05-21 |
+| **Amper** | [@helloamper](https://x.com/helloamper) · [@ampera_xyze](https://x.com/ampera_xyze) | [happycamper-stix/aeon](https://github.com/happycamper-stix/aeon) | 0 | 2026-05-21 |
 | **AntFleet** | [@AntFleetDev](https://x.com/AntFleetDev) | [AntFleet/aeon](https://github.com/AntFleet/aeon) | 0 | 2026-05-29 |
 | **Bean** | [@minebean_](https://x.com/minebean_) | [damo-nu11/aeon-minebean](https://github.com/damo-nu11/aeon-minebean) | 0 | 2026-05-31 |
 | **Blue Agent** | [@blueagent_](https://x.com/blueagent_) | [madebyshun/blueagent-aeon](https://github.com/madebyshun/blueagent-aeon) | 0 | 2026-05-30 |
-| **GitBounty** | [@Gitlawbounty](https://x.com/Gitlawbounty) | [gitlawbounty/aeon](https://github.com/gitlawbounty/aeon) | 1 | 2026-05-30 |
+| **GitBounty** | [@Gitlawbounty](https://x.com/Gitlawbounty) · [@Git_Bounty](https://x.com/Git_Bounty) | [gitlawbounty/aeon](https://github.com/gitlawbounty/aeon) | 1 | 2026-05-30 |
 | **LawbWorld** | [@LawbWorld](https://x.com/LawbWorld) | [lawbworld-tech/aeon](https://github.com/lawbworld-tech/aeon) | 0 | 2026-05-31 |
 | **LiquidPad** | [@LiquidPadBot](https://x.com/LiquidPadBot) · [liquidpad.site](https://www.liquidpad.site) | [liquidpadbot/aeon](https://github.com/liquidpadbot/aeon) | 1 | 2026-05-29 |
 | **Noctel** | [@noctelxbt](https://x.com/noctelxbt) · [noctel.xyz](https://www.noctel.xyz) | [NoctelXBT/aeon](https://github.com/NoctelXBT/aeon) | 0 | 2026-05-28 |
@@ -69,7 +69,7 @@ Listed in ECOSYSTEM.md but our fuzzy matcher couldn't find a public fork (could 
 | **Vexor** | [@Vexora_x](https://x.com/Vexora_x) |
 | **Wake** | [@WakeOnBase](https://x.com/WakeOnBase) |
 | **x402Books** | [@x402Books](https://x.com/x402Books) |
-| **zer0** | [@atzer0_BOT](https://x.com/atzer0_BOT) |
+| **zer0** | [@atzer0_BOT](https://x.com/atzer0_BOT) · [@Jaineon0G](https://x.com/Jaineon0G) |
 
 ## Forks not listed in ECOSYSTEM.md or skill-packs
 
