@@ -192,6 +192,32 @@ function fetchSkillPacks(upstreamRepo) {
   } catch { return []; }
 }
 
+// Collapse cross-root duplicates in a curated list. Two tracked roots can
+// publish the same ECOSYSTEM.md project or skill-packs.json pack (the lists
+// overlap heavily in spirit even though each is curated separately). Without
+// merging, every shared entry is counted once per root — inflating the
+// registry stats and repeating rows in `docs/ecosystem.md` / `docs/skill-packs.md`.
+// Each `item` is expected to carry a `root` tag; this keys by a stable
+// identifier (project name for ecosystem, pack repo for packs), keeps the
+// first occurrence, and accumulates every root that lists it in `roots`.
+// `root` (singular) is preserved as the first root for back-compat.
+export function dedupeByRoot(items, keyOf) {
+  const byKey = new Map();
+  const out = [];
+  for (const item of items) {
+    const key = keyOf(item);
+    const existing = byKey.get(key);
+    if (existing) {
+      if (item.root && !existing.roots.includes(item.root)) existing.roots.push(item.root);
+      continue;
+    }
+    const entry = { ...item, roots: item.root ? [item.root] : [] };
+    byKey.set(key, entry);
+    out.push(entry);
+  }
+  return out;
+}
+
 // Fuzzy match an ecosystem project name against the fork list. Lowercase
 // + alpha-only token comparison against owner name, repo name, and
 // description. Returns the best matching fork id or null.
@@ -650,7 +676,7 @@ function renderDisabledDefaults(graph) {
   return out;
 }
 
-function renderEcosystem(graph) {
+export function renderEcosystem(graph) {
   const s = graph.stats;
   const projects = graph.ecosystemProjects || [];
   let out = `---\nlayout: default\ntitle: "Aeon Atlas — Ecosystem"\npermalink: /ecosystem/\n---\n\n`;
@@ -699,7 +725,7 @@ function renderEcosystem(graph) {
   return out;
 }
 
-function renderSkillPacks(graph) {
+export function renderSkillPacks(graph) {
   const s = graph.stats;
   const packs = graph.skillPacks || [];
   let out = `---\nlayout: default\ntitle: "Aeon Atlas — Skill Packs"\npermalink: /skill-packs/\n---\n\n`;
@@ -763,7 +789,7 @@ function escapeYamlString(s) {
   return '"' + (s || "").replace(/"/g, '\\"').replace(/\n/g, " ") + '"';
 }
 
-function writeUniverseContent(graph) {
+export function writeUniverseContent(graph) {
   // Wipe & recreate so deletions in atlas.json don't leave stale notes behind.
   const subs = ["forks", "ecosystem", "packs", "novel-skills"];
   for (const sub of subs) {
@@ -966,7 +992,7 @@ function writeUniverseContent(graph) {
 function readdirSyncSafe(dir) { try { return readdirSync(dir); } catch { return []; } }
 function unlinkSyncSafe(file) { try { unlinkSync(file); } catch {} }
 
-function renderHtml(graph) {
+export function renderHtml(graph) {
   const json = safeJsonForScript(graph);
   return `<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><title>Aeon Atlas — fork ecosystem map</title>
@@ -1128,14 +1154,18 @@ function main() {
   // Each entry is tagged with the root it came from so renderers can show
   // per-root sections.
   console.log(`atlas: fetching ECOSYSTEM.md + skill-packs.json per root`);
-  const ecosystem = [];
-  const skillPacks = [];
+  const ecosystemRaw = [];
+  const skillPacksRaw = [];
   for (const root of opts.upstreams) {
     const eco = fetchEcosystem(root);
-    for (const p of eco) ecosystem.push({ ...p, root });
+    for (const p of eco) ecosystemRaw.push({ ...p, root });
     const packs = fetchSkillPacks(root);
-    for (const p of packs) skillPacks.push({ ...p, root });
+    for (const p of packs) skillPacksRaw.push({ ...p, root });
   }
+  // Roots overlap — merge shared entries so each project/pack counts once
+  // while remembering every root that lists it (see dedupeByRoot).
+  const ecosystem = dedupeByRoot(ecosystemRaw, (p) => (p.name || "").toLowerCase().trim());
+  const skillPacks = dedupeByRoot(skillPacksRaw, (p) => (p.repo || p.name || "").toLowerCase().trim());
 
   const graph = buildGraph(repos);
   // Cross-match ecosystem projects → forks (fuzzy)
@@ -1197,4 +1227,8 @@ function main() {
   if (existsSync(resolve(ROOT, "quartz"))) console.log(`  wrote quartz/content/{forks,ecosystem,packs,novel-skills}/*.md`);
 }
 
-main();
+// Only run when invoked as a script (`node scripts/atlas.mjs`), not when
+// imported (e.g. by an offline rebuild that reuses the renderers).
+if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
+  main();
+}
