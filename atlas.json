@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-31T14:55:18.752Z",
+  "generatedAt": "2026-05-31T15:17:37.275Z",
   "upstreams": [
     "aaronjmars/aeon",
     "aaronjmars/aeon-agent",
@@ -37,8 +37,8 @@
         "stars": 0
       }
     ],
-    "ecosystemProjects": 47,
-    "ecosystemMatched": 9,
+    "ecosystemProjects": 50,
+    "ecosystemMatched": 10,
     "skillPacks": 16,
     "skillPacksWithFork": 14,
     "forksNotPubliclyListed": 132
@@ -28802,6 +28802,55 @@
       "listedBy": [
         "aaronjmars/aeon",
         "aaronjmars/aeon-agent"
+      ],
+      "matchedFork": null
+    },
+    {
+      "name": "Sparkleware",
+      "links": [
+        {
+          "label": "github",
+          "url": "https://github.com/sparkleware/sparkleware"
+        }
+      ],
+      "listedBy": [
+        "aaronjmars/aeon",
+        "aaronjmars/aeon-agent",
+        "aaronjmars/miroshark-aeon"
+      ],
+      "matchedFork": "sparkleware/aeon"
+    },
+    {
+      "name": "Westworld Host Template",
+      "links": [
+        {
+          "label": "github",
+          "url": "https://github.com/proxima424/westworld-host-template"
+        },
+        {
+          "label": "aeonbook",
+          "url": "https://www.aeonbook.ai/deploy/host"
+        }
+      ],
+      "listedBy": [
+        "aaronjmars/aeon",
+        "aaronjmars/aeon-agent",
+        "aaronjmars/miroshark-aeon"
+      ],
+      "matchedFork": null
+    },
+    {
+      "name": "Aeon Excalidraw Diagram",
+      "links": [
+        {
+          "label": "github",
+          "url": "https://github.com/aeonbook/aeon-excalidraw-diagram"
+        }
+      ],
+      "listedBy": [
+        "aaronjmars/aeon",
+        "aaronjmars/aeon-agent",
+        "aaronjmars/miroshark-aeon"
       ],
       "matchedFork": null
     }

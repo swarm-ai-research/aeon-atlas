@@ -179,7 +179,15 @@ function parseEcosystemMd(md) {
 
 function fetchEcosystem(upstreamRepo) {
   const md = ghRaw(upstreamRepo, "main", "ECOSYSTEM.md");
-  return parseEcosystemMd(md);
+  const upstream = parseEcosystemMd(md);
+  // Merge with local supplements (this fork's additions, not yet upstreamed).
+  const localPath = resolve(ROOT, "ECOSYSTEM.local.md");
+  if (!existsSync(localPath)) return upstream;
+  const local = parseEcosystemMd(readFileSync(localPath, "utf8"));
+  // De-dupe by normalized name so a project that lands upstream stops
+  // double-printing without anyone having to edit ECOSYSTEM.local.md.
+  const seen = new Set(upstream.map((p) => p.name.toLowerCase().replace(/\s+/g, "")));
+  return [...upstream, ...local.filter((p) => !seen.has(p.name.toLowerCase().replace(/\s+/g, "")))];
 }
 
 function fetchSkillPacks(upstreamRepo) {
