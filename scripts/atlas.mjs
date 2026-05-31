@@ -120,15 +120,24 @@ function ghRaw(repoFullName, ref, path) {
   return Buffer.from(obj.content, "base64").toString("utf8");
 }
 
-// Fetch raw commit dates for the last `daysBack` days. One page (≤ 100) is
-// enough — for activity-heatmap intensity, anything > 100 commits in 90 days
-// is already "very active". Returns ISO date strings, or [] on any failure.
-function fetchCommitDates(repoFullName, daysBack = 90) {
+// Fetch raw commit dates for the last `daysBack` days. Paginates until the
+// repo returns a partial page (< 100), so totals aren't artificially capped.
+// Hard ceiling at 10 pages (= 1000 commits) as a safety valve against
+// pathological repos. Returns ISO date strings, or [] on any failure.
+function fetchCommitDates(repoFullName, daysBack = 30) {
   try {
     const since = new Date(Date.now() - daysBack * 86400000).toISOString();
-    const commits = ghApi(`/repos/${repoFullName}/commits?since=${since}&per_page=100`);
-    if (!Array.isArray(commits)) return [];
-    return commits.map((c) => c.commit?.author?.date).filter(Boolean);
+    const all = [];
+    for (let page = 1; page <= 10; page++) {
+      const commits = ghApi(`/repos/${repoFullName}/commits?since=${since}&per_page=100&page=${page}`);
+      if (!Array.isArray(commits) || commits.length === 0) break;
+      for (const c of commits) {
+        const d = c.commit?.author?.date;
+        if (d) all.push(d);
+      }
+      if (commits.length < 100) break;
+    }
+    return all;
   } catch (err) {
     // 409 = empty repo. 404 = deleted. Suppress — common and not interesting.
     if (!/409|404/.test(err.message)) {
@@ -1016,7 +1025,7 @@ function writeUniverseContent(graph, operators) {
     const heatmap = buildHeatmap(n.recentCommits || [], 30);
     const totalRecent = heatmap.reduce((a, c) => a + c.count, 0);
     lines.push(``, `## Activity (last 30 days)`, ``);
-    lines.push(`**${totalRecent}** commit${totalRecent === 1 ? "" : "s"} (capped at 100 / fetch).`);
+    lines.push(`**${totalRecent}** commit${totalRecent === 1 ? "" : "s"}.`);
     lines.push(``, heatmapSvg(heatmap), ``);
 
     // Parent fork
