@@ -37,6 +37,13 @@ if [ ! -d "$QUARTZ_DIR/quartz" ]; then
     "$TMP/quartz/" "$QUARTZ_DIR/"
 fi
 
+# Apply our SCSS overrides (tracked at quartz/custom.scss, copied into the
+# scaffold's expected path). Idempotent — runs every build so local edits to
+# quartz/quartz/styles/custom.scss never silently override the tracked file.
+if [ -f "$QUARTZ_DIR/custom.scss" ] && [ -d "$QUARTZ_DIR/quartz/styles" ]; then
+  cp "$QUARTZ_DIR/custom.scss" "$QUARTZ_DIR/quartz/styles/custom.scss"
+fi
+
 # Install deps (cheap if node_modules is fresh)
 cd "$QUARTZ_DIR"
 if [ ! -d node_modules ]; then
