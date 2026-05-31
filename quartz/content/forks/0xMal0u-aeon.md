@@ -2,7 +2,7 @@
 title: "0xMal0u/aeon"
 tags: [fork]
 stars: 0
-pushed: "2026-05-30"
+pushed: "2026-05-31"
 enabled_skills: 8
 shipped_skills: 121
 ---
@@ -14,7 +14,7 @@ The most autonomous agent framework. No approval loops. No babysitting. Configur
 [Repository on GitHub](https://github.com/0xMal0u/aeon)
 
 - **★** 0
-- **Last push:** 2026-05-30
+- **Last push:** 2026-05-31
 - **Default branch:** `main`
 - **Enabled skills in `aeon.yml`:** 8
 - **Skills shipped in `skills/`:** 121

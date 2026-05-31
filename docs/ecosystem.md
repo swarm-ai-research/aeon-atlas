@@ -19,8 +19,8 @@ These projects publicly identify as built on Aeon AND have a GitHub fork we can 
 | **Amper** | [@helloamper](https://x.com/helloamper) | [happycamper-stix/aeon](https://github.com/happycamper-stix/aeon) | 0 | 2026-05-21 |
 | **AntFleet** | [@AntFleetDev](https://x.com/AntFleetDev) | [AntFleet/aeon](https://github.com/AntFleet/aeon) | 0 | 2026-05-29 |
 | **Bean** | [@minebean_](https://x.com/minebean_) | [damo-nu11/aeon-minebean](https://github.com/damo-nu11/aeon-minebean) | 0 | 2026-05-31 |
-| **Blue Agent** | [@blueagent_](https://x.com/blueagent_) | [madebyshun/blueagent-aeon](https://github.com/madebyshun/blueagent-aeon) | 0 | 2026-05-30 |
-| **GitBounty** | [@Gitlawbounty](https://x.com/Gitlawbounty) | [gitlawbounty/aeon](https://github.com/gitlawbounty/aeon) | 1 | 2026-05-30 |
+| **Blue Agent** | [@blueagent_](https://x.com/blueagent_) | [madebyshun/blueagent-aeon](https://github.com/madebyshun/blueagent-aeon) | 0 | 2026-05-31 |
+| **GitBounty** | [@Gitlawbounty](https://x.com/Gitlawbounty) | [gitlawbounty/aeon](https://github.com/gitlawbounty/aeon) | 1 | 2026-05-31 |
 | **LawbWorld** | [@LawbWorld](https://x.com/LawbWorld) | [lawbworld-tech/aeon](https://github.com/lawbworld-tech/aeon) | 0 | 2026-05-31 |
 | **LiquidPad** | [@LiquidPadBot](https://x.com/LiquidPadBot) · [liquidpad.site](https://www.liquidpad.site) | [liquidpadbot/aeon](https://github.com/liquidpadbot/aeon) | 1 | 2026-05-29 |
 | **Noctel** | [@noctelxbt](https://x.com/noctelxbt) · [noctel.xyz](https://www.noctel.xyz) | [NoctelXBT/aeon](https://github.com/NoctelXBT/aeon) | 0 | 2026-05-28 |
