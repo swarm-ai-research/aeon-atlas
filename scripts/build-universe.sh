@@ -14,7 +14,7 @@ cd "$ROOT"
 
 QUARTZ_DIR="$ROOT/quartz"
 QUARTZ_UPSTREAM="https://github.com/jackyzha0/quartz.git"
-QUARTZ_VERSION="${QUARTZ_VERSION:-v4.5.2}"  # pin for reproducibility
+QUARTZ_VERSION="${QUARTZ_VERSION:-v5.0.0}"  # pin for reproducibility; v5 introduced `plugin install`
 
 mkdir -p "$QUARTZ_DIR"
 
@@ -43,8 +43,14 @@ if [ ! -d node_modules ]; then
   npm install --silent
 fi
 
-# Make sure our pinned plugin set is installed (idempotent)
-npx --yes quartz plugin install --from-config 2>&1 | tail -3
+# Make sure our pinned plugin set is installed (idempotent).
+# Quartz v5 changed the CLI: `plugin install` now reads quartz.lock.json
+# (vs `plugin install --from-config` in older versions). Our lockfile is
+# committed, so `plugin install` alone is sufficient.
+# Also: `quartz` is the package's own bin, not a dependency's — `npx quartz`
+# can silently fetch an unrelated package from the registry, so use
+# `npm run quartz --` which dispatches to ./quartz/bootstrap-cli.mjs.
+npm run --silent quartz -- plugin install 2>&1 | tail -3
 
 cd "$ROOT"
 # Refresh atlas data + emit per-entity markdown into quartz/content/
@@ -53,7 +59,7 @@ node scripts/atlas.mjs --cache
 # Build with Quartz. Output ships to docs/universe/ so GitHub Pages serves it
 # at /aeon-atlas/universe/ alongside the Jekyll-built top-level pages.
 cd "$QUARTZ_DIR"
-npx quartz build --output "$ROOT/docs/universe"
+npm run --silent quartz -- build --output "$ROOT/docs/universe"
 
 # Quartz emits a CNAME from baseUrl that would hijack the Pages domain — our
 # baseUrl is project-pages-style (host + path), so the CNAME is wrong.
@@ -61,5 +67,5 @@ rm -f "$ROOT/docs/universe/CNAME"
 
 echo ""
 echo "✓ built → $ROOT/docs/universe/"
-echo "  preview locally: cd quartz && npx quartz build --serve"
+echo "  preview locally: cd quartz && npm run quartz -- build --serve"
 echo "  commit + push, then visit: https://rsavitt.github.io/aeon-atlas/universe/"
