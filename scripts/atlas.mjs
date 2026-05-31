@@ -53,6 +53,8 @@ const OUT_INNOVATIONS = resolve(ROOT, "docs/innovations.md");
 const OUT_DISABLED_DEFAULTS = resolve(ROOT, "docs/disabled-defaults.md");
 const OUT_ECOSYSTEM = resolve(ROOT, "docs/ecosystem.md");
 const OUT_SKILL_PACKS = resolve(ROOT, "docs/skill-packs.md");
+const OUT_WHATS_NEW = resolve(ROOT, "docs/whats-new.md");
+const HISTORY_DIR = resolve(ROOT, "history");
 const QUARTZ_CONTENT = resolve(ROOT, "quartz/content");
 const CACHE_DIR = resolve(ROOT, ".atlas-cache");
 const CACHE_TTL_MS = 24 * 60 * 60 * 1000;
@@ -1208,6 +1210,7 @@ function main() {
   // exists (i.e. the operator has set up Quartz locally). Keeps the script
   // usable on installs without the Quartz toolchain.
   if (existsSync(resolve(ROOT, "quartz"))) writeUniverseContent(graph);
+  const whatsNew = writeWhatsNew(graph);
 
   const s = graph.stats;
   console.log(`\natlas: ${s.repos} repos · ${s.withAeonYml} with aeon.yml · ${s.forkEdges} fork edges · ${s.skillEdges} skill-overlap edges · ${s.totalStars} ★`);
@@ -1224,6 +1227,260 @@ function main() {
   console.log(`  wrote docs/ecosystem.md`);
   console.log(`  wrote docs/skill-packs.md`);
   if (existsSync(resolve(ROOT, "quartz"))) console.log(`  wrote quartz/content/{forks,ecosystem,packs,novel-skills}/*.md`);
+  if (whatsNew.hadPrior) {
+    const d = whatsNew.diff;
+    console.log(`  whats-new: +${d.newForks.length} forks, -${d.removedForks.length}, +${d.newNovelSkills.length} novel skills, +${d.newEcosystem.length} ecosystem entries`);
+  } else {
+    console.log(`  whats-new: first snapshot recorded (no diff yet)`);
+  }
+}
+
+// ── weekly diff: snapshot graph, diff against the prior snapshot, render. ──
+// Snapshot is a trimmed projection (id + stars + lastPushed + novel skills +
+// matched ecosystem name) — big enough to diff meaningfully, small enough to
+// commit one per run without bloating the repo.
+function buildSnapshot(graph) {
+  const ecosystemByFork = new Map(
+    (graph.ecosystemProjects || [])
+      .filter((p) => p.matchedFork)
+      .map((p) => [p.matchedFork, p.name]),
+  );
+  return {
+    generatedAt: graph.generatedAt,
+    upstreams: graph.upstreams || [graph.upstream],
+    stats: {
+      repos: graph.stats.repos,
+      forks: graph.stats.forks,
+      withAeonYml: graph.stats.withAeonYml,
+      totalStars: graph.stats.totalStars,
+      ecosystemProjects: graph.stats.ecosystemProjects,
+      skillPacks: graph.stats.skillPacks,
+    },
+    nodes: graph.nodes
+      .filter((n) => !n.isRoot)
+      .map((n) => ({
+        id: n.id,
+        stars: n.stars || 0,
+        pushedAt: n.pushedAt || null,
+        archived: !!n.archived,
+        novelSkills: (n.novelSkills || []).map((s) => s.slug || s).sort(),
+        ecosystemName: ecosystemByFork.get(n.id) || null,
+      })),
+    ecosystemProjects: (graph.ecosystemProjects || []).map((p) => p.name).sort(),
+    skillPacks: (graph.skillPacks || []).map((p) => `${p.author || ""}/${p.name || ""}`).sort(),
+    novelSkillSlugs: (graph.innovationsBySkill || []).map((s) => s.slug).sort(),
+  };
+}
+
+function loadPriorSnapshot(todayIso) {
+  if (!existsSync(HISTORY_DIR)) return null;
+  const today = todayIso.slice(0, 10);
+  const files = readdirSync(HISTORY_DIR)
+    .filter((f) => /^\d{4}-\d{2}-\d{2}\.json$/.test(f))
+    .filter((f) => f.slice(0, 10) < today)
+    .sort();
+  const latest = files[files.length - 1];
+  if (!latest) return null;
+  try {
+    return { date: latest.slice(0, 10), data: JSON.parse(readFileSync(resolve(HISTORY_DIR, latest), "utf8")) };
+  } catch { return null; }
+}
+
+function diffSnapshots(prev, curr) {
+  const prevIds = new Set(prev.nodes.map((n) => n.id));
+  const currIds = new Set(curr.nodes.map((n) => n.id));
+  const prevById = new Map(prev.nodes.map((n) => [n.id, n]));
+  const currById = new Map(curr.nodes.map((n) => [n.id, n]));
+
+  const newForks = curr.nodes.filter((n) => !prevIds.has(n.id));
+  const removedForks = prev.nodes.filter((n) => !currIds.has(n.id));
+
+  const starDeltas = [];
+  for (const n of curr.nodes) {
+    const p = prevById.get(n.id);
+    if (!p) continue;
+    const d = (n.stars || 0) - (p.stars || 0);
+    if (d !== 0) starDeltas.push({ id: n.id, delta: d, stars: n.stars });
+  }
+  starDeltas.sort((a, b) => Math.abs(b.delta) - Math.abs(a.delta));
+
+  const prevNovel = new Set(prev.novelSkillSlugs || []);
+  const newNovelSkills = (curr.novelSkillSlugs || []).filter((s) => !prevNovel.has(s));
+  const currNovel = new Set(curr.novelSkillSlugs || []);
+  const droppedNovelSkills = (prev.novelSkillSlugs || []).filter((s) => !currNovel.has(s));
+
+  const prevEco = new Set(prev.ecosystemProjects || []);
+  const currEco = new Set(curr.ecosystemProjects || []);
+  const newEcosystem = [...currEco].filter((p) => !prevEco.has(p));
+  const removedEcosystem = [...prevEco].filter((p) => !currEco.has(p));
+
+  const prevPacks = new Set(prev.skillPacks || []);
+  const currPacks = new Set(curr.skillPacks || []);
+  const newPacks = [...currPacks].filter((p) => !prevPacks.has(p));
+  const removedPacks = [...prevPacks].filter((p) => !currPacks.has(p));
+
+  // Activity transition: was active (pushed ≤ 60d before prev snapshot) and
+  // is now dormant (pushed > 60d before curr snapshot) — or vice versa.
+  const dormantThresholdDays = 60;
+  const dormancyWasActiveNowDormant = [];
+  const dormancyWasDormantNowActive = [];
+  const prevSnapshotMs = new Date(prev.generatedAt).getTime();
+  const currSnapshotMs = new Date(curr.generatedAt).getTime();
+  for (const n of curr.nodes) {
+    const p = prevById.get(n.id);
+    if (!p || !p.pushedAt || !n.pushedAt) continue;
+    const prevAgeDays = (prevSnapshotMs - new Date(p.pushedAt).getTime()) / 86400000;
+    const currAgeDays = (currSnapshotMs - new Date(n.pushedAt).getTime()) / 86400000;
+    if (prevAgeDays <= dormantThresholdDays && currAgeDays > dormantThresholdDays) {
+      dormancyWasActiveNowDormant.push({ id: n.id, lastPushed: n.pushedAt });
+    } else if (prevAgeDays > dormantThresholdDays && currAgeDays <= dormantThresholdDays) {
+      dormancyWasDormantNowActive.push({ id: n.id, lastPushed: n.pushedAt });
+    }
+  }
+
+  return {
+    newForks,
+    removedForks,
+    starDeltas,
+    newNovelSkills,
+    droppedNovelSkills,
+    newEcosystem,
+    removedEcosystem,
+    newPacks,
+    removedPacks,
+    dormancyWasActiveNowDormant,
+    dormancyWasDormantNowActive,
+  };
+}
+
+function renderWhatsNewBody(diff, prev, curr) {
+  const lines = [];
+  const days = Math.round((new Date(curr.generatedAt) - new Date(prev.generatedAt)) / 86400000);
+  const since = prev.date || prev.generatedAt.slice(0, 10);
+  const totals = [
+    `${diff.newForks.length} new forks`,
+    `${diff.removedForks.length} removed`,
+    `${diff.newNovelSkills.length} new novel skills`,
+    `${diff.newEcosystem.length} new ecosystem entries`,
+    `${diff.newPacks.length} new skill packs`,
+  ];
+  lines.push(`> Diff vs snapshot from **${since}** (${days} day${days === 1 ? "" : "s"} ago). ${totals.join(" · ")}.\n`);
+
+  function section(title, body) {
+    lines.push(`## ${title}\n`);
+    lines.push(body);
+    lines.push("");
+  }
+
+  if (diff.newForks.length) {
+    section(
+      `New forks (${diff.newForks.length})`,
+      diff.newForks
+        .slice(0, 25)
+        .map((f) => `- [\`${f.id}\`](https://github.com/${f.id}) — ${f.stars} ★`)
+        .join("\n") + (diff.newForks.length > 25 ? `\n\n_…and ${diff.newForks.length - 25} more._` : ""),
+    );
+  }
+
+  if (diff.removedForks.length) {
+    section(
+      `Removed forks (${diff.removedForks.length})`,
+      diff.removedForks.map((f) => `- \`${f.id}\` (deleted or unforked)`).join("\n"),
+    );
+  }
+
+  if (diff.newNovelSkills.length) {
+    section(
+      `New novel skills (${diff.newNovelSkills.length})`,
+      diff.newNovelSkills.map((s) => `- \`${s}\``).join("\n"),
+    );
+  }
+
+  const gainers = diff.starDeltas.filter((d) => d.delta > 0).slice(0, 10);
+  const losers = diff.starDeltas.filter((d) => d.delta < 0).slice(0, 5);
+  if (gainers.length) {
+    section(
+      `Top ★ gainers`,
+      gainers.map((d) => `- [\`${d.id}\`](https://github.com/${d.id}) +${d.delta} (now ${d.stars} ★)`).join("\n"),
+    );
+  }
+  if (losers.length) {
+    section(
+      `Top ★ losers`,
+      losers.map((d) => `- [\`${d.id}\`](https://github.com/${d.id}) ${d.delta} (now ${d.stars} ★)`).join("\n"),
+    );
+  }
+
+  if (diff.dormancyWasActiveNowDormant.length) {
+    section(
+      `Went dormant (no push in 60+ days)`,
+      diff.dormancyWasActiveNowDormant
+        .slice(0, 15)
+        .map((d) => `- \`${d.id}\` — last push ${d.lastPushed.slice(0, 10)}`)
+        .join("\n"),
+    );
+  }
+  if (diff.dormancyWasDormantNowActive.length) {
+    section(
+      `Woke up`,
+      diff.dormancyWasDormantNowActive
+        .map((d) => `- \`${d.id}\` — pushed ${d.lastPushed.slice(0, 10)}`)
+        .join("\n"),
+    );
+  }
+
+  if (diff.newEcosystem.length) {
+    section(`New ecosystem entries`, diff.newEcosystem.map((p) => `- ${p}`).join("\n"));
+  }
+  if (diff.removedEcosystem.length) {
+    section(`Removed ecosystem entries`, diff.removedEcosystem.map((p) => `- ${p}`).join("\n"));
+  }
+  if (diff.newPacks.length) {
+    section(`New skill packs`, diff.newPacks.map((p) => `- \`${p}\``).join("\n"));
+  }
+
+  return lines.join("\n");
+}
+
+function renderWhatsNew(graph, diff, prev, curr) {
+  let out = `---\nlayout: default\ntitle: "Aeon Atlas — What's new"\npermalink: /whats-new/\n---\n\n`;
+  out += `# What's new\n\n`;
+  if (!prev || !diff) {
+    out += `> First snapshot recorded ${curr.generatedAt.slice(0, 10)}. No prior history to diff against yet — next run will produce the first delta.\n`;
+    return out;
+  }
+  out += renderWhatsNewBody(diff, prev, curr);
+  return out;
+}
+
+function renderWhatsNewUniverse(graph, diff, prev, curr) {
+  let out = `---\ntitle: "What's new"\ntags: [meta]\n---\n\n`;
+  if (!prev || !diff) {
+    out += `_First snapshot recorded ${curr.generatedAt.slice(0, 10)}. No prior history to diff against yet._\n`;
+    return out;
+  }
+  out += renderWhatsNewBody(diff, prev, curr);
+  return out;
+}
+
+function writeWhatsNew(graph) {
+  mkdirSync(HISTORY_DIR, { recursive: true });
+  const curr = buildSnapshot(graph);
+  const today = curr.generatedAt.slice(0, 10);
+  // Load prior BEFORE writing today's snapshot — otherwise the first run of
+  // a new day would diff against itself.
+  const prior = loadPriorSnapshot(curr.generatedAt);
+  const diff = prior ? diffSnapshots(prior.data, curr) : null;
+  // Write today's snapshot (overwrites if same date — last run of the day wins).
+  writeFileSync(resolve(HISTORY_DIR, `${today}.json`), JSON.stringify(curr, null, 2));
+  writeFileSync(OUT_WHATS_NEW, renderWhatsNew(graph, diff, prior ? prior.data : null, curr));
+  if (existsSync(resolve(ROOT, "quartz"))) {
+    writeFileSync(
+      resolve(QUARTZ_CONTENT, "whats-new.md"),
+      renderWhatsNewUniverse(graph, diff, prior ? prior.data : null, curr),
+    );
+  }
+  return { hadPrior: !!prior, diff };
 }
 
 main();
