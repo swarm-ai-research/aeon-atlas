@@ -1,7 +1,7 @@
 title: "Aeon Atlas"
 description: "A live map of the aeon fork ecosystem — every public fork, what they enable, where they cluster. Regenerated weekly."
 baseurl: "/aeon-atlas"
-url: "https://rsavitt.github.io"
+url: "https://swarm-ai-research.github.io"
 
 # Build settings
 theme: minima
@@ -10,7 +10,7 @@ markdown: kramdown
 # Author
 author:
   name: Aeon Atlas
-  url: https://github.com/rsavitt/aeon-atlas
+  url: https://github.com/swarm-ai-research/aeon-atlas
 
 # Navigation — atlas-focused. Inherited upstream pages remain accessible
 # at their direct URLs but aren't surfaced in the header.
@@ -54,4 +54,4 @@ exclude:
 # Social links
 minima:
   social_links:
-    - { platform: github, user_url: "https://github.com/rsavitt/aeon-atlas" }
+    - { platform: github, user_url: "https://github.com/swarm-ai-research/aeon-atlas" }

@@ -18,7 +18,7 @@ title: "Aeon Atlas"
     <a class="btn btn-outline" href="disabled-defaults/">Disabled defaults</a>
     <a class="btn btn-outline" href="ecosystem/">Ecosystem</a>
     <a class="btn btn-outline" href="skill-packs/">Skill packs</a>
-    <a class="btn btn-outline" href="https://github.com/rsavitt/aeon-atlas" target="_blank" rel="noopener">Source on GitHub</a>
+    <a class="btn btn-outline" href="https://github.com/swarm-ai-research/aeon-atlas" target="_blank" rel="noopener">Source on GitHub</a>
   </div>
 </div>
 
@@ -38,7 +38,7 @@ Top-4 per fork, jaccard ≥ 0.30, ≥ 2 shared deltas. On the first snapshot thi
 
 ## Refresh cadence
 
-The [`atlas` skill](https://github.com/rsavitt/aeon-atlas/blob/main/skills/atlas/SKILL.md) runs every Sunday at 04:00 UTC. It fetches the fork list, parses each `aeon.yml`, regenerates these artifacts, and opens a PR only when something material changed — a new fork joined, a fork's ★ jumped, a dormant fork resumed activity, or a high-confidence overlap pair appeared.
+The [`atlas` skill](https://github.com/swarm-ai-research/aeon-atlas/blob/main/skills/atlas/SKILL.md) runs every Sunday at 04:00 UTC. It fetches the fork list, parses each `aeon.yml`, regenerates these artifacts, and opens a PR only when something material changed — a new fork joined, a fork's ★ jumped, a dormant fork resumed activity, or a high-confidence overlap pair appeared.
 
 ## What it isn't
 
@@ -49,6 +49,6 @@ The [`atlas` skill](https://github.com/rsavitt/aeon-atlas/blob/main/skills/atlas
 
 ## Source
 
-[`rsavitt/aeon-atlas`](https://github.com/rsavitt/aeon-atlas) on GitHub. This Pages site is built from the `docs/` directory of `main`.
+[`swarm-ai-research/aeon-atlas`](https://github.com/swarm-ai-research/aeon-atlas) on GitHub. This Pages site is built from the `docs/` directory of `main`.
 
 The atlas is itself an aeon fork — a vanilla descendant of `aaronjmars/aeon` whose only divergence is the `atlas` script and skill. Upstream commits merge cleanly via `git fetch upstream main`.
