@@ -30,3 +30,13 @@ Operator profile: 9 atlas artifacts (1 fork, 7 packs, 1 ecosystem entry). Footpr
 
 - [[ecosystem/sparkleware|Sparkleware]]
 
+## Get the badge
+
+![](https://swarm-ai-research.github.io/aeon-atlas/badges/sparkleware.svg)
+
+Add to your README:
+
+```markdown
+[![Listed on Aeon Atlas](https://swarm-ai-research.github.io/aeon-atlas/badges/sparkleware.svg)](https://swarm-ai-research.github.io/aeon-atlas/universe/operators/sparkleware)
+```
+

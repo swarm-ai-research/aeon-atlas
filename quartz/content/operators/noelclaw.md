@@ -28,3 +28,13 @@ Operator profile: 3 atlas artifacts (1 fork, 1 pack, 1 ecosystem entry). Footpri
 
 - [[ecosystem/noelclaw|NoelClaw]]
 
+## Get the badge
+
+![](https://swarm-ai-research.github.io/aeon-atlas/badges/noelclaw.svg)
+
+Add to your README:
+
+```markdown
+[![Listed on Aeon Atlas](https://swarm-ai-research.github.io/aeon-atlas/badges/noelclaw.svg)](https://swarm-ai-research.github.io/aeon-atlas/universe/operators/noelclaw)
+```
+

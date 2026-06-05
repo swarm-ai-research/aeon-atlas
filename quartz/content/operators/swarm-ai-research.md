@@ -20,3 +20,13 @@ Operator profile: 2 atlas artifacts (1 fork, 0 packs, 0 ecosystem entries). Foot
 
 - [`swarm-ai-research/aeon`](https://github.com/swarm-ai-research/aeon) — 0 ★
 
+## Get the badge
+
+![](https://swarm-ai-research.github.io/aeon-atlas/badges/swarm-ai-research.svg)
+
+Add to your README:
+
+```markdown
+[![Listed on Aeon Atlas](https://swarm-ai-research.github.io/aeon-atlas/badges/swarm-ai-research.svg)](https://swarm-ai-research.github.io/aeon-atlas/universe/operators/swarm-ai-research)
+```
+

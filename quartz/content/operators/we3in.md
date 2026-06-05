@@ -18,3 +18,13 @@ Operator profile: 3 atlas artifacts (3 forks, 0 packs, 0 ecosystem entries). Foo
 - [[forks/We3In-vvvkernel-skills-up|We3In/vvvkernel-skills-up]] — 0 ★
 - [[forks/We3In-aeon|We3In/aeon]] — 0 ★
 
+## Get the badge
+
+![](https://swarm-ai-research.github.io/aeon-atlas/badges/we3in.svg)
+
+Add to your README:
+
+```markdown
+[![Listed on Aeon Atlas](https://swarm-ai-research.github.io/aeon-atlas/badges/we3in.svg)](https://swarm-ai-research.github.io/aeon-atlas/universe/operators/we3in)
+```
+

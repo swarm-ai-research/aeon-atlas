@@ -24,3 +24,13 @@ Operator profile: 2 atlas artifacts (1 fork, 0 packs, 1 ecosystem entry). Footpr
 
 - [[ecosystem/bean|Bean]]
 
+## Get the badge
+
+![](https://swarm-ai-research.github.io/aeon-atlas/badges/damo-nu11.svg)
+
+Add to your README:
+
+```markdown
+[![Listed on Aeon Atlas](https://swarm-ai-research.github.io/aeon-atlas/badges/damo-nu11.svg)](https://swarm-ai-research.github.io/aeon-atlas/universe/operators/damo-nu11)
+```
+

@@ -24,3 +24,13 @@ Operator profile: 2 atlas artifacts (1 fork, 0 packs, 1 ecosystem entry). Footpr
 
 - [[ecosystem/blue-agent|Blue Agent]]
 
+## Get the badge
+
+![](https://swarm-ai-research.github.io/aeon-atlas/badges/madebyshun.svg)
+
+Add to your README:
+
+```markdown
+[![Listed on Aeon Atlas](https://swarm-ai-research.github.io/aeon-atlas/badges/madebyshun.svg)](https://swarm-ai-research.github.io/aeon-atlas/universe/operators/madebyshun)
+```
+

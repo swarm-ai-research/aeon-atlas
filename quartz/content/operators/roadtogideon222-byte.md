@@ -20,3 +20,13 @@ Operator profile: 2 atlas artifacts (1 fork, 0 packs, 0 ecosystem entries). Foot
 
 - [`roadtogideon222-byte/aeon-cat-studio`](https://github.com/roadtogideon222-byte/aeon-cat-studio) — 0 ★
 
+## Get the badge
+
+![](https://swarm-ai-research.github.io/aeon-atlas/badges/roadtogideon222-byte.svg)
+
+Add to your README:
+
+```markdown
+[![Listed on Aeon Atlas](https://swarm-ai-research.github.io/aeon-atlas/badges/roadtogideon222-byte.svg)](https://swarm-ai-research.github.io/aeon-atlas/universe/operators/roadtogideon222-byte)
+```
+

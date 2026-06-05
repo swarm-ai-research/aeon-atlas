@@ -24,3 +24,13 @@ Operator profile: 3 atlas artifacts (1 fork, 1 pack, 0 ecosystem entries). Footp
 
 - [`Atrium-Hermes/atrium-lighthouse`](https://github.com/Atrium-Hermes/atrium-lighthouse) — 0 ★
 
+## Get the badge
+
+![](https://swarm-ai-research.github.io/aeon-atlas/badges/atrium-hermes.svg)
+
+Add to your README:
+
+```markdown
+[![Listed on Aeon Atlas](https://swarm-ai-research.github.io/aeon-atlas/badges/atrium-hermes.svg)](https://swarm-ai-research.github.io/aeon-atlas/universe/operators/atrium-hermes)
+```
+

@@ -29,3 +29,13 @@ Operator profile: 4 atlas artifacts (2 forks, 1 pack, 1 ecosystem entry). Footpr
 
 - [[ecosystem/antfleet|AntFleet]]
 
+## Get the badge
+
+![](https://swarm-ai-research.github.io/aeon-atlas/badges/antfleet.svg)
+
+Add to your README:
+
+```markdown
+[![Listed on Aeon Atlas](https://swarm-ai-research.github.io/aeon-atlas/badges/antfleet.svg)](https://swarm-ai-research.github.io/aeon-atlas/universe/operators/antfleet)
+```
+

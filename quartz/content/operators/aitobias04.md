@@ -17,3 +17,13 @@ Operator profile: 2 atlas artifacts (2 forks, 0 packs, 0 ecosystem entries). Foo
 - [[forks/AITOBIAS04-aeon|AITOBIAS04/aeon]] — 0 ★
 - [[forks/AITOBIAS04-CHORUS|AITOBIAS04/CHORUS]] — 0 ★
 
+## Get the badge
+
+![](https://swarm-ai-research.github.io/aeon-atlas/badges/aitobias04.svg)
+
+Add to your README:
+
+```markdown
+[![Listed on Aeon Atlas](https://swarm-ai-research.github.io/aeon-atlas/badges/aitobias04.svg)](https://swarm-ai-research.github.io/aeon-atlas/universe/operators/aitobias04)
+```
+

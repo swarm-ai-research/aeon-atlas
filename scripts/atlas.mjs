@@ -998,6 +998,47 @@ function renderNonForkUsers(graph) {
   return out;
 }
 
+// Listed-on-Atlas badge. Tiny "shields"-style SVG operators can drop into
+// their README, with a backlink to their operator profile. Static dimensions
+// because we don't want to ship webfonts; widths are hand-tuned for the
+// most common owner-name lengths (5-15 chars), with a generous right-padding
+// so it doesn't clip on slightly longer names.
+function renderBadgeSvg(operator) {
+  const labelW = 105; // "Aeon Atlas •"
+  const valueText = `${operator.footprint}`;
+  const valueW = Math.max(28, valueText.length * 7 + 16);
+  const totalW = labelW + valueW;
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="${totalW}" height="20" role="img" aria-label="Aeon Atlas footprint: ${operator.footprint}">
+  <linearGradient id="g" x2="0" y2="100%">
+    <stop offset="0" stop-color="#bbb" stop-opacity=".1"/>
+    <stop offset="1" stop-opacity=".1"/>
+  </linearGradient>
+  <clipPath id="r"><rect width="${totalW}" height="20" rx="3" fill="#fff"/></clipPath>
+  <g clip-path="url(#r)">
+    <rect width="${labelW}" height="20" fill="#555"/>
+    <rect x="${labelW}" width="${valueW}" height="20" fill="#216e39"/>
+    <rect width="${totalW}" height="20" fill="url(#g)"/>
+  </g>
+  <g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-size="11">
+    <text x="${labelW / 2}" y="14">Aeon Atlas •</text>
+    <text x="${labelW + valueW / 2}" y="14">${operator.footprint}</text>
+  </g>
+</svg>`;
+}
+
+function writeBadges(operators) {
+  const dir = resolve(ROOT, "docs/badges");
+  mkdirSync(dir, { recursive: true });
+  // Wipe so removed operators don't keep stale badges.
+  for (const f of readdirSyncSafe(dir)) {
+    if (f.endsWith(".svg")) unlinkSyncSafe(resolve(dir, f));
+  }
+  for (const op of operators) {
+    writeFileSync(resolve(dir, `${slugify(op.owner)}.svg`), renderBadgeSvg(op));
+  }
+}
+
 function renderOperators(graph, operators) {
   let out = `---\nlayout: default\ntitle: "Aeon Atlas — Operators"\npermalink: /operators/\n---\n\n`;
   out += `# Operators\n\n`;
@@ -1277,6 +1318,15 @@ function writeUniverseContent(graph, operators) {
       }
       lines.push(``);
     }
+    // Shareable badge — small SVG operators can paste into their own README.
+    const badgeUrl = `${SITE_BASE}/badges/${slug}.svg`;
+    const profileUrl = `${SITE_BASE}/universe/operators/${slug}`;
+    const snippet = `[![Listed on Aeon Atlas](${badgeUrl})](${profileUrl})`;
+    lines.push(`## Get the badge`, ``);
+    lines.push(`![](${badgeUrl})`);
+    lines.push(``);
+    lines.push(`Add to your README:`);
+    lines.push(``, "```markdown", snippet, "```", ``);
     writeFileSync(resolve(QUARTZ_CONTENT, "operators", `${slug}.md`), lines.join("\n") + "\n");
   }
 
@@ -1619,6 +1669,7 @@ function main() {
   writeFileSync(OUT_SKILL_PACKS, renderSkillPacks(graph));
   writeFileSync(OUT_OPERATORS, renderOperators(graph, operators));
   writeFileSync(OUT_NON_FORK, renderNonForkUsers(graph));
+  writeBadges(operators);
   // Quartz-content emit is optional — only writes if the quartz/ subdirectory
   // exists (i.e. the operator has set up Quartz locally). Keeps the script
   // usable on installs without the Quartz toolchain.
