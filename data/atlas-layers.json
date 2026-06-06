@@ -66,6 +66,12 @@
           "ref": "Sparkleware",
           "url": "https://sparkleware.dev",
           "note": "Browsable storefront over skill-packs-catalog.json. Independent web property."
+        },
+        {
+          "kind": "ecosystem",
+          "ref": "aeonbook",
+          "url": "https://www.aeonbook.ai",
+          "note": "Browsable gallery of Aeon host templates and operator deploys (Westworld Host Template, Excalidraw diagram, etc.). Storefront for the deploy/template surface the way Sparkleware is for the skill-pack surface."
         }
       ]
     },
