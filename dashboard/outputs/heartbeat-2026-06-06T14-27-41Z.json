@@ -1,0 +1,190 @@
+{
+  "root": "card-heartbeat",
+  "state": {},
+  "elements": {
+    "card-heartbeat": {
+      "type": "Card",
+      "props": {
+        "title": "Heartbeat Status Monitor",
+        "description": "Health check monitoring — cron state recorder misclassifying runs"
+      },
+      "children": [
+        "status-stack"
+      ]
+    },
+    "status-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "status-badge",
+        "separator-1",
+        "issue-text",
+        "separator-2",
+        "root-cause-alert",
+        "separator-3",
+        "stats-grid",
+        "separator-4",
+        "skills-section"
+      ]
+    },
+    "status-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "🔴 DEGRADED",
+        "variant": "destructive"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "issue-text": {
+      "type": "Text",
+      "props": {
+        "text": "heartbeat has logged 29 consecutive 'failed' runs (0% success, no last_success) yet it's clearly executing: each run regenerates docs/status.md. The same signature of all-zero-usage result-JSON shows up in atlas-layers' one failure.",
+        "variant": "body"
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "root-cause-alert": {
+      "type": "Alert",
+      "props": {
+        "title": "Root Cause",
+        "message": "The cron state recorder is misclassifying healthy runs as failures, not the skill breaking. Filed ISS-001 (critical) for skill-repair.",
+        "type": "warning"
+      }
+    },
+    "separator-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stats-grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "stat-failed-runs",
+        "stat-success-rate",
+        "stat-enabled-skills",
+        "stat-issue"
+      ]
+    },
+    "stat-failed-runs": {
+      "type": "Stat",
+      "props": {
+        "label": "Consecutive Failed Runs",
+        "value": "29"
+      }
+    },
+    "stat-success-rate": {
+      "type": "Stat",
+      "props": {
+        "label": "Success Rate",
+        "value": "0%"
+      }
+    },
+    "stat-enabled-skills": {
+      "type": "Stat",
+      "props": {
+        "label": "Enabled Skills",
+        "value": "4"
+      }
+    },
+    "stat-issue": {
+      "type": "Stat",
+      "props": {
+        "label": "Issue Filed",
+        "value": "ISS-001"
+      }
+    },
+    "separator-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "skills-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "skills-heading",
+        "skill-1",
+        "skill-2"
+      ]
+    },
+    "skills-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Status Page Skills",
+        "level": "h3"
+      }
+    },
+    "skill-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "skill-name-1",
+        "skill-status-1"
+      ]
+    },
+    "skill-name-1": {
+      "type": "Text",
+      "props": {
+        "text": "atlas-layers",
+        "variant": "body"
+      }
+    },
+    "skill-status-1": {
+      "type": "Badge",
+      "props": {
+        "text": "✅",
+        "variant": "default"
+      }
+    },
+    "skill-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "skill-name-2",
+        "skill-status-2"
+      ]
+    },
+    "skill-name-2": {
+      "type": "Text",
+      "props": {
+        "text": "atlas/atlas-improve",
+        "variant": "body"
+      }
+    },
+    "skill-status-2": {
+      "type": "Badge",
+      "props": {
+        "text": "not yet run",
+        "variant": "outline"
+      }
+    }
+  }
+}
