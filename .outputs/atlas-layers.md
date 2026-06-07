@@ -1,13 +1,20 @@
-Done.
+Done. Here's the verdict.
 
 ## Summary
 
-Executed the **atlas-layers** skill (`skills/atlas-layers/SKILL.md`).
+**Outcome:** Regenerated the Atlas layers page and determined there is **no new operator-relevant signal this week** → no PR opened, no notification sent (silent expected path).
 
-- **Ran the generator:** `node scripts/atlas-layers.mjs` → `7 layers · 8 hand entries · 31 forks · 16 packs · 2 ecosystem`
-- **Diffed against prior run:** `git diff --quiet quartz/content/atlas-layers.md` reported **no change** — the regenerated page is byte-identical to `HEAD`.
-- **Exit mode: `LAYERS_NO_CHANGE`** — the expected weekly outcome on a stable orbit. No new curated-layer entrants, no new skill packs, no new fleet forks, and no new unclassified ecosystem candidates. Per the skill, this means **silent exit: no PR, no notify**.
+**What I did:**
+- Ran `node scripts/atlas-layers.mjs` → `7 layers · 9 hand entries · 31 forks · 16 packs · 3 ecosystem`.
+- Diffed against `main` HEAD. The only delta is the **aeonbook → Layer 5 (Storefronts)** promotion (hand 8→9, ecosystem 2→3, aeonbook dropped from the candidate pool).
+- Verified this is **not new**: the regenerated page is **byte-identical** to the already-open, unmerged **PR #10** ("aeonbook added to Layer 5"). The `data/atlas-layers.json` curation is already on main; the page is just stale because PR #10 hasn't merged.
+- Confirmed **no genuinely new entrants**: no new hand entries, no new unclassified ecosystem candidates (diff only removes aeonbook), no new packs, no new forks.
+- Skipped opening `atlas-layers/2026-06-07` (would duplicate PR #10) and skipped re-notifying (aeonbook already announced via PR #10). Restored the working tree to keep `main` clean.
 
-**Files modified:** `memory/logs/2026-06-06.md` (appended activity log). No changes to `quartz/content/atlas-layers.md` or `data/atlas-layers.json`.
+**Files:**
+- Modified: `memory/logs/2026-06-07.md` (activity log).
+- No changes to `quartz/content/atlas-layers.md` or `data/atlas-layers.json` committed (working tree restored).
 
-**Follow-up:** None. The next signal will surface whenever a new entrant lands in a layer or shows up unclassified in `atlas.json`.
+**Exit mode:** effectively `LAYERS_NO_CHANGE` relative to in-flight state — the sole delta vs main is already proposed in open PR #10.
+
+**Follow-up for the operator:** PR #10 carries the aeonbook Layer 5 page regeneration and is still unmerged. Until it merges, `main`'s page will keep diverging from the curated data and this skill will keep re-detecting the same in-flight change. Merging #10 resolves it. (Stalled-PR escalation itself is the heartbeat skill's responsibility.)
