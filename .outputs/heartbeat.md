@@ -1,19 +1,19 @@
-Heartbeat complete. All checks ran; every flag is a known standing item already deduped within the last 48h, so no notification was sent.
+HEARTBEAT_OK · STATUS_PAGE=DEGRADED
 
 ## Summary
 
-**Checks (2026-06-12 20:35 UTC, Friday 20:00 slot):**
-- **P0** — heartbeat success_rate 31% (13/42) trips the chronic-failure threshold, but this is the known **ISS-001** recorder misclassification (`last_status=success`, `consecutive_failures=0`, last success ~24h ago). Already filed + DEGRADED-notified → deduped. atlas-layers healthy (80%, consec 0). No failed/stuck skills. Self-check OK (<36h).
-- **P1** — PR #10 (atlas-layers → Layer 5) still open ~150h, stalled but already in last-48h logs → deduped. No urgent issues.
-- **P2** — no flagged memory follow-ups.
-- **P3** — `atlas` still missing its Sunday 04:00 cron-state entry (deduped); atlas-improve monthly (next Jul 1) and atlas-layers (weekly, last 06-07) within interval.
+Ran the heartbeat skill for the 2026-06-13 08:00 slot (executed 09:31 UTC, Saturday).
 
-**Notification:** none sent — all standing flags appear in logs within 48h.
+**Checks:**
+- **P0** — No failed or stuck skills. heartbeat shows chronic success_rate (33%, 14/43) per threshold, but this is the known **ISS-001** recorder misclassification (last_status=success, consecutive_failures=0, last_success ~13h ago). Self-check passed (<36h). atlas-layers healthy (80%, 0 consec).
+- **P1** — PR #10 still stalled (~163h old); no urgent issues.
+- **P2** — No flagged memory follow-ups.
+- **P3** — `atlas` still missing its Sunday 04:00 cron-state entry; atlas-improve (monthly) and atlas-layers (weekly) within bounds.
+
+**Notification:** None sent — every flag (ISS-001/DEGRADED, PR #10 stalled, atlas missing) already appears in logs within the last 48h → deduped.
 
 **Files modified:**
-- `docs/status.md` — regenerated, Overall 🔴 DEGRADED, 4 enabled skills, 1 open issue (ISS-001), next run heartbeat 08:00 UTC. Token pulse omitted (no `token-report-*.md`).
-- `memory/logs/2026-06-12.md` — created with run findings.
+- `docs/status.md` — regenerated (Overall 🔴 DEGRADED, 4 enabled skills, 1 open issue, next run heartbeat 14:00 UTC; Token pulse omitted, no token-report present).
+- `memory/logs/2026-06-13.md` — created with the run log entry.
 
-**Verdict:** `HEARTBEAT_OK · STATUS_PAGE=DEGRADED`
-
-**Follow-up:** ISS-001 (heartbeat run-recorder misclassifying executed runs as failed) remains open and is the sole driver of the DEGRADED state — needs the repair/output-format fix to clear the chronic success-rate flag.
+**Follow-up:** ISS-001 (heartbeat recorder writing a trailing failed-status line despite clean execution) remains the only open issue and continues to suppress true health on the status page — a repair skill closing it would clear the persistent DEGRADED verdict.
