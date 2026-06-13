@@ -2,16 +2,18 @@ HEARTBEAT_OK · STATUS_PAGE=DEGRADED
 
 ## Summary
 
-Ran the `heartbeat` skill (14:00 UTC slot, Saturday 2026-06-13). All flags are standing items already logged within the last 48h → **no notification sent** (dedup).
+Ran the **heartbeat** skill for the 2026-06-13 20:00 UTC slot.
 
 **Checks:**
-- **P0** — `heartbeat` success_rate 34% (15/44) trips the chronic threshold, but this is the known **ISS-001** recorder misclassification (`last_status=success`, `consecutive_failures=0`, last_success ~6h ago). Already filed + DEGRADED-notified. `atlas-layers` healthy (80%). No failed/stuck skills; self-check OK.
-- **P1** — PR #10 stalled (~167h old). No urgent issues.
-- **P2** — none.
-- **P3** — `atlas` still has no cron-state entry (Sunday 04:00 slot); `atlas-improve` monthly (next Jul 1) not flagged.
+- **P0 — Failed/stuck:** None. heartbeat shows `success_rate 0.36` (chronic threshold), but this is the already-filed **ISS-001** recorder misclassification (`last_status: success`, `consecutive_failures: 0`, `last_success` ~5h ago). atlas-layers healthy (80%). Self-check OK (<36h).
+- **P1 — PRs/issues:** PR #10 stalled (~172h) — already in last-48h logs. No urgent issues.
+- **P2 — Memory:** nothing flagged.
+- **P3 — Missing skills:** `atlas` has no cron-state entry (next slot Sun 04:00) — already logged.
+
+**Notification:** None sent — every flag is a standing item already logged within 48h (dedup).
 
 **Files modified:**
-- `docs/status.md` — regenerated (Overall 🔴 DEGRADED, 4 enabled skills, 1 open issue, next run heartbeat 20:00 UTC; Token pulse omitted — no token-report present)
-- `memory/logs/2026-06-13.md` — appended 14:00-slot run entry
+- `docs/status.md` — regenerated: Overall 🔴 DEGRADED, 1 open issue, next run `atlas at 04:00 UTC`, Token pulse omitted (no token-report file).
+- `memory/logs/2026-06-13.md` — appended 20:00-slot findings.
 
-**Follow-up:** ISS-001 (heartbeat recorder misclassification) and the missing `atlas` cron-state entry remain open for a repair skill to address.
+**Follow-up:** ISS-001 (the recorder marking heartbeat runs `failed` despite successful execution) remains open and is the root cause of the persistent DEGRADED verdict — needs a fix to the state-recorder step to clear it.
