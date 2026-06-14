@@ -1,0 +1,42 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Atlas layers"
+      },
+      "children": [
+        "stack"
+      ]
+    },
+    "stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "message",
+        "pr_link"
+      ]
+    },
+    "message": {
+      "type": "Text",
+      "props": {
+        "text": "aeonbook added to Layer 5 — Storefronts",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "pr_link": {
+      "type": "Link",
+      "props": {
+        "label": "View PR #11",
+        "href": "https://github.com/swarm-ai-research/aeon-atlas/pull/11"
+      },
+      "children": []
+    }
+  }
+}
