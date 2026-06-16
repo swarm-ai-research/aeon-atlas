@@ -1,17 +1,17 @@
-HEARTBEAT_OK · STATUS_PAGE=DEGRADED
+Heartbeat complete. `HEARTBEAT_OK · STATUS_PAGE=DEGRADED`
 
 ## Summary
 
-Ran the `heartbeat` skill (Monday 2026-06-15, 20:00 slot). All findings are standing flags already in the last-48h logs — **no notification sent** (dedup).
+Ran the full heartbeat check sweep for the 2026-06-16 20:00 UTC slot. No notification sent — every active flag is a standing item already logged within the last 48h (dedup).
 
-**Checks:**
-- **P0** — No failed/stuck skills. heartbeat success_rate 40% (19/48) is chronic-per-threshold but is the known **ISS-001** recorder misclassification (last_status=success, consecutive_failures=0). atlas-layers healthy (83%). Self-check OK (last_success ~25h ago, <36h).
-- **P1** — PR #10 stalled (~223h). PR #11 (duplicate) now crosses the 24h stalled threshold (~38.5h) but was already tracked in 06-14 logs → dedup. No open/urgent issues.
-- **P2** — Nothing flagged.
-- **P3** — `atlas` (Sunday 04:00) still has no cron-state entry / never dispatched; already logged → dedup. atlas-improve not due (next Jul 1).
+**Findings (all dedup'd, no re-notify):**
+- **P0** — heartbeat success_rate 41% (chronic-threshold trip), but this is the known **ISS-001** recorder misclassification (last_status=`success`, consec_failures=0, last_success ~23h ago). No genuinely failed or stuck skills. atlas-layers healthy (83%). Self-check OK.
+- **P1** — PR #10 (~246h) and PR #11 (~62h) both stalled >24h; both previously flagged. No urgent issues.
+- **P2** — none.
+- **P3** — `atlas` (Sunday 04:00) still has no cron-state entry (never dispatched); previously flagged.
 
 **Files modified:**
-- `docs/status.md` — regenerated, Overall 🔴 DEGRADED, 1 open issue, next run heartbeat 08:00 UTC Tue. Token pulse omitted (no token-report file).
-- `memory/logs/2026-06-15.md` — created with this run's findings.
+- `docs/status.md` — regenerated: Overall 🔴 DEGRADED, Updated 2026-06-16 20:22 UTC, 1 open issue, next run heartbeat 08:00 UTC. Token pulse section omitted (no `token-report-*.md`). Skill table sorted: heartbeat → atlas-layers → atlas → atlas-improve.
+- `memory/logs/2026-06-16.md` — created with the run log.
 
-**Follow-up:** ISS-001 (critical, open since 2026-06-06) — the cron state recorder still misclassifies zero-usage result fragments; needs skill-repair/autoresearch to fix the workflow state-update step and reset heartbeat's counters. This keeps the status page pinned to DEGRADED.
+**Follow-up needed:** ISS-001 (critical, open since 2026-06-06) remains unresolved — the cron-state recorder misclassifies zero-usage result fragments as failures, saturating heartbeat's failure signal. This is a repair-skill/workflow fix, outside heartbeat's scope.
