@@ -10,6 +10,7 @@ A categorical map of the constellation around aaronjmars/aeon. Layers 1–3 list
 The maintainer's own working test bed. Runs the same skill catalog one day behind main as an unbroken backport chain. The only layer the maintainer built deliberately.
 
 - [`aaronjmars/aeon-agent`](https://github.com/aaronjmars/aeon-agent). Same-day-after backport of main since 2026-05-03.
+- [MiroShark](https://miroshark.xyz) — The maintainer's separate flagship (repo aaronjmars/MiroShark, ★1.3k) — a Universal Swarm Intelligence Engine, "simulate anything for $1 in under 10 min." Not an aeon fork or feed consumer; listed here as the operator's adjacent product, not part of the orbit proper.
 
 ## Layer 2 — The fleet
 
@@ -48,8 +49,9 @@ Forks running their own cron schedules in production. Every entry is a live agen
 
 ## Layer 3 — Community skill packs
 
-Installable skill collections that live outside the Aeon repo and are pulled in on demand by ./install-skill-pack. Counted in skill-packs.json; rendered here from the same source.
+Installable skill collections that live outside the Aeon repo and are pulled in on demand by ./install-skill-pack. Counted in skill-packs.json; rendered here from the same source. Hand entries below are community skills not yet in the registry.
 
+- [Aeon Excalidraw Diagram](https://github.com/aeonbook/aeon-excalidraw-diagram) — Community Aeon skill — machine-validated two-color Excalidraw diagrams from drawfiles. Lives outside skill-packs.json; surfaced via aeonbook.
 - [AntFleet aeon-skills](https://www.antfleet.dev) — AntFleet · dev · trusted · 1 skills. On-demand two-model-consensus PR review (Claude Opus + GPT) with on-chain USDC payment channel on Base. Pull-mode counterpart to AntFleet's auto-review GitHub App.
 - [aeon-skill-pack-vvvkernel](https://github.com/baseddevoloper/aeon-skill-pack-vvvkernel) — baseddevoloper · crypto · community · 9 skills. Venice AI inference via VVVKernel — onchain, audit, growth, narrative, image gen, monitoring.
 - [luca-aeon-skills](https://github.com/danbuildss/luca-aeon-skills) — danbuildss · crypto · community · 4 skills. Financial intelligence via x402Books AI — wallet scanning, treasury monitoring, financial reports, agent registry on Base.
@@ -81,6 +83,7 @@ Outside-the-project surfaces that consume Layer 4 feeds and render them for huma
 
 - [Sparkleware](https://sparkleware.dev) — Browsable storefront over skill-packs-catalog.json. Independent web property.
 - [aeonbook](https://www.aeonbook.ai) — Browsable gallery of Aeon host templates and operator deploys (Westworld Host Template, Excalidraw diagram, etc.). Storefront for the deploy/template surface the way Sparkleware is for the skill-pack surface.
+- [Westworld Host Template](https://github.com/proxima424/westworld-host-template) — Use-this-template repo to spin up one autonomous host — soul, memory, reputation — in ~10 min. The deploy-template artifact aeonbook surfaces at /deploy/host.
 
 ## Layer 6 — Audit
 
@@ -109,9 +112,6 @@ Entities present in the underlying data that no layer has claimed yet. Promote t
 
 **Ecosystem projects:**
 
-- [Westworld Host Template](https://github.com/proxima424/westworld-host-template)
-- [Aeon Excalidraw Diagram](https://github.com/aeonbook/aeon-excalidraw-diagram)
-- [MiroShark](https://github.com/aaronjmars/MiroShark)
 - [AgentBounty](https://x.com/agentbountydev)
 - [Amper](https://x.com/ampera_xyze)
 - [Autonomopoly](https://x.com/AUTONOMOPOLY_)
