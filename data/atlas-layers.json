@@ -13,6 +13,12 @@
           "ref": "aaronjmars/aeon-agent",
           "url": "https://github.com/aaronjmars/aeon-agent",
           "note": "Same-day-after backport of main since 2026-05-03."
+        },
+        {
+          "kind": "ecosystem",
+          "ref": "MiroShark",
+          "url": "https://miroshark.xyz",
+          "note": "The maintainer's separate flagship (repo aaronjmars/MiroShark, ★1.3k) — a Universal Swarm Intelligence Engine, \"simulate anything for $1 in under 10 min.\" Not an aeon fork or feed consumer; listed here as the operator's adjacent product, not part of the orbit proper."
         }
       ]
     },
@@ -26,9 +32,16 @@
     {
       "id": "skill-packs",
       "title": "Layer 3 — Community skill packs",
-      "blurb": "Installable skill collections that live outside the Aeon repo and are pulled in on demand by ./install-skill-pack. Counted in skill-packs.json; rendered here from the same source.",
+      "blurb": "Installable skill collections that live outside the Aeon repo and are pulled in on demand by ./install-skill-pack. Counted in skill-packs.json; rendered here from the same source. Hand entries below are community skills not yet in the registry.",
       "auto": { "source": "skill-packs.json", "select": "packs" },
-      "entries": []
+      "entries": [
+        {
+          "kind": "ecosystem",
+          "ref": "Aeon Excalidraw Diagram",
+          "url": "https://github.com/aeonbook/aeon-excalidraw-diagram",
+          "note": "Community Aeon skill — machine-validated two-color Excalidraw diagrams from drawfiles. Lives outside skill-packs.json; surfaced via aeonbook."
+        }
+      ]
     },
     {
       "id": "discovery",
@@ -72,6 +85,12 @@
           "ref": "aeonbook",
           "url": "https://www.aeonbook.ai",
           "note": "Browsable gallery of Aeon host templates and operator deploys (Westworld Host Template, Excalidraw diagram, etc.). Storefront for the deploy/template surface the way Sparkleware is for the skill-pack surface."
+        },
+        {
+          "kind": "ecosystem",
+          "ref": "Westworld Host Template",
+          "url": "https://github.com/proxima424/westworld-host-template",
+          "note": "Use-this-template repo to spin up one autonomous host — soul, memory, reputation — in ~10 min. The deploy-template artifact aeonbook surfaces at /deploy/host."
         }
       ]
     },
