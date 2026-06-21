@@ -1,20 +1,16 @@
 ---
 title: "noelclaw"
 tags: [operator]
-footprint: 10
+footprint: 5
 forks: 1
 stars: 0
 ---
 
 # noelclaw
 
-Operator profile: 3 atlas artifacts (1 fork, 1 pack, 1 ecosystem entry). Footprint **10**, **0 ★** across all forks.
+Operator profile: 2 atlas artifacts (1 fork, 1 pack, 0 ecosystem entries). Footprint **5**, **0 ★** across all forks.
 
 [GitHub profile](https://github.com/noelclaw)
-
-## Linked social handles
-
-- [@noelclawfun](https://x.com/noelclawfun)
 
 ## Forks (1)
 
@@ -23,10 +19,6 @@ Operator profile: 3 atlas artifacts (1 fork, 1 pack, 1 ecosystem entry). Footpri
 ## Authored skill packs (1)
 
 - [[packs/noelclaw-aeon-skill-pack-noelclaw|aeon-skill-pack-noelclaw]] — 2 skills
-
-## Ecosystem identities (1)
-
-- [[ecosystem/noelclaw|NoelClaw]]
 
 ## Get the badge
 

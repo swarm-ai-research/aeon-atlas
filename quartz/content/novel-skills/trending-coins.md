@@ -1,12 +1,12 @@
 ---
 title: "trending-coins"
 tags: [novel-skill]
-adoption: 7
+adoption: 9
 ---
 
 # `trending-coins`
 
-Custom skill shipped by 7 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
+Custom skill shipped by 9 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
 
 ## Forks shipping this
 
@@ -17,3 +17,5 @@ Custom skill shipped by 7 forks. Not present in upstream `aaronjmars/aeon/skills
 - [[forks/hdkzt-aeon|hdkzt/aeon]]
 - [[forks/jonnocraig-aeon|jonnocraig/aeon]]
 - [[forks/gcampton-aeon|gcampton/aeon]]
+- [[forks/AITOBIAS04-CHORUS|AITOBIAS04/CHORUS]]
+- [[forks/acumenix-aeon-agent|acumenix/aeon-agent]]
