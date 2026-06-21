@@ -1,20 +1,21 @@
-HEARTBEAT_OK · STATUS_PAGE=WATCH
+Heartbeat complete.
+
+`HEARTBEAT_OK · STATUS_PAGE=WATCH`
 
 ## Summary
 
-Ran the `heartbeat` skill for the 2026-06-20 20:00 slot (executed 20:50 UTC).
+Ran the heartbeat ambient check for 2026-06-21 09:01 UTC (Sunday, 08:00 slot, delayed).
 
-**Checks:**
-- **P0 — Failed/stuck skills:** None. heartbeat is `success` with `consecutive_failures=0`; success_rate ticked up to **50%** (29/58), so the chronic-failure flag (`< 0.5`) **clears**. atlas-layers healthy (83%). No `consecutive_failures ≥ 3`. Self-check OK.
-- **P1 — PRs/issues:** `gh pr list` and `gh issue list` both empty. Clean.
-- **P2 — Memory:** No flagged follow-ups.
-- **P3 — Missing skills:** `atlas` still never dispatched (next slot Sun 06-21 04:00) — flagged but already in last-48h logs → deduped.
-- **Open issue:** ISS-001 (critical) remains open → overall verdict **🟡 WATCH** (improved from 🔴 DEGRADED now that the P0 chronic flag cleared). Left open for repair skills to close.
+**Findings:**
+- **P0 — all clear.** heartbeat `success_rate` recovered to 51% (30/59), `last_status=success`, consecutive_failures=0; the ISS-001 recorder fix continues working. atlas (100%) and atlas-layers (86%) both ran successfully today. No failed, stuck, or chronically-failing skills.
+- **P1 — clean.** PR #13 (`atlas: 32 new fork(s)`) opened ~3.7h ago — not yet stalled (<24h). No urgent issues.
+- **P3 — positive transition.** `atlas` now has its first cron-state entry (successful dispatch today), clearing the long-standing "atlas never dispatched" flag carried in prior logs.
+- ISS-001 (critical) remains open → keeps overall verdict at 🟡 **WATCH** (left open per the file/close separation between health and repair skills).
 
-**Notification:** None sent. The only standing flag (ISS-001) is already in the last-48h logs, and DEGRADED→WATCH is a positive transition (no notify on improvement).
+**No notification sent** — no P0 flags, PR #13 isn't stalled, and the only standing flag (ISS-001) is already in the last-48h logs.
 
 **Files modified:**
-- `docs/status.md` — regenerated public status page (Overall 🟡 WATCH, Updated 2026-06-20 20:50 UTC, 1 open issue, next run atlas 04:00 UTC Sun; Token pulse omitted — no token-report present).
-- `memory/logs/2026-06-20.md` — appended the 20:00-slot run log.
+- `docs/status.md` — regenerated: Overall 🟡 WATCH, 4 enabled skills, 1 open issue, next run heartbeat 14:00 UTC. Token pulse omitted (no `token-report-*.md`).
+- `memory/logs/2026-06-21.md` — appended heartbeat run entry.
 
-**Follow-up:** ISS-001 is the long-tail of a since-fixed recorder bug; success_rate is climbing back (49%→50%) as new successes accumulate. A repair/skill-evals pass should formally close ISS-001 once it confirms the recorder fix is durable.
+**Follow-up:** A repair skill (skill-repair/autoresearch) should close ISS-001 — the recorder is now logging successes consistently (consec 0, 30 cumulative), so the issue appears effectively resolved but is awaiting formal closure to drop the page out of WATCH.
