@@ -1,20 +1,20 @@
 ---
 title: "swarm-ai-research"
 tags: [operator]
-footprint: 2
+footprint: 4
 forks: 1
-stars: 0
+stars: 2
 ---
 
 # swarm-ai-research
 
-Operator profile: 2 atlas artifacts (1 fork, 0 packs, 0 ecosystem entries). Footprint **2**, **0 ★** across all forks.
+Operator profile: 2 atlas artifacts (1 fork, 0 packs, 0 ecosystem entries). Footprint **4**, **2 ★** across all forks.
 
 [GitHub profile](https://github.com/swarm-ai-research)
 
 ## Forks (1)
 
-- [[forks/swarm-ai-research-aeon-atlas|swarm-ai-research/aeon-atlas]] — 0 ★
+- [[forks/swarm-ai-research-aeon-atlas|swarm-ai-research/aeon-atlas]] — 2 ★
 
 ## Standalone repos using aeon (1)
 

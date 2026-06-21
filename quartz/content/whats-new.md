@@ -3,16 +3,196 @@ title: "What's new"
 tags: [meta]
 ---
 
-> Diff vs snapshot from **2026-06-03** (2 days ago). 5 new forks · 0 removed · 0 new novel skills · 0 new ecosystem entries · 0 new skill packs.
+> Diff vs snapshot from **2026-06-05** (16 days ago). 32 new forks · 5 removed · 71 new novel skills · 0 new ecosystem entries · 5 new skill packs.
 
-## New forks (5)
+## New forks (32)
 
-- [`NurstarK/aeon-upstream`](https://github.com/NurstarK/aeon-upstream) — 0 ★
-- [`yyayourt/aeon`](https://github.com/yyayourt/aeon) — 0 ★
-- [`aeoncity-hub/aeon`](https://github.com/aeoncity-hub/aeon) — 0 ★
-- [`seuzht/aeon`](https://github.com/seuzht/aeon) — 0 ★
-- [`beijiangqukuailian/aeon`](https://github.com/beijiangqukuailian/aeon) — 0 ★
+- [`Tholynceus/aeon`](https://github.com/Tholynceus/aeon) — 0 ★
+- [`logbookbase/aeon`](https://github.com/logbookbase/aeon) — 0 ★
+- [`maredek-bot/aeon`](https://github.com/maredek-bot/aeon) — 0 ★
+- [`CharonAI-code/aeon`](https://github.com/CharonAI-code/aeon) — 0 ★
+- [`KK-OS/aeon`](https://github.com/KK-OS/aeon) — 0 ★
+- [`P9LLI/aeon`](https://github.com/P9LLI/aeon) — 0 ★
+- [`adlai88/aeon`](https://github.com/adlai88/aeon) — 0 ★
+- [`vladimirvalcourt/aeon`](https://github.com/vladimirvalcourt/aeon) — 1 ★
+- [`clawhunter/add-clawhunter-pack`](https://github.com/clawhunter/add-clawhunter-pack) — 0 ★
+- [`hurley87/aeon`](https://github.com/hurley87/aeon) — 0 ★
+- [`runchr-org/aeon`](https://github.com/runchr-org/aeon) — 0 ★
+- [`brainlabors-dot/aeon`](https://github.com/brainlabors-dot/aeon) — 0 ★
+- [`rajkaria/aeon`](https://github.com/rajkaria/aeon) — 0 ★
+- [`tenequm/aeon`](https://github.com/tenequm/aeon) — 0 ★
+- [`ziyosteve/aeon`](https://github.com/ziyosteve/aeon) — 0 ★
+- [`zszkey/aeon-1`](https://github.com/zszkey/aeon-1) — 0 ★
+- [`modelcollapse/aeon`](https://github.com/modelcollapse/aeon) — 0 ★
+- [`wrenwealth/aeon`](https://github.com/wrenwealth/aeon) — 0 ★
+- [`ghostx-dev/aeon`](https://github.com/ghostx-dev/aeon) — 0 ★
+- [`sinfronterasai/aeon`](https://github.com/sinfronterasai/aeon) — 0 ★
+- [`gitlumen-team/aeon`](https://github.com/gitlumen-team/aeon) — 0 ★
+- [`ashneil12/aeon-upstream`](https://github.com/ashneil12/aeon-upstream) — 0 ★
+- [`AdversaLLC/aeon`](https://github.com/AdversaLLC/aeon) — 0 ★
+- [`anondevv69/bankr-space-aeon`](https://github.com/anondevv69/bankr-space-aeon) — 0 ★
+- [`SahilParikh03/aeon`](https://github.com/SahilParikh03/aeon) — 0 ★
+
+_…and 7 more._
+
+## Removed forks (5)
+
+- `AISynthetics/aeon` (deleted or unforked)
+- `avalidurl/aeon` (deleted or unforked)
+- `Azh1er/aeon` (deleted or unforked)
+- `KevinFreistroffer/aeon` (deleted or unforked)
+- `ashneil12/aeon` (deleted or unforked)
+
+## New novel skills (71)
+
+- `ai-framework-watch`
+- `api-health-probe`
+- `atlas-layers`
+- `atrium-catalog-watcher`
+- `bankr-communities`
+- `bankr-space-worker`
+- `capabilities-sweep`
+- `chart-request`
+- `close-trade`
+- `competitor-launch-radar`
+- `competitor-radar`
+- `concierge`
+- `daily-routine`
+- `defi-monitor`
+- `discord-trader-monitor`
+- `ecosystem-entrants`
+- `evening-recap`
+- `fear-divergence-scout`
+- `feature`
+- `fleet-skill-adoption`
+- `follow-up-patrol`
+- `fork-contributor-leaderboard`
+- `fork-first-run-alert`
+- `fork-health-score`
+- `fork-release-tracker`
+- `fork-skill-digest`
+- `fork-skill-gap`
+- `github-issues`
+- `hacker-news-digest`
+- `hyperstitions-ideas`
+- `kraken-execute`
+- `lp-lock-check`
+- `market-context-refresh`
+- `memory-flush`
+- `memory-structural-dedupe`
+- `monitor-runners`
+- `morning-brief`
+- `note-taking`
+- `on-chain-monitor`
+- `pm-intel`
+- `polymarket`
+- `polymarket-comments`
+- `pr-merge-queue`
+- `pr-skill-triage`
+- `price-threshold-alert`
+- `product-hunt-launch`
+- `pvr-triage-monitor`
+- `run-frequency-guard`
+- `show-hn-draft`
+- `skill-of-the-day`
+- `skill-security-scan`
+- `skill-update-check`
+- `smithery-manifest`
+- `star-momentum-alert`
+- `thread-formatter`
+- `token-alert`
+- `token-report`
+- `trader-bootstrap`
+- `trader-x-bootstrap`
+- `trading-brief`
+- `v4-readiness`
+- `vienna-apartments`
+- `wallet-digest`
+- `wallet-risk-audit`
+- `wallet-risk-weekly`
+- `wc-resale`
+- `weekly-review`
+- `weekly-shiplog`
+- `workflow-security-audit`
+- `write-tweet`
+- `x-trader-monitor`
+
+## Top ★ gainers
+
+- [`swarm-ai-research/aeon-atlas`](https://github.com/swarm-ai-research/aeon-atlas) +2 (now 2 ★)
+- [`0xWCME/aeon`](https://github.com/0xWCME/aeon) +1 (now 1 ★)
+- [`AITOBIAS04/CHORUS`](https://github.com/AITOBIAS04/CHORUS) +1 (now 1 ★)
 
 ## Went dormant (no push in 60+ days)
 
-- `lordchildrey/aeon` — last push 2026-04-05
+- `jdwyer76/aeon` — last push 2026-04-21
+- `0xfreddy/aeon` — last push 2026-04-21
+- `moseslua/talon` — last push 2026-04-19
+- `morashad1010/aeon` — last push 2026-04-18
+- `brandong1987/aeon` — last push 2026-04-19
+- `maacx2022/aeon` — last push 2026-04-18
+- `roadtogideon222-byte/aeon` — last push 2026-04-17
+- `JayNgDigitalCaptain/aeon` — last push 2026-04-17
+- `jcksnykm/993` — last push 2026-04-17
+- `iilbell/aeon` — last push 2026-04-17
+- `AcidicSoil/aeon` — last push 2026-04-16
+- `kevingrondin/aeon` — last push 2026-04-15
+- `arnaudbellemare/aeon` — last push 2026-04-15
+- `AITOBIAS04/aeon` — last push 2026-04-15
+- `jordanfxlab/aeon` — last push 2026-04-21
+
+## Removed ecosystem entries
+
+- AgentBounty
+- Amper
+- AntFleet
+- Autonomopoly
+- Bankr
+- Bankrsynth
+- BaseHouse
+- Baseline
+- Bean
+- Blue Agent
+- Capacitr
+- Claw Harbor
+- ClawBank
+- Clerk
+- Cobot
+- GitBlock
+- GitBounty
+- GitKernal
+- Gitlawb Terminal
+- LawbWorld
+- Liq
+- LiquidPad
+- Mei
+- MythosForge
+- NoelClaw
+- PancakeSwap
+- Powerloom
+- Precog
+- Reg Terminal
+- ResearchSwarm
+- Revault
+- RootAi
+- SAM
+- Signa
+- Solvr
+- Spoon
+- SyntheticsAI
+- Tachi
+- USIC
+- Venice Kernel
+- Vexor
+- Wake
+- aeonbook
+- x402Books
+- zer0
+
+## New skill packs
+
+- `UIZorrot/Careful Finance Aeon Skill Pack`
+- `clawhunter/clawhunter-skills`
+- `mnemedb/aeon-skill-pack-mneme`
+- `rajkaria/Hunch Prediction Markets`
+- `simmer/Polymarket Trader by Simmer`

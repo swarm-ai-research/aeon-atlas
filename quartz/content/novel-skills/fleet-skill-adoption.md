@@ -1,0 +1,61 @@
+---
+title: "fleet-skill-adoption"
+tags: [novel-skill]
+adoption: 49
+---
+
+# `fleet-skill-adoption`
+
+Custom skill shipped by 49 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
+
+## Forks shipping this
+
+- [[forks/chxoky-aeon|chxoky/aeon]]
+- [[forks/mnemedb-aeon|mnemedb/aeon]]
+- [[forks/NASTYZUNI-aeon|NASTYZUNI/aeon]]
+- [[forks/alfahadgm-aeon|alfahadgm/aeon]]
+- [[forks/dannysrod-aeon|dannysrod/aeon]]
+- [[forks/daxaur-aeon|daxaur/aeon]]
+- [[forks/anomit-aeon|anomit/aeon]]
+- [[forks/SahilParikh03-aeon|SahilParikh03/aeon]]
+- [[forks/NurstarK-aeon-upstream|NurstarK/aeon-upstream]]
+- [[forks/yyayourt-aeon|yyayourt/aeon]]
+- [[forks/seuzht-aeon|seuzht/aeon]]
+- [[forks/swarm-ai-research-aeon-atlas|swarm-ai-research/aeon-atlas]]
+- [[forks/beijiangqukuailian-aeon|beijiangqukuailian/aeon]]
+- [[forks/rsavitt-aeon-upstream|rsavitt/aeon-upstream]]
+- [[forks/ikkeflikkeri-aeon|ikkeflikkeri/aeon]]
+- [[forks/vigilcodes-aeon|vigilcodes/aeon]]
+- [[forks/BuiltByEcho-aeon|BuiltByEcho/aeon]]
+- [[forks/LiamVisionary-aeon|LiamVisionary/aeon]]
+- [[forks/Atrium-Hermes-aeon|Atrium-Hermes/aeon]]
+- [[forks/sparkleware-aeon|sparkleware/aeon]]
+- [[forks/jianggaoyi-aeon|jianggaoyi/aeon]]
+- [[forks/gdalabs-aeon|gdalabs/aeon]]
+- [[forks/Damoncrypto-aeon|Damoncrypto/aeon]]
+- [[forks/z-korp-aeon|z-korp/aeon]]
+- [[forks/BBridgeers-aeon|BBridgeers/aeon]]
+- [[forks/0xNN-aeon|0xNN/aeon]]
+- [[forks/simistern-aeon|simistern/aeon]]
+- [[forks/shulthz-aeon-work|shulthz/aeon-work]]
+- [[forks/0xbobzilla-aeon|0xbobzilla/aeon]]
+- [[forks/likenow66-aeon|likenow66/aeon]]
+- [[forks/mandateseal-aeon|mandateseal/aeon]]
+- [[forks/luazhizhan-aeon|luazhizhan/aeon]]
+- [[forks/UIZorrot-aeon|UIZorrot/aeon]]
+- [[forks/loessy-aeon|loessy/aeon]]
+- [[forks/AntFleet-aeon|AntFleet/aeon]]
+- [[forks/houndflow-aeon|houndflow/aeon]]
+- [[forks/AIRYDER-aeon|AIRYDER/aeon]]
+- [[forks/ScoutAeon-Scout|ScoutAeon/Scout]]
+- [[forks/NoctelXBT-aeon|NoctelXBT/aeon]]
+- [[forks/KanekiCraynet-aeon|KanekiCraynet/aeon]]
+- [[forks/TakamiyaZee-aeon|TakamiyaZee/aeon]]
+- [[forks/xBalbinus-aeon|xBalbinus/aeon]]
+- [[forks/needsomevibe-aeon|needsomevibe/aeon]]
+- [[forks/0xWCME-aeon|0xWCME/aeon]]
+- [[forks/richard7463-aeon|richard7463/aeon]]
+- [[forks/janicegrech1-hash-aeon|janicegrech1-hash/aeon]]
+- [[forks/Keeleran-aeon|Keeleran/aeon]]
+- [[forks/noelclaw-aeon|noelclaw/aeon]]
+- [[forks/svenakira-aeon|svenakira/aeon]]

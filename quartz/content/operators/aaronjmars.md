@@ -1,14 +1,14 @@
 ---
 title: "aaronjmars"
 tags: [operator]
-footprint: 6
+footprint: 7
 forks: 3
-stars: 0
+stars: 1
 ---
 
 # aaronjmars
 
-Operator profile: 4 atlas artifacts (3 forks, 0 packs, 0 ecosystem entries). Footprint **6**, **0 ★** across all forks.
+Operator profile: 4 atlas artifacts (3 forks, 0 packs, 0 ecosystem entries). Footprint **7**, **1 ★** across all forks.
 
 [GitHub profile](https://github.com/aaronjmars)
 
@@ -20,7 +20,7 @@ Operator profile: 4 atlas artifacts (3 forks, 0 packs, 0 ecosystem entries). Foo
 
 ## Standalone repos using aeon (1)
 
-- [`aaronjmars/aeon-aaronjmars`](https://github.com/aaronjmars/aeon-aaronjmars) — 0 ★
+- [`aaronjmars/aeon-aaronjmars`](https://github.com/aaronjmars/aeon-aaronjmars) — 1 ★
 
 ## Get the badge
 
