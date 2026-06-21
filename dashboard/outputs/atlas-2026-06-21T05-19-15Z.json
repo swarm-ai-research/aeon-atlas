@@ -1,0 +1,120 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Atlas"
+      },
+      "children": [
+        "heading",
+        "stat_forks",
+        "text_top_fork",
+        "separator1",
+        "grid_network",
+        "separator2",
+        "alert_rebuild",
+        "separator3",
+        "link_pr"
+      ]
+    },
+    "heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Atlas updated",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "stat_forks": {
+      "type": "Stat",
+      "props": {
+        "label": "New forks",
+        "value": "32"
+      },
+      "children": []
+    },
+    "text_top_fork": {
+      "type": "Text",
+      "props": {
+        "text": "Top: vladimirvalcourt/aeon"
+      },
+      "children": []
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "grid_network": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat_repos",
+        "stat_stars",
+        "stat_fork_edges"
+      ]
+    },
+    "stat_repos": {
+      "type": "Stat",
+      "props": {
+        "label": "Network repos",
+        "value": "192"
+      },
+      "children": []
+    },
+    "stat_stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars",
+        "value": "15"
+      },
+      "children": []
+    },
+    "stat_fork_edges": {
+      "type": "Stat",
+      "props": {
+        "label": "Fork edges",
+        "value": "189"
+      },
+      "children": []
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "alert_rebuild": {
+      "type": "Alert",
+      "props": {
+        "title": "Universe rebuild skipped",
+        "message": "Sandbox blocked the Quartz bootstrap",
+        "type": "info"
+      },
+      "children": []
+    },
+    "separator3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "link_pr": {
+      "type": "Link",
+      "props": {
+        "label": "View PR #13",
+        "href": "https://github.com/swarm-ai-research/aeon-atlas/pull/13"
+      },
+      "children": []
+    }
+  }
+}
