@@ -1,23 +1,22 @@
-Heartbeat complete. All checks green except the standing open issue.
+Heartbeat complete. All checks green except the standing critical issue.
 
 ## Summary
 
-Ran the **heartbeat** skill (15:22 UTC, Sunday — 14:00 slot, delayed).
+Ran the **heartbeat** skill for the 20:00 UTC slot (2026-06-21 20:03 UTC, Sunday).
 
 **Checks:**
-- **P0** — No active flags. `heartbeat` (52%, 31/60, consec 0, last_success today 09:02), `atlas` (100%, 1/1), `atlas-layers` (86%, 6/7) all `success` with 0 consecutive failures. No failed/stuck/chronic skills; self-check <36h OK.
-- **P1** — PR #13 (atlas, 32 new forks) opened ~10h ago → not stalled. No open issues via `gh issue list`.
-- **P2** — No flagged memory follow-ups.
-- **P3** — All 4 enabled skills current; `atlas-improve` (monthly) not due until Jul 1.
-- **Overall: 🟡 WATCH** — driven solely by open critical issue **ISS-001** (heartbeat recorder misclassification; recorder fix continues working).
+- **P0 (failed/stuck skills):** None. heartbeat (success, 52%, consec 0, last success ~4.7h ago), atlas (100%, 1/1), atlas-layers (86%) all healthy. No consecutive-failure or chronic-failure flags. Self-check OK.
+- **P1 (stalled PRs / urgent issues):** PR #13 (`atlas: 32 new fork(s)`) open ~14.7h — still under 24h, not stalled. No urgent issues (`gh issue list` empty).
+- **P2 (memory follow-ups):** None.
+- **P3 (missing scheduled skills):** All 4 enabled skills current; atlas-improve (monthly) not due until Jul 1.
+- **Open issue:** ISS-001 (critical, output-format) still open → drives overall status to 🟡 WATCH. heartbeat's recorder fix continues working (32 cumulative successes, consec 0).
 
-**Actions:**
-- Regenerated `docs/status.md` (Overall 🟡 WATCH, Updated 15:22 UTC, 4 skills, 1 open issue, next run heartbeat 20:00 UTC; Token pulse omitted — no token-report present).
-- Appended findings to `memory/logs/2026-06-21.md`.
-- **No notification sent** — no P0 flags; PR #13 not yet stalled; ISS-001 already logged within 48h (dedup).
+**Notification:** None sent — no P0 flags; PR #13 not yet stalled; ISS-001 already logged within last 48h (dedup).
 
-Files modified: `docs/status.md`, `memory/logs/2026-06-21.md`.
+**Files modified:**
+- `docs/status.md` — regenerated (Overall 🟡 WATCH, updated timestamp, next run heartbeat 08:00 UTC). No token-report files present → Token pulse section omitted.
+- `memory/logs/2026-06-21.md` — appended this run's findings.
 
-`HEARTBEAT_OK · STATUS_PAGE=WATCH`
+**Result:** `HEARTBEAT_OK · STATUS_PAGE=WATCH`
 
-**Follow-up:** ISS-001 remains open — closure is owned by repair skills, not heartbeat.
+**Follow-up:** ISS-001 remains open and requires a repair skill (skill-repair) to close — heartbeat only files/tracks it.
