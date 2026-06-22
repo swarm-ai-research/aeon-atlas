@@ -1,0 +1,141 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Heartbeat"
+      },
+      "children": [
+        "alert-stalled",
+        "sep-1",
+        "stack-pr",
+        "sep-2",
+        "badge-fleet",
+        "sep-3",
+        "stack-issues"
+      ]
+    },
+    "alert-stalled": {
+      "type": "Alert",
+      "props": {
+        "title": "🟡 STALLED",
+        "message": "PR #13 (atlas: 32 new fork(s)) has been open ~39h with no merge — crossed the 24h stale threshold. Auto-merge is off, so it needs a manual review/merge.",
+        "type": "warning"
+      },
+      "children": []
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "stack-pr": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-pr",
+        "stat-changes",
+        "stat-duration",
+        "text-threshold",
+        "text-action"
+      ]
+    },
+    "heading-pr": {
+      "type": "Heading",
+      "props": {
+        "text": "PR #13 — atlas",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "stat-changes": {
+      "type": "Stat",
+      "props": {
+        "label": "Changes",
+        "value": "32 new fork(s)"
+      },
+      "children": []
+    },
+    "stat-duration": {
+      "type": "Stat",
+      "props": {
+        "label": "Time Open",
+        "value": "~39h"
+      },
+      "children": []
+    },
+    "text-threshold": {
+      "type": "Text",
+      "props": {
+        "text": "Crossed 24h stale threshold",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "text-action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: Auto-merge is off — requires manual review/merge",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "badge-fleet": {
+      "type": "Badge",
+      "props": {
+        "text": "Fleet: Green",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "stack-issues": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-issues",
+        "issue-001"
+      ]
+    },
+    "heading-issues": {
+      "type": "Heading",
+      "props": {
+        "text": "Open Issues",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "issue-001": {
+      "type": "StoryLink",
+      "props": {
+        "title": "ISS-001: heartbeat recorder misclassification",
+        "href": "#issues/ISS-001",
+        "source": "Only open issue"
+      },
+      "children": []
+    }
+  }
+}
