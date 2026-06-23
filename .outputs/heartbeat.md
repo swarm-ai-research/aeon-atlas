@@ -1,22 +1,21 @@
-Heartbeat complete. All checks green except standing flags already tracked — no new notification sent.
+Heartbeat complete. `HEARTBEAT_OK · STATUS_PAGE=WATCH`
 
 ## Summary
 
-Ran the `heartbeat` skill for the 14:00 UTC slot (2026-06-23T14:08Z).
+Ran the heartbeat skill for the 2026-06-23 20:00 UTC slot. All priority checks performed against `memory/cron-state.json`, `aeon.yml`, GitHub, and memory.
 
-**Checks:**
-- **P0 (failed/stuck skills):** None. heartbeat `success` (55%, consec 0, last_success 08:51 today — self-check OK), atlas `success` (100%), atlas-layers `success` (86%). No failures, stalls, degradation, or chronic skills.
-- **P1 (stalled PRs/urgent issues):** PR #13 (`atlas: 32 new fork(s)`) still open ~57h, stalled >24h — already notified 06-22 and in last-48h logs → **deduped, no re-notify**. No urgent issues.
-- **P2/P3:** No flagged memory items; all 4 enabled skills current.
+**Findings:**
+- **P0 (failed/stuck skills):** None. heartbeat (55%, success, consec 0, last success ~6h ago), atlas (100%), atlas-layers (86%) all healthy. No chronic/degradation/stuck flags.
+- **P1 (stalled PRs/urgent issues):** PR #13 still open ~63h (stalled >24h), but already notified on 06-22 and present in last-48h logs → deduped, no re-notify. No urgent issues.
+- **P2:** No flagged memory follow-ups.
+- **P3 (missing scheduled skills):** All 4 enabled skills current; atlas-improve (monthly) not due until Jul 1.
+- **Open issue ISS-001** (critical) remains open → drives overall to 🟡 WATCH.
 
-**Overall: 🟡 WATCH** — driven by open issue ISS-001 (critical) and the standing stalled PR #13.
+**Actions:**
+- No notification sent (no new P0; standing flags already covered within 48h).
+- Regenerated `docs/status.md` — Overall 🟡 WATCH, 4 skills, 1 open issue, next run heartbeat 08:00 UTC. No token-report present → Token pulse omitted.
+- Appended log entry to `memory/logs/2026-06-23.md`.
 
-**Notification:** None sent (no new P0 flags; both standing flags already notified/logged within 48h).
+**Files modified:** `docs/status.md`, `memory/logs/2026-06-23.md`
 
-**Files modified:**
-- `docs/status.md` — regenerated public status page (Overall 🟡 WATCH, updated 14:08 UTC, next run 20:00 UTC). Token pulse omitted (no `token-report-*.md`).
-- `memory/logs/2026-06-23.md` — appended the 14:00-slot run log.
-
-`HEARTBEAT_OK · STATUS_PAGE=WATCH` — auto-commits on `main` via the workflow step.
-
-**Follow-up:** PR #13 still needs manual review/merge; ISS-001 remains open for a repair skill to close.
+**Follow-up:** PR #13 still needs manual review/merge (auto-merge disabled); ISS-001 awaiting closure by a repair skill.
