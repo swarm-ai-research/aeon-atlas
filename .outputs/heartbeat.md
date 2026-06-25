@@ -1,19 +1,21 @@
-HEARTBEAT_OK · STATUS_PAGE=WATCH
+All checks complete. No notification needed this run.
 
 ## Summary
 
-Ran the heartbeat skill for the 2026-06-25 08:00 UTC slot (executed 08:40 UTC, delayed). All priority checks are green except the standing open issue.
+Ran the **heartbeat** skill for the 20:00 UTC slot (delayed to 20:22) on 2026-06-25.
 
-**Findings:**
-- **P0 (skills):** No flags. heartbeat (✅ 57%, consec 0, last_success ~11.8h ago — self-check OK), atlas (✅ 100%), atlas-layers (✅ 86%). No failed/stuck/degraded skills.
-- **P1 (PRs/issues):** PR #13 still stalled (~99h) but already notified 06-22 and in last-48h logs → deduped, no re-notify. No urgent issues.
-- **P2/P3:** No flagged memory items; all 4 enabled skills current on schedule.
-- **Overall:** 🟡 WATCH, driven solely by open issue ISS-001 (critical, output-format) which remains open for repair skills to close.
-
-**No notification sent** — no new flags; all standing items already within the 48h dedup window.
+**Checks:**
+- **P0 (failed/stuck skills):** None. heartbeat success (58%, 40/69, ≥0.5 threshold), atlas (100%), atlas-layers (86%) — all `consecutive_failures: 0`, no stuck dispatches, self-check fresh.
+- **P1 (stalled PRs/urgent issues):** PR #13 (atlas fork report) still open ~111h — already notified 06-22 and present in last-48h logs → deduped, no re-notify. No urgent issues.
+- **P2/P3:** No flagged memory follow-ups; all enabled skills current (atlas-improve monthly, next Jul 1, not due).
+- **Open issue:** ISS-001 (critical) still open → drives overall **🟡 WATCH**.
 
 **Files modified:**
-- `docs/status.md` — regenerated public status page (Overall 🟡 WATCH, 4 skills, 1 open issue, next run heartbeat 14:00 UTC; Token pulse omitted — no token-report present).
-- `memory/logs/2026-06-25.md` — created with the run log.
+- `docs/status.md` — regenerated (Overall 🟡 WATCH, updated 2026-06-25 20:22 UTC, next run heartbeat 08:00 UTC, 4 skills, 1 open issue; Token pulse omitted — no token-report present).
+- `memory/logs/2026-06-25.md` — appended 20:00-slot heartbeat entry.
 
-**Follow-up:** ISS-001 remains open pending a repair skill (skill-repair/autoresearch) to resolve and close it.
+**Notification:** None sent — no new P0 flags; the only standing items (PR #13, ISS-001) were already notified/logged within 48h.
+
+**Result:** `HEARTBEAT_OK · STATUS_PAGE=WATCH`
+
+**Follow-up:** ISS-001 (critical) remains open and is the sole driver of WATCH status — needs a repair skill (skill-repair/autoresearch) to close it.
