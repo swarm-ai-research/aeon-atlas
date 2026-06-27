@@ -1,19 +1,18 @@
-Heartbeat complete. All checks ran; nothing new needs attention.
+`HEARTBEAT_OK · STATUS_PAGE=WATCH`
 
 ## Summary
 
-**Verdict:** `HEARTBEAT_OK · STATUS_PAGE=WATCH` — no notification sent.
+Ran the heartbeat skill for the 14:00 UTC slot (2026-06-27). All priority checks passed with no new flags — no notification sent.
 
-**Checks (all clean of new flags):**
-- **P0 (skill health):** No failed/stuck skills, no consecutive failures ≥3. heartbeat success_rate 60% (44/73, ≥0.5 so no chronic flag), last success ~12.7h ago (self-check OK). atlas (100%) and atlas-layers (86%) both healthy.
-- **P1 (PRs/issues):** PR #13 still stalled (~268h) but already notified 2026-06-22 and present in last-48h logs → deduped, no re-notify. No open GitHub issues.
-- **P2:** No flagged memory follow-ups.
-- **P3 (missing skills):** All 4 enabled skills current; atlas-improve is monthly (next Jul 1, not due).
-
-**Overall:** 🟡 WATCH — driven solely by the standing open issue ISS-001 (critical), which is already tracked. No new P0 flags, so no notification.
+**Checks:**
+- **P0** — No failed or stuck skills. heartbeat (61%, 45/74, consec 0, last success 09:38 UTC ~4.5h ago), atlas (100%), atlas-layers (86%) all healthy. No `consecutive_failures ≥ 3`, no chronic failures, self-check fresh.
+- **P1** — PR #13 still stalled (~273h) but already notified within 48h → deduped. No urgent issues.
+- **P2** — No flagged memory follow-ups.
+- **P3** — All 4 enabled skills current; atlas-improve (monthly, next Jul 1) not yet due.
+- Open **ISS-001** (critical) keeps overall status at 🟡 WATCH (heartbeat files issues; repair skills close them).
 
 **Files modified:**
-- `docs/status.md` — regenerated (Overall 🟡 WATCH, updated 2026-06-27 09:37 UTC, next run heartbeat 14:00 UTC, Token pulse omitted — no token-report present).
-- `memory/logs/2026-06-27.md` — created with this run's findings.
+- `docs/status.md` — regenerated (Overall 🟡 WATCH, updated 14:09 UTC, next run heartbeat 20:00 UTC; Token pulse omitted — no `token-report-*.md`).
+- `memory/logs/2026-06-27.md` — appended run log.
 
-**Follow-up:** PR #13 remains stalled (atlas fork update, open since 06-21) — awaiting operator merge/close; ISS-001 stays open pending a repair skill to close it (heartbeat recorder fix continues working, 44 cumulative successes).
+**Follow-up:** ISS-001 remains open in `memory/issues/INDEX.md` though heartbeat's recorder has run clean for 45 consecutive successes — a repair/skill-health skill should verify and close it.
