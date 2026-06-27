@@ -1,21 +1,19 @@
-Heartbeat complete. All checks green except the standing open issue.
+Heartbeat complete. All checks ran; nothing new needs attention.
 
 ## Summary
 
-Ran the `heartbeat` skill for the 2026-06-26 20:00 UTC slot (executed 20:52 UTC, delayed).
+**Verdict:** `HEARTBEAT_OK · STATUS_PAGE=WATCH` — no notification sent.
 
-**Checks**
-- **P0 — Failed/stuck skills:** None. heartbeat (success, 60% / 43-72, consec 0, last success 15:35 UTC), atlas (100%), atlas-layers (86%) all healthy. No failures, no stuck dispatches, no `consecutive_failures ≥ 3`, no chronic `success_rate < 0.5`. Self-check OK.
-- **P1 — Stalled PRs/issues:** PR #13 (`atlas: 32 new fork(s)`) still stalled (~256h) but already notified 2026-06-22 and present in last-48h logs → deduped, no re-notify. No urgent issues.
-- **P2 — Memory follow-ups:** None flagged.
-- **P3 — Missing scheduled skills:** None. `atlas-improve` (monthly, next Jul 1) not yet due.
-- **Open issue:** ISS-001 (critical, open) drives overall status to 🟡 WATCH.
+**Checks (all clean of new flags):**
+- **P0 (skill health):** No failed/stuck skills, no consecutive failures ≥3. heartbeat success_rate 60% (44/73, ≥0.5 so no chronic flag), last success ~12.7h ago (self-check OK). atlas (100%) and atlas-layers (86%) both healthy.
+- **P1 (PRs/issues):** PR #13 still stalled (~268h) but already notified 2026-06-22 and present in last-48h logs → deduped, no re-notify. No open GitHub issues.
+- **P2:** No flagged memory follow-ups.
+- **P3 (missing skills):** All 4 enabled skills current; atlas-improve is monthly (next Jul 1, not due).
 
-**Actions / files**
-- Regenerated `docs/status.md` — Overall 🟡 WATCH, Updated 20:52 UTC, 4 enabled skills, 1 open issue, next run heartbeat 08:00 UTC. No `token-report-*.md` present → Token pulse section omitted.
-- Appended the 20:00-slot entry to `memory/logs/2026-06-26.md`.
-- No notification sent (no new flags; standing items already within the 48h dedup window).
+**Overall:** 🟡 WATCH — driven solely by the standing open issue ISS-001 (critical), which is already tracked. No new P0 flags, so no notification.
 
-**Follow-up:** ISS-001 remains open and is what keeps the page at WATCH — heartbeat files it, but a repair skill (skill-repair/autoresearch) needs to close it. The recorder fix is holding (43 cumulative successes, consec 0), so it may now be eligible to close as resolved.
+**Files modified:**
+- `docs/status.md` — regenerated (Overall 🟡 WATCH, updated 2026-06-27 09:37 UTC, next run heartbeat 14:00 UTC, Token pulse omitted — no token-report present).
+- `memory/logs/2026-06-27.md` — created with this run's findings.
 
-`HEARTBEAT_OK · STATUS_PAGE=WATCH`
+**Follow-up:** PR #13 remains stalled (atlas fork update, open since 06-21) — awaiting operator merge/close; ISS-001 stays open pending a repair skill to close it (heartbeat recorder fix continues working, 44 cumulative successes).
