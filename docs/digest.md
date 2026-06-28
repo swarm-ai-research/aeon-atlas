@@ -8,5 +8,6 @@ permalink: /digest/
 
 Auto-generated diff between each pair of [history snapshots](https://github.com/swarm-ai-research/aeon-atlas/tree/main/history). Subscribe via [Atom feed](/aeon-atlas/feed.xml).
 
+- **[2026-06-28](/aeon-atlas/digest/2026-06-28/)** — 39 new forks · 5 removed · 71 new novel skills · 6 new packs
 - **[2026-06-05](/aeon-atlas/digest/2026-06-05/)** — 5 new forks
 - **[2026-06-03](/aeon-atlas/digest/2026-06-03/)** — 13 new forks · 1 removed · 4 new novel skills · 2 new packs

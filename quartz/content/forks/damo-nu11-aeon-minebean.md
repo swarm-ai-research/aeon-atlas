@@ -2,7 +2,7 @@
 title: "damo-nu11/aeon-minebean"
 tags: [fork]
 stars: 0
-pushed: "2026-06-04"
+pushed: "2026-06-28"
 enabled_skills: 2
 shipped_skills: 121
 ---
@@ -14,26 +14,52 @@ The most autonomous agent framework. No approval loops. No babysitting. Configur
 [Repository on GitHub](https://github.com/damo-nu11/aeon-minebean)
 
 - **★** 0
-- **Last push:** 2026-06-04
+- **Last push:** 2026-06-28
 - **Default branch:** `main`
 - **Enabled skills in `aeon.yml`:** 2
 - **Skills shipped in `skills/`:** 121
 
 ## Activity (last 30 days)
 
-**650** commits.
+**917** commits.
 
-<svg xmlns="http://www.w3.org/2000/svg" width="65" height="91" viewBox="0 0 65 91" aria-label="650 commits in the last 35 days"><rect x="0" y="0" width="11" height="11" rx="2" ry="2" fill="var(--lightgray, #ebedf0)"><title>2026-05-03: 0 commits</title></rect><rect x="0" y="13" width="11" height="11" rx="2" ry="2" fill="var(--lightgray, #ebedf0)"><title>2026-05-04: 0 commits</title></rect><rect x="0" y="26" width="11" height="11" rx="2" ry="2" fill="var(--lightgray, #ebedf0)"><title>2026-05-05: 0 commits</title></rect><rect x="0" y="39" width="11" height="11" rx="2" ry="2" fill="#9be9a8"><title>2026-05-06: 2 commits</title></rect><rect x="0" y="52" width="11" height="11" rx="2" ry="2" fill="#9be9a8"><title>2026-05-07: 2 commits</title></rect><rect x="0" y="65" width="11" height="11" rx="2" ry="2" fill="#9be9a8"><title>2026-05-08: 2 commits</title></rect><rect x="0" y="78" width="11" height="11" rx="2" ry="2" fill="#9be9a8"><title>2026-05-09: 1 commit</title></rect><rect x="13" y="0" width="11" height="11" rx="2" ry="2" fill="#9be9a8"><title>2026-05-10: 1 commit</title></rect><rect x="13" y="13" width="11" height="11" rx="2" ry="2" fill="#9be9a8"><title>2026-05-11: 1 commit</title></rect><rect x="13" y="26" width="11" height="11" rx="2" ry="2" fill="#9be9a8"><title>2026-05-12: 1 commit</title></rect><rect x="13" y="39" width="11" height="11" rx="2" ry="2" fill="var(--lightgray, #ebedf0)"><title>2026-05-13: 0 commits</title></rect><rect x="13" y="52" width="11" height="11" rx="2" ry="2" fill="#9be9a8"><title>2026-05-14: 6 commits</title></rect><rect x="13" y="65" width="11" height="11" rx="2" ry="2" fill="#9be9a8"><title>2026-05-15: 1 commit</title></rect><rect x="13" y="78" width="11" height="11" rx="2" ry="2" fill="var(--lightgray, #ebedf0)"><title>2026-05-16: 0 commits</title></rect><rect x="26" y="0" width="11" height="11" rx="2" ry="2" fill="#9be9a8"><title>2026-05-17: 4 commits</title></rect><rect x="26" y="13" width="11" height="11" rx="2" ry="2" fill="var(--lightgray, #ebedf0)"><title>2026-05-18: 0 commits</title></rect><rect x="26" y="26" width="11" height="11" rx="2" ry="2" fill="#216e39"><title>2026-05-19: 65 commits</title></rect><rect x="26" y="39" width="11" height="11" rx="2" ry="2" fill="#30a14e"><title>2026-05-20: 33 commits</title></rect><rect x="26" y="52" width="11" height="11" rx="2" ry="2" fill="#30a14e"><title>2026-05-21: 36 commits</title></rect><rect x="26" y="65" width="11" height="11" rx="2" ry="2" fill="#30a14e"><title>2026-05-22: 36 commits</title></rect><rect x="26" y="78" width="11" height="11" rx="2" ry="2" fill="#216e39"><title>2026-05-23: 54 commits</title></rect><rect x="39" y="0" width="11" height="11" rx="2" ry="2" fill="#216e39"><title>2026-05-24: 51 commits</title></rect><rect x="39" y="13" width="11" height="11" rx="2" ry="2" fill="#30a14e"><title>2026-05-25: 36 commits</title></rect><rect x="39" y="26" width="11" height="11" rx="2" ry="2" fill="#30a14e"><title>2026-05-26: 33 commits</title></rect><rect x="39" y="39" width="11" height="11" rx="2" ry="2" fill="#40c463"><title>2026-05-27: 28 commits</title></rect><rect x="39" y="52" width="11" height="11" rx="2" ry="2" fill="#40c463"><title>2026-05-28: 29 commits</title></rect><rect x="39" y="65" width="11" height="11" rx="2" ry="2" fill="#30a14e"><title>2026-05-29: 33 commits</title></rect><rect x="39" y="78" width="11" height="11" rx="2" ry="2" fill="#216e39"><title>2026-05-30: 51 commits</title></rect><rect x="52" y="0" width="11" height="11" rx="2" ry="2" fill="#30a14e"><title>2026-05-31: 48 commits</title></rect><rect x="52" y="13" width="11" height="11" rx="2" ry="2" fill="#40c463"><title>2026-06-01: 20 commits</title></rect><rect x="52" y="26" width="11" height="11" rx="2" ry="2" fill="#40c463"><title>2026-06-02: 25 commits</title></rect><rect x="52" y="39" width="11" height="11" rx="2" ry="2" fill="#40c463"><title>2026-06-03: 20 commits</title></rect><rect x="52" y="52" width="11" height="11" rx="2" ry="2" fill="#40c463"><title>2026-06-04: 31 commits</title></rect><rect x="52" y="65" width="11" height="11" rx="2" ry="2" fill="var(--lightgray, #ebedf0)"><title>2026-06-05: 0 commits</title></rect><rect x="52" y="78" width="11" height="11" rx="2" ry="2" fill="var(--lightgray, #ebedf0)"><title>2026-06-06: 0 commits</title></rect></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="65" height="91" viewBox="0 0 65 91" aria-label="917 commits in the last 35 days"><rect x="0" y="0" width="11" height="11" rx="2" ry="2" fill="#216e39"><title>2026-05-31: 48 commits</title></rect><rect x="0" y="13" width="11" height="11" rx="2" ry="2" fill="#40c463"><title>2026-06-01: 20 commits</title></rect><rect x="0" y="26" width="11" height="11" rx="2" ry="2" fill="#40c463"><title>2026-06-02: 25 commits</title></rect><rect x="0" y="39" width="11" height="11" rx="2" ry="2" fill="#40c463"><title>2026-06-03: 20 commits</title></rect><rect x="0" y="52" width="11" height="11" rx="2" ry="2" fill="#30a14e"><title>2026-06-04: 31 commits</title></rect><rect x="0" y="65" width="11" height="11" rx="2" ry="2" fill="#30a14e"><title>2026-06-05: 31 commits</title></rect><rect x="0" y="78" width="11" height="11" rx="2" ry="2" fill="#216e39"><title>2026-06-06: 49 commits</title></rect><rect x="13" y="0" width="11" height="11" rx="2" ry="2" fill="#216e39"><title>2026-06-07: 43 commits</title></rect><rect x="13" y="13" width="11" height="11" rx="2" ry="2" fill="#30a14e"><title>2026-06-08: 30 commits</title></rect><rect x="13" y="26" width="11" height="11" rx="2" ry="2" fill="#30a14e"><title>2026-06-09: 32 commits</title></rect><rect x="13" y="39" width="11" height="11" rx="2" ry="2" fill="#40c463"><title>2026-06-10: 25 commits</title></rect><rect x="13" y="52" width="11" height="11" rx="2" ry="2" fill="#30a14e"><title>2026-06-11: 27 commits</title></rect><rect x="13" y="65" width="11" height="11" rx="2" ry="2" fill="#30a14e"><title>2026-06-12: 30 commits</title></rect><rect x="13" y="78" width="11" height="11" rx="2" ry="2" fill="#216e39"><title>2026-06-13: 43 commits</title></rect><rect x="26" y="0" width="11" height="11" rx="2" ry="2" fill="#30a14e"><title>2026-06-14: 37 commits</title></rect><rect x="26" y="13" width="11" height="11" rx="2" ry="2" fill="#40c463"><title>2026-06-15: 20 commits</title></rect><rect x="26" y="26" width="11" height="11" rx="2" ry="2" fill="#40c463"><title>2026-06-16: 20 commits</title></rect><rect x="26" y="39" width="11" height="11" rx="2" ry="2" fill="#30a14e"><title>2026-06-17: 27 commits</title></rect><rect x="26" y="52" width="11" height="11" rx="2" ry="2" fill="#40c463"><title>2026-06-18: 25 commits</title></rect><rect x="26" y="65" width="11" height="11" rx="2" ry="2" fill="#30a14e"><title>2026-06-19: 34 commits</title></rect><rect x="26" y="78" width="11" height="11" rx="2" ry="2" fill="#216e39"><title>2026-06-20: 42 commits</title></rect><rect x="39" y="0" width="11" height="11" rx="2" ry="2" fill="#30a14e"><title>2026-06-21: 37 commits</title></rect><rect x="39" y="13" width="11" height="11" rx="2" ry="2" fill="#40c463"><title>2026-06-22: 24 commits</title></rect><rect x="39" y="26" width="11" height="11" rx="2" ry="2" fill="#30a14e"><title>2026-06-23: 33 commits</title></rect><rect x="39" y="39" width="11" height="11" rx="2" ry="2" fill="#30a14e"><title>2026-06-24: 35 commits</title></rect><rect x="39" y="52" width="11" height="11" rx="2" ry="2" fill="#30a14e"><title>2026-06-25: 38 commits</title></rect><rect x="39" y="65" width="11" height="11" rx="2" ry="2" fill="#30a14e"><title>2026-06-26: 36 commits</title></rect><rect x="39" y="78" width="11" height="11" rx="2" ry="2" fill="#216e39"><title>2026-06-27: 52 commits</title></rect><rect x="52" y="0" width="11" height="11" rx="2" ry="2" fill="#9be9a8"><title>2026-06-28: 3 commits</title></rect><rect x="52" y="13" width="11" height="11" rx="2" ry="2" fill="var(--lightgray, #ebedf0)"><title>2026-06-29: 0 commits</title></rect><rect x="52" y="26" width="11" height="11" rx="2" ry="2" fill="var(--lightgray, #ebedf0)"><title>2026-06-30: 0 commits</title></rect><rect x="52" y="39" width="11" height="11" rx="2" ry="2" fill="var(--lightgray, #ebedf0)"><title>2026-07-01: 0 commits</title></rect><rect x="52" y="52" width="11" height="11" rx="2" ry="2" fill="var(--lightgray, #ebedf0)"><title>2026-07-02: 0 commits</title></rect><rect x="52" y="65" width="11" height="11" rx="2" ry="2" fill="var(--lightgray, #ebedf0)"><title>2026-07-03: 0 commits</title></rect><rect x="52" y="78" width="11" height="11" rx="2" ry="2" fill="var(--lightgray, #ebedf0)"><title>2026-07-04: 0 commits</title></rect></svg>
 
 
 ## Parent
 
 - [[forks/aaronjmars-aeon|aaronjmars/aeon]]
 
-## Operator
+## Novel skills shipped (spread to ≥ 2 forks)
 
-- [[operators/damo-nu11|damo-nu11]]
-
-## Ecosystem identity
-
-- [[ecosystem/bean|Bean]]
+- [[novel-skills/ai-framework-watch|ai-framework-watch]]
+- [[novel-skills/daily-routine|daily-routine]]
+- [[novel-skills/defi-monitor|defi-monitor]]
+- [[novel-skills/evening-recap|evening-recap]]
+- [[novel-skills/fork-contributor-leaderboard|fork-contributor-leaderboard]]
+- [[novel-skills/fork-first-run-alert|fork-first-run-alert]]
+- [[novel-skills/fork-release-tracker|fork-release-tracker]]
+- [[novel-skills/fork-skill-digest|fork-skill-digest]]
+- [[novel-skills/fork-skill-gap|fork-skill-gap]]
+- [[novel-skills/github-issues|github-issues]]
+- [[novel-skills/hacker-news-digest|hacker-news-digest]]
+- [[novel-skills/market-context-refresh|market-context-refresh]]
+- [[novel-skills/monitor-runners|monitor-runners]]
+- [[novel-skills/morning-brief|morning-brief]]
+- [[novel-skills/on-chain-monitor|on-chain-monitor]]
+- [[novel-skills/polymarket-comments|polymarket-comments]]
+- [[novel-skills/price-threshold-alert|price-threshold-alert]]
+- [[novel-skills/product-hunt-launch|product-hunt-launch]]
+- [[novel-skills/show-hn-draft|show-hn-draft]]
+- [[novel-skills/skill-security-scan|skill-security-scan]]
+- [[novel-skills/skill-update-check|skill-update-check]]
+- [[novel-skills/smithery-manifest|smithery-manifest]]
+- [[novel-skills/star-momentum-alert|star-momentum-alert]]
+- [[novel-skills/thread-formatter|thread-formatter]]
+- [[novel-skills/token-alert|token-alert]]
+- [[novel-skills/token-report|token-report]]
+- [[novel-skills/v4-readiness|v4-readiness]]
+- [[novel-skills/weekly-review|weekly-review]]
+- [[novel-skills/weekly-shiplog|weekly-shiplog]]
+- [[novel-skills/workflow-security-audit|workflow-security-audit]]
+- [[novel-skills/write-tweet|write-tweet]]

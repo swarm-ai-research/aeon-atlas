@@ -1,0 +1,32 @@
+---
+title: "clawhunter"
+tags: [operator]
+footprint: 5
+forks: 1
+stars: 0
+---
+
+# clawhunter
+
+Operator profile: 2 atlas artifacts (1 fork, 1 pack, 0 ecosystem entries). Footprint **5**, **0 ★** across all forks.
+
+[GitHub profile](https://github.com/clawhunter)
+
+## Forks (1)
+
+- [[forks/clawhunter-add-clawhunter-pack|clawhunter/add-clawhunter-pack]] — 0 ★
+
+## Authored skill packs (1)
+
+- [[packs/clawhunter-clawhunter-skills|clawhunter-skills]] — 2 skills
+
+## Get the badge
+
+![](https://swarm-ai-research.github.io/aeon-atlas/badges/clawhunter.svg)
+
+Add to your README:
+
+```markdown
+[![Listed on Aeon Atlas](https://swarm-ai-research.github.io/aeon-atlas/badges/clawhunter.svg)](https://swarm-ai-research.github.io/aeon-atlas/universe/operators/clawhunter)
+```
+
