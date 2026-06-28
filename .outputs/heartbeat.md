@@ -1,20 +1,20 @@
-Heartbeat complete for the 14:00 UTC slot. All clear — no notification warranted.
+Heartbeat complete. All checks ran; nothing new needs attention.
 
 ## Summary
 
-Ran the heartbeat ambient check (2026-06-28 14:09 UTC, Sunday — 14:00 slot).
+Ran the **heartbeat** skill (20:00 UTC slot, Sunday 2026-06-28). All priority checks passed clean — no notification sent.
 
-**Checks performed:**
-- **P0 (failed/stuck skills):** None. heartbeat 62% (48/77), consec 0, last_success 08:15 today; atlas 100% (2/2), ran today at 05:05; atlas-layers 86% (6/7), healthy. No stuck dispatches, no `consecutive_failures ≥ 3`, self-check OK.
-- **P1 (stalled PRs / urgent issues):** PR #13 still open ~297h, but already notified 06-22 and within the 48h dedup window → no re-notify. `gh issue list` empty.
+**Checks:**
+- **P0 (failed/stuck skills):** None. heartbeat (63%, success, consec 0, last success 14:10 UTC), atlas (100%), atlas-layers (86%) all healthy. No `consecutive_failures ≥ 3`, no chronic failures, self-check fresh (<36h).
+- **P1 (stalled PRs/urgent issues):** PR #13 still stalled (~299h) but already notified within 48h → dedup, no re-notify. No urgent issues (`gh issue list` empty).
 - **P2 (memory follow-ups):** None.
-- **P3 (missing scheduled skills):** **atlas-layers** did not fire at today's Sunday 05:00 slot (last_dispatch still 06-21 05:10), though atlas (04:00) and heartbeat both fired. last_success age ~177h is still under the 2× interval (336h) threshold → no flag, but tracked as a watch item; will re-confirm at the 20:00 slot.
-- **ISS-001** (critical, open) drives overall to 🟡 WATCH.
-
-**Outcome:** `HEARTBEAT_OK · STATUS_PAGE=WATCH` — no notification sent (no new flags).
+- **P3 (missing scheduled skills):** atlas-layers (weekly Sun 05:00) again did not fire at today's slot — 3rd consecutive check noting it, but last_success age ~183h is still under the 2× interval (336h) threshold, so no flag yet. Tracking.
+- **ISS-001** (critical, open) keeps overall status at 🟡 WATCH; repair skills own its closure.
 
 **Files modified:**
-- `docs/status.md` — regenerated (Overall 🟡 WATCH, 4 enabled skills, 1 open issue, next run heartbeat 20:00 UTC; Token pulse omitted — no token-report present).
-- `memory/logs/2026-06-28.md` — appended 14:00 slot entry.
+- `docs/status.md` — regenerated (Overall 🟡 WATCH, updated 20:03 UTC, 1 open issue, next run heartbeat 08:00 UTC). Token pulse omitted (no token-report-*.md present).
+- `memory/logs/2026-06-28.md` — appended 20:00 slot log entry.
 
-**Follow-up:** Confirm whether atlas-layers' missed Sunday 05:00 dispatch repeats — if its last_success crosses the 336h (2× interval) threshold, it becomes a P3 flag. ISS-001 remains open for a repair skill to close.
+**Follow-up:** Watch atlas-layers — if it misses the next weekly Sunday slot too, last_success will cross the 2× threshold and trip a P3 flag.
+
+`HEARTBEAT_OK · STATUS_PAGE=WATCH`
