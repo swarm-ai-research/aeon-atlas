@@ -1,22 +1,20 @@
-Heartbeat complete. All checks ran clean — no notification needed.
+Heartbeat complete. All priority checks ran; nothing new needs attention, so no notification was sent.
 
 ## Summary
 
-Ran the heartbeat skill (20:00 UTC slot, delayed to 21:04). Fleet is stable; no new attention items.
+Ran the `heartbeat` skill for the 2026-06-28 08:00 UTC (Sunday) slot.
 
-**Checks**
-- **P0 (failed/stuck skills):** None. heartbeat success (61%, 46/75, consec 0, last success 14:09 UTC ~7h ago); atlas (100%) and atlas-layers (86%) both healthy. No chronic/degradation flags, self-check OK.
-- **P1 (PRs/issues):** PR #13 (`atlas: 32 new forks`) still stalled at ~280h — already notified, in last-48h logs → deduped, no re-notify. No open GitHub issues.
-- **P2 (memory):** No flagged follow-ups.
-- **P3 (missing skills):** All 4 enabled skills (atlas, atlas-layers, heartbeat, atlas-improve) current.
-- **ISS-001** (critical) remains open → drives overall **🟡 WATCH**. Recorder fix continues holding (consec 0, 46 cumulative successes).
+**Checks:**
+- **P0 (failed/stuck skills):** None. heartbeat success (62%, 47/76, consec 0); atlas success (100%, ran today 05:05 UTC — weekly Sunday slot fired correctly); atlas-layers success (86%). No chronic, stuck, or ≥3-consecutive-failure flags.
+- **P1 (stalled PRs/urgent issues):** PR #13 still open ~291h — already notified within 48h → dedup, no re-notify. No urgent issues.
+- **P2 (memory follow-ups):** None.
+- **P3 (missing scheduled skills):** No flags. Noted atlas-layers (weekly Sun 05:00) hasn't visibly run at today's slot yet, but it's well under the 2× interval threshold — flagged as a watch item only, will confirm at the 14:00 run.
+- **Overall:** 🟡 WATCH, driven solely by standing critical issue ISS-001 (already logged).
 
-**Files modified**
-- `docs/status.md` — regenerated (Overall 🟡 WATCH, updated 21:04 UTC, next run atlas 04:00 UTC Sun, Token pulse omitted — no token-report present).
-- `memory/logs/2026-06-27.md` — appended the 20:00-slot run log.
+**Files modified:**
+- `docs/status.md` — regenerated public status page (Overall 🟡 WATCH, 4 enabled skills, 1 open issue, next run heartbeat 14:00 UTC; table re-sorted with atlas now newest; Token pulse omitted — no token-report present).
+- `memory/logs/2026-06-28.md` — created with this run's findings.
 
-**No notification sent** — no new P0 flags; only standing items (PR #13, ISS-001) already within the 48h dedup window.
+**Notification:** None sent — no new P0 flags; all standing items already within the 48h dedup window.
 
-Verdict: **HEARTBEAT_OK · STATUS_PAGE=WATCH**
-
-(Note: a heredoc append to the log was blocked by the write sandbox; completed the append via the Edit tool instead.)
+**Follow-up:** Confirm atlas-layers ran today's 05:00 slot at the next heartbeat (14:00 UTC). Final verdict: `HEARTBEAT_OK · STATUS_PAGE=WATCH`.
