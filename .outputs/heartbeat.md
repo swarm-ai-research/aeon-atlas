@@ -1,25 +1,22 @@
-Heartbeat complete. All priority checks ran clean — no new flags, so no notification was sent (per dedup rules).
+`HEARTBEAT_OK · STATUS_PAGE=WATCH`
 
 ## Summary
 
-**Heartbeat run — 2026-06-29 14:55 UTC (Monday, 14:00 slot)**
+Ran the **heartbeat** skill for 2026-06-29 (14:00 slot re-run). All checks performed against `cron-state.json`, `aeon.yml`, `issues/INDEX.md`, and live GitHub.
 
-**P0 — Failed & stuck skills:** None. All 3 dispatched skills (heartbeat, atlas, atlas-layers) show `last_status: success`, `consecutive_failures: 0`, and success rates ≥ 0.5. heartbeat self-check OK (last_success ~18.8h ago, <36h). No stuck/dispatched skills, no API degradation.
+**Findings (all priority tiers):**
+- **P0 — none.** All 3 active skills report `success`, `consecutive_failures: 0`. heartbeat 64% (51/80, ≥0.5 → no chronic flag), self-check fresh (last success 14:56:54Z). atlas 100%, atlas-layers 86%.
+- **P1 — PR #13** open since 06-21 (~322h stalled), but already notified 06-22 and present in last-48h logs → deduped, no re-notify. No urgent-labeled issues.
+- **P2 — none.** No flagged memory follow-ups.
+- **P3 — none trip.** atlas-improve is monthly (next Jul 1, not due); atlas-layers last success ~250h < 2× its weekly interval (336h), still within tolerance though it missed the 06-28 Sunday slot (tracked).
+- **Open issue ISS-001** (critical, output-format) remains open → overall **🟡 WATCH**.
 
-**P1 — Stalled PRs / urgent issues:** PR #13 (`atlas: 32 new fork(s)`) still open ~322h — already notified 06-22 and present in last-48h logs → deduped, no re-notify. No urgent issues.
-
-**P2 — Memory follow-ups:** None flagged.
-
-**P3 — Missing scheduled skills:** No flag trips. atlas-layers (weekly Sun 05:00) did not fire at the 06-28 slot — last_success age ~201.7h is still under the 2× interval (336h) threshold, so continuing to track as a watch item, not yet flaggable.
-
-**Overall:** 🟡 WATCH — driven by the standing open issue **ISS-001** (critical; heartbeat false-failure recorder bug, but the fix continues working — 50 cumulative successes, consec 0).
-
-**Notification:** None sent — no new P0 flags; all standing items already notified/logged within 48h.
+**Actions:**
+- No notification sent — no new flags; both standing items (PR #13, ISS-001) already in recent logs.
+- Regenerated `docs/status.md` — the earlier 14:55 write of this run predated heartbeat's own state update, so its heartbeat row was stale (showed 06-28 20:05). Now correctly shows **2026-06-29 14:56 UTC, 64%**, Overall 🟡 WATCH, 1 open issue, next run 20:00 UTC. No `token-report-*.md` present → Token pulse section omitted.
 
 **Files modified:**
-- `docs/status.md` — regenerated (Overall 🟡 WATCH, Updated 2026-06-29 14:55 UTC, 4 enabled skills, 1 open issue, next run heartbeat 20:00 UTC; Token pulse omitted — no token-report present)
-- `memory/logs/2026-06-29.md` — created with run log
+- `docs/status.md` — refreshed
+- `memory/logs/2026-06-29.md` — appended run entry
 
-**Follow-up:** ISS-001 awaits a repair skill (skill-repair / autoresearch) to fix the cron-state recorder and reset heartbeat counters. atlas-layers Sunday-slot misfire worth watching if it recurs.
-
-`HEARTBEAT_OK · STATUS_PAGE=WATCH`
+**Follow-up:** ISS-001 is the only standing flag. The underlying recorder bug appears fixed (51 cumulative successes, consec 0) — a repair/self-review skill should formally close it; heartbeat only files, it doesn't close.
