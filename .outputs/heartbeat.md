@@ -1,22 +1,22 @@
-Heartbeat complete. All checks ran clean — no notification needed (no new flags; PR #13 and ISS-001 both already deduped within the last 48h).
+Heartbeat complete — fleet is healthy, no notification needed (all flags are already-notified standing items).
 
 ## Summary
 
-Ran the heartbeat skill for the **2026-06-30 14:00 slot** (executed 15:43 UTC).
+Ran the **heartbeat** skill (2026-06-30 21:11 UTC, 20:00 slot).
 
-**Findings (all priority tiers):**
-- **P0 — Failed/stuck skills:** None. heartbeat (65%, consec 0, last_success 08:09 UTC), atlas (100%), atlas-layers (86%) all healthy. No chronic failures, no consecutive_failures ≥ 3, self-check fresh.
-- **P1 — Stalled PRs/urgent issues:** PR #13 still open (~226h) but already notified within 48h → deduped. No urgent issues.
-- **P2 — Memory follow-ups:** None.
-- **P3 — Missing scheduled skills:** atlas-layers missed its 06-28 Sunday slot, but last_success age (~226.5h) is under the 2× weekly threshold (336h) → no flag, still tracking.
-- **Overall:** 🟡 WATCH — driven by open critical issue ISS-001.
+**Checks:**
+- **P0 (failed/stuck skills):** None. All three tracked skills `success` — heartbeat (65%, consec 0, last success ~5.4h ago), atlas (100%), atlas-layers (86%). No consecutive failures, no chronic skills, self-check healthy. The originally-reported ISS-001 symptom (29 consecutive false "failed") has self-cleared in live state (consec=0, last_status=success).
+- **P1:** PR #13 still stalled (~232h) but already notified within 48h → dedup, no re-notify. No urgent issues.
+- **P2:** No flagged memory follow-ups.
+- **P3:** atlas-layers missed its 06-28 Sunday slot but is still within the 2× interval threshold (~232h < 336h) → no flag, tracking.
+- **Open issue:** ISS-001 (critical) remains open → drives overall to **🟡 WATCH**.
 
-**Notification:** None sent (no new flags; standing items already in last-48h logs).
+**Notification:** None sent — no new flags; all standing items already in last-48h logs.
 
 **Files modified:**
-- `docs/status.md` — regenerated (Overall 🟡 WATCH, 4 skills, 1 open issue, next run heartbeat 20:00 UTC; Token pulse omitted — no token-report file).
-- `memory/logs/2026-06-30.md` — appended 14:00-slot log entry.
+- `docs/status.md` — regenerated (Overall 🟡 WATCH, updated 21:11 UTC, next run **atlas-improve 06:00 UTC** Jul 1, 1 open issue, Token pulse omitted — no token report present)
+- `memory/logs/2026-06-30.md` — appended 20:00-slot run entry
 
-**Outcome:** `HEARTBEAT_OK · STATUS_PAGE=WATCH`
+**Result:** `HEARTBEAT_OK · STATUS_PAGE=WATCH`
 
-**Follow-up:** ISS-001 (critical, open since 06-06) remains the only standing flag — it requires a repair skill (skill-repair/autoresearch) to close; heartbeat can only file/track it.
+**Follow-up:** ISS-001 stays open for a repair skill (skill-repair/autoresearch) to close — the recorder fix appears effective, so closing it could be considered.
