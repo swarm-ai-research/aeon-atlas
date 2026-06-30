@@ -1,22 +1,22 @@
-Heartbeat complete. All priority checks ran clean — no notification was warranted.
+Heartbeat complete. All checks ran clean — no notification needed (no new flags; PR #13 and ISS-001 both already deduped within the last 48h).
 
 ## Summary
 
-Ran the `heartbeat` skill (2026-06-30 08:08 UTC, Tuesday 08:00 slot).
+Ran the heartbeat skill for the **2026-06-30 14:00 slot** (executed 15:43 UTC).
 
-**Checks:**
-- **P0 — Failed/stuck skills:** None. heartbeat (✅ success, 64%, consec 0, last success ~11h ago), atlas (✅ 100%), atlas-layers (✅ 86%) all healthy. No chronic failures, no `consecutive_failures ≥ 3`, self-check fresh.
-- **P1 — Stalled PRs/urgent issues:** PR #13 (`atlas: 32 new fork(s)`) still stalled at ~339h, but already notified within 48h → dedup, no re-notify. No urgent issues.
-- **P2 — Memory follow-ups:** None flagged.
-- **P3 — Missing skills:** atlas-layers missed its 06-28 Sunday slot but age (~219h) is still under the 2× interval threshold (336h) → tracking, no flag. atlas-improve monthly, due tomorrow.
-- **Open issue ISS-001** (critical, open) drives overall to 🟡 **WATCH**.
+**Findings (all priority tiers):**
+- **P0 — Failed/stuck skills:** None. heartbeat (65%, consec 0, last_success 08:09 UTC), atlas (100%), atlas-layers (86%) all healthy. No chronic failures, no consecutive_failures ≥ 3, self-check fresh.
+- **P1 — Stalled PRs/urgent issues:** PR #13 still open (~226h) but already notified within 48h → deduped. No urgent issues.
+- **P2 — Memory follow-ups:** None.
+- **P3 — Missing scheduled skills:** atlas-layers missed its 06-28 Sunday slot, but last_success age (~226.5h) is under the 2× weekly threshold (336h) → no flag, still tracking.
+- **Overall:** 🟡 WATCH — driven by open critical issue ISS-001.
 
-**Notification:** None sent — no new flags; PR #13 and ISS-001 both already in last-48h logs.
+**Notification:** None sent (no new flags; standing items already in last-48h logs).
 
 **Files modified:**
-- `docs/status.md` — regenerated: Overall 🟡 WATCH, Updated 2026-06-30 08:08 UTC, 4 enabled skills, 1 open issue, next run heartbeat 14:00 UTC. Token pulse section omitted (no token-report). Auto-commits to main via workflow.
-- `memory/logs/2026-06-30.md` — created with this run's findings.
+- `docs/status.md` — regenerated (Overall 🟡 WATCH, 4 skills, 1 open issue, next run heartbeat 20:00 UTC; Token pulse omitted — no token-report file).
+- `memory/logs/2026-06-30.md` — appended 14:00-slot log entry.
 
-**Verdict:** `HEARTBEAT_OK · STATUS_PAGE=WATCH`
+**Outcome:** `HEARTBEAT_OK · STATUS_PAGE=WATCH`
 
-**Follow-up:** ISS-001 (cron-state recorder misclassification) remains open for skill-repair/autoresearch to close; underlying recorder fix continues working (52 cumulative successes, consec 0).
+**Follow-up:** ISS-001 (critical, open since 06-06) remains the only standing flag — it requires a repair skill (skill-repair/autoresearch) to close; heartbeat can only file/track it.
