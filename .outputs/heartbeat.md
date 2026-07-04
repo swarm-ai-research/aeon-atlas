@@ -1,20 +1,18 @@
-All checks complete. No new items need attention — no notification sent.
+HEARTBEAT_OK · STATUS_PAGE=WATCH
 
 ## Summary
 
-Ran the **heartbeat** skill for the 2026-07-04 08:00 UTC slot (executed 09:37 UTC, delayed).
+Ran the heartbeat skill (2026-07-04 15:03 UTC, delayed 14:00 slot). All checks clean; no notification sent (no new P0 flags, known items already deduped).
 
 **Checks:**
-- **P0 (failed/stuck skills):** All 4 enabled skills healthy in `cron-state.json` — heartbeat (68%, consec 0), atlas (100%), atlas-layers (86%), atlas-improve (100%). No failures, no stuck dispatches, no consecutive_failures ≥ 3, no chronic sub-0.5. Heartbeat self-check <36h OK. **No flag.**
-- **P1:** PR #13 still open (~340h stalled) but already notified and in last-48h logs → deduped, no re-notify. No urgent issues.
-- **P2:** No flagged memory follow-ups.
-- **P3:** atlas-layers `last_success` 06-21 05:11 is ~316.5h old — still within the 2× weekly tolerance (336h), margin now thin (~19.5h). Next due 07-05 05:00. Tracking, no flag.
-- **Open issue:** ISS-001 (critical, output-format) still open → overall verdict **🟡 WATCH**.
+- **P0** — No failed/stuck skills. All 4 enabled skills (heartbeat 68%, atlas 100%, atlas-layers 86%, atlas-improve 100%) at `last_status=success`, consec_failures 0. Heartbeat self-check <36h OK. **No flag.**
+- **P1** — PR #13 (atlas fork report) still open ~322h, but already notified and in last-48h logs → dedup. No urgent issues.
+- **P2** — No flagged memory follow-ups.
+- **P3** — atlas-layers weekly last succeeded 06-21 (~322h ago, just under the 336h/2× threshold; next due 07-05 05:00 — thin ~14h margin, tracking). No flag.
+- Open issue **ISS-001** (critical, self-cleared symptom, held for repair) → **Overall 🟡 WATCH**.
 
 **Files modified:**
-- `docs/status.md` — regenerated public status page (Overall 🟡 WATCH, 4 skills, 1 open issue, Updated 2026-07-04 09:37 UTC, next run heartbeat 14:00 UTC; Token pulse omitted — no `token-report-*.md`).
-- `memory/logs/2026-07-04.md` — created with today's heartbeat log entry.
+- `docs/status.md` — regenerated (Overall 🟡 WATCH, Updated 15:03 UTC, next run 20:00 UTC, Token pulse omitted — no token-report exists).
+- `memory/logs/2026-07-04.md` — appended run log.
 
-**Follow-up:** atlas-layers approaching its 2× staleness threshold — if the 07-05 05:00 weekly run misses, it will flag P3 next cycle. ISS-001 remains open pending a repair skill to close it.
-
-`HEARTBEAT_OK · STATUS_PAGE=WATCH`
+**Follow-up:** atlas-layers hasn't run since 06-21; if it misses the 07-05 05:00 slot it crosses the 2×-interval P3 threshold and should flag next run.
