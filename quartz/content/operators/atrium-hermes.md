@@ -1,14 +1,14 @@
 ---
 title: "Atrium-Hermes"
 tags: [operator]
-footprint: 5
+footprint: 7
 forks: 1
 stars: 0
 ---
 
 # Atrium-Hermes
 
-Operator profile: 2 atlas artifacts (1 fork, 1 pack, 0 ecosystem entries). Footprint **5**, **0 ★** across all forks.
+Operator profile: 3 atlas artifacts (1 fork, 1 pack, 0 ecosystem entries). Footprint **7**, **0 ★** across all forks.
 
 [GitHub profile](https://github.com/Atrium-Hermes)
 
@@ -19,6 +19,10 @@ Operator profile: 2 atlas artifacts (1 fork, 1 pack, 0 ecosystem entries). Footp
 ## Authored skill packs (1)
 
 - [[packs/atrium-hermes-aeon-atrium-skills|Atrium Skills]] — 3 skills
+
+## Standalone repos using aeon (1)
+
+- [`Atrium-Hermes/atrium-lighthouse`](https://github.com/Atrium-Hermes/atrium-lighthouse) — 0 ★
 
 ## Get the badge
 
