@@ -4,8 +4,177 @@
   <id>https://swarm-ai-research.github.io/aeon-atlas/feed.xml</id>
   <link href="https://swarm-ai-research.github.io/aeon-atlas/" rel="alternate"/>
   <link href="https://swarm-ai-research.github.io/aeon-atlas/feed.xml" rel="self"/>
-  <updated>2026-06-28T00:00:00Z</updated>
+  <updated>2026-07-05T00:00:00Z</updated>
   <author><name>scripts/atlas.mjs</name></author>
+  <entry>
+    <title>Digest 2026-07-05: 9 new forks · 1 removed · 132 new novel skills</title>
+    <id>https://swarm-ai-research.github.io/aeon-atlas/digest/2026-07-05/</id>
+    <link href="https://swarm-ai-research.github.io/aeon-atlas/digest/2026-07-05/" rel="alternate"/>
+    <updated>2026-07-05T00:00:00Z</updated>
+    <summary>9 new forks · 1 removed · 132 new novel skills</summary>
+    <content type="html">&lt;blockquote&gt;
+&lt;p&gt;Diff vs snapshot from &lt;strong&gt;2026-06-28&lt;/strong&gt; (7 days ago). 9 new forks · 1 removed · 132 new novel skills · 0 new ecosystem entries · 0 new skill packs.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;New forks (9)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/nigelon11/aeon&quot;&gt;&lt;code&gt;nigelon11/aeon&lt;/code&gt;&lt;/a&gt; — 1 ★&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/webguy-cloud/aeon&quot;&gt;&lt;code&gt;webguy-cloud/aeon&lt;/code&gt;&lt;/a&gt; — 0 ★&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/Loopershot/aeon&quot;&gt;&lt;code&gt;Loopershot/aeon&lt;/code&gt;&lt;/a&gt; — 0 ★&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/s97472091-pixel/aeon&quot;&gt;&lt;code&gt;s97472091-pixel/aeon&lt;/code&gt;&lt;/a&gt; — 0 ★&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/usepaxterapp/aeon&quot;&gt;&lt;code&gt;usepaxterapp/aeon&lt;/code&gt;&lt;/a&gt; — 0 ★&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/penguinxbt/aeon&quot;&gt;&lt;code&gt;penguinxbt/aeon&lt;/code&gt;&lt;/a&gt; — 0 ★&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/freezerboi/aeon&quot;&gt;&lt;code&gt;freezerboi/aeon&lt;/code&gt;&lt;/a&gt; — 0 ★&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/anajuliabit/aeon-fork&quot;&gt;&lt;code&gt;anajuliabit/aeon-fork&lt;/code&gt;&lt;/a&gt; — 0 ★&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/Cbowcrptex/aeon&quot;&gt;&lt;code&gt;Cbowcrptex/aeon&lt;/code&gt;&lt;/a&gt; — 0 ★&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Removed forks (1)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;janicegrech1-hash/aeon&lt;/code&gt; (deleted or unforked)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;New novel skills (132)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;agent-buzz&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;agent-displacement&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;aixbt-pulse&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;api-health&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;approval-audit&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;article-queue&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;atrium-watch&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;batch-health&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;beamr-route&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;beat-tracker&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;builder-map&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;capabilities-map&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;channel-recap&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;compute-pulse&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;config-validator&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;content-performance&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;contract-audit&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;contributor-leaderboard&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;contributor-reward&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;contributor-spotlight&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;create-campaign&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;daily-shiplog&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;deal-flow&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;deep-research&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;deployer-trace&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;disclosure-emailer&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;disclosure-tracker&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;docs-sync&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ecosystem-links&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;engagement-act&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;external-feature&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;farcaster-digest&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fleet-scorecard&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fleet-state&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;followup-patrol&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fork-cohort&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fork-digest&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fork-events&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fork-firstrun&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fork-health&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fork-release&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;framework-watch&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;frequency-guard&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fund-flow&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;github-releases&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;goal-tracker&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;hn-digest&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;holder-concentration&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;honeypot-check&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;huggingface-trending&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;idea-capture&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;idea-validator&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;janitor&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;launch-radar&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;linked-wallets&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;liquidpad-launch&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;list-digest&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;lp-lock&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;market-context&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;mcp-pulse&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;memory-dedupe&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;milestone-tracker&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;monitor-kalshi&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;morning-briefing&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;onboard&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ops-recap&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;paper-digest&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;paper-pick&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;peng-pulse&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;peng-scout&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;phylax-audit&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pr-merge&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pr-tracker&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;priority-brief&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;product-hunt&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;product-pulse&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;project-lens&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;push-recap&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pvr-triage&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pvr-watchlist&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;reddit-digest&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;reflect&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;refresh-x&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;reg-monitor&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;remix-tweets&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;repo-actions&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;repo-article&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;repo-pulse&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;repo-revive&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;research-brief&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;retrospective&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;routine&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;rss-digest&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;rss-feed&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;rug-scan&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;rwa-pulse&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;security-digest&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;self-repair-ledger&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;self-review&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;show-hn&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;signal-verdict&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;skill-adoption&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;skill-analytics&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;skill-enabler&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;skill-evals&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;skill-freshness&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;skill-gap&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;skill-graph&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;skill-leaderboard&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;skill-scan&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;skill-spotlight&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;skill-triage&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;skill-update&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;sparkleware-catalog&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;spend-monitor&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;star-momentum&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;startup-idea&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;syndicate-article&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;technical-explainer&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;telegram-digest&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;thread-writer&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;tool-builder&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;topic-momentum&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;tweet-digest&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;tweet-roundup&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;update-gallery&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;vercel-projects&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;vibecoding-digest&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;vigil&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;vigil-revoke&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;wallet-profile&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;wallet-risk&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Went dormant (no push in 60+ days)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;FreyjasWrath/aeon&lt;/code&gt; — last push 2026-05-06&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;infrareactive/aeon&lt;/code&gt; — last push 2026-05-03&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;CNZSMJ/aeon&lt;/code&gt; — last push 2026-04-30&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;eugene-gourevitch/aeon&lt;/code&gt; — last push 2026-04-30&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;adarshhalan/aeon&lt;/code&gt; — last push 2026-04-29&lt;/li&gt;
+&lt;/ul&gt;</content>
+  </entry>
   <entry>
     <title>Digest 2026-06-28: 39 new forks · 5 removed · 71 new novel skills · 6 new packs</title>
     <id>https://swarm-ai-research.github.io/aeon-atlas/digest/2026-06-28/</id>

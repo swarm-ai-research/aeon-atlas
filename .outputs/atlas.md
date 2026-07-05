@@ -1,1 +1,1 @@
-Waiting for the Quartz plugin build to finish.
+*Atlas updated* — 9 new fork(s) (top: nigelon11/aeon). 207 repos, 355 skill-overlap edges, 17★. Universe rebuild skipped (Quartz bootstrap unavailable this run). PR: https://github.com/swarm-ai-research/aeon-atlas/pull/15
