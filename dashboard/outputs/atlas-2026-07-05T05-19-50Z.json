@@ -1,0 +1,90 @@
+{
+  "root": "card-atlas",
+  "state": {},
+  "elements": {
+    "card-atlas": {
+      "type": "Card",
+      "props": {
+        "title": "Atlas updated"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stack-metrics",
+        "text-top-fork",
+        "alert-status",
+        "storylink-pr"
+      ]
+    },
+    "stack-metrics": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat-forks",
+        "stat-repos",
+        "stat-edges",
+        "stat-stars"
+      ]
+    },
+    "stat-forks": {
+      "type": "Stat",
+      "props": {
+        "value": "9",
+        "label": "new forks"
+      }
+    },
+    "stat-repos": {
+      "type": "Stat",
+      "props": {
+        "value": "207",
+        "label": "repos"
+      }
+    },
+    "stat-edges": {
+      "type": "Stat",
+      "props": {
+        "value": "355",
+        "label": "skill-overlap edges"
+      }
+    },
+    "stat-stars": {
+      "type": "Stat",
+      "props": {
+        "value": "17",
+        "label": "★"
+      }
+    },
+    "text-top-fork": {
+      "type": "Text",
+      "props": {
+        "text": "Top fork: nigelon11/aeon",
+        "variant": "caption"
+      }
+    },
+    "alert-status": {
+      "type": "Alert",
+      "props": {
+        "type": "info",
+        "message": "Universe rebuild skipped (Quartz bootstrap unavailable this run)"
+      }
+    },
+    "storylink-pr": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Atlas PR #15",
+        "href": "https://github.com/swarm-ai-research/aeon-atlas/pull/15"
+      }
+    }
+  }
+}
