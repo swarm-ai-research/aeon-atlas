@@ -2,17 +2,17 @@ HEARTBEAT_OK · STATUS_PAGE=WATCH
 
 ## Summary
 
-Ran the heartbeat skill for 2026-07-08 (08:00 slot, executed 09:13 UTC). Fleet is healthy; no notification sent.
+Ran the heartbeat skill (14:00 slot, delayed to 15:03 UTC on Wed 2026-07-08). All checks green on live state; no notification sent (nothing new — every flag already in last-48h logs).
 
 **Checks:**
-- **P0** — No failed or stuck skills. All 4 enabled skills at `last_status: success`, `consecutive_failures: 0`. heartbeat 71% (72/101, >0.5 threshold), self-check <36h (last success ~13h ago). No P0 flag.
-- **P1** — 3 open PRs (#13, #14, #15), all routine auto-generated atlas/atlas-layers output PRs already tracked in last-48h logs → deduped, no re-notify. No urgent issues.
+- **P0** — No failed or stuck skills. `heartbeat` 72% (73/102, last success ~5.8h ago, self-check OK), `atlas` 100%, `atlas-layers` 88%, `atlas-improve` 100%; all consecutive_failures 0. No degradation/chronic flags.
+- **P1** — 3 open PRs (#13 ~416h, #14/#15 ~82h), all routine auto-generated atlas outputs already logged → dedup, no re-notify. No open issues via `gh`.
 - **P2** — No flagged memory follow-ups.
-- **P3** — All 4 enabled skills within schedule tolerance.
-- **Overall:** 🟡 WATCH — driven solely by open critical issue **ISS-001** (heartbeat's historic 29-failure symptom, self-cleared in live state; held open for a repair skill to close).
+- **P3** — 4 enabled skills, all within schedule tolerance.
+- **Overall:** 🟡 WATCH — driven solely by open issue ISS-001 (critical, held for repair; symptom self-cleared, live state healthy).
 
 **Files modified:**
-- `docs/status.md` — regenerated (Overall 🟡 WATCH, 4 skills, 1 open issue, updated 2026-07-08 09:13 UTC, next run heartbeat 14:00 UTC). No `token-report-*.md` present → Token pulse section omitted.
-- `memory/logs/2026-07-08.md` — created with this run's findings.
+- `docs/status.md` — regenerated (Updated 2026-07-08 15:03 UTC, next run heartbeat 20:00 UTC, Token pulse omitted — no token-report file).
+- `memory/logs/2026-07-08.md` — appended run entry.
 
-**Follow-up:** ISS-001 remains open pending a repair/close by a repair skill (skill-repair/autoresearch) — live metrics show the failure symptom has been cleared since 2026-06-06.
+**Follow-up:** ISS-001 stays open for a repair skill (skill-repair) to close — the 29-consecutive-failure symptom remains self-cleared but the issue is retained pending root-cause fix.
