@@ -1,20 +1,22 @@
-Heartbeat complete. All fleet checks green; no notification needed (nothing new since earlier runs), status page refreshed.
+All checks complete. No notification sent — everything is deduped or green.
 
 ## Summary
 
-**Checks (20:00 UTC slot, run at 20:49):**
-- **P0 — Failed/stuck skills:** None. All 4 skills last_status=success, consec_failures=0. heartbeat 72% (74/103), atlas 100%, atlas-layers 88%, atlas-improve 100%. Self-check OK (last success ~5.7h ago). No P0 flag.
-- **P1 — Stalled PRs/urgent issues:** 3 open PRs (#13 ~423h, #14/#15 ~87h) — all routine auto-generated atlas/atlas-layers output PRs already logged within 48h → deduped, no notify. No open issues via `gh`.
-- **P2 — Memory follow-ups:** None flagged.
-- **P3 — Missing scheduled skills:** All 4 enabled skills within schedule tolerance. No flag.
-- **Open issue:** ISS-001 (critical, output-format) still open → overall **🟡 WATCH**. Live state stays healthy; symptom self-cleared, held open for repair to close.
+Ran the **heartbeat** skill for the 2026-07-09 08:00 UTC slot (executed 08:42 UTC).
 
-**Notification:** None sent — no new P0 flags; everything already in last-48h logs.
+**Checks:**
+- **P0 — Failed/stuck skills:** None. heartbeat 72% (75/104, consec 0, last success ~12h ago, self-check OK), atlas 100%, atlas-layers 88%, atlas-improve 100% — all `last_status: success`, no consecutive failures ≥3, no chronic failures.
+- **P1 — PRs/issues:** 3 open PRs (#13, #14, #15) all routine auto-generated atlas/atlas-layers output PRs, already in last-48h logs → deduped. No urgent issues.
+- **P2 — Memory:** No flagged follow-ups.
+- **P3 — Scheduled skills:** All 4 enabled skills within tolerance.
+- **Open issue:** ISS-001 (critical) still open → overall **🟡 WATCH**. Live state is healthy; the 29-consecutive-failure symptom stays self-cleared, issue held open for repair to close.
 
 **Files modified:**
-- `docs/status.md` — regenerated (Overall 🟡 WATCH, Updated 2026-07-08 20:49 UTC, next run heartbeat 08:00 UTC, 4 skills, 1 open issue; Token pulse omitted — no `articles/token-report-*.md`).
-- `memory/logs/2026-07-08.md` — appended run log.
+- `docs/status.md` — regenerated (Overall 🟡 WATCH, 4 skills, 1 open issue, next run heartbeat 14:00 UTC; Token pulse omitted — no token-report file)
+- `memory/logs/2026-07-09.md` — created with run log
 
-**Follow-up:** ISS-001 needs a repair skill to close it (live failure symptom already self-cleared).
+**Notification:** None sent (no new P0 flags; all P1/P2 items already logged in the last 48h).
 
 `HEARTBEAT_OK · STATUS_PAGE=WATCH`
+
+**Follow-up:** ISS-001 remains open awaiting a repair skill to formally close it — the underlying symptom is already self-cleared in live state.
