@@ -1,19 +1,19 @@
-Heartbeat complete for the 2026-07-11 14:00 slot.
+Heartbeat complete — nothing needs attention.
 
 ## Summary
 
-Ran all heartbeat checks. Everything is healthy on live state; no notification sent.
+Ran the **heartbeat** skill (20:00 slot, 20:10 UTC 2026-07-11, Saturday). All checks green; **no notification sent**.
 
-- **P0 (skills):** No failed or stuck skills. heartbeat 74% (82/111, consec 0, last success ~5.7h ago), atlas 100%, atlas-layers 88%, atlas-improve 100% — all `success`, consec 0. No consecutive-failure or chronic flags.
-- **P1 (PRs/issues):** 3 open PRs (#13 stalled ~505h, #14/#15 routine atlas outputs ~153h) — all already tracked in last-48h logs → deduped, no re-notify. No open GitHub issues, none urgent.
-- **P2 (memory):** No flagged follow-ups.
-- **P3 (schedules):** 4 enabled skills all within tolerance (atlas/atlas-layers next Sun 07-12, atlas-improve Aug 1).
-- **Overall:** 🟡 WATCH — driven solely by open issue **ISS-001** (critical). Live symptom stays self-cleared; issue held open for a repair skill to close (heartbeat doesn't close issues).
+- **P0 (failed/stuck skills):** None. All 4 enabled skills report `last_status: success`, `consecutive_failures: 0`, no chronic failures. heartbeat self-check OK (last success ~6h ago). **No flag.**
+- **P1 (stalled PRs / urgent issues):** 3 open PRs — all routine auto-generated atlas/atlas-layers output PRs (#13, #14, #15) already tracked in last-48h logs → deduped, no re-notify. No urgent issues (`gh issue list` empty).
+- **P2 (flagged memory):** None.
+- **P3 (missing scheduled skills):** All 4 skills within schedule tolerance.
+- **Overall status:** 🟡 WATCH — driven solely by open critical issue **ISS-001** (held open for repair; live state is healthy and the 29-consecutive-failure symptom stays self-cleared).
 
 **Files modified:**
-- `docs/status.md` — regenerated (Overall 🟡 WATCH, 4 skills, 1 open issue, Updated 14:04 UTC, next run heartbeat 20:00 UTC; Token pulse omitted — no `token-report-*.md`).
-- `memory/logs/2026-07-11.md` — appended 14:00-slot entry.
+- `docs/status.md` — regenerated (Overall 🟡 WATCH, Updated 2026-07-11 20:10 UTC, next run atlas at 04:00 UTC 07-12, 1 open issue). No `token-report-*.md` present → Token pulse section omitted.
+- `memory/logs/2026-07-11.md` — appended 20:00-slot log entry.
 
-**Follow-up:** ISS-001 needs a repair/close pass (skill-repair or manual) to move it to resolved — the underlying 29-consecutive-failure symptom has been self-cleared for weeks, so the page will stay WATCH until it's closed.
+**Follow-up:** ISS-001 remains open for a repair skill to close; no action required this run.
 
 `HEARTBEAT_OK · STATUS_PAGE=WATCH`
