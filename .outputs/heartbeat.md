@@ -1,18 +1,22 @@
-`HEARTBEAT_OK · STATUS_PAGE=WATCH`
+Heartbeat complete. All live skill state is healthy; no notification warranted.
 
 ## Summary
 
-Ran the heartbeat skill (Sunday 2026-07-12, 09:11 UTC — delayed 08:00 slot). All checks clean; no notification sent (nothing new).
+Ran the `heartbeat` skill for the **2026-07-12 14:00 UTC slot** (Sunday). Soul files are empty placeholders → neutral tone.
 
-**Findings:**
-- **P0 — none.** All 4 enabled skills report `last_status: success`, consec_failures 0. heartbeat 74% (self-check <36h OK), atlas 100%, atlas-layers 88%, atlas-improve 100%. atlas ran on schedule today (04:36) with no new PR → silent no-change week, as designed.
-- **P1 — none new.** Same 3 open atlas/atlas-layers output PRs (#13/#14/#15), all already logged in last 48h → deduped. No urgent issues.
-- **P2 — none.**
-- **P3 — soft watch:** atlas-layers was due today 05:00 but its last_dispatch is still 07-05 (missed/delayed Sunday slot). By the >2× schedule-interval rule (7d < 14d) this is *not* a hard flag — GitHub Actions cron can delay. Will reassess at the 14:00 heartbeat if it still hasn't dispatched.
-- **Overall 🟡 WATCH** — driven solely by open critical ISS-001 (self-cleared symptom, held open for repair to close).
+**Checks:**
+- **P0 (failed/stuck):** None. heartbeat 75% (85/114, consec 0, last_success ~5h ago), atlas 100%, atlas-layers 88%, atlas-improve 100% — all `last_status: success`, consec 0. No degradation, no chronic failures.
+- **P1 (PRs/issues):** 3 open PRs (#13 stalled ~552h; #14/#15 routine atlas outputs) — all already in last-48h logs → deduped, no re-notify. No open GitHub issues.
+- **P2:** No flagged memory follow-ups.
+- **P3 (missing skills):** Reassessed the atlas-layers slot-miss the morning run flagged — it missed its 07-12 05:00 weekly slot and still hasn't dispatched (last_dispatch 07-05). atlas fired fine the same morning, so the scheduler works; this is an atlas-layers-specific dropped run. At ~7.4d elapsed it's under the 14d / 2× threshold, so **not a hard flag** — logged an escalation trigger to file an issue if it hasn't dispatched by 07-19 05:00.
+- **Overall:** 🟡 WATCH (driven solely by open critical issue ISS-001, held for repair; live state is fully healthy).
+
+**No notification sent** — no new P0/P1 flags; all items already deduped in last-48h logs; the atlas-layers slot-miss is within tolerance.
 
 **Files modified:**
-- `docs/status.md` — regenerated public status page (🟡 WATCH, 4 skills, 1 open issue, updated 09:11 UTC, next run heartbeat 14:00; Token pulse omitted, no token-report file).
-- `memory/logs/2026-07-12.md` — created with today's heartbeat entry.
+- `docs/status.md` — regenerated (Overall 🟡 WATCH, 4 enabled skills, 1 open issue, updated 2026-07-12 14:09 UTC, next run heartbeat 20:00 UTC).
+- `memory/logs/2026-07-12.md` — appended the 14:00 run log.
 
-**Follow-up:** At the 14:00 heartbeat, confirm atlas-layers has dispatched/completed its weekly Sunday run; escalate if still missing.
+**Follow-up:** If atlas-layers hasn't dispatched by **2026-07-19 05:00 UTC**, file an issue for a repeatedly-dropped weekly cron slot.
+
+`HEARTBEAT_OK · STATUS_PAGE=WATCH`
