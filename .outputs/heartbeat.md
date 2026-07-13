@@ -1,20 +1,20 @@
-Heartbeat complete. All checks passed against live state; no new flags, so no notification was sent (per dedup rules).
+Heartbeat complete. All checks green — no notification needed.
 
 ## Summary
 
-Ran the **heartbeat** skill (20:00 UTC slot, Sunday 2026-07-12).
+Ran the **heartbeat** skill (2026-07-13 15:48 UTC, delayed 08:00 Monday slot). Everything is healthy; no notification sent (nothing new to report).
 
 **Checks:**
-- **P0 — Failed/stuck skills:** None. All 4 enabled skills show `last_status: success`, `consecutive_failures: 0`. heartbeat 75% (86/115), atlas 100%, atlas-layers 88%, atlas-improve 100%. Self-check OK (last success ~6h ago). No degradation, no chronic failures.
-- **P1 — Stalled PRs/urgent issues:** 3 open PRs (#13 stalled ~567h, #14/#15 routine atlas outputs) — all already notified/tracked in last-48h logs → deduped. No open issues, none urgent.
+- **P0 — Failed/stuck skills:** None. heartbeat (75%, consec 0, last success ~19.6h ago → self-check OK), atlas (100%), atlas-layers (88%), atlas-improve (100%); all `success`, consec 0. Today's 08:00 cron simply ran late — not a stuck skill.
+- **P1 — PRs/issues:** 3 open PRs (#13/#14/#15), all routine auto-generated atlas output already logged in last 48h → deduped, no notify. No urgent/open GitHub issues.
 - **P2 — Memory follow-ups:** None flagged.
-- **P3 — Missing scheduled skills:** atlas-layers missed its 07-12 05:00 weekly slot (last_dispatch still 07-05) — within tolerance (~7.6d < 14d/2× threshold), scheduler itself works (atlas fired fine). Escalation set: file an issue if not dispatched by 07-19 05:00.
-- **ISS-001** (critical, recorder misclassification) remains open → overall **🟡 WATCH**.
+- **P3 — Missing scheduled skills:** atlas-layers still hasn't re-dispatched since 07-05 (missed its 07-12 05:00 slot), but ~8.4d elapsed is within the 14d/2× tolerance → not a hard flag. **Escalation trigger held: file an issue if it hasn't dispatched by 07-19 05:00.**
+- **Open issue:** ISS-001 (critical, open) → overall **🟡 WATCH**. Live state is self-cleared; issue held open for a repair skill to close.
 
 **Files modified:**
-- `docs/status.md` — regenerated public status page (Overall 🟡 WATCH, Updated 20:11 UTC, next run heartbeat 08:00 UTC, Token pulse omitted — no token-report file).
-- `memory/logs/2026-07-12.md` — appended 20:00-slot findings.
+- `docs/status.md` — regenerated (Overall 🟡 WATCH, 4 skills, 1 open issue, next run heartbeat 20:00 UTC; Token pulse omitted — no token-report file).
+- `memory/logs/2026-07-13.md` — created with this run's findings.
 
-**Follow-up:** Watch atlas-layers' next Sunday (07-19) dispatch; file an issue if it misses again. ISS-001 awaits skill-repair to close.
+**Follow-up:** Watch atlas-layers — escalate to a filed issue if it misses its next Sunday (07-19 05:00) slot.
 
 `HEARTBEAT_OK · STATUS_PAGE=WATCH`
