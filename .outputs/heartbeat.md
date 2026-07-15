@@ -1,23 +1,22 @@
-Heartbeat complete. All checks ran green at the live-state level; the only standing item is the pre-existing open issue.
+Heartbeat complete. All checks green; nothing new to notify.
 
 ## Summary
 
-Ran the heartbeat skill for the 08:00 UTC slot (executed 09:25 UTC, Wednesday 2026-07-15, delayed).
+Ran the heartbeat skill for the 2026-07-15 14:00 slot (executed ~14:16 UTC).
 
 **Checks:**
-- **P0 — Failed/stuck skills:** None. All 4 enabled skills (`heartbeat`, `atlas`, `atlas-layers`, `atlas-improve`) show `last_status: success`, `consecutive_failures: 0`, and success rates ≥ 0.76. No stuck dispatches, no API degradation, no chronic failures. Heartbeat self-check OK (last success ~13.4h ago, well under 36h).
-- **P1 — PRs/issues:** 3 open PRs (#13, #14, #15) — all routine auto-generated atlas output PRs, all already in the last-48h logs → deduped, no notification. `gh issue list` empty; no urgent issues.
-- **P2 — Memory follow-ups:** None flagged.
-- **P3 — Missing scheduled skills:** `atlas-layers` slot-miss still standing (weekly due 07-12, last dispatch 07-05, ~10.2d elapsed < 14d threshold) → not a hard flag. Escalation carries forward: file an issue if it hasn't dispatched by 07-19 05:00 (next weekly run should self-clear it).
+- **P0 — Failed/stuck skills:** None. All 4 enabled skills (heartbeat 76%, atlas 100%, atlas-layers 88%, atlas-improve 100%) show `last_status: success`, `consecutive_failures: 0`. No chronic/degradation flags. Heartbeat self-check OK (last success ~4.8h ago).
+- **P1 — PRs/issues:** 3 open PRs (#13, #14, #15) — all routine auto-generated atlas output PRs, unchanged and already in last-48h logs → deduped, no notify. No open/urgent GitHub issues.
+- **P2 — Memory:** No flagged follow-ups.
+- **P3 — Missing skills:** atlas-layers slot-miss (due 07-12, last dispatch 07-05, ~10.4d) is under the 14d/2× threshold → not a hard flag. Escalation note carried forward: file an issue if it hasn't dispatched by 07-19 05:00.
+- **Open issue:** ISS-001 (critical, output-format) still open → overall status **🟡 WATCH**. The underlying 29-consecutive-failure symptom stays self-cleared (heartbeat now has 93 recorded successes); issue held open for a repair skill to formally close.
 
-**Overall status:** 🟡 WATCH — driven solely by open issue ISS-001 (critical, held open for repair to close; live symptom remains self-cleared).
+**No notification sent** — no new P0/P1 flags; all standing items already logged within 48h.
 
 **Files modified:**
-- `docs/status.md` — regenerated public status page (Overall 🟡 WATCH, 4 skills, 1 open issue, next run 14:00 UTC; Token pulse omitted — no `token-report-*.md`).
-- `memory/logs/2026-07-15.md` — created with this run's log entry.
-
-**Notification:** None sent — no new P0/P1 flags; all items already logged within 48h.
-
-**Follow-up:** If `atlas-layers` has not dispatched by 2026-07-19 05:00 UTC, file an issue.
+- `docs/status.md` — regenerated (🟡 WATCH, 4 skills, 1 open issue, next run heartbeat 20:00 UTC, Token pulse omitted — no token-report article present).
+- `memory/logs/2026-07-15.md` — appended run log.
 
 `HEARTBEAT_OK · STATUS_PAGE=WATCH`
+
+No follow-up actions required.
