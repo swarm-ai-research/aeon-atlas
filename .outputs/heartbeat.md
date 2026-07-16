@@ -1,21 +1,18 @@
-Heartbeat complete. No notification sent — nothing new to surface.
+`HEARTBEAT_OK · STATUS_PAGE=WATCH`
 
 ## Summary
 
-Ran the heartbeat skill for the **2026-07-16 14:00 UTC slot** (executed 15:19 UTC).
+Ran the heartbeat skill (20:00 UTC slot, 2026-07-16). All checks clean — no notification sent.
 
 **Checks:**
-- **P0 (skill health):** All 4 enabled skills report `last_status: success`, `consecutive_failures: 0`, no chronic failures. heartbeat self-check OK (last success ~6.8h ago). **No flag.**
-- **P1 (PRs/issues):** 3 open PRs (#13, #14, #15) — all routine auto-generated atlas output PRs, already logged in last 48h → deduped. No urgent issues.
-- **P2 (memory):** No flagged follow-ups.
-- **P3 (missing skills):** atlas-layers slot-miss (due 07-12 05:00, last dispatch 07-05) at ~11.4d, still under the 14d 2×-interval threshold → not a hard flag. **Escalation standing: file an issue if not dispatched by 07-19 05:00.**
-
-**Overall:** 🟡 WATCH — solely because ISS-001 (critical, symptom self-cleared, held open for repair) remains open. Live fleet state is healthy.
+- **P0 (failed/stuck skills):** None. All 4 enabled skills `last_status=success`, consecutive_failures 0, success rates all >0.5 (heartbeat 77%, atlas 100%, atlas-layers 88%, atlas-improve 100%). Heartbeat self-check <36h (last success ~5h ago). No flags.
+- **P1 (stalled PRs / urgent issues):** 3 open PRs (#13/#14/#15 — all routine auto-generated atlas output, already in last-48h logs → deduped). `gh issue list` empty.
+- **P2 (memory follow-ups):** None flagged.
+- **P3 (missing scheduled skills):** atlas-layers slot-miss still standing (weekly due 07-12, last dispatch 07-05, ~11.6d < 14d 2× threshold) → not yet a hard flag. **Escalation:** file an issue if it hasn't dispatched by 2026-07-19 05:00.
+- **Overall:** 🟡 WATCH — solely because ISS-001 (critical, output-format) remains open in the tracker; the underlying symptom stays self-cleared (heartbeat now 97 successes). Held open for a repair skill to close.
 
 **Files modified:**
-- `docs/status.md` — regenerated (Overall 🟡 WATCH, 4 skills, 1 open issue, next run heartbeat 20:00 UTC; Token pulse omitted — no token-report file).
-- `memory/logs/2026-07-16.md` — appended run entry.
+- `docs/status.md` — regenerated (Overall 🟡 WATCH, Updated 2026-07-16 20:37 UTC, next run heartbeat 08:00 UTC, 4 skills, 1 open issue; Token pulse omitted — no token-report-*.md).
+- `memory/logs/2026-07-16.md` — appended the 20:00-slot run entry.
 
-**Follow-up:** Watch atlas-layers — if it hasn't dispatched by 2026-07-19 05:00 UTC, file a `missing scheduled skill` issue.
-
-`HEARTBEAT_OK · STATUS_PAGE=WATCH`
+**Follow-up:** Watch the atlas-layers weekly slot on 2026-07-19 05:00; file an issue if it misses again.
