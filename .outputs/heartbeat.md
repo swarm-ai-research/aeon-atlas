@@ -1,18 +1,22 @@
-`HEARTBEAT_OK · STATUS_PAGE=WATCH`
+Heartbeat complete. All checks green — no notification needed.
 
 ## Summary
 
-Ran the heartbeat skill (20:00 UTC slot, 2026-07-16). All checks clean — no notification sent.
+Ran the `heartbeat` skill for the 2026-07-17 08:00 UTC slot (Friday).
 
 **Checks:**
-- **P0 (failed/stuck skills):** None. All 4 enabled skills `last_status=success`, consecutive_failures 0, success rates all >0.5 (heartbeat 77%, atlas 100%, atlas-layers 88%, atlas-improve 100%). Heartbeat self-check <36h (last success ~5h ago). No flags.
-- **P1 (stalled PRs / urgent issues):** 3 open PRs (#13/#14/#15 — all routine auto-generated atlas output, already in last-48h logs → deduped). `gh issue list` empty.
-- **P2 (memory follow-ups):** None flagged.
-- **P3 (missing scheduled skills):** atlas-layers slot-miss still standing (weekly due 07-12, last dispatch 07-05, ~11.6d < 14d 2× threshold) → not yet a hard flag. **Escalation:** file an issue if it hasn't dispatched by 2026-07-19 05:00.
-- **Overall:** 🟡 WATCH — solely because ISS-001 (critical, output-format) remains open in the tracker; the underlying symptom stays self-cleared (heartbeat now 97 successes). Held open for a repair skill to close.
+- **P0 (failed/stuck):** None. All 4 enabled skills (`heartbeat`, `atlas`, `atlas-layers`, `atlas-improve`) show `last_status: success`, `consecutive_failures: 0`. Heartbeat self-check healthy (last success ~11.9h ago, well under 36h). No chronic failures, no API degradation.
+- **P1 (PRs/issues):** 3 open PRs (#13, #14, #15) — all routine auto-generated atlas output PRs, unchanged and already logged within 48h → deduped, no notify. No open issues.
+- **P2 (memory):** No flagged follow-ups.
+- **P3 (missing skills):** `atlas-layers` slot-miss still tracked — weekly, last dispatch 07-05, elapsed ~12.1d < 14d (2× interval), not yet a hard flag. Escalation set: file an issue if it hasn't dispatched by 07-19 05:00.
+- **Open issue ISS-001** (critical, symptom self-cleared) held open for repair → overall verdict **🟡 WATCH**.
 
 **Files modified:**
-- `docs/status.md` — regenerated (Overall 🟡 WATCH, Updated 2026-07-16 20:37 UTC, next run heartbeat 08:00 UTC, 4 skills, 1 open issue; Token pulse omitted — no token-report-*.md).
-- `memory/logs/2026-07-16.md` — appended the 20:00-slot run entry.
+- `docs/status.md` — regenerated (Overall 🟡 WATCH, Updated 2026-07-17 08:32 UTC, next run heartbeat 14:00 UTC, Token pulse omitted — no token-report). Auto-commits on `main` via workflow.
+- `memory/logs/2026-07-17.md` — created with this run's findings.
 
-**Follow-up:** Watch the atlas-layers weekly slot on 2026-07-19 05:00; file an issue if it misses again.
+**Notification:** None sent — no new P0/P1 flags; all standing items already in last-48h logs.
+
+**Follow-up:** File an issue if `atlas-layers` still hasn't dispatched by 2026-07-19 05:00 UTC.
+
+`HEARTBEAT_OK · STATUS_PAGE=WATCH`
