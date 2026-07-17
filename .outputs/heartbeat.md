@@ -1,18 +1,21 @@
-Heartbeat run complete. No notification sent (nothing new to report — all flags already in the last-48h logs).
+Heartbeat complete for the Friday 20:00 UTC slot. All checks green, no notification warranted.
 
 ## Summary
 
-Ran the `heartbeat` skill for the 14:00 UTC slot on 2026-07-17.
+**Result:** `HEARTBEAT_OK · STATUS_PAGE=WATCH`
 
-**Checks:**
-- **P0 (failed/stuck skills):** None. All 4 enabled skills show `last_status: success`, `consecutive_failures: 0`. heartbeat 77% (99/128), atlas 100%, atlas-layers 88%, atlas-improve 100%. Heartbeat self-check healthy (last_success ~5.8h ago). **No P0 flag.**
-- **P1 (stalled PRs / urgent issues):** 3 open PRs (#13, #14, #15) — all routine auto-generated atlas output PRs already logged within 48h → deduped, no notify. No urgent issues.
-- **P2 (memory follow-ups):** None flagged.
-- **P3 (missing scheduled skills):** atlas-layers slot-miss watch continues (weekly due 07-12, last dispatch 07-05; elapsed ~12.4d < 14d threshold) → not yet a hard flag. Escalation held: file an issue if it hasn't dispatched by 07-19 05:00. **No P3 hard flag.**
-- **Overall:** 🟡 WATCH — driven solely by open critical issue ISS-001 (heartbeat's stale 29-failure symptom, self-cleared in live state, held open for a repair skill to close). No P0 present.
+**Checks run:**
+- **P0 (failed/stuck):** None. All 4 enabled skills report `last_status: success`, `consecutive_failures: 0`. heartbeat 78% (100/129), atlas 100%, atlas-layers 88%, atlas-improve 100%. No degradation, no chronic failures, self-check fresh (last success ~6h ago).
+- **P1 (PRs/issues):** 3 open PRs (#13/#14/#15) — all routine auto-generated atlas output PRs already logged within 48h → deduped, no notify. No urgent issues.
+- **P2 (memory):** No flagged follow-ups.
+- **P3 (missing schedules):** atlas-layers weekly slot-miss still standing (last dispatch 07-05, ~12.6d elapsed) but under the 14d/2× threshold → not a hard flag. Escalation watch: file an issue if it hasn't dispatched by 07-19 05:00.
+
+**Overall:** 🟡 WATCH — driven solely by open critical issue ISS-001 (the historical 29-consecutive-failure symptom, self-cleared in live state; held open for repair to close).
 
 **Files modified:**
-- `docs/status.md` — regenerated (Overall 🟡 WATCH, 4 skills, 1 open issue, Updated 2026-07-17 14:19 UTC, next run heartbeat 20:00 UTC; Token pulse omitted — no token-report file).
-- `memory/logs/2026-07-17.md` — appended 14:00-slot heartbeat entry.
+- `docs/status.md` — regenerated (Updated 2026-07-17 20:35 UTC, next run heartbeat 08:00 UTC, 78% heartbeat rate)
+- `memory/logs/2026-07-17.md` — appended 20:00-slot entry
 
-**Follow-up:** None new. Verdict: `HEARTBEAT_OK · STATUS_PAGE=WATCH`.
+**Notification:** None sent — no new P0/P1 flags; all findings already in last-48h logs.
+
+**Follow-up:** If atlas-layers hasn't dispatched by Sun 2026-07-19 05:00 UTC, file an issue for the recurring weekly slot-miss.
