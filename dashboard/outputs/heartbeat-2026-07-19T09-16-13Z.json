@@ -1,0 +1,213 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "heartbeat"
+      },
+      "children": [
+        "alert_main",
+        "separator_1",
+        "stack_details",
+        "separator_2",
+        "stack_investigation",
+        "separator_3",
+        "stack_status"
+      ]
+    },
+    "alert_main": {
+      "type": "Alert",
+      "props": {
+        "title": "atlas-layers: Dispatch Frozen",
+        "message": "Skipped weekly Sunday 05:00 dispatch for 2 weeks (07-12 + 07-19). Last run 2026-07-05, now >14d stale.",
+        "type": "warning"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_details_header",
+        "grid_details"
+      ]
+    },
+    "text_details_header": {
+      "type": "Heading",
+      "props": {
+        "text": "Dispatch Details",
+        "level": "h3"
+      }
+    },
+    "grid_details": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "stat_last_run",
+        "stat_interval",
+        "badge_status",
+        "badge_dates"
+      ]
+    },
+    "stat_last_run": {
+      "type": "Stat",
+      "props": {
+        "label": "Last Run",
+        "value": "2026-07-05"
+      }
+    },
+    "stat_interval": {
+      "type": "Stat",
+      "props": {
+        "label": "Expected Interval",
+        "value": "7d"
+      }
+    },
+    "badge_status": {
+      "type": "Badge",
+      "props": {
+        "text": "Status: Frozen",
+        "variant": "destructive"
+      }
+    },
+    "badge_dates": {
+      "type": "Badge",
+      "props": {
+        "text": "Missed Dispatch: 07-12, 07-19",
+        "variant": "outline"
+      }
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_investigation": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_investigation_header",
+        "stack_issue",
+        "text_sibling_check",
+        "text_root_cause"
+      ]
+    },
+    "text_investigation_header": {
+      "type": "Heading",
+      "props": {
+        "text": "Investigation",
+        "level": "h3"
+      }
+    },
+    "stack_issue": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "text_issue_label",
+        "badge_issue_id",
+        "badge_severity",
+        "badge_category"
+      ]
+    },
+    "text_issue_label": {
+      "type": "Text",
+      "props": {
+        "text": "Filed:"
+      }
+    },
+    "badge_issue_id": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-002",
+        "variant": "secondary"
+      }
+    },
+    "badge_severity": {
+      "type": "Badge",
+      "props": {
+        "text": "medium",
+        "variant": "outline"
+      }
+    },
+    "badge_category": {
+      "type": "Badge",
+      "props": {
+        "text": "config",
+        "variant": "outline"
+      }
+    },
+    "text_sibling_check": {
+      "type": "Text",
+      "props": {
+        "text": "Sibling skill atlas fired fine today at 04:33 — scheduler is alive.",
+        "variant": "body"
+      }
+    },
+    "text_root_cause": {
+      "type": "Text",
+      "props": {
+        "text": "Root cause: Scheduler alive but not matching 05:00 slot.",
+        "variant": "muted"
+      }
+    },
+    "separator_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_status": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_fleet_header",
+        "badge_fleet_health",
+        "badge_overall"
+      ]
+    },
+    "text_fleet_header": {
+      "type": "Heading",
+      "props": {
+        "text": "Fleet Status",
+        "level": "h3"
+      }
+    },
+    "badge_fleet_health": {
+      "type": "Badge",
+      "props": {
+        "text": "🔵 Fleet: Green (except atlas-layers)",
+        "variant": "secondary"
+      }
+    },
+    "badge_overall": {
+      "type": "Badge",
+      "props": {
+        "text": "🟡 Overall: WATCH",
+        "variant": "secondary"
+      }
+    }
+  }
+}
