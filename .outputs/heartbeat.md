@@ -1,19 +1,21 @@
-Heartbeat complete. `HEARTBEAT_OK · STATUS_PAGE=WATCH`
+Heartbeat complete. No notification sent — all findings are already deduped from the last 48h of logs.
 
 ## Summary
 
-Ran the heartbeat skill for the 08:00 UTC slot (executed 09:42 UTC, 2026-07-20). No new notification was sent — every finding was already in the last-48h logs (deduped).
+Ran the heartbeat skill for the **14:00 UTC slot** (2026-07-20 14:26 UTC).
 
 **Checks:**
-- **P0 (failed/stuck):** None. All 4 enabled skills report `last_status: success`, `consecutive_failures: 0`, and success rates ≥ 79%. Heartbeat self-check OK (last success ~13.5h ago). **No P0 flag.**
-- **P1 (stalled PRs/urgent issues):** 3 open PRs (#13, #14, #15) — all routine auto-generated atlas PRs, already logged → deduped. No urgent GitHub issues.
-- **P2 (memory follow-ups):** None flagged.
-- **P3 (missing schedules):** atlas-layers still frozen since 07-05 (missed 07-12 and 07-19 Sunday 05:00 slots, now 15d stale). Already escalated as **ISS-002** → deduped, no re-notify.
+- **P0 — Failed/stuck skills:** None. All 4 enabled skills (`heartbeat` 79%, `atlas` 100%, `atlas-layers` 88%, `atlas-improve` 100%) show `last_status: success`, `consecutive_failures: 0`. Heartbeat self-check OK (last success ~4.7h ago). **No flag.**
+- **P1 — PRs/issues:** 3 open PRs (#13, #14, #15 — all routine auto-generated atlas PRs) confirmed live via `gh pr list`; already in last-48h logs → deduped. `gh issue list` empty. **No flag.**
+- **P2 — Memory:** No flagged follow-ups.
+- **P3 — Missing skills:** `atlas-layers` still frozen since 07-05 (missed 07-12 & 07-19 Sunday slots, >2× weekly interval) — already tracked as **ISS-002** → deduped, no re-notify.
 
-**Overall: 🟡 WATCH** — open issues ISS-001 (critical) + ISS-002 (medium); no P0 flag so not DEGRADED.
+**Overall status:** 🟡 WATCH (2 open issues: ISS-001 critical, ISS-002 medium; no P0 flag → not DEGRADED).
 
 **Files modified:**
-- `docs/status.md` — regenerated (Overall 🟡 WATCH, Updated 2026-07-20 09:42 UTC, next run heartbeat 14:00 UTC; Token pulse omitted, no token-report file)
-- `memory/logs/2026-07-20.md` — created with run entry
+- `docs/status.md` — regenerated (Overall 🟡 WATCH, Updated 14:26 UTC, next run heartbeat 20:00 UTC; Token pulse omitted — no `token-report-*.md`)
+- `memory/logs/2026-07-20.md` — appended 14:00-slot findings
 
-**Follow-up:** ISS-002 (atlas-layers 05:00 Sunday slot-miss) remains open for skill-repair/config-validator to diagnose the `0 5 * * 0` cron matcher vs. the working `0 4 * * 0` atlas slot.
+**Notification:** None sent (all findings already in last-48h logs).
+
+`HEARTBEAT_OK · STATUS_PAGE=WATCH`
