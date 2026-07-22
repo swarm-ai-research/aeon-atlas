@@ -1,23 +1,18 @@
-Heartbeat complete. All checks green; no notification needed (all findings already logged within 48h).
+HEARTBEAT_OK · STATUS_PAGE=WATCH
 
 ## Summary
 
-Ran the **heartbeat** skill (2026-07-21, 20:00 UTC slot).
+Ran the heartbeat skill (08:00 UTC slot, 2026-07-22). All priority checks clean — no notification sent (every finding was already in the last-48h logs).
 
 **Checks:**
-- **P0 — Failed/stuck skills:** None. All 4 enabled skills (`heartbeat` 79%, `atlas` 100%, `atlas-layers` 88%, `atlas-improve` 100%) show `last_status: success`, `consecutive_failures: 0`, no chronic failures. heartbeat self-check <36h OK.
-- **P1 — PRs/issues:** 3 open PRs (#13, #14, #15 — routine auto-generated atlas PRs) confirmed live; no open issues via `gh issue list`. All already in last-48h logs → deduped.
+- **P0 — Failed/stuck skills:** None. All 4 enabled skills (heartbeat 80%, atlas 100%, atlas-layers 88%, atlas-improve 100%) show `last_status: success`, `consecutive_failures: 0`. heartbeat self-check <36h (last success ~12.5h ago). No P0 flag.
+- **P1 — PRs/issues:** 3 open PRs (#13, #14, #15) — all routine auto-generated atlas PRs, already logged → dedup. No open issues.
 - **P2 — Memory:** No flagged follow-ups.
-- **P3 — Missing skills:** `atlas-layers` still frozen since 07-05 (missed 07-12 & 07-19 weekly slots, 16d stale) — already tracked as **ISS-002** → no re-notify.
-
-**Overall:** 🟡 WATCH (ISS-001 critical + ISS-002 medium open; no P0 flag → not DEGRADED).
-
-**Notification:** None sent — every finding is already in the last-48h logs (dedup).
+- **P3 — Missing skills:** atlas-layers still frozen at 2026-07-05 (missed its 07-12 and 07-19 Sunday slots, 17d stale) — already tracked as **ISS-002**, deduped.
+- **Overall:** 🟡 WATCH (ISS-001 critical + ISS-002 medium still open; no P0 → not DEGRADED).
 
 **Files modified:**
-- `docs/status.md` — regenerated public status page (Overall 🟡 WATCH, 4 skills, 2 open issues, Updated 20:09 UTC, next run heartbeat 08:00 UTC; Token pulse omitted — no `token-report-*.md`).
-- `memory/logs/2026-07-21.md` — appended run log.
+- `docs/status.md` — regenerated public status page (Overall 🟡 WATCH, 4 skills, 2 open issues, updated 2026-07-22 08:42 UTC). Token pulse omitted (no `token-report-*.md`).
+- `memory/logs/2026-07-22.md` — created with this run's findings.
 
-**Follow-up:** ISS-002 (`atlas-layers` weekly dispatch failure) remains open and warrants a repair pass — it's now missed 2+ consecutive Sunday slots.
-
-HEARTBEAT_OK · STATUS_PAGE=WATCH
+**Follow-up:** ISS-002 (atlas-layers not dispatching on its weekly Sunday slot) remains open and is now 17d stale — a repair skill should address the scheduler config; heartbeat only surfaces it.
