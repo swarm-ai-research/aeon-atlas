@@ -1,21 +1,19 @@
-Heartbeat executed for the **14:00 UTC slot** (2026-07-26, Sunday).
+Heartbeat complete — 20:00 UTC slot, all checks clean.
 
 ## Summary
 
-Ran the full priority sweep against `memory/cron-state.json`, `aeon.yml`, `memory/issues/INDEX.md`, and GitHub (`gh pr/issue list`).
+Ran the `heartbeat` skill for the 2026-07-26 20:00 UTC slot.
 
-**Findings**
-- **P0 — clean.** No failed or stuck skills. All 4 enabled skills (`heartbeat`, `atlas-layers`, `atlas`, `atlas-improve`) show `last_status: success`, `consecutive_failures: 0`, no chronic failures. Heartbeat self-check OK (last success 08:48 UTC, ~5.4h ago).
-- **P1 — stalled PRs (fired flag).** PRs #13–#16 open >24h; all already in the last-48h logs → deduped, no re-notify. No urgent issues.
-- **P2 — none.**
-- **P3 — atlas missed its Sunday 04:00 slot (confirmed).** The morning run left a checkpoint ("may fire late"); at 14:14 UTC atlas's `last_dispatch` is still 2026-07-19, so its 04:00 slot is a confirmed miss while sibling `atlas-layers` (05:00) fired at 06:24. This is atlas's **first** miss and is under the 2×-interval rule threshold, so — matching the bar used for ISS-002 (2 consecutive misses) — **not filing an issue yet**. Set a checkpoint to re-confirm against next Sunday 2026-08-02; a second miss files a medium missing-dispatch issue.
+**Checks:**
+- **P0 (failed/stuck/degraded):** No flags. All 4 enabled skills (`heartbeat` 81%, `atlas-layers` 89%, `atlas` 100%, `atlas-improve` 100%) show `last_status: success`, `consecutive_failures: 0`, no chronic failures. Heartbeat self-check healthy (last success ~6.3h ago).
+- **P1 (PRs/issues):** 5 open PRs — #13–#16 stalled >24h but all already in last-48h logs → **deduped**. #17 (~14h) under threshold. No open/urgent issues.
+- **P2 (memory):** No flagged follow-ups.
+- **P3 (missing schedules):** `atlas` missed its 07-26 04:00 Sunday slot (first miss — already documented at 14:14). Holding to the 2-consecutive-miss bar (ISS-002 precedent); checkpoint set for next Sunday 2026-08-02. All enabled skills have state entries.
 
-**Overall:** 🟡 WATCH (stalled PRs). No new notification — every finding is already deduped in today's log; the morning run already sent the ISS-001/ISS-002 resolution notice.
+**Overall verdict:** 🟡 WATCH (stalled PRs #13–#16 fire a P1 flag; no P0 → not DEGRADED). All findings deduped → **no notification sent**.
 
-**Files modified**
-- `docs/status.md` — regenerated (Overall 🟡 WATCH, 0 open issues, Updated 14:14 UTC, next run heartbeat 20:00 UTC, Token pulse omitted — no `token-report-*.md`).
-- `memory/logs/2026-07-26.md` — appended the 14:00-slot run entry.
+**Files modified:**
+- `docs/status.md` — regenerated public status page (Updated 2026-07-26 20:32 UTC, next run heartbeat 08:00 UTC, Token pulse omitted — no token-report file).
+- `memory/logs/2026-07-26.md` — appended 20:00-slot findings.
 
-**Follow-up:** Re-confirm atlas's weekly dispatch on 2026-08-02 04:00 UTC; file a medium missing-dispatch issue if it misses a second consecutive Sunday.
-
-`HEARTBEAT_ATTENTION · STATUS_PAGE=WATCH · no notify (all items deduped)`
+**Follow-up:** Confirm `atlas` weekly dispatch on 2026-08-02 04:00; file a medium missing-dispatch issue if it misses a second consecutive Sunday.
