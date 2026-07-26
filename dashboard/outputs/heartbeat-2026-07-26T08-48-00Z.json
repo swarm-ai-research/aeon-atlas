@@ -1,0 +1,177 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Heartbeat"
+      },
+      "children": [
+        "status-section",
+        "separator-1",
+        "issues-section",
+        "separator-2",
+        "watch-section"
+      ]
+    },
+    "status-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "status-text"
+      ]
+    },
+    "status-text": {
+      "type": "Text",
+      "props": {
+        "text": "🟢 Two issues cleared. Open issues now: 0",
+        "variant": "lead"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "issues-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "issues-heading",
+        "issue-001",
+        "issue-002",
+        "atlas-pr-group"
+      ]
+    },
+    "issues-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Resolved Issues",
+        "level": "h3"
+      }
+    },
+    "issue-001": {
+      "type": "Alert",
+      "props": {
+        "title": "ISS-001 (Critical) — Resolved",
+        "message": "Cron recorder classified 125 straight heartbeat runs as success since 2026-06-06. False-failure symptom is gone.",
+        "type": "success"
+      }
+    },
+    "issue-002": {
+      "type": "Alert",
+      "props": {
+        "title": "ISS-002 (Medium) — Resolved",
+        "message": "atlas-layers dispatched cleanly on Sunday slot today (06:24→06:28 UTC). Pre-registered 2026-07-26 confirmation met. Missing runs on 07-12 and 07-19.",
+        "type": "success"
+      }
+    },
+    "atlas-pr-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "pr-label",
+        "pr-17"
+      ]
+    },
+    "pr-label": {
+      "type": "Text",
+      "props": {
+        "text": "Related PR:",
+        "variant": "caption"
+      }
+    },
+    "pr-17": {
+      "type": "Link",
+      "props": {
+        "label": "#17",
+        "href": "https://github.com/aeon-atlas/aeon-atlas/pull/17"
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "watch-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "watch-badge",
+        "watch-alert",
+        "pr-links-group"
+      ]
+    },
+    "watch-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "🟡 WATCH",
+        "variant": "outline"
+      }
+    },
+    "watch-alert": {
+      "type": "Alert",
+      "props": {
+        "title": "4 Auto-Generated PRs Stalled >24h",
+        "message": "Pull requests have been stalled for more than 24 hours.",
+        "type": "warning"
+      }
+    },
+    "pr-links-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "pr-13",
+        "pr-14",
+        "pr-15",
+        "pr-16"
+      ]
+    },
+    "pr-13": {
+      "type": "Link",
+      "props": {
+        "label": "#13",
+        "href": "https://github.com/aeon-atlas/aeon-atlas/pull/13"
+      }
+    },
+    "pr-14": {
+      "type": "Link",
+      "props": {
+        "label": "#14",
+        "href": "https://github.com/aeon-atlas/aeon-atlas/pull/14"
+      }
+    },
+    "pr-15": {
+      "type": "Link",
+      "props": {
+        "label": "#15",
+        "href": "https://github.com/aeon-atlas/aeon-atlas/pull/15"
+      }
+    },
+    "pr-16": {
+      "type": "Link",
+      "props": {
+        "label": "#16",
+        "href": "https://github.com/aeon-atlas/aeon-atlas/pull/16"
+      }
+    }
+  }
+}
