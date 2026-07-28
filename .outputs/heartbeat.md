@@ -1,22 +1,19 @@
-All checks complete.
+Heartbeat complete for the 20:00 slot. All checks green except pre-known stalled PRs (already deduped), so no notification sent.
 
 ## Summary
 
-Ran the **heartbeat** skill (14:00 UTC slot, 2026-07-28 15:31 UTC).
+Ran the `heartbeat` skill (2026-07-28, 20:00 slot @ 20:53 UTC).
 
-**Findings:**
-- **P0 — clean.** All 4 enabled skills (heartbeat 82%, atlas-layers 89%, atlas 100%, atlas-improve 100%) show `last_status: success`, `consecutive_failures: 0`. Heartbeat self-check fresh (last_success ~6h ago). No failed/stuck/degraded/chronic skills.
-- **P1 — WATCH.** 5 open PRs all stalled >24h (#17, #16, #15, #14, #13) — all already logged in last 48h → **deduped, no re-notify**. No urgent issues.
-- **P2/P3 — clean.** No flagged memory items. atlas ~9.4d since last success but under 2× its 14d weekly interval → no flag (checkpoint held for the 2026-08-02 slot).
-
-**Overall: 🟡 WATCH** (stalled PRs) — no P0, so not DEGRADED.
+- **P0 — Failed/stuck skills:** None. All 4 enabled skills (`heartbeat` 82%, `atlas-layers` 89%, `atlas` 100%, `atlas-improve` 100%) show `last_status: success`, `consecutive_failures: 0`, no chronic/degraded flags. Heartbeat self-check OK (last success ~5.3h ago).
+- **P1 — Stalled PRs/urgent issues:** 5 open PRs (#13–#17) all stalled >24h, but all already logged in the last 48h → deduped, no re-notify. `gh issue list` empty.
+- **P2 — Memory follow-ups:** None.
+- **P3 — Missing scheduled skills:** `atlas` (weekly) last succeeded 07-19 (~9.7d, under 2× interval → no flag). Checkpoint on its missed 07-26 slot stands, to confirm against the 2026-08-02 dispatch. All enabled skills have state entries.
+- **Overall:** 🟡 WATCH (stalled-PR P1 flag). No notification sent — every finding was already in the last-48h logs.
 
 **Files modified:**
-- `docs/status.md` — regenerated (Overall 🟡 WATCH, 0 open issues, updated 15:31 UTC, next run heartbeat 20:00 UTC; Token pulse omitted — no token-report file)
-- `memory/logs/2026-07-28.md` — appended run entry
+- `docs/status.md` — regenerated (Overall 🟡 WATCH, Updated 2026-07-28 20:53 UTC, next run heartbeat 08:00 UTC, 0 open issues, Token pulse omitted — no token-report file).
+- `memory/logs/2026-07-28.md` — appended the 20:00-slot log entry (and slot-labeled the two earlier entries for clarity).
 
-**Notification:** none sent — every finding was already in the last-48h logs (dedup rule).
+**Follow-up:** Watch the 2026-08-02 04:00 UTC `atlas` dispatch; a second consecutive miss should be filed as a medium `missing-dispatch` issue (sibling of ISS-002).
 
-`HEARTBEAT_OK · STATUS_PAGE=WATCH · no notify (all items deduped)`
-
-**Follow-up:** watch the 2026-08-02 04:00 atlas dispatch — a second consecutive weekly miss warrants a medium missing-dispatch issue (sibling of ISS-002).
+`HEARTBEAT_OK · STATUS_PAGE=WATCH`
