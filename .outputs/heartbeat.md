@@ -1,19 +1,21 @@
-Heartbeat complete for the 20:00 slot. All checks green except pre-known stalled PRs (already deduped), so no notification sent.
+Heartbeat run complete.
 
 ## Summary
 
-Ran the `heartbeat` skill (2026-07-28, 20:00 slot @ 20:53 UTC).
+Ran the heartbeat skill for the 2026-07-29 08:00 slot (executed 09:46 UTC, Wednesday). All checks clean; no notification sent (every finding was deduped against the last 48h of logs).
 
-- **P0 — Failed/stuck skills:** None. All 4 enabled skills (`heartbeat` 82%, `atlas-layers` 89%, `atlas` 100%, `atlas-improve` 100%) show `last_status: success`, `consecutive_failures: 0`, no chronic/degraded flags. Heartbeat self-check OK (last success ~5.3h ago).
-- **P1 — Stalled PRs/urgent issues:** 5 open PRs (#13–#17) all stalled >24h, but all already logged in the last 48h → deduped, no re-notify. `gh issue list` empty.
-- **P2 — Memory follow-ups:** None.
-- **P3 — Missing scheduled skills:** `atlas` (weekly) last succeeded 07-19 (~9.7d, under 2× interval → no flag). Checkpoint on its missed 07-26 slot stands, to confirm against the 2026-08-02 dispatch. All enabled skills have state entries.
-- **Overall:** 🟡 WATCH (stalled-PR P1 flag). No notification sent — every finding was already in the last-48h logs.
+**Findings by tier:**
+- **P0 — Failed/stuck skills:** None. All 4 enabled skills (`heartbeat` 82%, `atlas-layers` 89%, `atlas` 100%, `atlas-improve` 100%) show `last_status: success`, `consecutive_failures: 0`. Heartbeat self-check <36h OK. No API degradation or chronic failures.
+- **P1 — Stalled PRs/urgent issues:** 5 open PRs (#13–#17) all stalled >24h, but all already logged in the last 48h → deduped, no re-notify. No open issues.
+- **P2 — Memory follow-ups:** None flagged.
+- **P3 — Missing scheduled skills:** `atlas` (weekly) last succeeded 07-19 (~10.2d, over 1× but under 2× the 14d interval → no flag by rule). Checkpoint holds: watch for a second consecutive miss on the 2026-08-02 04:00 slot before filing a medium missing-dispatch issue. Others within window.
+
+**Overall verdict:** 🟡 WATCH (P1 stalled PRs fired; no P0).
 
 **Files modified:**
-- `docs/status.md` — regenerated (Overall 🟡 WATCH, Updated 2026-07-28 20:53 UTC, next run heartbeat 08:00 UTC, 0 open issues, Token pulse omitted — no token-report file).
-- `memory/logs/2026-07-28.md` — appended the 20:00-slot log entry (and slot-labeled the two earlier entries for clarity).
+- `docs/status.md` — regenerated (Overall 🟡 WATCH, 4 enabled skills, 0 open issues, Updated 2026-07-29 09:46 UTC, next run heartbeat 14:00 UTC; Token pulse omitted — no `token-report-*.md`).
+- `memory/logs/2026-07-29.md` — created with the run log.
 
-**Follow-up:** Watch the 2026-08-02 04:00 UTC `atlas` dispatch; a second consecutive miss should be filed as a medium `missing-dispatch` issue (sibling of ISS-002).
+**Result:** `HEARTBEAT_OK · STATUS_PAGE=WATCH · no notify (all items deduped)`
 
-`HEARTBEAT_OK · STATUS_PAGE=WATCH`
+**Follow-up:** Confirm `atlas` weekly dispatch on Sunday 2026-08-02 04:00 UTC — a second consecutive miss warrants a medium missing-dispatch issue (sibling of ISS-002).
