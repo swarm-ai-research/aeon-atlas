@@ -1,19 +1,17 @@
-Heartbeat complete for the 2026-07-31 14:00 UTC slot.
+Heartbeat complete for the 20:00 UTC slot. All checks ran clean.
 
 ## Summary
 
-Ran all heartbeat checks — everything nominal, no notification sent.
+**HEARTBEAT_OK · STATUS_PAGE=WATCH · no notify (all items deduped)**
 
-- **P0 (failed/stuck):** None. All 4 enabled skills (heartbeat, atlas, atlas-layers, atlas-improve) show `last_status: success`, `consecutive_failures: 0`, and success rates ≥ 83%. Heartbeat self-check OK (last success ~18h ago, well under 36h).
-- **P1 (stalled PRs / urgent issues):** 5 open PRs stalled >24h (#13–#17) — all already recorded in the last 48h of logs, so deduped and **not re-notified**. No urgent issues.
-- **P2 (memory follow-ups):** None flagged.
-- **P3 (missing schedules):** atlas (weekly) last succeeded 07-19 (~12d ago) — over 1× but under 2× its 7d interval, so no flag by rule. Checkpoint stands: it missed the 07-26 slot; watch next Sunday 08-02 dispatch — a second consecutive miss files a medium missing-dispatch issue. atlas-improve is due tomorrow (08-01). All skills have state entries.
-- **Overall:** 🟡 WATCH (P1 stalled PRs fired). No P0 → not DEGRADED.
+- **P0 — Failed/stuck skills:** None. All 4 enabled skills (`heartbeat`, `atlas-layers`, `atlas`, `atlas-improve`) show `last_status: success`, `consecutive_failures: 0`, and success rates ≥ 0.83. Heartbeat self-check passed (last success ~5.8h ago). No P0 flag.
+- **P1 — Stalled PRs/urgent issues:** 5 open PRs stalled >24h (#13–#17), but all already appear in the last 48h of logs → deduped, no re-notify. No open issues, none urgent.
+- **P2 — Flagged memory:** None.
+- **P3 — Missing scheduled skills:** `atlas` last succeeded 07-19 (~12.6d, over 1× but under 2× its weekly interval — no flag by rule; watching for a second consecutive miss on 08-02). All skills have state entries.
+- **Overall:** No P0 → not DEGRADED. Stalled PRs fired a P1 flag → **🟡 WATCH**. All findings deduped → no notification sent.
 
 **Files modified:**
-- `docs/status.md` — regenerated public status page (Overall 🟡 WATCH, 4 skills, 0 open issues, next run heartbeat 20:00 UTC; Token pulse omitted — no token-report file).
-- `memory/logs/2026-07-31.md` — created with this run's log entry.
+- `docs/status.md` — regenerated (Overall 🟡 WATCH, Updated 2026-07-31 20:20 UTC, 0 open issues, next run atlas-improve 08-01 06:00 UTC; Token pulse omitted — no `token-report-*.md`).
+- `memory/logs/2026-07-31.md` — appended 20:00-slot findings.
 
-**Follow-up:** Watch the 2026-08-02 04:00 UTC atlas dispatch; a second consecutive weekly miss should be filed as a medium missing-dispatch issue.
-
-`HEARTBEAT_OK · STATUS_PAGE=WATCH · no notify (all items deduped)`
+**Follow-ups:** Confirm `atlas` dispatches on its 2026-08-02 04:00 slot — a second consecutive miss warrants filing a medium missing-dispatch issue (sibling of ISS-002). `atlas-improve` is due tomorrow (08-01 06:00).
