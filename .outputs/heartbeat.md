@@ -1,21 +1,21 @@
-Heartbeat complete for the 14:00 slot.
+Heartbeat complete for the 20:00 UTC slot on 2026-08-02.
 
 ## Summary
 
-Ran the `heartbeat` skill (2026-08-02 14:12 UTC, Sunday — 14:00 slot).
+Ran all heartbeat priority checks. Fleet is stable — no new alerts.
 
-**Checks:**
-- **P0 (failed/stuck skills):** none. All 4 enabled skills healthy — heartbeat (83%, consec 0, self-check OK), atlas-layers (90%), atlas (100%), atlas-improve (100%). No degradation, no chronic failures. **No flag.**
-- **P1 (PRs/issues):** 6 open PRs — #18 (~7.8h, not stalled); #13–#17 stalled >24h but all already in last-48h logs → deduped. No open/urgent issues.
-- **P2 (memory):** nothing flagged.
-- **P3 (missing dispatch):** atlas stale ~14.4d (>2× weekly) — flag stays fired, but **ISS-003** was already filed and P3-notified at the 08:00 slot today → deduped, no re-notify. Checkpoint holds: next Sunday 2026-08-09 04:00.
+**Checks (20:00 slot):**
+- **P0 — clean.** All 4 enabled skills report `last_status: success`, `consecutive_failures: 0`, and success rates well above 0.5 (heartbeat 83%, atlas-layers 90%, atlas 100%, atlas-improve 100%). No failed, stuck, degraded, or chronic skills. Heartbeat self-check <36h (last success ~6.3h ago).
+- **P1 — deduped.** 6 open PRs; #18 is <24h (not stalled). #13–#17 stalled >24h but already in the last 48h of logs → no re-notify. No open/urgent issues.
+- **P2 — none.**
+- **P3 — deduped.** atlas remains ~14.7d stale (>2× its weekly interval), but this flag was already captured this morning as **ISS-003** and P3-notified at the 08:00 slot. Confirmation checkpoint stands: next Sunday 2026-08-09 04:00 (clean dispatch → resolve; 3rd miss → escalate to high).
 
-**Overall: 🟡 WATCH** (P3 flag + 1 open medium issue ISS-003). All findings deduped → **no notification sent**.
+**Overall: 🟡 WATCH** (P3 flag + 1 open medium issue). All findings deduped → **no notification sent** this cycle.
 
 **Files modified:**
-- `docs/status.md` — regenerated (🟡 WATCH, 4 skills, 1 open issue, next run heartbeat 20:00 UTC; Token pulse omitted — no token-report file).
-- `memory/logs/2026-08-02.md` — appended 14:00-slot log entry.
+- `docs/status.md` — regenerated (Overall 🟡 WATCH, Updated 2026-08-02 20:29 UTC, 1 open issue, next run heartbeat 08:00 UTC). No token-report article → Token pulse omitted.
+- `memory/logs/2026-08-02.md` — appended 20:00-slot entry.
 
-**Follow-up:** ISS-003 confirmation checkpoint at Sunday 2026-08-09 04:00 — clean atlas dispatch resolves it; a 3rd consecutive miss escalates severity to high.
+**Follow-up:** None new. Watch the atlas 2026-08-09 04:00 checkpoint (tracked in ISS-003).
 
-`HEARTBEAT_OK · STATUS_PAGE=WATCH`
+`HEARTBEAT_OK · STATUS_PAGE=WATCH · no notify (all items deduped) [20:00 slot]`
