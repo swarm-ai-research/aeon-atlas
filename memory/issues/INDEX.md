@@ -4,8 +4,7 @@
 
 | ID | Title | Severity | Category | Detected | Affected Skills |
 |----|-------|----------|----------|----------|-----------------|
-
-_No open issues._
+| ISS-003 | atlas not dispatching on its weekly Sunday 04:00 slot (2 consecutive misses) | medium | config | 2026-08-02 | atlas |
 
 ## Resolved
 

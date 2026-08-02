@@ -1,0 +1,150 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Heartbeat",
+        "description": "Schedule dispatch monitoring"
+      },
+      "children": [
+        "alert_p3",
+        "sep1",
+        "stack_details",
+        "sep2",
+        "text_overall"
+      ]
+    },
+    "alert_p3": {
+      "type": "Alert",
+      "props": {
+        "title": "🔵 P3 SCHEDULE: atlas",
+        "message": "Weekly Sunday 04:00 slot has not dispatched since 2026-07-19 — missed both 07-26 and 08-02, now >2× its interval.",
+        "type": "warning"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "stack_details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_not_failure",
+        "row_sibling",
+        "text_mirror",
+        "row_issue"
+      ]
+    },
+    "text_not_failure": {
+      "type": "Text",
+      "props": {
+        "text": "Not a failure: last_status still success, it's simply not being matched.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "row_sibling": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "text_sibling",
+        "link_pr18"
+      ]
+    },
+    "text_sibling": {
+      "type": "Text",
+      "props": {
+        "text": "Sibling atlas-layers (05:00) dispatched fine today.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "link_pr18": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #18",
+        "href": "https://github.com/anthropic-ai/aeon-atlas/pull/18",
+        "source": "GitHub"
+      },
+      "children": []
+    },
+    "text_mirror": {
+      "type": "Text",
+      "props": {
+        "text": "Mirror-inversion of resolved ISS-002.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "row_issue": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge_iss003",
+        "stack_iss_details"
+      ]
+    },
+    "badge_iss003": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-003",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "stack_iss_details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_iss_meta",
+        "text_iss_action"
+      ]
+    },
+    "text_iss_meta": {
+      "type": "Text",
+      "props": {
+        "text": "Severity: medium | Category: config",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "text_iss_action": {
+      "type": "Text",
+      "props": {
+        "text": "Confirm on next Sunday 08-09 or escalate to high",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "text_overall": {
+      "type": "Text",
+      "props": {
+        "text": "Everything else green ✓",
+        "variant": "lead"
+      },
+      "children": []
+    }
+  }
+}
