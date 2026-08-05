@@ -1,21 +1,20 @@
-Heartbeat complete. All checks green on P0; existing WATCH-tier items carried forward and deduped.
+Heartbeat complete. All checks clean; no notification sent (all findings already deduped in the last 48h of logs).
 
 ## Summary
 
-Ran the `heartbeat` skill (2026-08-05 15:27 UTC, 14:00 slot).
+Ran the `heartbeat` skill for the 20:00 UTC slot (executed 21:05 UTC, Wednesday 2026-08-05).
 
 **Checks:**
-- **P0 (failed/stuck/degraded):** None. All 4 enabled skills (heartbeat 84%, atlas-layers 90%, atlas 100%, atlas-improve 100%) last_status `success`, consecutive_failures 0, no chronic failures. Heartbeat self-check <36h. **No P0 flag.**
-- **P1:** 6 open PRs (#13–#18) stalled >24h — all already logged in last 48h → deduped. No open issues, none urgent.
-- **P2:** No flagged memory follow-ups.
-- **P3:** `atlas` weekly skill stale ~17.4d (>2× interval) — already captured as **ISS-003** (open) and previously notified → deduped. Confirmation checkpoint remains next Sunday 2026-08-09 04:00.
-
-**Overall verdict:** 🟡 **WATCH** (P3 staleness + 1 open medium issue; no P0). All findings deduped → **no notification sent**.
+- **P0 (failed/stuck skills):** None. All 4 enabled skills — heartbeat (84%), atlas-layers (90%), atlas (100%), atlas-improve (100%) — show `success`, consec_failures 0, no chronic failures. Heartbeat self-check healthy (last success ~5.6h ago).
+- **P1 (stalled PRs / urgent issues):** 6 open PRs (#13–#18) all stalled >24h, all previously logged → deduped. No open GitHub issues.
+- **P2 (flagged memory):** None.
+- **P3 (missing scheduled skills):** `atlas` still stale (last success 2026-07-19, ~17.7d, >2× its weekly interval) — already tracked as **ISS-003** and notified 08-02 → deduped. Confirmation checkpoint remains next Sunday 2026-08-09 04:00. atlas-layers/atlas-improve within interval.
+- **Overall:** 🟡 WATCH (P3 flag + 1 open medium issue). No P0 → not DEGRADED. All findings deduped → **no notification sent**.
 
 **Files modified:**
-- `docs/status.md` — regenerated (Overall 🟡 WATCH, 4 skills sorted by last run, 1 open issue, next run heartbeat 20:00 UTC; Token pulse omitted — no `token-report-*.md`).
-- `memory/logs/2026-08-05.md` — appended 14:00-slot log entry.
+- `docs/status.md` — regenerated (Overall 🟡 WATCH, Updated 2026-08-05 21:05 UTC, next run heartbeat 08:00 UTC, Token pulse omitted — no token-report file).
+- `memory/logs/2026-08-05.md` — appended 20:00 slot log entry.
 
-**Follow-up:** Watch atlas's 2026-08-09 04:00 Sunday slot — clean dispatch resolves ISS-003; another miss escalates it to high severity.
+**Result:** `HEARTBEAT_OK · STATUS_PAGE=WATCH`
 
-`HEARTBEAT_OK · STATUS_PAGE=WATCH`
+**Follow-up:** Watch `atlas` Sunday 2026-08-09 04:00 dispatch — clean dispatch closes ISS-003; sustained miss escalates to high.
