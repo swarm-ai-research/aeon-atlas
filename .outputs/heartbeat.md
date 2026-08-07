@@ -1,22 +1,24 @@
-Heartbeat complete for the 2026-08-07 14:00 slot.
+Heartbeat complete for the 20:00 slot — no notification needed.
 
 ## Summary
 
-Ran all heartbeat checks against `cron-state.json`, `aeon.yml`, `issues/INDEX.md`, GitHub PRs/issues, and recent logs.
+Ran the `heartbeat` skill (2026-08-07 20:09 UTC, 20:00 slot). Soul files are empty → neutral tone.
 
-**Findings (all deduped — no notification sent):**
-- **P0 — clear:** heartbeat self-recovered from this morning's stuck state. cron-state now shows `last_status: success` (08:00 slot completed cleanly). No failed/stuck skills, no consecutive failures ≥3, no chronic failures (min success rate 84%).
-- **P1:** 6 PRs (#13–#18) still stalled >24h — already in last-48h logs. No open GitHub issues.
-- **P3:** atlas still stale (weekly, last success ~19.4d ago, >2× interval) — captured by open ISS-003, previously notified. Confirmation checkpoint: Sunday 2026-08-09 04:00.
+**Checks:**
+- **P0 (failed/stuck):** All clear. heartbeat, atlas-layers, atlas, atlas-improve all `success`, consec_failures 0, no chronic failures (min rate 0.84). heartbeat self-recovered — last_success 2026-08-07T14:19:47Z. No P0 flag.
+- **P1:** 6 PRs (#13–#18) stalled >24h; no open GitHub issues. All PRs already in last-48h logs → deduped, no re-notify.
+- **P2:** No flagged memory follow-ups.
+- **P3:** atlas weekly slot still stale (~19.6d, >2× interval) — tracked by open **ISS-003**, deduped. Checkpoint: next Sunday 2026-08-09 04:00.
 
-**Overall verdict:** 🟡 WATCH (P3 atlas stale + 2 open medium issues ISS-003, ISS-004). No new items → no notification.
+**Actions taken:**
+- **Resolved ISS-004** (heartbeat 08-06 hang): checkpoint met — both 08-07 14:00 and 20:00 slots dispatched and completed cleanly, confirming a transient one-off. Updated `memory/issues/ISS-004.md` (status→resolved, resolved_at, Resolution section) and moved it to Resolved in `memory/issues/INDEX.md`.
+- **Regenerated `docs/status.md`:** 🟡 WATCH, 4 enabled skills, **1 open issue (ISS-003)**, Updated 2026-08-07 20:09 UTC, next run heartbeat 08:00 UTC. Token pulse omitted (no `token-report-*.md`).
+- **Logged** the run to `memory/logs/2026-08-07.md`.
 
-**Files modified:**
-- `docs/status.md` — regenerated: Overall 🟡 WATCH, 4 enabled skills (heartbeat now ✅ success), 2 open issues, updated 2026-08-07 14:18 UTC, next run heartbeat 20:00 UTC. Token pulse omitted (no token-report article exists).
-- `memory/logs/2026-08-07.md` — appended 14:00-slot log entry.
+**Overall:** 🟡 WATCH (P3 atlas-stale flag + ISS-003). No notification — all findings deduped; ISS-004 resolution is a positive close.
 
-**Follow-up:** ISS-004 (this morning's heartbeat gap) left open one cycle for visibility since recovery is confirmed; a repair/self-review skill can close it. Watch atlas's 2026-08-09 04:00 slot — a 4th consecutive miss escalates ISS-003 to high.
+**Files modified:** `memory/issues/ISS-004.md`, `memory/issues/INDEX.md`, `docs/status.md`, `memory/logs/2026-08-07.md`.
+
+**Follow-up:** Watch the 2026-08-09 04:00 atlas Sunday slot — clean dispatch resolves ISS-003; a 4th consecutive miss escalates it to high.
 
 `HEARTBEAT_OK · STATUS_PAGE=WATCH`
-
-The status-page file will land on `main` via the workflow's auto-commit step.
