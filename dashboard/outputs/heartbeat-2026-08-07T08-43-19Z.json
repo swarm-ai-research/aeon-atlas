@@ -1,0 +1,237 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Heartbeat"
+      },
+      "children": [
+        "alert_status",
+        "sep1",
+        "stack_content"
+      ]
+    },
+    "alert_status": {
+      "type": "Alert",
+      "props": {
+        "title": "🔴 DEGRADED",
+        "message": "Heartbeat monitoring gap — no fleet health checks for ~24h",
+        "type": "warning"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "section_incident",
+        "sep2",
+        "section_timeline",
+        "sep3",
+        "section_checkpoint",
+        "sep4",
+        "section_unchanged"
+      ]
+    },
+    "section_incident": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_incident",
+        "text_dispatch",
+        "text_hung",
+        "text_gap"
+      ]
+    },
+    "heading_incident": {
+      "type": "Heading",
+      "props": {
+        "text": "Incident Details",
+        "level": "h3"
+      }
+    },
+    "text_dispatch": {
+      "type": "Text",
+      "props": {
+        "text": "2026-08-06 14:00 UTC run dispatched at 15:18Z but hung before completing",
+        "variant": "body"
+      }
+    },
+    "text_hung": {
+      "type": "Text",
+      "props": {
+        "text": "20:00 UTC slot never fired",
+        "variant": "body"
+      }
+    },
+    "text_gap": {
+      "type": "Text",
+      "props": {
+        "text": "Result: approximately 24 hours with no fleet health checks",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_timeline": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_timeline",
+        "stat_last_clean",
+        "stat_next_clean",
+        "stat_recovery"
+      ]
+    },
+    "heading_timeline": {
+      "type": "Heading",
+      "props": {
+        "text": "Timeline",
+        "level": "h3"
+      }
+    },
+    "stat_last_clean": {
+      "type": "Stat",
+      "props": {
+        "label": "Last clean run",
+        "value": "2026-08-06 08:52Z"
+      }
+    },
+    "stat_next_clean": {
+      "type": "Stat",
+      "props": {
+        "label": "Next clean run",
+        "value": "2026-08-07 08:00Z (now)"
+      }
+    },
+    "stat_recovery": {
+      "type": "Stat",
+      "props": {
+        "label": "Recovery status",
+        "value": "Self-recovered this cycle"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_checkpoint": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_checkpoint",
+        "text_resolve",
+        "text_escalate",
+        "badge_tracking"
+      ]
+    },
+    "heading_checkpoint": {
+      "type": "Heading",
+      "props": {
+        "text": "Resolution Checkpoint",
+        "level": "h3"
+      }
+    },
+    "text_resolve": {
+      "type": "Text",
+      "props": {
+        "text": "Today's 14:00 and 20:00 UTC slots must run clean to resolve",
+        "variant": "body"
+      }
+    },
+    "text_escalate": {
+      "type": "Text",
+      "props": {
+        "text": "Another hang will trigger escalation",
+        "variant": "body"
+      }
+    },
+    "badge_tracking": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-004",
+        "variant": "secondary"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_unchanged": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_unchanged",
+        "text_unchanged_intro",
+        "badge_iss003",
+        "text_prs_header",
+        "text_prs_list"
+      ]
+    },
+    "heading_unchanged": {
+      "type": "Heading",
+      "props": {
+        "text": "Unchanged Issues",
+        "level": "h3"
+      }
+    },
+    "text_unchanged_intro": {
+      "type": "Text",
+      "props": {
+        "text": "Already tracked and being monitored:",
+        "variant": "body"
+      }
+    },
+    "badge_iss003": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-003 — Atlas weekly-dispatch staleness",
+        "variant": "outline"
+      }
+    },
+    "text_prs_header": {
+      "type": "Text",
+      "props": {
+        "text": "6 stalled PRs:",
+        "variant": "caption"
+      }
+    },
+    "text_prs_list": {
+      "type": "Text",
+      "props": {
+        "text": "#13, #14, #15, #16, #17, #18",
+        "variant": "body"
+      }
+    }
+  }
+}
