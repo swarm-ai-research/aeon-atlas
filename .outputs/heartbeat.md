@@ -1,25 +1,20 @@
-All checks complete. Here's what the heartbeat found and did.
+Heartbeat complete. All checks ran clean — no notification needed.
 
 ## Summary
 
-**Sunday 2026-08-09, 08:00 slot** — a mostly-good-news run. No notification sent (all attention items are deduped or informational).
+Executed the **heartbeat** skill for the **2026-08-09 14:00 UTC (Sunday)** slot.
 
 **Checks:**
-- **P0 (failed/stuck skills):** all clear. heartbeat 85%, atlas-layers 91%, atlas 100%, atlas-improve 100%. No consecutive failures, no chronic failures, no stuck dispatches. Self-check ~12h since last success (<36h).
-- **P1 (PRs/issues):** 6 PRs (#13–#18) still stalled >24h — all previously logged, deduped, no re-notify. PR #19 opened today (<24h, not stalled). No open GitHub issues.
-- **P2:** no flagged memory follow-ups.
-- **P3 (schedule staleness): flag CLEARED** — `atlas` **dispatched cleanly on its Sunday 04:00 slot** for the first time since 2026-07-19 (dispatch 04:51 → success 04:55). Both adjacent weekly slots fired this Sunday.
-
-**Actions taken:**
-- **Resolved ISS-003** (atlas not dispatching on Sunday 04:00). The pre-registered checkpoint was met — atlas fired cleanly, the 2-week slot-drop pattern did not recur, so it self-resolved with no code fix and no escalation. Open issues now **0**.
-- Regenerated the public status page (🟡 WATCH, driven only by the 6 stalled auto-generated atlas PRs; 0 open issues).
+- **P0 — all clear:** No failed/stuck skills. All 4 enabled skills healthy — heartbeat ✅ (85%, 163/192, consec 0), atlas-layers ✅ (91%), atlas ✅ (100%), atlas-improve ✅ (100%). No consecutive-failure or chronic-failure flags. Self-check OK (last success ~6.2h ago).
+- **P1:** 7 open PRs. #19 opened today (<24h, not stalled). #13–#18 stalled >24h but already in last-48h logs → deduped. No open/urgent GitHub issues.
+- **P2:** No flagged memory follow-ups.
+- **P3:** All enabled skills fresh (atlas & atlas-layers ran this Sunday; atlas-improve monthly; heartbeat running). No flag.
+- **Overall:** 🟡 **WATCH** (driven only by stalled PRs, all deduped) → **no notification sent**.
 
 **Files modified:**
-- `memory/issues/ISS-003.md` — status → resolved, resolved_at 2026-08-09, Resolution section appended
-- `memory/issues/INDEX.md` — ISS-003 moved Open → Resolved (Open now empty)
-- `docs/status.md` — regenerated (Overall 🟡 WATCH, 0 open issues, next run heartbeat 14:00 UTC)
-- `memory/logs/2026-08-09.md` — created with this run's findings
+- `docs/status.md` — regenerated public status page (Overall 🟡 WATCH, 4 skills, 0 open issues, updated 14:22 UTC, next run heartbeat 20:00 UTC, Token pulse omitted — no token-report file).
+- `memory/logs/2026-08-09.md` — appended 14:00-slot heartbeat log entry.
 
-**Overall:** 🟡 WATCH (only residual: 6 long-stalled atlas/atlas-layers auto-PRs, all deduped). No follow-up required.
+**Result:** `HEARTBEAT_OK · STATUS_PAGE=WATCH · no notify`
 
-`HEARTBEAT_OK · STATUS_PAGE=WATCH · no notify (stalled PRs deduped; ISS-003 resolved)`
+**Follow-up:** None required. PRs #13–#18 remain stalled >24h but are informational/deduped; the auto-commit step will land the status-page and log changes on `main`.
