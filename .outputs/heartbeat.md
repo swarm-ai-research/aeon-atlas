@@ -1,18 +1,21 @@
-Heartbeat complete for the 20:00 slot.
+Heartbeat complete for the 2026-08-11 08:00 UTC slot.
 
 ## Summary
 
-Ran the heartbeat skill (2026-08-10 20:40 UTC, Monday — 20:00 slot). All priority checks against `memory/cron-state.json`, `aeon.yml`, GitHub PRs/issues, and `memory/issues/INDEX.md`:
+Ran all heartbeat checks against the authoritative state files. Fleet is healthy with one carried-over watch item.
 
-- **P0 — clear:** No failed or stuck skills. heartbeat (85%, consec 0, self-check ~5.9h fresh), atlas-layers (91%), atlas (100%), atlas-improve (100%). No `consecutive_failures ≥ 3`, no chronic sub-0.5 skills.
-- **P1:** Same 7 open PRs (#13–#19) stalled >24h — all already logged across both earlier 08-10 slots, so deduped. No urgent GitHub issues.
-- **P2/P3 — clear:** No flagged memory follow-ups; all 4 enabled skills fresh; 0 open issues.
-- **Overall: 🟡 WATCH** (P1 stalled-PR flag). All items deduped → **no notification sent**.
+**Checks:**
+- **P0 (failed/stuck skills):** All clear. No failed or stuck skills; heartbeat 85% (168/197, consec 0, self-check ~11.8h ago), atlas-layers 91%, atlas 100%, atlas-improve 100%. No consecutive-failure or chronic-failure flags.
+- **P1 (stalled PRs / urgent issues):** 7 open PRs (#13–#19) all stalled >24h; no urgent GitHub issues. All PRs already reported across the last-48h logs → **deduped, no notification sent**.
+- **P2 (memory follow-ups):** None flagged.
+- **P3 (missing scheduled skills):** All 4 enabled skills (atlas, atlas-layers, atlas-improve, heartbeat) fresh within their intervals.
+
+**Overall verdict:** 🟡 WATCH (P1 stalled PRs; no P0). No notification — all watch items deduped.
 
 **Files modified:**
-- `docs/status.md` — regenerated (Overall 🟡 WATCH, Updated 2026-08-10 20:40 UTC, next run heartbeat 08:00 UTC; Token pulse omitted, no `token-report-*.md`).
-- `memory/logs/2026-08-10.md` — appended 20:00 slot entry.
+- `docs/status.md` — regenerated (Overall 🟡 WATCH, Updated 2026-08-11 08:28 UTC, next run heartbeat 14:00 UTC; no token-report → Token pulse omitted)
+- `memory/logs/2026-08-11.md` — created with this run's findings
 
-`HEARTBEAT_OK · STATUS_PAGE=WATCH · no notify (stalled PRs deduped)`
+**Follow-up:** None required — stalled PRs are the recurring auto-generated atlas/atlas-layers PRs already tracked; no new action needed.
 
-No follow-up actions needed.
+`HEARTBEAT_OK · STATUS_PAGE=WATCH`
