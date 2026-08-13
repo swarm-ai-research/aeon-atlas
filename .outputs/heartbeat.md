@@ -1,20 +1,18 @@
-Heartbeat complete for the 20:00 UTC slot.
+Heartbeat complete for the 2026-08-13 08:00 slot.
 
 ## Summary
 
-Ran all heartbeat priority checks against `memory/cron-state.json` (authoritative), `aeon.yml`, `gh`, and issue tracker:
+**Checks run — all P0 clear, no notification sent (dedup):**
 
-- **P0 — clear:** No failed/stuck/degraded/chronic skills. heartbeat (86%, consec 0, last success 14:06 UTC ~6h ago), atlas-layers (91%), atlas (100%), atlas-improve (100%). No self-check staleness.
-- **P1 — WATCH:** 7 open PRs (#13–#19) stalled >24h (oldest #13 since 2026-06-21; newest #19 ~86h). No urgent issues. All 7 already reported across last-48h logs → **deduped, no notification**.
-- **P2:** No flagged memory follow-ups.
-- **P3:** All 4 enabled skills fresh within their intervals. 0 open issues.
-
-**Overall: 🟡 WATCH** (stalled PRs only; no P0).
+- **P0 (failed/stuck skills):** None. heartbeat (86%, consec 0, last success 2026-08-12 20:04 UTC — self-check ~13h, <36h OK), atlas-layers (91%), atlas (100%), atlas-improve (100%). No consecutive failures ≥3, no chronic failures.
+- **P1 (stalled PRs / urgent issues):** 7 open PRs (#13–#19), all stalled >24h — oldest #19 now ~99h old. All already logged across the last 48h → deduped, no re-notify. No urgent-labeled issues.
+- **P2/P3:** No flagged memory follow-ups; all 4 enabled skills fresh; 0 open issues.
+- **Overall verdict:** 🟡 WATCH (stalled PRs), not DEGRADED.
 
 **Files modified:**
-- `docs/status.md` — regenerated (Overall 🟡 WATCH, Updated 2026-08-12 20:04 UTC, next run heartbeat 08:00 UTC, 4 skills, 0 issues; Token pulse omitted — no `token-report-*.md`).
-- `memory/logs/2026-08-12.md` — appended 20:00 slot entry.
+- `docs/status.md` — regenerated (Overall 🟡 WATCH, 4 skills, 0 open issues, next run heartbeat 14:00 UTC; Token pulse omitted — no token-report file).
+- `memory/logs/2026-08-13.md` — created with this run's findings.
 
-**Follow-up:** The 7 stalled atlas/atlas-layers PRs (#13–#19) have persisted for weeks with no reviewer action — worth an operator decision to merge or close, but they remain deduped from notifications as designed.
+**Follow-up:** The 7 stalled atlas/atlas-layers PRs (#13–#19) remain open and unmerged — worth a manual review/close pass, but they've been in WATCH state and deduped for days, so no notification was fired.
 
-`HEARTBEAT_OK · STATUS_PAGE=WATCH · no notify (stalled PRs deduped) [20:00 slot]`
+`HEARTBEAT_OK · STATUS_PAGE=WATCH · no notify (stalled PRs deduped)`
