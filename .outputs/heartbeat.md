@@ -1,22 +1,21 @@
-Heartbeat complete for the 14:00 slot.
+Heartbeat complete for the 20:00 UTC slot. All clear — no notification sent.
 
 ## Summary
 
-Ran the full heartbeat checklist for the 2026-08-13 14:00 UTC slot. Fleet is healthy; nothing requiring notification.
+Ran the `heartbeat` skill (Thursday 2026-08-13, 20:00 slot @ 20:42 UTC).
 
 **Checks:**
-- **P0 (failed/stuck skills):** All clear. heartbeat 86% (175/204, consec 0, last success 09:08 UTC today), atlas-layers 91%, atlas 100%, atlas-improve 100%. No consecutive failures ≥3, no chronic failures.
-- **P1 (stalled PRs / urgent issues):** 7 open auto-generated PRs (#13–#19) stalled >24h — all already logged across the last 48h, so deduped (no re-notify). No open issues, none urgent.
-- **P2 (memory follow-ups):** None flagged.
-- **P3 (missing scheduled skills):** All 4 enabled skills fresh and within schedule.
-- **Overall:** 🟡 WATCH (driven only by long-stalled bot PRs).
+- **P0 (failed/stuck skills):** All clear. heartbeat success (86%, 176/205, consec 0, self-check 6.3h ago), atlas-layers (91%), atlas (100%), atlas-improve (100%). No consecutive-failure or chronic-failure flags.
+- **P1 (stalled PRs / urgent issues):** 7 open PRs (#13–#19) stalled >24h (oldest #19 ~111h). All already logged in the last 48h → deduped, no re-notify. No urgent issues.
+- **P2 (flagged memory):** none.
+- **P3 (missing scheduled skills):** all 4 enabled skills fresh and within schedule intervals. 0 open issues.
+
+**Overall:** 🟡 WATCH (stalled PRs only, no P0). No notification sent — every flagged item was already deduped in recent logs.
 
 **Files modified:**
-- `docs/status.md` — regenerated (Overall 🟡 WATCH, Updated 14:22 UTC, next run heartbeat 20:00 UTC, 0 open issues, Token pulse omitted — no `token-report-*.md`).
-- `memory/logs/2026-08-13.md` — appended 14:00 slot entry.
+- `docs/status.md` — regenerated public status page (Overall 🟡 WATCH, updated 2026-08-13 20:42 UTC, next run heartbeat 08:00 UTC; Token pulse omitted, no token-report file).
+- `memory/logs/2026-08-13.md` — appended 20:00 slot findings.
 
-**Notification:** None sent (all findings deduped against last-48h logs).
-
-**Follow-up:** The 7 stalled atlas/atlas-layers PRs (#13–#19) remain open and keep the fleet in perpetual WATCH — worth a one-time cleanup (merge/close) so the status page can return to 🟢 OK.
+**Follow-up:** The 7 stalled atlas/atlas-layers PRs (#13–#19) remain unmerged for days — worth a human decision on merging or closing, but not a heartbeat action.
 
 `HEARTBEAT_OK · STATUS_PAGE=WATCH`
