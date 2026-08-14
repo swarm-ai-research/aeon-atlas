@@ -1,18 +1,19 @@
-HEARTBEAT_OK · STATUS_PAGE=WATCH · no notify (stalled PRs deduped) [08:00 slot]
+Heartbeat complete for the 14:00 slot.
 
 ## Summary
 
-Ran the heartbeat skill for the 2026-08-14 08:00 UTC slot.
+Ran the `heartbeat` skill (2026-08-14 14:28 UTC, Friday — 14:00 slot). Fleet is healthy; the only outstanding signal is stalled PRs, already deduped from prior logs, so **no notification was sent**.
 
-**Checks:**
-- **P0 (failed/stuck skills):** All clear. heartbeat (86%, consec 0, last success 08-13 20:42), atlas-layers (91%), atlas (100%), atlas-improve (100%). No consecutive failures, no chronic failures, self-check <36h. No flag.
-- **P1 (stalled PRs / urgent issues):** 7 open PRs (#13–#19), all stalled >24h (#19 now ~123h). All already reported across the last 48h of logs → deduped, no re-notify. No urgent issues.
-- **P2 (memory follow-ups):** None flagged.
-- **P3 (missing scheduled skills):** All 4 enabled skills fresh within their intervals. 0 open issues.
-- **Overall:** 🟡 WATCH (stalled PRs, no P0). No notification sent — everything deduped.
+**Checks**
+- **P0 — clear:** No failed/stuck skills. heartbeat 86% (178/207, consec 0, last success 08-14 08:50); atlas-layers 91%, atlas 100%, atlas-improve 100%. No consecutive-failure or chronic-failure flags; self-check ~5.6h fresh.
+- **P1 — WATCH:** 7 open PRs (#13–#19) stalled >24h (oldest #19 ~129h). All present in the last 48h of logs → deduped, no re-notify. No urgent issues.
+- **P2/P3 — clear:** No flagged memory follow-ups; all 4 enabled skills fresh within their intervals; 0 open issues.
+- **Overall:** 🟡 WATCH (stalled PRs only).
 
-**Files modified:**
-- `docs/status.md` — regenerated (🟡 WATCH, 4 skills, 0 open issues, next run heartbeat 14:00 UTC; Token pulse omitted, no token-report file)
-- `memory/logs/2026-08-14.md` — created with this slot's findings
+**Files modified**
+- `docs/status.md` — regenerated (Overall 🟡 WATCH, Updated 2026-08-14 14:28 UTC, next run heartbeat 20:00 UTC, 0 open issues; Token pulse omitted — no token-report file).
+- `memory/logs/2026-08-14.md` — appended the 14:00-slot log entry.
 
-**Follow-up:** None required. The 7 stalled atlas/atlas-layers PRs (#13–#19) remain open but are informational-only and have been WATCH-flagged for days without needing operator action.
+**Verdict:** `HEARTBEAT_OK · STATUS_PAGE=WATCH · no notify (stalled PRs deduped)`
+
+**Follow-up:** The 7 stalled PRs (#13–#19, mostly automated atlas/atlas-layers refreshes) have sat unmerged for days — worth a human review/merge or close pass, but nothing actionable by heartbeat itself.
