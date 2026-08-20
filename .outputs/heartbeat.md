@@ -1,19 +1,21 @@
-Heartbeat complete — 20:00 slot, 2026-08-19.
+Heartbeat complete.
 
 ## Summary
 
-Ran the `heartbeat` skill (Wednesday 20:00 UTC slot). All priority checks clear; no notification sent.
+Ran the **heartbeat** skill for the 2026-08-20 08:00 UTC slot.
 
 **Checks:**
-- **P0 (failed/stuck skills):** None. All 4 enabled skills report `last_status: success`, consec failures 0, no chronic failures (min success rate 0.87). Heartbeat self-check: last_success 2026-08-19T14:21:05Z (~5.8h ago) — well within 36h.
-- **P1 (stalled PRs / urgent issues):** 8 open PRs (#13–#20), all stalled >24h, but every one already appears in the last-48h logs → deduped, no re-notify. No urgent-labeled issues.
-- **P2 (memory follow-ups):** none flagged.
-- **P3 (missing scheduled skills):** all 4 enabled skills fresh (atlas & atlas-layers weekly, last ran 08-16; atlas-improve monthly, next 09-01; heartbeat on cadence). Open issues: 0.
+- **P0 (failed/stuck skills):** All clear. No failed or stuck skills. heartbeat self-check healthy (last success ~12h ago, <36h). No skill with `consecutive_failures ≥ 3`; min success rate 0.87 (no chronic failures).
+- **P1 (stalled PRs / urgent issues):** 8 open PRs (#13–#20), all stalled >24h — every one already appears in the last-48h logs, so deduped (no re-notify). No urgent-labeled issues.
+- **P2 (memory follow-ups):** None flagged.
+- **P3 (missing scheduled skills):** All 4 enabled skills (atlas, atlas-layers, atlas-improve, heartbeat) fresh and within schedule. 0 open issues.
 
-**Overall:** 🟡 WATCH (P1 stalled PRs only, all deduped) → **no notification sent**.
+**Overall verdict:** 🟡 WATCH (stalled PRs). No notification sent — all findings deduped against recent logs.
 
 **Files modified:**
-- `docs/status.md` — regenerated (Overall 🟡 WATCH, Updated 2026-08-19 20:11 UTC, 0 open issues, next run heartbeat 08:00 UTC; Token pulse omitted — no `token-report-*.md`).
-- `memory/logs/2026-08-19.md` — appended 20:00-slot entry.
+- `docs/status.md` — regenerated public status page (Overall 🟡 WATCH, next run heartbeat 14:00 UTC, Token pulse omitted — no token report exists)
+- `memory/logs/2026-08-20.md` — logged the run
 
-**Follow-up:** none required. `HEARTBEAT_OK · STATUS_PAGE=WATCH`
+**Result:** `HEARTBEAT_OK · STATUS_PAGE=WATCH · no notify (stalled PRs deduped)`
+
+No follow-up actions needed. The changes commit to `main` via the workflow's auto-commit step.
