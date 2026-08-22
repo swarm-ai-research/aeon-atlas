@@ -1,22 +1,21 @@
-Heartbeat complete — 14:00 slot, all priority checks run.
+Heartbeat complete for the 20:00 slot. All clear on the priority checks — no notification needed.
 
 ## Summary
 
-Ran the heartbeat skill (2026-08-22, 14:19 UTC — Saturday 14:00 slot).
+Ran the **heartbeat** skill (2026-08-22, 20:00 UTC slot).
 
 **Checks:**
-- **P0 (failed/stuck skills):** All clear. heartbeat 87% (202/231, consec 0, last success 08:22 UTC today), atlas-layers 92%, atlas 100%, atlas-improve 100%. No consecutive-failure or chronic-failure flags. Self-check ~5.9h since last success (<36h). No P0.
-- **P1 (stalled PRs / urgent issues):** 8 open PRs (#13–#20), all stalled >24h — but every one already appears in the last-48h logs (08-20, 08-21, 08-22 08:00), so deduped. No urgent issues.
-- **P2 (flagged memory):** None.
-- **P3 (missing scheduled skills):** All 4 enabled skills fresh within 2× their intervals. Open issues: 0.
+- **P0 — Failed & stuck skills:** All clear. heartbeat (88%, 203/232, consec 0, last_success 14:20 UTC — self-check ~6h ago, OK), atlas-layers (92%), atlas (100%), atlas-improve (100%). No failures, no stuck skills, no consecutive-failure or chronic flags.
+- **P1 — Stalled PRs/urgent issues:** 8 open PRs (#13–#20), all stalled >24h — but all already logged across the last 48h → **deduped, not re-notified**. No urgent issues.
+- **P2 — Flagged memory:** none.
+- **P3 — Missing scheduled skills:** all 4 enabled skills fresh (atlas/atlas-layers weekly, atlas-improve monthly, heartbeat 3×/day). No misses. 0 open issues.
 
-**Overall:** 🟡 WATCH (stalled PRs, P1). No P0 → not degraded.
+**Overall verdict:** 🟡 WATCH (driven only by the long-standing stalled PRs, all deduped) → **no notification sent**.
 
-**Actions:**
-- Rewrote `docs/status.md` (Overall 🟡 WATCH, updated 2026-08-22 14:19 UTC, next run heartbeat 20:00 UTC; no token-report file so Token pulse omitted).
-- Appended run log to `memory/logs/2026-08-22.md`.
-- **No notification sent** — all findings deduped against recent logs.
+**Files modified:**
+- `docs/status.md` — regenerated (Overall 🟡 WATCH, Updated 2026-08-22 20:18 UTC, next run atlas at 04:00 UTC Sun 08-23; Token pulse omitted — no token-report file).
+- `memory/logs/2026-08-22.md` — appended 20:00 slot log entry.
 
-**Files modified:** `docs/status.md`, `memory/logs/2026-08-22.md`
+**Result:** `HEARTBEAT_OK · STATUS_PAGE=WATCH · no notify (stalled PRs deduped)`
 
-`HEARTBEAT_OK · STATUS_PAGE=WATCH`
+No follow-up actions needed.
