@@ -1,1 +1,1 @@
-I've scheduled a fallback wakeup. The extractor is running as a background task and will re-invoke me when it completes. Waiting.
+The Bash background task is already harness-tracked, so I'll be notified when `atlas.mjs` finishes. Waiting for it to complete before proceeding to the diff step.
