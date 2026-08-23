@@ -1,21 +1,19 @@
-Heartbeat complete for the 14:00 UTC slot.
+Heartbeat complete for the 20:00 UTC Sunday slot.
 
 ## Summary
 
-Ran all heartbeat checks (P0–P3) for the 2026-08-23 14:00 UTC slot. Fleet is healthy; the only outstanding item (stalled PRs) is already deduped from prior logs, so no notification was sent.
+Ran the heartbeat skill (2026-08-23, 20:00 slot). All priority checks clean; no notification sent (only stalled PRs, all deduped in last-48h logs).
 
-**Findings by tier:**
-- **P0 — Failed/stuck skills:** None. All 4 enabled skills report `success`, 0 consecutive failures, success rates 88–100%. Heartbeat self-check ~6h stale (<36h). ✅
-- **P1 — Stalled PRs / urgent issues:** 9 open PRs (#13–#21). #21 is fresh (~9h); #13–#20 stalled >24h but all appear in the last 48h of logs → deduped, no re-notify. No urgent issues.
+- **P0 — Failed/stuck skills:** None. All 4 enabled skills `success`, consec_failures 0, min success_rate 0.88. Heartbeat self-check ~6.2h stale (<36h OK).
+- **P1 — Stalled PRs / urgent issues:** 9 open PRs; #21 fresh (~15h). #13–#20 (8 PRs) stalled >24h but already in last-48h logs → deduped, no re-notify. No urgent issues.
 - **P2 — Flagged memory:** None.
-- **P3 — Missing scheduled skills:** All 4 enabled skills fresh; none overdue. 0 open issues.
-
-**Overall verdict:** 🟡 WATCH (stalled PRs) — but every stalled item is deduped, so **no notification sent**.
+- **P3 — Missing scheduled skills:** None. atlas, atlas-layers, atlas-improve, heartbeat all within schedule interval. 0 open issues.
+- **Overall:** 🟡 WATCH (8 stalled PRs) — not DEGRADED.
 
 **Files modified:**
-- `docs/status.md` — regenerated public status page (Overall WATCH, Updated 14:03 UTC, next run heartbeat 20:00 UTC, skills re-sorted by last-run desc, Token pulse omitted — no token-report file exists).
-- `memory/logs/2026-08-23.md` — appended the 14:00-slot log entry.
+- `docs/status.md` — regenerated (Overall 🟡 WATCH, Updated 2026-08-23 20:18 UTC, next run heartbeat 08:00 UTC, no token-report → Token pulse omitted).
+- `memory/logs/2026-08-23.md` — appended 20:00 slot findings.
 
-**Final:** `HEARTBEAT_OK · STATUS_PAGE=WATCH · no notify (stalled PRs deduped)`
+**Result:** `HEARTBEAT_OK · STATUS_PAGE=WATCH · no notify (stalled PRs deduped)`
 
-**Follow-up:** The 8 chronically stalled atlas/atlas-layers PRs (#13–#20) remain open — worth a batch triage/close pass, but that's outside heartbeat's scope.
+**Follow-up:** The 8 chronically stalled auto-generated PRs (#13–#20, atlas/atlas-layers refreshes) remain unmerged — a human may want to review/close them, but no action is warranted from heartbeat.
