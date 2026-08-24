@@ -1,19 +1,18 @@
-Heartbeat complete for the 20:00 UTC Sunday slot.
+Heartbeat complete.
 
 ## Summary
 
-Ran the heartbeat skill (2026-08-23, 20:00 slot). All priority checks clean; no notification sent (only stalled PRs, all deduped in last-48h logs).
+Ran the heartbeat skill for the 2026-08-24 08:00 UTC slot.
 
-- **P0 — Failed/stuck skills:** None. All 4 enabled skills `success`, consec_failures 0, min success_rate 0.88. Heartbeat self-check ~6.2h stale (<36h OK).
-- **P1 — Stalled PRs / urgent issues:** 9 open PRs; #21 fresh (~15h). #13–#20 (8 PRs) stalled >24h but already in last-48h logs → deduped, no re-notify. No urgent issues.
-- **P2 — Flagged memory:** None.
-- **P3 — Missing scheduled skills:** None. atlas, atlas-layers, atlas-improve, heartbeat all within schedule interval. 0 open issues.
-- **Overall:** 🟡 WATCH (8 stalled PRs) — not DEGRADED.
+**Checks:**
+- **P0 (failed/stuck skills):** All clear. heartbeat (88%, consec 0, self-check ~12h), atlas (100%), atlas-layers (92%), atlas-improve (100%) — no failures, no stuck dispatches, no consecutive-failure or chronic-failure flags.
+- **P1 (stalled PRs / urgent issues):** 9 open PRs (#13–#21) all now stalled >24h — but every one appears in the last-48h logs, so deduped. No urgent-labeled issues.
+- **P2/P3:** No flagged memory items; all 4 enabled skills fresh against their schedules; 0 open issues.
+
+**Overall verdict:** 🟡 WATCH (stalled PRs), but all items already deduped → **no notification sent**.
 
 **Files modified:**
-- `docs/status.md` — regenerated (Overall 🟡 WATCH, Updated 2026-08-23 20:18 UTC, next run heartbeat 08:00 UTC, no token-report → Token pulse omitted).
-- `memory/logs/2026-08-23.md` — appended 20:00 slot findings.
+- `docs/status.md` — regenerated public status page (Overall 🟡 WATCH, Updated 2026-08-24 08:22 UTC, next run heartbeat 14:00 UTC, Token pulse omitted — no token-report file).
+- `memory/logs/2026-08-24.md` — logged findings.
 
-**Result:** `HEARTBEAT_OK · STATUS_PAGE=WATCH · no notify (stalled PRs deduped)`
-
-**Follow-up:** The 8 chronically stalled auto-generated PRs (#13–#20, atlas/atlas-layers refreshes) remain unmerged — a human may want to review/close them, but no action is warranted from heartbeat.
+`HEARTBEAT_OK · STATUS_PAGE=WATCH` — files land on `main` via the workflow's auto-commit step.
