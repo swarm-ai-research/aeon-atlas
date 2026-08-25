@@ -1,19 +1,22 @@
-Heartbeat complete (14:00 slot).
+Heartbeat complete for the 20:00 slot. All checks ran; nothing new needs attention.
 
 ## Summary
 
-Ran the heartbeat skill for the 2026-08-25 14:00 UTC slot. All priority checks clean — no notification sent.
+Ran the `heartbeat` skill (2026-08-25, 20:00 UTC slot).
 
 **Checks:**
-- **P0 — Failed/stuck skills:** All 4 enabled skills (heartbeat, atlas, atlas-layers, atlas-improve) show `last_status: success`, `consecutive_failures: 0`, and success rates 88–100%. Heartbeat self-check passed (last_success 08:30 today, ~6h ago). **No flags.**
-- **P1 — Stalled PRs/urgent issues:** 9 open PRs (#13–#21) stalled >24h, but all already logged in prior 48h slots → deduped, no re-notify. No urgent labels, 0 open issues.
-- **P2/P3:** No flagged memory follow-ups; all enabled skills fresh relative to their schedules.
-- **Overall:** 🟡 WATCH (driven by stalled PRs) — no P0, so not DEGRADED.
+- **P0 — Failed/stuck skills:** None. All 4 enabled skills (`heartbeat` 88%, `atlas` 100%, `atlas-layers` 92%, `atlas-improve` 100%) are `success` with 0 consecutive failures. Heartbeat self-check ~5.5h fresh (<36h). No API degradation, no chronic failures.
+- **P1 — Stalled PRs/urgent issues:** 9 open PRs (#13–#21), all stalled >24h, but all already logged in the last 48h → deduped, no re-notify. No urgent issues, 0 open issues.
+- **P2 — Flagged memory:** Nothing pending.
+- **P3 — Missing scheduled skills:** All 4 enabled skills present and fresh relative to their schedules.
 
-**Files modified:**
-- `docs/status.md` — regenerated (Overall 🟡 WATCH, Updated 2026-08-25 14:24 UTC, next run heartbeat 20:00 UTC, Token pulse omitted — no token report exists).
-- `memory/logs/2026-08-25.md` — appended 14:00 slot findings.
+**Overall verdict:** 🟡 WATCH (driven only by the long-standing stalled PRs, all previously surfaced).
 
-**Verdict:** `HEARTBEAT_OK · STATUS_PAGE=WATCH · no notify (stalled PRs deduped)`
+**Actions:**
+- Rewrote `docs/status.md` (Overall 🟡 WATCH, Updated 2026-08-25 20:03 UTC, next run heartbeat 08:00 UTC, 0 open issues). No `token-report-*.md` exists → Token pulse section omitted.
+- Appended the 20:00-slot entry to `memory/logs/2026-08-25.md`.
+- **No notification sent** — all findings deduped against recent logs.
 
-No follow-up actions needed. Files land on `main` via the workflow's auto-commit step.
+`HEARTBEAT_OK · STATUS_PAGE=WATCH`
+
+**Files modified:** `docs/status.md`, `memory/logs/2026-08-25.md` (auto-committed by the workflow). No follow-up needed.
