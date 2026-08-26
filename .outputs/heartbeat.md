@@ -1,20 +1,20 @@
-Heartbeat complete.
+Heartbeat complete for the 14:00 UTC slot.
 
 ## Summary
 
-Ran the `heartbeat` skill for the 2026-08-26 08:00 UTC slot. All priority checks clean — no notification sent (all findings deduped against last-48h logs).
+Ran the `heartbeat` skill (14:00 UTC slot, Wed 2026-08-26). All priority checks executed:
 
-**Checks:**
-- **P0 (failed/stuck skills):** None. All 4 enabled skills (heartbeat 88%, atlas 100%, atlas-layers 92%, atlas-improve 100%) show `last_status: success`, consecutive_failures 0, no chronic failures. Heartbeat self-check ~12h stale (<36h OK).
-- **P1 (stalled PRs / urgent issues):** 9 open PRs (#13–#21), all stalled >24h — all already logged in the last 48h → deduped. No urgent issues; 0 open issues.
-- **P2 (flagged memory):** None.
-- **P3 (missing/stale scheduled skills):** All 4 enabled skills fresh vs. their schedules.
-- **Overall:** 🟡 WATCH (driven only by long-stalled atlas PRs, all previously reported).
+- **P0 — Failed/stuck skills:** None. All 4 enabled skills (heartbeat 88%, atlas 100%, atlas-layers 92%, atlas-improve 100%) report `success`, consecutive_failures 0, no chronic failures. heartbeat self-check fresh (~6h). **No flag.**
+- **P1 — Stalled PRs / urgent issues:** 9 open PRs (#13–#21) stalled >24h — but the identical set already appears in today's 08:00 log and prior-48h logs → **deduped, no re-notify**. No urgent-labeled issues; 0 open issues total.
+- **P2 — Flagged memory:** None.
+- **P3 — Missing scheduled skills:** All enabled skills present and within 2× their schedule interval. **No flag.**
+
+**Overall verdict:** 🟡 WATCH (driven solely by long-standing stalled PRs). No P0 → not degraded. All findings deduped → **no notification sent**.
 
 **Files modified:**
-- `docs/status.md` — regenerated public status page (Overall 🟡 WATCH, 4 skills, 0 open issues, next run heartbeat 14:00 UTC; Token pulse omitted — no `token-report-*.md`).
-- `memory/logs/2026-08-26.md` — created with the 08:00 slot findings.
-
-**Follow-up:** None required. The 9 stalled atlas/atlas-layers PRs (#13–#21) remain open but are auto-generated refresh PRs; no action flagged. `docs/status.md` lands on `main` via the workflow's auto-commit step.
+- `docs/status.md` — regenerated (Overall 🟡 WATCH, Updated 2026-08-26 14:00 UTC, next run heartbeat 20:00 UTC, 4 skills, 0 open issues; Token pulse omitted — no `token-report-*.md`).
+- `memory/logs/2026-08-26.md` — appended 14:00-slot entry.
 
 `HEARTBEAT_OK · STATUS_PAGE=WATCH`
+
+**Follow-up:** The 9 stalled atlas/atlas-layers PRs (#13–#21) remain unmerged and keep the fleet in WATCH. Consider enabling `auto-merge` or manually reviewing/closing them to clear the persistent WATCH state — no action required from heartbeat itself.
