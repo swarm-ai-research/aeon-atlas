@@ -4,7 +4,7 @@
 
 | ID | Title | Severity | Category | Detected | Affected Skills |
 |----|-------|----------|----------|----------|-----------------|
-| _(none)_ | | | | | |
+| ISS-005 | scheduler quiet ~65h — heartbeat missed 6 slots + atlas/atlas-layers missed 08-30 Sunday slots | high | unknown | 2026-09-01 | heartbeat, atlas, atlas-layers |
 
 ## Resolved
 

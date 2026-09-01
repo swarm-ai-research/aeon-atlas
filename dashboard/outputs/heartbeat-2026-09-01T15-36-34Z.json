@@ -1,0 +1,200 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "heartbeat",
+        "description": "System health monitoring and scheduler diagnostics"
+      },
+      "children": [
+        "alert-status",
+        "sep-1",
+        "section-timing",
+        "sep-2",
+        "section-failures",
+        "sep-3",
+        "section-recovery"
+      ]
+    },
+    "alert-status": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "🔴 DEGRADED",
+        "message": "The scheduler has gone quiet. heartbeat missed six dispatch slots (08-30 through 09-01 morning), and weekly atlas + atlas-layers both skipped their 08-30 Sunday slots."
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-timing": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-timing",
+        "stack-timing-details"
+      ]
+    },
+    "heading-timing": {
+      "type": "Heading",
+      "props": {
+        "text": "Timing Metrics",
+        "level": "h3"
+      }
+    },
+    "stack-timing-details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "stat-last-run",
+        "text-threshold"
+      ]
+    },
+    "stat-last-run": {
+      "type": "Stat",
+      "props": {
+        "label": "Last Successful Run",
+        "value": "2026-08-29 21:56 UTC",
+        "delta": "~65 hours ago",
+        "trend": "down"
+      }
+    },
+    "text-threshold": {
+      "type": "Text",
+      "props": {
+        "text": "Exceeds 36-hour self-check threshold",
+        "variant": "muted"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-failures": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-failures",
+        "stack-failures-details"
+      ]
+    },
+    "heading-failures": {
+      "type": "Heading",
+      "props": {
+        "text": "Missed Dispatches",
+        "level": "h3"
+      }
+    },
+    "stack-failures-details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "stat-missed",
+        "text-missed-detail",
+        "text-partial-success"
+      ]
+    },
+    "stat-missed": {
+      "type": "Stat",
+      "props": {
+        "label": "Total Slots Missed",
+        "value": "6"
+      }
+    },
+    "text-missed-detail": {
+      "type": "Text",
+      "props": {
+        "text": "heartbeat missed six slots (08-30 through 09-01 morning). Weekly atlas and atlas-layers both skipped their 08-30 Sunday slots."
+      }
+    },
+    "text-partial-success": {
+      "type": "Text",
+      "props": {
+        "text": "atlas-improve fired on time at 09-01 06:00 — indicates slot-specific failures rather than a complete outage",
+        "variant": "caption"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-recovery": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-recovery",
+        "stack-recovery-details"
+      ]
+    },
+    "heading-recovery": {
+      "type": "Heading",
+      "props": {
+        "text": "Recovery & Resolution",
+        "level": "h3"
+      }
+    },
+    "stack-recovery-details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-issue",
+        "text-issue",
+        "text-action",
+        "text-monitor"
+      ]
+    },
+    "badge-issue": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-005 (high)",
+        "variant": "destructive"
+      }
+    },
+    "text-issue": {
+      "type": "Text",
+      "props": {
+        "text": "Issue filed: ISS-005 (high severity)"
+      }
+    },
+    "text-action": {
+      "type": "Text",
+      "props": {
+        "text": "Catch-up run initiated at 15:33 UTC to self-heal state"
+      }
+    },
+    "text-monitor": {
+      "type": "Text",
+      "props": {
+        "text": "Monitoring next scheduled slots to confirm dispatch path has recovered",
+        "variant": "caption"
+      }
+    }
+  }
+}
