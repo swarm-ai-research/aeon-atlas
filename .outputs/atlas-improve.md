@@ -1,18 +1,16 @@
-I've executed the `atlas-improve` skill. Here's what happened:
+Skill executed. Silent-exit path — no PR, no notification.
 
 ## Summary
 
-Ran the monthly `atlas-improve` self-improvement loop for 2026-08-01.
+Executed `skills/atlas-improve/SKILL.md` (monthly atlas self-improvement loop) for 2026-09-01:
 
-**Steps executed:**
-1. **Cap check** — `gh pr list --state open --search "head:atlas-improve/"` returned 0 open improvement PRs. Not capped, proceeded.
-2. **Compute surprises** — The oldest `atlas.json` commit in the 30-day window is `e43f0ee` (the single bootstrap commit that added the whole repo), which is *also* HEAD. Running `scripts/atlas-snapshot-diff.mjs --git e43f0ee HEAD` diffs the commit against itself and returns an empty `surprises` array (`prev_generated == curr_generated`).
+- **Step 1 — PR cap:** No open `atlas-improve/*` PR. Cap clear. ✅
+- **Step 2 — 30-day surprises:** `atlas.json` has only **one snapshot in its entire history** (commit `041c72d`, which is also HEAD). There is no older snapshot in the 30-day window to diff against. Running the skill's own command — `node scripts/atlas-snapshot-diff.mjs --git 041c72d HEAD` — returned an empty `surprises` array.
+- **Outcome:** `ATLAS_IMPROVE_NOTHING_TO_DO` — the prescribed **silent exit**. No surprise to seed from → no candidate, no code change, no branch, no PR, and (per the skill) **no notification**.
 
-**Outcome: `ATLAS_IMPROVE_NOTHING_TO_DO`** — silent exit. No PR opened, no notification sent, per the skill's spam-prevention discipline (silent on no surprises).
-
-**Why nothing to do:** Local git history contains only one `atlas.json` commit, so there's no earlier weekly snapshot to diff against. Genuine surprises can't surface until `atlas.json` accumulates ≥ 2 distinct weekly snapshots in git history.
+**Why:** The improvement loop needs at least one atlas snapshot older than today to compute deltas. The weekly atlas skill has committed only a single snapshot so far, so there's no month-over-month change to surface better. This is the expected result on a quiet/early month.
 
 **Files modified:**
-- `memory/logs/2026-08-01.md` — created; logged the run per CLAUDE.md.
+- `memory/logs/2026-09-01.md` (created) — logged the run per CLAUDE.md.
 
-**Follow-up:** None required. `memory/state/atlas-improve.json` remains absent (expected — it's only written when a PR opens). This is the normal quiet-month result and matches prior atlas-improve runs, which also exited without a PR.
+**Follow-up:** None required. The loop will produce real signal once the weekly atlas skill has committed additional `atlas.json` snapshots spanning the 30-day window.
