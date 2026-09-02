@@ -1,21 +1,21 @@
-Heartbeat run complete.
+Heartbeat complete. All checks ran; nothing needs a new notification.
 
 ## Summary
 
-Ran the `heartbeat` skill for the 2026-09-01 20:00 UTC slot (fired late at 21:22 UTC). Soul files are empty templates → neutral tone.
+Ran the `heartbeat` skill for the 2026-09-02 08:00 UTC slot (executed 09:54 UTC, ~1h54m late).
 
-**Findings:**
-- **P0 — cleared / recovering:** heartbeat's own self-check that fired at the 15:33 catch-up run (~65h stale, DEGRADED) **no longer fires** — `last_success` is now `2026-09-01T15:37:22Z` (~5.7h ago). This 20:00 slot firing confirms the scheduler is alive again. No failed, stuck, consec≥3, or chronic conditions across all 4 enabled skills.
-- **P1:** 9 stalled PRs (#13–#21) — deduped (same set as prior logs). No open GitHub issues.
-- **P2/P3:** nothing new; atlas/atlas-layers frozen at 08-23 already captured under ISS-005.
-- **Overall status:** improved 🔴 DEGRADED → **🟡 WATCH** (ISS-005 open at `high` + stalled PRs).
+**Findings by priority:**
+- **P0 — clear:** No failed, stuck, degraded (consec≥3), or chronic skills. heartbeat self-check ~12.5h < 36h threshold → no flag. The 20:00 slot recorded success at 21:23 and this slot fired → scheduler alive.
+- **P1:** 9 open PRs (#13–#21) stalled >24h — same set as prior logs, deduped, no re-notify. No open GitHub issues.
+- **P2/P3:** No flagged memory items. atlas/atlas-layers frozen at 2026-08-23 (~10.7d, under the 14d 2×-weekly threshold; 08-30 miss already tracked in ISS-005).
+- **ISS-005 (high, open):** Recovery advancing — clean scheduled slots now 2 of 3 (09-01 20:00 ✅, 09-02 08:00 ✅). Resolve after the 09-02 14:00 slot lands cleanly. Kept open.
 
-**Actions:**
-- **No notification sent** — recovery is a de-escalation, not a new alert; ISS-005 and the stalled PRs were already notified/deduped. Recovery not yet confirmed (1 of 3 designated clean slots done).
-- **ISS-005 kept open** — tracking toward resolution; needs clean 09-02 08:00 + 14:00 slots.
+**Overall: 🟡 WATCH** (ISS-005 high + stalled PRs). No new notification sent (all items previously notified/deduped; ISS-005 recovery still in progress).
 
 **Files modified:**
-- `docs/status.md` — regenerated (🟡 WATCH, updated 2026-09-01 21:22 UTC, 4 skills, 1 open issue, Token pulse omitted — no token report exists).
-- `memory/logs/2026-09-01.md` — appended this run's log entry.
+- `docs/status.md` — regenerated (Overall 🟡 WATCH, next run heartbeat 14:00 UTC, Token pulse omitted — no token reports)
+- `memory/logs/2026-09-02.md` — created with run log
 
-**Follow-up:** watch 09-02 08:00 + 14:00 heartbeat slots; 3 consecutive clean scheduled slots → resolve ISS-005. Watch atlas/atlas-layers on 09-06 Sunday for a repeat weekly-slot miss.
+**Follow-up:** Confirm the 09-02 14:00 heartbeat slot fires cleanly → resolve ISS-005. Watch atlas/atlas-layers on 09-06 Sunday for a repeat weekly miss. (Auto-commit to `main` handled by the workflow.)
+
+`HEARTBEAT_OK · STATUS_PAGE=WATCH`
