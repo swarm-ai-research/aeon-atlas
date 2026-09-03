@@ -1,21 +1,22 @@
-Heartbeat complete. All checks ran; nothing needs a new notification.
+Heartbeat run complete for the 2026-09-03 08:00 slot.
 
 ## Summary
 
-Ran the `heartbeat` skill for the 2026-09-02 08:00 UTC slot (executed 09:54 UTC, ~1h54m late).
+Ran all heartbeat checks. Overall fleet status: **🟡 WATCH**.
 
-**Findings by priority:**
-- **P0 — clear:** No failed, stuck, degraded (consec≥3), or chronic skills. heartbeat self-check ~12.5h < 36h threshold → no flag. The 20:00 slot recorded success at 21:23 and this slot fired → scheduler alive.
-- **P1:** 9 open PRs (#13–#21) stalled >24h — same set as prior logs, deduped, no re-notify. No open GitHub issues.
-- **P2/P3:** No flagged memory items. atlas/atlas-layers frozen at 2026-08-23 (~10.7d, under the 14d 2×-weekly threshold; 08-30 miss already tracked in ISS-005).
-- **ISS-005 (high, open):** Recovery advancing — clean scheduled slots now 2 of 3 (09-01 20:00 ✅, 09-02 08:00 ✅). Resolve after the 09-02 14:00 slot lands cleanly. Kept open.
+**Findings:**
+- **P0 — clear (strict conditions):** no failed, stuck, consec≥3, or chronic skills. heartbeat self-check `last_success` = 2026-09-02 09:55Z (~23h ago), under the 36h threshold → no DEGRADED this run.
+- **ISS-005 recovery broke (kept open, high):** cron-state is frozen at heartbeat's 09-02 08:00 slot, so **heartbeat missed the 09-02 14:00 and 20:00 slots**. The 3-clean-slot recovery reached 2/3 then dropped two more before this run recovered — the intermittent missed-dispatch pattern persists. Reset the clean-slot counter to 1/3.
+- **P1:** 9 stalled bot PRs (#13–#21) — deduped (unchanged for days). No GitHub issues.
+- **P2/P3:** nothing new; weekly atlas/atlas-layers still frozen at 08-23 (~11d, under the 14d flag; next slots Sun 09-06).
 
-**Overall: 🟡 WATCH** (ISS-005 high + stalled PRs). No new notification sent (all items previously notified/deduped; ISS-005 recovery still in progress).
+**Notification:** not sent — ISS-005 already open + notified within 48h; recurrence reinforces it and overall is WATCH, not a fresh escalation. Avoided noise.
 
 **Files modified:**
-- `docs/status.md` — regenerated (Overall 🟡 WATCH, next run heartbeat 14:00 UTC, Token pulse omitted — no token reports)
-- `memory/logs/2026-09-02.md` — created with run log
+- `docs/status.md` — regenerated (Overall 🟡 WATCH, Updated 2026-09-03 08:55 UTC, 1 open issue; Token pulse omitted, no token-report file).
+- `memory/issues/ISS-005.md` — appended checkpoint noting recovery broke + counter reset.
+- `memory/logs/2026-09-03.md` — created with full run log.
 
-**Follow-up:** Confirm the 09-02 14:00 heartbeat slot fires cleanly → resolve ISS-005. Watch atlas/atlas-layers on 09-06 Sunday for a repeat weekly miss. (Auto-commit to `main` handled by the workflow.)
+**Follow-up:** watch the 09-03 14:00 + 20:00 slots for 3 consecutive clean dispatches to resolve ISS-005; watch atlas/atlas-layers Sunday 2026-09-06 for a repeat weekly miss. No standing code fix available (skill-repair disabled) — mitigation (redundant offset cron / external repository_dispatch) remains the candidate fix.
 
 `HEARTBEAT_OK · STATUS_PAGE=WATCH`
