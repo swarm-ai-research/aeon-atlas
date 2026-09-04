@@ -1,20 +1,24 @@
-Heartbeat complete. All checks ran; no notification sent (nothing new — everything is deduped against the last 48h of logs).
+Heartbeat complete for the 2026-09-04 14:00 slot (~17min late).
 
 ## Summary
 
-Ran the **heartbeat** skill for the **2026-09-03 20:00 UTC slot** (executed 21:52 UTC, ~1h52m late).
+Ran all heartbeat checks against `cron-state.json`, `aeon.yml`, `issues/INDEX.md`, and the last 2 days of logs.
 
 **Findings:**
-- **P0 — clear.** No failed/stuck skills, no `consecutive_failures ≥ 3`, no chronic failures. Heartbeat self-check: last success ~13h ago (under the 36h threshold) → no DEGRADED.
-- **ISS-005 (open, high) — recurrence.** The **09-03 14:00 slot was missed** (cron-state frozen at 08:56, no log). Sequence this cycle: 08:00 ✅ → 14:00 ✗ → 20:00 ✅. Third consecutive cycle of landing 1–2 clean slots then dropping the next — the missed-dispatch pattern is now firmly chronic/intermittent. The 3-clean-slot resolution criterion has failed to hold for three cycles running. Real mitigation (redundant offset cron / external `repository_dispatch` ping) remains the only close path; skill-repair is `enabled: false`.
-- **P1:** 9 open PRs (#13–#21) still stalled >24h — same set → deduped. No GitHub issues.
-- **P2/P3:** No flagged memory items. atlas/atlas-layers frozen at 08-23 (~11.7d; under the 14d 2×-interval flag). Next weekly test Sunday 2026-09-06.
-- **Overall: 🟡 WATCH.**
-- **Notification:** NOT sent — all items deduped against last-48h logs; recurrence reinforces an already-notified open issue, not a fresh DEGRADED escalation.
+- **P0 — all clear.** No failed/stuck skills, no `consecutive_failures ≥ 3`, no chronic (heartbeat 89%, atlas 100%, atlas-layers 92%, atlas-improve 100%). Heartbeat self-check ~16.4h < 36h → did not fire.
+- **ISS-005 (open, high) — recurrence.** cron-state frozen at heartbeat's 09-03 20:00 completion → the **09-04 08:00 slot was missed**; this 14:00 run recovered. Fourth consecutive cycle (09-01→09-04) of the intermittent missed-dispatch pattern. Appended a checkpoint; clean-slot counter reset to 1/3.
+- **P1:** 9 stalled PRs (#13–#21, all bot atlas refreshes + #16) — same set as prior logs, deduped. 0 GitHub issues.
+- **P2/P3:** No flagged memory items. atlas/atlas-layers at ~12.4d (weekly ×2 = 14d, not yet a standalone flag; next test Sun 09-06).
+
+**Overall: 🟡 WATCH** — no P0, but ISS-005 (high) + stalled PRs hold it at WATCH.
+
+**Notification:** NOT SENT — ISS-005 already open/notified and in last-48h logs; PRs deduped. No fresh DEGRADED escalation.
 
 **Files modified:**
-- `docs/status.md` — regenerated (Overall 🟡 WATCH, Updated 2026-09-03 21:52 UTC, 1 open issue, Token pulse omitted — no token-report file).
-- `memory/issues/ISS-005.md` — appended a checkpoint documenting the second broken recovery and counter reset to 1/3.
-- `memory/logs/2026-09-03.md` — appended the 20:00 slot log entry.
+- `docs/status.md` — regenerated (WATCH, updated 2026-09-04 14:17 UTC, 1 open issue, next run heartbeat 20:00 UTC)
+- `memory/issues/ISS-005.md` — appended 09-04 checkpoint
+- `memory/logs/2026-09-04.md` — created with this run's findings
 
-**Follow-up:** Watch the 09-04 08:00/14:00/20:00 slots for 3 consecutive clean dispatches to resolve ISS-005; a code-level cron redundancy fix is needed since the self-heal criterion keeps failing.
+**Follow-up:** Watch 09-04 20:00 + 09-05 slots for 3 consecutive clean dispatches to downgrade/resolve ISS-005; watch atlas cohort on Sun 09-06. Real fix (redundant offset cron / external repository_dispatch ping) still pending — skill-repair is `enabled: false`.
+
+`HEARTBEAT_OK · STATUS_PAGE=WATCH`
