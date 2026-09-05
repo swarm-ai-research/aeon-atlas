@@ -1,0 +1,179 @@
+{
+  "root": "card-heartbeat",
+  "state": {},
+  "elements": {
+    "card-heartbeat": {
+      "type": "Card",
+      "props": {
+        "title": "Heartbeat"
+      },
+      "children": [
+        "alert-watch",
+        "recovery-section",
+        "open-issues-stat",
+        "separator-1",
+        "prs-section",
+        "separator-2",
+        "watch-note"
+      ]
+    },
+    "alert-watch": {
+      "type": "Alert",
+      "props": {
+        "title": "🟡 Status: WATCH",
+        "message": "9 stalled atlas/atlas-layers bot PRs (#13–#21) still open (auto-merge disabled).",
+        "type": "warning"
+      }
+    },
+    "recovery-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "recovery-text"
+      ]
+    },
+    "recovery-text": {
+      "type": "Text",
+      "props": {
+        "text": "✅ Recovered: ISS-005 (scheduler quiet ~65h) resolved. Heartbeat dispatch path landed 3 consecutive clean slots (09-04 14:00 → 09-05 08:00), closing the loop on the 09-01 DEGRADED alert."
+      }
+    },
+    "open-issues-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Open Issues",
+        "value": "0"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "prs-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "prs-heading",
+        "prs-list"
+      ]
+    },
+    "prs-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Stalled PRs",
+        "level": "h3"
+      }
+    },
+    "prs-list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pr-13",
+        "pr-14",
+        "pr-15",
+        "pr-16",
+        "pr-17",
+        "pr-18",
+        "pr-19",
+        "pr-20",
+        "pr-21"
+      ]
+    },
+    "pr-13": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #13",
+        "href": "https://github.com/aeon-atlas/atlas-layers/pull/13"
+      }
+    },
+    "pr-14": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #14",
+        "href": "https://github.com/aeon-atlas/atlas-layers/pull/14"
+      }
+    },
+    "pr-15": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #15",
+        "href": "https://github.com/aeon-atlas/atlas-layers/pull/15"
+      }
+    },
+    "pr-16": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #16",
+        "href": "https://github.com/aeon-atlas/atlas-layers/pull/16"
+      }
+    },
+    "pr-17": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #17",
+        "href": "https://github.com/aeon-atlas/atlas-layers/pull/17"
+      }
+    },
+    "pr-18": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #18",
+        "href": "https://github.com/aeon-atlas/atlas-layers/pull/18"
+      }
+    },
+    "pr-19": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #19",
+        "href": "https://github.com/aeon-atlas/atlas-layers/pull/19"
+      }
+    },
+    "pr-20": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #20",
+        "href": "https://github.com/aeon-atlas/atlas-layers/pull/20"
+      }
+    },
+    "pr-21": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #21",
+        "href": "https://github.com/aeon-atlas/atlas-layers/pull/21"
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "watch-note": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "watch-text"
+      ]
+    },
+    "watch-text": {
+      "type": "Text",
+      "props": {
+        "text": "Watch: atlas weekly cohort re-tests Sunday 09-06 04:00/05:00 UTC — a miss there is a fresh issue."
+      }
+    }
+  }
+}
