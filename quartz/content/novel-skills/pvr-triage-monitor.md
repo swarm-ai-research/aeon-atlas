@@ -1,39 +1,36 @@
 ---
 title: "pvr-triage-monitor"
 tags: [novel-skill]
-adoption: 63
+adoption: 59
 ---
 
 # `pvr-triage-monitor`
 
-Custom skill shipped by 63 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
+Custom skill shipped by 59 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
 
 ## Forks shipping this
 
 - [[forks/chxoky-aeon|chxoky/aeon]]
+- [[forks/0xHarish-aeon|0xHarish/aeon]]
 - [[forks/mnemedb-aeon|mnemedb/aeon]]
 - [[forks/NASTYZUNI-aeon|NASTYZUNI/aeon]]
 - [[forks/alfahadgm-aeon|alfahadgm/aeon]]
 - [[forks/dannysrod-aeon|dannysrod/aeon]]
 - [[forks/daxaur-aeon|daxaur/aeon]]
 - [[forks/anomit-aeon|anomit/aeon]]
-- [[forks/SahilParikh03-aeon|SahilParikh03/aeon]]
 - [[forks/NurstarK-aeon-upstream|NurstarK/aeon-upstream]]
 - [[forks/yyayourt-aeon|yyayourt/aeon]]
 - [[forks/seuzht-aeon|seuzht/aeon]]
-- [[forks/swarm-ai-research-aeon-atlas|swarm-ai-research/aeon-atlas]]
 - [[forks/beijiangqukuailian-aeon|beijiangqukuailian/aeon]]
 - [[forks/rsavitt-aeon-upstream|rsavitt/aeon-upstream]]
 - [[forks/ikkeflikkeri-aeon|ikkeflikkeri/aeon]]
 - [[forks/vigilcodes-aeon|vigilcodes/aeon]]
-- [[forks/BuiltByEcho-aeon|BuiltByEcho/aeon]]
 - [[forks/LiamVisionary-aeon|LiamVisionary/aeon]]
 - [[forks/Atrium-Hermes-aeon|Atrium-Hermes/aeon]]
 - [[forks/sparkleware-aeon|sparkleware/aeon]]
 - [[forks/jianggaoyi-aeon|jianggaoyi/aeon]]
-- [[forks/gdalabs-aeon|gdalabs/aeon]]
+- [[forks/swarm-ai-research-aeon-atlas|swarm-ai-research/aeon-atlas]]
 - [[forks/Damoncrypto-aeon|Damoncrypto/aeon]]
-- [[forks/z-korp-aeon|z-korp/aeon]]
 - [[forks/BBridgeers-aeon|BBridgeers/aeon]]
 - [[forks/0xNN-aeon|0xNN/aeon]]
 - [[forks/simistern-aeon|simistern/aeon]]
@@ -42,7 +39,6 @@ Custom skill shipped by 63 forks. Not present in upstream `aaronjmars/aeon/skill
 - [[forks/likenow66-aeon|likenow66/aeon]]
 - [[forks/mandateseal-aeon|mandateseal/aeon]]
 - [[forks/luazhizhan-aeon|luazhizhan/aeon]]
-- [[forks/AFHUNTLY-aeon|AFHUNTLY/aeon]]
 - [[forks/UIZorrot-aeon|UIZorrot/aeon]]
 - [[forks/loessy-aeon|loessy/aeon]]
 - [[forks/AntFleet-aeon|AntFleet/aeon]]
@@ -50,16 +46,17 @@ Custom skill shipped by 63 forks. Not present in upstream `aaronjmars/aeon/skill
 - [[forks/AIRYDER-aeon|AIRYDER/aeon]]
 - [[forks/ScoutAeon-Scout|ScoutAeon/Scout]]
 - [[forks/NoctelXBT-aeon|NoctelXBT/aeon]]
+- [[forks/richard7463-aeon|richard7463/aeon]]
 - [[forks/KanekiCraynet-aeon|KanekiCraynet/aeon]]
 - [[forks/TakamiyaZee-aeon|TakamiyaZee/aeon]]
 - [[forks/xBalbinus-aeon|xBalbinus/aeon]]
+- [[forks/AFHUNTLY-aeon|AFHUNTLY/aeon]]
+- [[forks/svenakira-aeon|svenakira/aeon]]
 - [[forks/needsomevibe-aeon|needsomevibe/aeon]]
 - [[forks/0xWCME-aeon|0xWCME/aeon]]
-- [[forks/richard7463-aeon|richard7463/aeon]]
-- [[forks/janicegrech1-hash-aeon|janicegrech1-hash/aeon]]
+- [[forks/Cbowcrptex-aeon|Cbowcrptex/aeon]]
 - [[forks/Keeleran-aeon|Keeleran/aeon]]
 - [[forks/noelclaw-aeon|noelclaw/aeon]]
-- [[forks/svenakira-aeon|svenakira/aeon]]
 - [[forks/codexvritra-aeon|codexvritra/aeon]]
 - [[forks/KingRwaz-aeon|KingRwaz/aeon]]
 - [[forks/rimurucook-aeon|rimurucook/aeon]]
@@ -67,9 +64,8 @@ Custom skill shipped by 63 forks. Not present in upstream `aaronjmars/aeon/skill
 - [[forks/apolloclaws-oss-aeon|apolloclaws-oss/aeon]]
 - [[forks/dontlickfrogs-aeon|dontlickfrogs/aeon]]
 - [[forks/ryjin111-aeon-pack-pr|ryjin111/aeon-pack-pr]]
-- [[forks/DoughBoiKush-aeon|DoughBoiKush/aeon]]
+- [[forks/liquidpadbot-aeon|liquidpadbot/aeon]]
 - [[forks/jvbono-aeon|jvbono/aeon]]
 - [[forks/masteramatajj-source-aeon|masteramatajj-source/aeon]]
 - [[forks/yehorcallmedai-maker-aeon|yehorcallmedai-maker/aeon]]
-- [[forks/liquidpadbot-aeon|liquidpadbot/aeon]]
 - [[forks/antfleet-ops-aeon|antfleet-ops/aeon]]
