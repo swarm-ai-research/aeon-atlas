@@ -1,0 +1,129 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Atlas updated"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat_new_forks",
+        "sep1",
+        "stack_network",
+        "sep2",
+        "stack_activity",
+        "sep3",
+        "text_insight",
+        "sep4",
+        "link_pr"
+      ]
+    },
+    "stat_new_forks": {
+      "type": "Stat",
+      "props": {
+        "label": "New forks (top: cyborganeh/aeon)",
+        "value": "80"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_network": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_repos",
+        "stat_stars"
+      ]
+    },
+    "stat_repos": {
+      "type": "Stat",
+      "props": {
+        "label": "Fork network repos",
+        "value": "267"
+      }
+    },
+    "stat_stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars",
+        "value": "21"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_activity": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_resumed",
+        "stat_pairs"
+      ]
+    },
+    "stat_resumed": {
+      "type": "Stat",
+      "props": {
+        "label": "Dormant forks resumed",
+        "value": "36"
+      }
+    },
+    "stat_pairs": {
+      "type": "Stat",
+      "props": {
+        "label": "New high-overlap skill pairs",
+        "value": "294"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "text_insight": {
+      "type": "Text",
+      "props": {
+        "text": "Wave of pack-provisioned forks detected",
+        "variant": "lead"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "link_pr": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #23 - swarm-ai-research/aeon-atlas",
+        "href": "https://github.com/swarm-ai-research/aeon-atlas/pull/23",
+        "source": "GitHub"
+      }
+    }
+  }
+}
