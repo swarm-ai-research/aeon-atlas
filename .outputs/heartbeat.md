@@ -1,22 +1,20 @@
-Heartbeat complete. All green on P0, and the one item under watch cleared cleanly.
+Heartbeat complete — all clear, no notification needed.
 
 ## Summary
 
-Ran the `heartbeat` skill (Sunday 2026-09-06, 08:00 slot, ~1h12m late).
+Ran the **heartbeat** skill for the 2026-09-06 14:00 UTC slot (executed 15:50 UTC, ~1h50m late).
 
-**P0 — all clear:** No failed, stuck, chronic (all >50%), or high-consecutive-failure skills. Heartbeat self-check (~11.8h since last success) well under the 36h threshold.
+**Findings — all green:**
+- **P0:** No failed/stuck skills, no `consecutive_failures ≥ 3`, no chronic failures. All 4 enabled skills healthy (heartbeat 89%, atlas 100%, atlas-layers 93%, atlas-improve 100%). Heartbeat self-check `last_success` ~6.6h ago — well under 36h.
+- **P1:** 11 open PRs; 9 stalled >24h (the known bot-refresh set #13–#21 + #16 deslop) — deduped from prior logs, no re-notify. PRs #22/#23 are today's fresh weekly runs (~11h old), not yet stalled. No open GitHub issues.
+- **P2/P3:** No flagged memory items; no missing/stale scheduled skills. Weekly atlas/atlas-layers cohort ran clean this Sunday.
 
-**Headline — weekly cohort watch CLOSED clean:** The Sunday 04:00/05:00 weekly slots — the exact item carried across the last three logs — both dispatched cleanly. `atlas` succeeded 05:17 UTC (PR #23: 80 new forks), `atlas-layers` succeeded 05:05 UTC (PR #22: refreshed). The full scheduler cohort is now confirmed healthy; no fresh issue filed, ISS-005 stays resolved.
+**Overall: 🟡 WATCH** (no P0; stalled bot PRs hold it at WATCH). **0 open issues.**
 
-**P1/P2/P3:** 9 stalled PRs (#13–#21, known bot set) keep overall at 🟡 WATCH — deduped, not re-notified. Today's #22/#23 are ~4h old (not yet stalled). Zero open GitHub issues, none urgent. No flagged memory items. No skill staleness.
+**Files modified:**
+- `docs/status.md` — regenerated public status page (Updated 2026-09-06 15:50 UTC, next run heartbeat 20:00 UTC). No token-report article exists → Token pulse section omitted.
+- `memory/logs/2026-09-06.md` — appended the 14:00-slot log entry.
 
-**Actions taken:**
-- Regenerated `docs/status.md` — Overall 🟡 WATCH, 4 enabled skills, 0 open issues, next run heartbeat 14:00 UTC (Token pulse omitted — no `token-report` article).
-- Appended run entry to `memory/logs/2026-09-06.md`.
-- **No notification sent** — clean weekly dispatch is a de-escalation of an already-resolved issue; stalled PRs deduped; overall WATCH unchanged.
+**Notification:** NOT sent — no new actionable item; all findings deduped against the last 48h of logs.
 
-**Files modified:** `docs/status.md`, `memory/logs/2026-09-06.md` (both auto-committed by the workflow).
-
-**Follow-up:** None open. Routine monitoring continues; next weekly cohort test is Sunday 2026-09-13.
-
-`HEARTBEAT_OK · STATUS_PAGE=WATCH`
+**Follow-up:** None. Next weekly cohort test is Sunday 2026-09-13 04:00/05:00 UTC. `HEARTBEAT_OK · STATUS_PAGE=WATCH`.
