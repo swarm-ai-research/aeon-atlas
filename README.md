@@ -48,12 +48,12 @@ node scripts/atlas.mjs --depth 2    # include forks-of-forks (default 1)
 
 The script uses `gh api` for auth headroom; with no auth it falls back to unauthenticated `curl` (60 req/hr rate limit — usually fine for one run).
 
-## What it isn't
+## Scope
 
-- **Not a skill marketplace.** It catalogs what's enabled in `aeon.yml`, not what's available in `skills/`. A fork can ship skills nobody runs; those don't show here.
-- **Not a contribution graph.** Doesn't currently look at committers or contributor overlap — could be added later.
-- **Not real-time.** Weekly cadence is enough for an ecosystem that adds a few forks per day.
-- **Not portable to other forks.** The atlas always maps `aaronjmars/aeon`'s descendants. Use `--upstream owner/repo` if you want to point it elsewhere.
+- **Tracks only enabled skills.** Charts what's turned on in `aeon.yml`, not all available skills in `skills/`. A fork can ship skills nobody runs; those won't appear here.
+- **Shows pushed forks, not contributions.** Doesn't currently track committers or contributor overlap — could be added later.
+- **Weekly updates.** Daily refresh would exceed the API quota; weekly catches the ecosystem's few forks per day.
+- **Scoped to aeon descendants.** Always maps `aaronjmars/aeon` family trees. Use `--upstream owner/repo` to point elsewhere.
 
 ## Relationship to upstream
 
