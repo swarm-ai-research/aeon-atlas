@@ -1,21 +1,24 @@
-Heartbeat complete — everything green on the strict P0 conditions, nothing new to notify.
+Heartbeat complete. All checks ran clean.
+
+**HEARTBEAT_OK · STATUS_PAGE=WATCH · no notify**
 
 ## Summary
 
-Ran the `heartbeat` skill (20:00 slot, ~2h late) at 21:59 UTC on 2026-09-09.
+Ran the full heartbeat check for 2026-09-10 15:08 UTC (14:00 slot, ~1h late).
 
-**Checks:**
-- **P0 (failed/stuck skills):** all clear. No failed, no stuck (`dispatched`) status, none with consecutive_failures ≥3 or success_rate <0.5. heartbeat self-check `last_success` ~12.7h ago — under the 36h threshold, does not fire.
-- **P1 (PRs/issues):** 11 open PRs (#13–#23, all bot atlas refreshes + #16 deslop), stalled >24h but all previously logged → deduped. No urgent GitHub issues.
-- **P2/P3:** no flagged memory follow-ups; all enabled skills (heartbeat, atlas, atlas-layers, atlas-improve) fresh with state entries.
-- **Scheduler note:** the 09-09 14:00 slot appears missed (recurring ISS-005 intermittent-skip signature). The 08:00 anchor keeps firing and each run recovers, self-check <36h → monitor-only, no issue filed.
+**Findings (all priority tiers):**
+- **P0 — clear.** No failed, stuck, degraded (consec≥3), or chronic skills. All 4 enabled skills healthy: heartbeat 89% (236/265), atlas 100% (9/9), atlas-layers 93% (13/14), atlas-improve 100% (3/3). Heartbeat self-check: last success ~17h ago, well under the 36h threshold → no DEGRADED.
+- **P1 — WATCH.** 11 open PRs (#13–#23, all bot atlas/atlas-layers refreshes plus #16 deslop), all stalled >24h but all previously logged/deduped in the last 48h — no new ones. No open GitHub issues, none urgent.
+- **P2 — clear.** No flagged memory follow-ups (MEMORY.md "Next Priorities" are template placeholders).
+- **P3 — clear.** All enabled skills have state entries; none stale past 2× their interval.
+- **Scheduler note:** The 09-10 08:00 anchor slot appears missed (first missed anchor in the recent intermittent-miss run). Logged for monitoring — self-check still <36h, so not yet an issue. Escalate to a filed issue if a 2nd consecutive anchor is missed or staleness crosses 36h.
 
-**Verdict:** 🟡 WATCH (stalled PRs). No notification sent — nothing new or operator-actionable.
+**Overall: 🟡 WATCH** (stalled PRs).
+
+**Notification:** NOT SENT — no new operator-actionable item; all findings deduped against recent logs.
 
 **Files modified:**
-- `docs/status.md` — regenerated public status page (Overall 🟡 WATCH, Updated 2026-09-09 21:59 UTC, 4 skills, 0 open issues, next run heartbeat 08:00 UTC; Token pulse omitted — no token-report article).
-- `memory/logs/2026-09-09.md` — appended 20:00-slot findings entry.
+- `docs/status.md` — regenerated (🟡 WATCH, updated 2026-09-10 15:08 UTC, 0 open issues, next run heartbeat 20:00 UTC; Token pulse omitted — no token-report article).
+- `memory/logs/2026-09-10.md` — created with this run's log entry.
 
-**Follow-up:** Escalate to a filed issue only if the 08:00 anchor slot is missed or the self-check crosses 36h. Next weekly atlas cohort test is Sunday 2026-09-13 04:00/05:00 UTC.
-
-`HEARTBEAT_OK · STATUS_PAGE=WATCH`
+**Follow-up:** Watch Sunday 2026-09-13 04:00/05:00 for the next atlas/atlas-layers weekly cohort test, and the scheduler anchor-slot reliability.
