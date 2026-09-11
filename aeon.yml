@@ -117,6 +117,7 @@ skills:
   # --- Evening / meta (6 PM UTC) ---
   goal-tracker: { enabled: false, schedule: "0 18 * * *" }
   skill-health: { enabled: false, schedule: "0 18 * * *" }
+  api-health-probe: { enabled: false, schedule: "0 10 * * *", var: "" } # proactively probe external API hosts the fleet depends on; alerts on UP/DOWN/SLOW transitions before they show up as skill failures. var: single host to probe, e.g. api.coingecko.com
   skill-analytics: { enabled: false, schedule: "30 18 * * 3", model: "claude-sonnet-4-6" } # Wednesday — fleet-level skill-run analytics: ranked run counts, exit-taxonomy distribution, anomaly flags (significance-gated)
 
   self-improve: { enabled: false, schedule: "0 18 1/2 * *" } # every other day — improve agent skills/prompts/config

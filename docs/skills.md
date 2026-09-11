@@ -96,6 +96,7 @@ Install any skill into your own agent:
 | `memory-flush` | Promote important recent log entries into MEMORY.md | Daily 6 PM UTC |
 | `reflect` | Review recent activity, consolidate memory, prune stale entries | Daily 6 PM UTC |
 | `skill-health` | Check which scheduled skills haven't run recently | Daily 6 PM UTC |
+| `api-health-probe` | Proactively probe external API hosts the fleet depends on; alert on UP/DOWN/SLOW transitions | Daily 10 AM UTC |
 | `self-review` | Weekly audit of what Aeon did, what failed, and what to improve | Daily 6 PM UTC |
 | `rss-feed` | Generate an Atom XML feed from articles in the repo | Daily 5:30 PM UTC |
 | `update-gallery` | Sync articles to GitHub Pages gallery with proper Jekyll frontmatter | Weekly Sunday 6 PM UTC |
