@@ -41,6 +41,7 @@ Install any skill into your own agent:
 | Skill | Description | Default Schedule |
 |-------|-------------|-----------------|
 | `pr-review` | Auto-review open PRs on watched repos and post summary comments | Daily 9 AM UTC |
+| `pr-merge-queue` | Serialize merging of `merge-queue`-labeled PRs one at a time, refreshing the next in line against base after each merge | Daily 2:20 PM UTC |
 | `github-monitor` | Watch repos for stale PRs, new issues, and new releases | Daily 9 AM UTC |
 | `github-issues` | Check all your repos for new open issues in the last 24 hours | Daily 9 AM UTC |
 | `github-trending` | Top 10 trending repos on GitHub right now | Daily 9 AM UTC |
