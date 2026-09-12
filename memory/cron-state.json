@@ -1,7 +1,7 @@
 {
   "heartbeat": {
-    "last_dispatch": "2026-09-11T09:36:13Z",
-    "last_status": "success",
+    "last_dispatch": "2026-09-12T21:37:12Z",
+    "last_status": "dispatched",
     "last_failed": "2026-06-06T12:56:45Z",
     "total_runs": 268,
     "total_successes": 239,
@@ -44,8 +44,8 @@
     "success_rate": 1
   },
   "skill-health": {
-    "last_dispatch": "2026-09-12T19:38:58Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-09-12T21:37:12Z",
+    "last_status": "dispatched",
     "last_failed": "2026-09-12T19:39:12Z",
     "total_runs": 1,
     "total_successes": 0,
@@ -53,5 +53,9 @@
     "consecutive_failures": 1,
     "success_rate": 0,
     "last_error": "requested\":{\"background\":0,\"foreground\":0,\"unset\":0},\"started_in_background\":0,\"max_depth\":0,\"spawned_by_subagents\":0,\"completed\":0,\"failed\":0,\"killed\":{\"parent\":0,\"user\":0,\"system\":0},\"refused\":{\"dep"
+  },
+  "fork-first-run-alert": {
+    "last_dispatch": "2026-09-12T21:37:12Z",
+    "last_status": "dispatched"
   }
 }
