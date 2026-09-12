@@ -1,5 +1,9 @@
 # Aeon configuration
 #
+# TIMEZONE: All cron schedules below are in UTC. GitHub Actions requires UTC for scheduling.
+# AEST equivalents (UTC+10) are documented in memory/topics/fleet-intelligence.md
+# For operator reference: add 10 hours to UTC times to get AEST times
+#
 # Enable skills by setting enabled: true. Multiple skills at the same time run in parallel.
 # Set var: "value" to pass a default parameter to the skill.
 # Set model: "claude-sonnet-4-6" per skill to override the default model (cost optimization).

@@ -14,7 +14,7 @@
 - **Tier 2 (Health/Ops):** heartbeat, skill-health, skill-evals, api-health-probe, skill-freshness, fork-first-run-alert, workflow-security-audit
 - **Tier 3 (Infrastructure):** atlas, atlas-layers, atlas-improve
 - **Tier 4 (Synthesis):** fleet-state, operator-scorecard, skill-update-check
-- **First weekly digest:** 2026-09-15, 06:00 UTC
+- **First weekly digest:** 2026-09-15, 16:00 AEST (06:00 UTC)
 
 ### 🏥 [Heartbeat & Scheduler Monitoring](topics/heartbeat-monitoring.md)
 - Runs 08:00, 14:00, 20:00 UTC daily (now part of larger operational health suite)
