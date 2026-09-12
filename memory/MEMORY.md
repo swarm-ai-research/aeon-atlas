@@ -8,20 +8,22 @@
 
 ## Active Topics
 
-### 🏥 [Heartbeat & Scheduler Monitoring](topics/heartbeat-monitoring.md)
-- Runs 08:00, 14:00, 20:00 UTC daily
-- ISS-005 (scheduler quiet) self-resolved 2026-09-05
-- Recurring intermittent late/skip pattern; recovers on dispatch
-- **Action:** Monitor for 2nd consecutive missed anchor or 36h staleness
+### ⚙️ [Fleet-Intelligence Suite (Phase 2 Complete)](topics/fleet-intelligence.md)
+- **25 skills enabled** (25% fleet activated) across 4 tiers
+- **Tier 1 (Analytics):** skill-leaderboard, fork-skill-digest, fork-skill-gap, fleet-skill-adoption, fork-contributor-leaderboard, fork-release-tracker, contributor-spotlight, fork-cohort
+- **Tier 2 (Health/Ops):** heartbeat, skill-health, skill-evals, api-health-probe, skill-freshness, fork-first-run-alert, workflow-security-audit
+- **Tier 3 (Infrastructure):** atlas, atlas-layers, atlas-improve
+- **Tier 4 (Synthesis):** fleet-state, operator-scorecard, skill-update-check
+- **First weekly digest:** 2026-09-15, 06:00 UTC
 
-### 🛠️ [Skills Built & Deployed](topics/skills-built.md)
-- **Recent (2026-09):** api-health-probe, pr-merge-queue, CrystalCore.OS dashboard
-- **Fork adoption:** api-health-probe 7 forks, pr-merge-queue 19 forks
-- **Next candidates:** skill-health (paired audit with api-health-probe)
+### 🏥 [Heartbeat & Scheduler Monitoring](topics/heartbeat-monitoring.md)
+- Runs 08:00, 14:00, 20:00 UTC daily (now part of larger operational health suite)
+- ISS-005 self-resolved 2026-09-05
+- Recurring intermittent late/skip pattern; recovers on dispatch
 
 ### 📊 [Amplitude Analytics Setup](topics/amplitude-analytics.md)
 - **Browser:** @amplitude/unified in dashboard, mounted in layout.tsx
-- **Agent:** Manual instrumentation in mcp-server/ and a2a-server/ (CLI subprocess pattern)
+- **Agent:** Manual instrumentation in mcp-server/ and a2a-server/
 - **PR #3:** Draft, ready for operator review; awaiting real API key testing
 
 ### 🧠 [Personal Practice & Boundaries](topics/personal-practice.md)
@@ -31,20 +33,27 @@
 
 ## Pending Work
 
+### Phase 2 Complete ✓
+- ✓ Memory consolidation (100+ logs → structured topics, MEMORY.md as index)
+- ✓ Fork-fleet analytics foundation (4 tiers, 25 skills enabled)
+- ✓ Fleet-intelligence suite staged for 2026-09-15 first run
+
 ### Notification Channels (Blocked)
 - No Telegram, Discord, Slack secrets configured
 - Requires operator to provide: TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID, DISCORD_WEBHOOK_URL, etc.
 - Script `./notify` and integration awaiting secrets
+- **Impact:** Digest notifications will run silently until channels configured
 
 ### Stalled PRs (Tracked, Low Priority)
-- 11 PRs #13–#23 open >24h (newest #23 updated 2026-09-06)
-- Mostly automated atlas/atlas-layers refreshes + #16 rsavitt deslop
-- All deduped in memory logs; no new urgent PRs
+- 11 PRs #13–#23 open >24h (stale, auto-managed)
+- No new urgent PRs since 2026-09-12
+- All deduped in memory logs
 
-### Memory Consolidation (In Progress → Complete)
-- Moved daily log detail into topic files (heartbeat-monitoring, skills-built, amplitude-analytics, personal-practice)
-- MEMORY.md now serves as index with links to topics
-- **Next:** Digest generation, skill-building from fork catalog
+### Phase 3 Optional (Future Enhancements)
+- fleet-scorecard (daily cost + reliability metrics)
+- follow-up-patrol (escalation audit + backlog aging)
+- AI framework watch (competitive intelligence digest)
+- ecosystem entrants (new fork detection refinement)
 
 ## Lessons Learned
 - Heartbeat runs: expect ~1–2h drift, but self-heal within 36h window
