@@ -122,14 +122,14 @@
 
 ## Phase 4: Strategic Intelligence & Backlog Management (In Progress)
 
-### Enabled (2 skills)
+### Enabled (3 skills)
 1. **ai-framework-watch** (Mon 18:30 AEST / 08:30 UTC) — Weekly competitive intelligence digest across 9 AI agent frameworks + peer cohort. Tracks 7d/30d star deltas, releases, breaking changes, momentum signals.
 2. **follow-up-patrol** (Tue 21:00 AEST / 11:00 UTC) — Escalation audit: parses MEMORY.md follow-up section + issue tracker, ages items, alerts on overdue CRITICAL/HIGH items (>21d/>14d). Catch-all for open-loop backlog.
+3. **ecosystem-pulse** (Mon 21:00 AEST / 11:00 UTC) — Weekly liveness check of ECOSYSTEM.md projects: resolves each to GitHub repos, reports stars/forks/last-push buckets (ACTIVE/RECENT/COLD/X-only), 7d release window, WoW transitions. Gated notifications for ecosystem health.
 
 ### Optional Future Enhancements
 1. **fleet-scorecard** — Daily cost + reliability metrics (blocked: needs prefetch integration)
-2. **ecosystem-pulse** — Liveness check on watched projects (blocked: needs ECOSYSTEM.md project list)
-3. **competitor-launch-radar** — New AI framework launch detection (lower priority: covered by fork analytics)
+2. **competitor-launch-radar** — New AI framework launch detection (lower priority: covered by fork analytics)
 
 ## Success Metrics (First Week: 2026-09-15)
 

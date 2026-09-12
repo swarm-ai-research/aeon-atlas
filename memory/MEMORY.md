@@ -9,12 +9,12 @@
 ## Active Topics
 
 ### ⚙️ [Fleet-Intelligence Suite (Phase 4 In Progress)](topics/fleet-intelligence.md)
-- **27 skills enabled** (27% fleet activated) across 4 tiers + Phase 4
+- **28 skills enabled** (28% fleet activated) across 4 tiers + Phase 4
 - **Tier 1 (Analytics):** skill-leaderboard, fork-skill-digest, fork-skill-gap, fleet-skill-adoption, fork-contributor-leaderboard, fork-release-tracker, contributor-spotlight, fork-cohort
 - **Tier 2 (Health/Ops):** heartbeat, skill-health, skill-evals, api-health-probe, skill-freshness, fork-first-run-alert, workflow-security-audit
 - **Tier 3 (Infrastructure):** atlas, atlas-layers, atlas-improve
 - **Tier 4 (Synthesis):** fleet-state, operator-scorecard, skill-update-check
-- **Phase 4 (Intelligence):** ai-framework-watch, follow-up-patrol
+- **Phase 4 (Intelligence):** ai-framework-watch, follow-up-patrol, ecosystem-pulse
 - **First weekly digest:** 2026-09-15, 16:00 AEST (06:00 UTC)
 
 ### 🏥 [Heartbeat & Scheduler Monitoring](topics/heartbeat-monitoring.md)
