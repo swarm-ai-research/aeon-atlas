@@ -1,53 +1,53 @@
-# Contributing to Australia Administration
+# Contributing to AUS-Monorepo
 
-Thank you for contributing to Australian governance transparency and administration!
+Thank you for contributing to decentralized, sovereign infrastructure!
 
 ## Contribution Types
 
-### 1. Documentation Updates
-- Clarifying existing procedures
-- Fixing outdated information
-- Adding missing documentation
-- Improving clarity and accessibility
+### 1. Protocol Design & Implementation
+- New consensus algorithms or communication protocols
+- Cryptographic primitives and proofs
+- P2P networking improvements
+- Message passing and sync algorithms
 
-### 2. New Department Records
-- Adding agency information
-- Documenting responsibilities
-- Updating contact information
-- Recording organizational changes
+### 2. Agent Frameworks & Implementations
+- Multi-agent coordination systems
+- Autonomous system behaviors
+- Agent decision-making frameworks
+- Interaction protocols
 
-### 3. Policy & Procedure Additions
-- New legislative frameworks
-- Administrative procedure updates
-- Process standardization
-- Governance improvements
+### 3. Governance & Decision-Making
+- DAO mechanisms and voting systems
+- Distributed consensus approaches
+- Resource allocation models
+- Dispute resolution protocols
 
-### 4. Data Contributions
-- Public datasets and statistics
-- Historical records
-- Performance metrics
-- Decision logs and transparency reports
+### 4. Infrastructure & Network
+- Distributed storage solutions
+- Compute network architectures
+- Mesh network implementations
+- Resilience & fault tolerance
 
-### 5. Quality & Accessibility
-- Improving formatting
-- Adding missing metadata
-- Accessibility enhancements
-- Localization
+### 5. Cryptography & Security
+- Zero-knowledge proof systems
+- Key management and signing schemes
+- Privacy primitives
+- Formal security verification
 
 ## Getting Started
 
 1. **Fork the repository** (or branch if you have write access)
 2. **Create a feature branch** with a descriptive name:
    ```bash
-   git checkout -b docs/department-xyz-update
-   git checkout -b policy/new-framework-name
-   git checkout -b data/dataset-addition
+   git checkout -b protocol/algorithm-name
+   git checkout -b agent/system-implementation
+   git checkout -b governance/mechanism-name
    ```
 3. **Make your changes** following the guidelines below
 4. **Commit with clear messages**:
    ```
    Add: [Brief description]
-   Ref: [Issue/department/section affected]
+   Ref: [Domain/issue/protocol affected]
    
    [Detailed explanation if needed]
    ```
@@ -59,80 +59,91 @@ Thank you for contributing to Australian governance transparency and administrat
 ## Documentation Standards
 
 ### File Naming
-- Use kebab-case: `my-department-name.md`
-- Be descriptive: `federal-tax-collection-procedures.md`
-- Avoid abbreviations unless official
+- Use kebab-case: `protocol-name.md`
+- Be descriptive: `byzantine-fault-tolerant-consensus.md`
+- Avoid abbreviations unless widely established
 
 ### Structure
 Every document should include:
 ```markdown
-# Department/Policy Name
+# Protocol/System Name
 
-**Established**: YYYY-MM-DD
+**Status**: Proposed | In Development | Stable | Deprecated
+**Authors**: [Name(s)]
+**Created**: YYYY-MM-DD
 **Last Updated**: YYYY-MM-DD
-**Responsible**: [Department/Agency Name]
 
 ## Overview
-Brief description of purpose and scope.
+Brief description of purpose, scope, and motivation.
 
-## Key Responsibilities
-- Item 1
-- Item 2
+## Problem Statement
+What problem does this solve?
 
-## Procedures
-Step-by-step processes.
+## Design Approach
+Core design principles and architecture.
 
-## Contact
-- Department: [name]
-- Email: [contact]
-- Phone: [number]
+## Specification
+Detailed technical specification or algorithm.
 
-## Related Documents
-- [[document-name]]
-- [[another-document]]
+## Security Considerations
+Known limitations, threat model, security properties.
+
+## Implementation
+Reference implementation or guidance.
+
+## Related Protocols
+- [[protocol-name]]
+- [[another-protocol]]
 ```
 
 ### Formatting Rules
 - Use `#` for main heading (H1 only once per document)
 - Use `##` for sections, `###` for subsections
 - Link to other documents: `[[document-name]]`
-- Use tables for structured data
-- Keep paragraphs concise (max 3 sentences)
+- Use code blocks for formal specifications
+- Include diagrams for complex systems (ASCII art or SVG)
+- Keep descriptions concise and technical
 
 ### Metadata
 Include at the top of documents:
 ```yaml
 ---
-date: 2026-09-12
-category: procedures
-department: [Department Name]
-status: active | draft | archived
+type: protocol | agent-framework | governance-mechanism | infrastructure | cryptography
+domain: core | agents | governance | infrastructure | protocols | cryptography | contracts
+status: proposed | development | stable | deprecated
 version: 1.0
 ---
 ```
 
-## Data Contribution Guidelines
+## Implementation & Research Guidelines
 
-### Datasets
-- Include a `README.md` explaining the dataset
-- Provide data dictionary with field definitions
-- Use standard formats (CSV, JSON, Parquet)
-- Include data source and collection date
-- Add update frequency information
+### Protocol Development
+- Include formal specification (pseudocode or detailed description)
+- Provide security analysis (threat model, assumptions)
+- Reference relevant literature and prior work
+- Include test vectors or example executions
+- Document known limitations
 
-### Decision Logs
-- Record significant decisions
-- Include date, decision, rationale
-- Link to supporting documents
-- Note outcomes and impacts
-- Update when new information emerges
+### Agent Framework Design
+- Specify agent capabilities and decision model
+- Define interaction protocols with other agents
+- Include examples of agent behavior
+- Document learning or adaptation mechanisms
+- Provide simulation/testing framework
 
-### Transparency Reports
-- Quarterly or annual summaries
-- Performance metrics aligned to objectives
-- Public accountability measures
-- Comparison to prior periods
-- Clear accessibility notes
+### Governance Mechanism Design
+- Describe decision-making process
+- Include participation and voting rules
+- Analyze equilibrium properties
+- Document failure modes and recovery
+- Provide parameter tuning guidance
+
+### Research & Analysis
+- Include methodology and assumptions
+- Provide reproducible results (seeds, configurations)
+- Document data sources and collection methods
+- Share analysis notebooks or scripts
+- Interpret findings with appropriate caveats
 
 ## Review Process
 
@@ -155,28 +166,32 @@ version: 1.0
 
 ## Issue Labels
 
-- `documentation` — Documentation updates
-- `department-records` — Department information
-- `policy` — Policy and legislation
-- `data` — Datasets and records
-- `accessibility` — Accessibility improvements
-- `question` — Question or clarification needed
+- `protocol` — Protocol design or improvement
+- `agent-framework` — Agent system or behavior
+- `governance` — Governance mechanism or voting
+- `infrastructure` — Network, storage, or compute
+- `cryptography` — Security, proofs, or primitives
+- `documentation` — Docs and specifications
+- `research` — Research questions or analysis
+- `question` — Question or discussion
 - `good-first-issue` — Good for new contributors
+- `breaking-change` — API or protocol breaking change
 
 ## Code of Conduct
 
 All contributors must adhere to our [Code of Conduct](./CODE_OF_CONDUCT.md). We expect:
-- Respectful, professional communication
-- Focus on improving transparency
-- Acknowledgment of different perspectives
-- Good faith participation
+- Respectful, professional technical discussion
+- Focus on improving system resilience and decentralization
+- Openness to alternative designs and approaches
+- Honest reporting of limitations and failures
 
 ## Questions?
 
-- **Issues**: Use GitHub Issues for questions and discussions
-- **Security concerns**: See [SECURITY.md](./SECURITY.md)
-- **Process questions**: Contact [maintainers](./MAINTAINERS.md)
+- **Technical Questions**: Use GitHub Discussions or Issues
+- **Design Review**: Open an issue and tag [@maintainers](./MAINTAINERS.md)
+- **Security Concerns**: See [SECURITY.md](./SECURITY.md)
+- **Governance**: Participate in community governance processes
 
 ---
 
-Thank you for helping build a more transparent Australian administration!
+Thank you for helping build resilient, decentralized infrastructure!

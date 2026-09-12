@@ -1,51 +1,63 @@
-# Australia Administration
+# AUS-Monorepo
 
-A public, transparent monorepo for Australian governance, administration, and policy documentation. Centralized source of truth for federal procedures, public records, datasets, and decision logs.
+Sovereign, decentralized infrastructure for autonomous systems, distributed governance, and self-organizing networks.
 
-## Structure
+A collective repository for building resilient, decentralized alternatives to centralized control systems. Open protocols, autonomous agents, and trustless coordination.
+
+## Architecture
 
 ```
-australia-administration/
-├── departments/          # Federal agencies & departments
-├── policies/             # Policy frameworks & legislation
-├── procedures/           # Administrative processes & guidelines
-├── datasets/             # Public data repositories
-├── transparency/         # Decision logs, FOIA, accountability records
-├── standards/            # Technical & organizational standards
-├── docs/                 # General documentation
-└── templates/            # Reusable templates for governance
+aus-monorepo/
+├── core/                 # Core decentralized protocols & primitives
+├── agents/               # Autonomous agent frameworks & implementations
+├── governance/           # Distributed decision-making & governance models
+├── infrastructure/       # Network, storage, computation layers
+├── protocols/            # Communication & consensus protocols
+├── cryptography/         # Key management, verification, signing
+├── contracts/            # Smart contracts & autonomous execution
+├── docs/                 # Architecture docs & whitepapers
+└── reference-impl/       # Reference implementations
 ```
 
-## Quick Links
+## Core Domains
 
-| Section | Purpose |
-|---------|---------|
-| **[Departments](./departments/)** | Structure, contacts, responsibilities of federal agencies |
-| **[Policies](./policies/)** | Legislation, frameworks, regulations |
-| **[Procedures](./procedures/)** | Step-by-step administrative processes |
-| **[Datasets](./datasets/)** | Public statistics, records, data |
-| **[Transparency](./transparency/)** | Decision logs, FOI requests, audit trails |
-| **[Standards](./standards/)** | Guidelines for consistency across agencies |
+| Domain | Purpose |
+|--------|---------|
+| **Agents** | Autonomous systems, multi-agent coordination, AI agents |
+| **Governance** | DAOs, distributed decision-making, consensus mechanisms |
+| **Protocols** | P2P communication, message passing, sync algorithms |
+| **Cryptography** | Zero-knowledge proofs, signatures, privacy primitives |
+| **Infrastructure** | Distributed storage, compute networks, mesh networks |
+| **Contracts** | Autonomous execution, state machines, verification |
+
+## Principles
+
+- **Decentralized**: No single point of control or failure
+- **Sovereign**: Self-governance, local authority over local decisions
+- **Trustless**: Verification through mathematics, not trusted intermediaries
+- **Open**: Transparent protocols, auditable systems
+- **Resilient**: Fault-tolerant, adversary-resistant design
+- **Interoperable**: Works across jurisdictions and systems
 
 ## Contributing
 
 See [CONTRIBUTING.md](./CONTRIBUTING.md) for:
-- How to propose changes
-- Documentation standards
-- Review process
-- Release procedures
+- Protocol contribution process
+- Implementation standards
+- Security review requirements
+- Decentralization principles
 
 ## Governance
 
-- **Maintainers**: [MAINTAINERS.md](./MAINTAINERS.md)
+- **Stewards**: [MAINTAINERS.md](./MAINTAINERS.md)
 - **Code of Conduct**: [CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md)
-- **Security Policy**: [SECURITY.md](./SECURITY.md)
+- **Security**: [SECURITY.md](./SECURITY.md)
 
 ## License
 
-[CC0 1.0 Universal](LICENSE) — Public domain. No restrictions on use.
+[MIT](LICENSE) — Open source. Use freely.
 
 ---
 
-**Last updated**: 2026-09-12
-**Repository**: https://github.com/crystalarchitect/aeon-atlas
+**Updated**: 2026-09-12
+**Network**: Decentralized, sovereignty-first

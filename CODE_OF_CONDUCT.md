@@ -1,124 +1,92 @@
-# Code of Conduct
+# Community Guidelines
 
-We are committed to providing a welcoming and inclusive environment for all contributors to Australia Administration, regardless of background or identity.
+We are committed to a decentralized, technically rigorous, and respectful community building resilient infrastructure.
 
-## Our Pledge
+## Our Principles
 
-We pledge to make participation in this project and our community a harassment-free experience for everyone, by:
-
-- Being respectful and professional in all interactions
-- Focusing on improving Australian governance transparency
-- Acknowledging diverse perspectives and experiences
-- Maintaining scientific and factual rigor
-- Assuming good faith in disagreements
-- Prioritizing accuracy and public benefit
+We aspire to:
+- **Technical rigor** — Thorough analysis, formal verification where possible, transparent trade-offs
+- **Intellectual honesty** — Acknowledge limitations, correct errors, cite prior work
+- **Collaborative problem-solving** — Assume good faith, debate ideas not personalities
+- **Openness** — Welcome scrutiny, diverse approaches, and principled disagreement
+- **Inclusive participation** — Value contributions from all backgrounds and experience levels
 
 ## Expected Behavior
 
-All contributors are expected to:
+All participants are expected to:
 
-1. **Be respectful** — Treat others with dignity and courtesy
-2. **Be collaborative** — Work constructively with others
-3. **Be honest** — Provide accurate information and cite sources
-4. **Be transparent** — Disclose conflicts of interest
-5. **Be constructive** — Offer solutions, not just criticism
-6. **Respect diversity** — Welcome people from all backgrounds
+1. **Engage technically** — Focus on ideas, evidence, and design trade-offs
+2. **Be honest** — Report findings faithfully, including negative results
+3. **Be respectful** — Disagree without dismissing or belittling others
+4. **Acknowledge limitations** — Be clear about assumptions and uncertainties
+5. **Share knowledge** — Help others understand your work and reasoning
+6. **Give credit** — Cite prior work and acknowledge contributors
 
-## Unacceptable Behavior
+## What We Don't Tolerate
 
-The following behaviors are unacceptable and will not be tolerated:
+- Personal attacks, harassment, or intimidation
+- Deliberate spread of misinformation or false claims
+- Bad-faith arguments designed to derail discussion
+- Attempts to exclude people based on identity or background
+- Violation of others' intellectual property or privacy
+- Coordinated harassment campaigns
+- Threats or violence
 
-- Harassment, bullying, or intimidation
-- Discrimination based on identity or characteristics
-- Deliberate spread of misinformation
-- Sexual or inappropriate conduct
-- Threats or violence (actual or implied)
-- Abuse of position or power
-- Vandalism or malicious edits
-- Doxing or sharing private information
-- Systematic gaming of processes
+## Handling Disagreement
 
-## Reporting Violations
+**Technical disagreement is healthy.** When you disagree:
 
-If you witness or experience a Code of Conduct violation:
+1. **Engage the argument** — Explain your reasoning clearly
+2. **Ask questions** — Understand the other perspective
+3. **Find common ground** — Identify shared assumptions and goals
+4. **Accept trade-offs** — Not all decisions have objectively correct answers
+5. **Document decisions** — Record the reasoning for future reference
 
-1. **Contact the maintainers** at [conduct@australia-admin.gov.au] (placeholder)
-2. **Provide details**:
-   - What happened
-   - When and where
-   - Who was involved
-   - Any witnesses or evidence
+If disagreement persists, escalate to the appropriate steward or community process.
 
-3. **What happens next**:
-   - Your report will be acknowledged within 48 hours
-   - Investigation will begin promptly
-   - Appropriate action will be taken
-   - Confidentiality will be maintained to the extent possible
+## Reporting Concerns
 
-## Response & Accountability
+If you witness behavior that violates these guidelines:
 
-Violators may face:
-- Request for apology or corrective action
-- Temporary muting or suspension
-- Removal from project
-- Banning from future participation
+1. **Consider direct conversation** — Sometimes a private message clarifies misunderstandings
+2. **Report to stewards** — Contact a domain steward or open an issue
+3. **Provide context** — Include what happened, when, and relevant links
+4. **Confidentiality** — Reports are handled discreetly
 
-Serious violations may be escalated to relevant authorities.
+## Response & Resolution
 
-## Appeals
-
-If you believe you've been unfairly sanctioned:
-1. Request an appeal in writing to the lead maintainer
-2. A separate reviewer will assess your case
-3. You'll receive a decision within 5 business days
+When concerns are raised:
+- **Initial response**: Within 48 hours
+- **Investigation**: Stewards understand context and gather input
+- **Resolution**: Ranges from clarification to removing access for serious violations
+- **Appeals**: Community can request reconsideration if concerned about fairness
 
 ## Scope
 
-This Code of Conduct applies to:
-- GitHub issues and pull requests
-- Documentation and comments
-- Email and direct communication
-- Project-related events and meetings
-- Official project spaces
+These guidelines apply to:
+- GitHub discussions, issues, and pull requests
+- Project documentation and code
+- Official communication channels
+- Project-related meetings and events
 
-It does not cover private conversations unrelated to the project, except where they have direct impact on the project community.
+They don't restrict private speech unrelated to the project.
 
 ## Acknowledgment
 
-This Code of Conduct is inspired by:
-- The Contributor Covenant (v2.1)
-- Python Enhancement Proposal 20 (PEP 20)
-- Mozilla Community Participation Guidelines
-
-We thank these communities for their thoughtful frameworks.
+This guideline draws inspiration from:
+- The Contributor Covenant
+- Kubernetes Community Code of Conduct
+- TensorFlow Community Guidelines
 
 ## Questions?
 
-For questions about this Code of Conduct:
-- Check the [FAQ](#faq) below
-- Open an issue (non-confidential discussions)
-- Contact a maintainer privately
-
----
-
-## FAQ
-
-**Q: What if I made a mistake?**
-A: We believe in learning. If you made an unintentional mistake, acknowledge it, apologize, and move forward. Growth is valued.
-
-**Q: What's the difference between a disagreement and a violation?**
-A: Disagreements are normal and expected. Violations involve disrespect, bad faith, or harmful behavior. We're strict about the latter, flexible with the former.
-
-**Q: Can I ask someone to change their behavior?**
-A: Yes. If someone's behavior bothers you, you can ask them respectfully to adjust. If it doesn't improve, escalate to maintainers.
-
-**Q: What about anonymous reports?**
-A: We accept anonymous reports, though we may ask clarifying questions. Anonymous reports are taken seriously and investigated.
+- **Behavioral questions**: Open an issue or ask a steward
+- **Reporting concerns**: Contact a steward privately (details in community channels)
+- **General discussion**: Raise topics in community calls or discussions
 
 ---
 
 **Effective Date**: 2026-09-12
 **Last Updated**: 2026-09-12
-**Contact**: [Lead Maintainer Name]
 
-Thank you for helping make Australia Administration a respectful, transparent community.
+We believe open, honest, technically rigorous discourse builds better systems. Thank you for contributing to that culture.

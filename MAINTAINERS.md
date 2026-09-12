@@ -1,89 +1,104 @@
-# Maintainers
+# Stewardship & Governance
 
-Australia Administration is maintained by a distributed team committed to transparency and governance excellence.
+AUS-Monorepo is maintained by a decentralized community of stewards committed to resilience, openness, and principled decentralization.
 
-## Current Maintainers
+## Current Stewards
 
-| Name | Role | Interests | GitHub |
-|------|------|-----------|--------|
-| [Your Name] | Founder & Lead | Overall governance | [@handle] |
-| [Maintainer 2] | Documentation Lead | Standards & consistency | [@handle] |
-| [Maintainer 3] | Data Lead | Datasets & transparency | [@handle] |
+| Name | Domain | Expertise | GitHub |
+|------|--------|-----------|--------|
+| [Your Name] | Protocols & Core | Protocol design, consensus | [@handle] |
+| [Steward 2] | Agents & Systems | Multi-agent coordination | [@handle] |
+| [Steward 3] | Cryptography | Security, formal verification | [@handle] |
 
-## Responsibilities
+## Stewardship Model
 
-### Lead Maintainer
-- Final approval authority on major structural changes
-- Oversees release process and versioning
-- Mediates disputes and approves controversial changes
-- Maintains MAINTAINERS.md and governance docs
+Stewardship is **expertise-based, transparent, and revocable** — not hierarchical authority.
 
-### Documentation Maintainer
-- Reviews documentation quality and consistency
-- Ensures metadata and formatting standards
-- Manages documentation workflow
-- Oversees department and policy sections
+### Protocol Steward
+- Owns protocol specification and security properties
+- Reviews protocol implementations and extensions
+- Maintains specification documents and change log
+- Coordinates with dependent systems
+- Runs security audits and threat analysis
 
-### Data Maintainer
-- Reviews data contributions
-- Ensures data quality and completeness
-- Manages datasets and transparency records
-- Validates data schemas and documentation
+### Agent Framework Steward
+- Designs agent interaction protocols
+- Reviews agent implementations
+- Maintains framework documentation
+- Coordinates cross-agent testing
+- Curates example implementations
 
-### Section Stewards (Emerging)
-Future expansions may designate stewards for specific sections:
-- Department stewards (agency-specific ownership)
-- Policy stewards (legislation expertise)
-- Data stewards (dataset domain expertise)
+### Cryptography & Security Steward
+- Establishes security standards and threat models
+- Reviews cryptographic implementations
+- Maintains proof libraries and verification scripts
+- Coordinates security audits
+- Publishes findings and advisories
 
-## Becoming a Maintainer
+### Governance & Research Stewards (Emerging)
+Future stewards may oversee:
+- Distributed governance mechanism research
+- Network topology and resilience analysis
+- Mechanism design and game theory
+- Cross-system interoperability
 
-To become a maintainer:
+## Becoming a Steward
 
-1. **Contribute consistently** — Submit well-crafted PRs over time
-2. **Demonstrate expertise** — Show deep knowledge in a specific area
-3. **Show judgment** — Help review and guide other contributions
-4. **Get nominated** — Current maintainers propose you
-5. **Accept the role** — Agree to maintenance responsibilities
+To become a steward:
 
-Maintainers commit to:
-- Prompt, constructive PR review
-- Mentoring new contributors
-- Upholding governance standards
-- Updating documentation as needed
-- Attending quarterly sync meetings
+1. **Deep expertise** — Demonstrate mastery in a domain through contributions
+2. **Consistent presence** — Help review and guide contributions over time
+3. **Principled approach** — Show commitment to decentralization and resilience
+4. **Community recognition** — Current stewards and contributors endorse you
+5. **Accept stewardship** — Agree to maintain the domain
+
+Stewards commit to:
+- Thorough, principled technical review
+- Mentoring new contributors in the domain
+- Upholding security and decentralization principles
+- Documenting decisions and rationale transparently
+- Regular syncs and community engagement
+
+## Review & Consensus
+
+- **Design decisions**: Discussed openly in issues/RFCs
+- **Major changes**: Require steward consensus + community comment period
+- **Reversible decisions**: Fast-track with single steward review
+- **Breaking changes**: Require full steward approval + deprecation period
 
 ## Escalation Path
 
-1. **Question/Issue**: File a GitHub Issue
-2. **Disagreement on approach**: Discuss in PR thread
-3. **Process concern**: Contact the Lead Maintainer
-4. **Code of Conduct violation**: See [CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md)
+1. **Technical Question**: File an issue or discussion
+2. **Design Disagreement**: Open RFC (request for comments)
+3. **Principle Concern**: Discuss in community call
+4. **Code of Conduct Violation**: See [CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md)
 
-## Maintenance Schedule
+## Review Timeline
 
-- **PR Review**: Within 5 business days
-- **Release cycle**: Monthly (first Friday)
-- **Sync meetings**: Quarterly
-- **Documentation audit**: Twice yearly
+- **Routine PR**: Within 7 days
+- **RFC Proposal**: 14-day comment period
+- **Security Advisory**: 24-48 hours initial response
+- **Steward Sync**: Monthly (async option available)
 
-## Communication
+## Communication & Transparency
 
-- **PR reviews**: In GitHub (async)
-- **Decisions**: Documented in decision logs
-- **Urgent issues**: Via email (see contacts)
+- **PR reviews**: Detailed feedback in GitHub
+- **Design decisions**: RFC documents and decision logs
+- **Disagreements**: Transparent discussion with rationale
+- **Async-first**: Accommodates distributed contributors
 
-## Stepping Down
+## Stepping Back from Stewardship
 
-If you need to step down as a maintainer:
-- Notify the lead maintainer
-- Help find a replacement or mentor
-- Document knowledge for transfer
-- Archive your documentation work
+If a steward needs to step back:
+- Announce transition plan in advance
+- Mentor a replacement or help recruit one
+- Document domain knowledge comprehensively
+- Archive key decisions and rationale
+- Remain available for historical context
 
 ---
 
 **Last Updated**: 2026-09-12
-**Next Maintainer Review**: 2026-12-12
+**Next Steward Sync**: 2026-10-12
 
-For questions about maintenance, open an issue or contact the lead maintainer.
+Stewardship is a service to the community, not a permanent title. We value fresh perspectives and distributed leadership.
