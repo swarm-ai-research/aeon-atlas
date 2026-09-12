@@ -120,13 +120,16 @@
 - Supported via gh CLI in GitHub Actions
 - No external blocking dependencies beyond GitHub
 
-## Next Steps (Phase 4 / Future)
+## Phase 4: Strategic Intelligence & Backlog Management (In Progress)
 
-Optional enhancements for deeper insight:
-1. **fleet-scorecard** — Daily cost + reliability metrics across fork fleet
-2. **follow-up-patrol** — Escalation audit: age items in MEMORY.md, alert on overdue CRITICAL/HIGH items
-3. **AI framework watch** — Weekly competitive intelligence on 9 AI agent frameworks + peer cohort
-4. **ecosystem-entrants** — New fork detection from ecosystem-watch integration
+### Enabled (2 skills)
+1. **ai-framework-watch** (Mon 18:30 AEST / 08:30 UTC) — Weekly competitive intelligence digest across 9 AI agent frameworks + peer cohort. Tracks 7d/30d star deltas, releases, breaking changes, momentum signals.
+2. **follow-up-patrol** (Tue 21:00 AEST / 11:00 UTC) — Escalation audit: parses MEMORY.md follow-up section + issue tracker, ages items, alerts on overdue CRITICAL/HIGH items (>21d/>14d). Catch-all for open-loop backlog.
+
+### Optional Future Enhancements
+1. **fleet-scorecard** — Daily cost + reliability metrics (blocked: needs prefetch integration)
+2. **ecosystem-pulse** — Liveness check on watched projects (blocked: needs ECOSYSTEM.md project list)
+3. **competitor-launch-radar** — New AI framework launch detection (lower priority: covered by fork analytics)
 
 ## Success Metrics (First Week: 2026-09-15)
 
