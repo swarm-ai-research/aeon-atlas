@@ -1,20 +1,23 @@
-Heartbeat complete. All P0–P3 checks clean; no notification sent (nothing new or operator-actionable), status page regenerated.
+Heartbeat complete. All checks ran green on P0; no notification warranted.
 
 ## Summary
 
-**Result:** `HEARTBEAT_OK · STATUS_PAGE=WATCH · no notify` — 08:00 slot, ~1h36m late.
+Ran the `heartbeat` skill (2026-09-12 20:59 UTC, Saturday — 20:00 slot, ~1h late).
 
 **Checks:**
-- **P0 (failed/stuck skills):** all clear. No `failed` or `dispatched`-stuck entries, no `consecutive_failures ≥ 3`, no chronic failures. Heartbeat self-check: last success 2026-09-10 20:59 UTC (~12.6h ago), well under the 36h threshold.
-- **P1 (PRs/issues):** 11 open PRs (#13–#23 bot refreshes + #16 deslop), all stalled >24h and previously logged → deduped, no new ones. 0 GitHub issues, none urgent.
-- **P2 (memory follow-ups):** none flagged.
-- **P3 (missing skills):** all 4 enabled skills (heartbeat, atlas, atlas-layers, atlas-improve) have fresh state entries; none overdue.
-- **Scheduler note:** the 09-11 08:00 anchor recovered (fired late) after 09-10's 08:00 miss — no 2nd consecutive anchor miss, so no issue filed. Continuing to monitor the recurring ISS-005 late/skip signature.
+- **P0 — clear.** No failed/stuck skills, no `consecutive_failures ≥ 3`, no chronic failures. All 4 enabled skills healthy (heartbeat 89%, atlas 100%, atlas-layers 93%, atlas-improve 100%). Heartbeat self-check: last success ~23h ago, under the 36h threshold → does not fire.
+- **Scheduler note:** the 09-12 08:00 and 14:00 slots appear missed (state last advanced 09-11 22:00); this run is the 20:00 slot recovering ~1h late. Recurring ISS-005 late/skip pattern — monitor-only, not DEGRADED, since dispatch recovers and self-check < 36h.
+- **P1:** 13 open PRs. New PR #25 (amplitude analytics, ~6h old, not yet stalled). #24 crossed the 24h stall line but was already logged and is a human feature PR outside heartbeat's remit. Others (#13–#23) deduped. No open/urgent issues.
+- **P2/P3:** no flagged memory follow-ups; all enabled skills present and fresh.
 
-**Overall:** 🟡 WATCH (stalled PRs; no P0 fires).
+**Overall verdict: 🟡 WATCH** (stalled PRs, 0 open issues).
 
 **Files modified:**
-- `docs/status.md` — regenerated (Overall 🟡 WATCH, Updated 2026-09-11 09:36 UTC, next run heartbeat 14:00 UTC; Token pulse omitted, no token report file).
-- `memory/logs/2026-09-11.md` — created with findings.
+- `docs/status.md` — regenerated (Overall 🟡 WATCH, updated 2026-09-12 20:59 UTC, next run atlas 04:00 UTC Sunday; Token pulse omitted — no token-report article exists).
+- `memory/logs/2026-09-12.md` — created with this run's findings.
 
-**Follow-up:** none required. Next escalation trigger: a fresh 2nd-consecutive missed 08:00 anchor or 36h self-check staleness. Next weekly cohort test: Sunday 2026-09-13 04:00/05:00 UTC.
+**Notification:** not sent — no new operator-actionable item; fresh/deduped PRs, scheduler misses self-recovering, self-check < 36h.
+
+**Follow-up:** file an issue if heartbeat self-check crosses 36h staleness; watch #24 (now stalled) and #25 on the next run. Next weekly cohort test Sunday 2026-09-13 04:00/05:00 UTC.
+
+`HEARTBEAT_OK · STATUS_PAGE=WATCH`
