@@ -6,7 +6,8 @@ on:
     inputs:
       skill:
         description: 'Skill name (must match a directory under skills/)'
-        required: true
+        required: false
+        default: 'heartbeat'
         type: string
       model:
         description: 'Model'
