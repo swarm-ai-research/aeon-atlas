@@ -1,0 +1,80 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Atlas layers refreshed",
+        "description": "Entities placed and fleet churn update"
+      },
+      "children": [
+        "stat_entities",
+        "sep1",
+        "stack_churn",
+        "sep2",
+        "link_pr"
+      ]
+    },
+    "stat_entities": {
+      "type": "Stat",
+      "props": {
+        "label": "Entities placed",
+        "value": "65"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_churn": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_churn_title",
+        "text_layer2",
+        "text_no_promotions"
+      ]
+    },
+    "text_churn_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Fleet churn this week",
+        "level": "h3"
+      }
+    },
+    "text_layer2": {
+      "type": "Text",
+      "props": {
+        "text": "9 new forks entered Layer 2 (all ★0)",
+        "variant": "body"
+      }
+    },
+    "text_no_promotions": {
+      "type": "Text",
+      "props": {
+        "text": "No hand promotions or new packs",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "link_pr": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Pull Request #31",
+        "href": "https://github.com/swarm-ai-research/aeon-atlas/pull/31",
+        "source": "GitHub"
+      }
+    }
+  }
+}
