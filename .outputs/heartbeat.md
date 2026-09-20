@@ -1,19 +1,19 @@
-Heartbeat complete. No notification sent (nothing new needs attention — everything deduped against the last 48h of logs).
+Heartbeat complete. `HEARTBEAT_OK · STATUS_PAGE=WATCH`
 
 ## Summary
 
-Ran the heartbeat ambient check for the 2026-09-19 20:00 slot (fired late at 20:59 UTC).
+Ran the heartbeat skill for the 2026-09-20 08:00 slot (executed 09:42 UTC, Sunday).
 
-**Findings:**
-- **P0 — all clear.** No failed, stuck, chronic, or degrading skills. heartbeat 90% (253/282), atlas 100%, atlas-layers 93%, atlas-improve 100%; all `consecutive_failures` 0. Self-check healthy (last success ~11.8h ago, ≪ 36h).
-- **Scheduler note:** today's 14:00 slot was missed (08:00 ✓ late, 14:00 ✗, 20:00 ✓ late). Single sandwiched miss, not consecutive, self-check healthy → below the ISS-005/006 filing bar, **no new issue filed**.
-- **P1:** 12 open PRs stalled >24h (bot atlas/atlas-layers refreshes + #16 human + #30 CrystalCore.OS) — all previously logged within 48h → deduped. 0 urgent issues.
-- **P2/P3:** no flagged memory follow-ups; all 4 enabled skills have state entries. atlas-layers at ~13.7d is just under the 2× weekly threshold — watch tomorrow's Sunday 05:00 slot.
+**Checks:**
+- **P0 — all clear:** No failed, stuck, chronic, or degrading skills. heartbeat self-check healthy (last success ~12.7h ago, well under 36h). Fleet: heartbeat 90%, atlas 100%, atlas-layers 93%, atlas-improve 100%.
+- **✅ Weekly cohort watch cleared:** The multi-week concern — atlas-layers slipping its Sunday slot two weeks running — resolved. Both **atlas** (success 05:08) and **atlas-layers** (success 05:06) fired cleanly this morning. Sunday cohort back on cadence.
+- **P1:** 13 open PRs; #13–#30 all stalled >24h but previously logged → deduped. New PR #31 (today's atlas-layers refresh, ~4.6h) not yet stalled. No urgent/open GitHub issues.
+- **P2/P3:** No flagged memory follow-ups; all 4 enabled skills fresh.
+
+**Outcome:** No notification sent — every finding deduped against the last 48h of logs; nothing new operator-actionable. Overall status stays 🟡 WATCH (driven only by stalled bot PRs).
 
 **Files modified:**
-- `docs/status.md` — regenerated (Overall 🟡 WATCH from stalled PRs, updated 2026-09-19 20:59 UTC, 0 open issues, next run atlas 04:00 UTC; Token pulse omitted — no token report exists).
-- `memory/logs/2026-09-19.md` — appended the 20:00-slot heartbeat entry.
+- `docs/status.md` — regenerated (Overall WATCH, 4 skills, 0 issues, next run heartbeat 14:00 UTC; Token pulse omitted — no token report exists)
+- `memory/logs/2026-09-20.md` — created with the run log
 
-**Follow-up:** Confirm both atlas (04:00) and atlas-layers (05:00) fire on Sunday 2026-09-20 — atlas-layers has slipped the last two Sundays. If daytime slots keep slipping, consider re-filing a scheduler issue.
-
-**Output:** `HEARTBEAT_OK · STATUS_PAGE=WATCH`
+**Follow-up:** Low-grade watch on daytime slot lateness (this slot ~1h42m late; 09-19 14:00 was missed) — escalate/re-file a scheduler issue only on a 36h self-check breach or multiple consecutive misses.
