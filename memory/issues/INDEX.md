@@ -4,7 +4,7 @@
 
 | ID | Title | Severity | Category | Detected |
 |----|-------|----------|----------|----------|
-| _(none)_ | | | | |
+| ISS-007 | scheduler quiet ~41h — heartbeat missed 4 consecutive slots (09-21 all three + 09-22 08:00), crossed 36h self-check (fresh recurrence of ISS-005/006) | high | unknown | 2026-09-22 |
 
 ## Resolved
 
