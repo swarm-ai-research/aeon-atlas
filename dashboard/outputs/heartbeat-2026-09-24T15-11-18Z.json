@@ -1,0 +1,290 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Heartbeat Self-Check",
+        "description": "Scheduler health monitoring"
+      },
+      "children": [
+        "alert-status",
+        "sep-1",
+        "stack-main"
+      ]
+    },
+    "alert-status": {
+      "type": "Alert",
+      "props": {
+        "title": "🔴 DEGRADED",
+        "message": "Scheduler went quiet ~41.7 hours. Missed 4 consecutive dispatch slots (09-23 and 09-24). Recovered ~1h late on 09-24 14:00.",
+        "type": "warning"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "section-timeline",
+        "section-missed",
+        "section-issue",
+        "section-history",
+        "section-action"
+      ]
+    },
+    "section-timeline": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-timeline",
+        "grid-timeline"
+      ]
+    },
+    "heading-timeline": {
+      "type": "Heading",
+      "props": {
+        "text": "Timeline & Metrics",
+        "level": "h3"
+      }
+    },
+    "grid-timeline": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "stat-duration",
+        "stat-last-clean",
+        "stat-recovery"
+      ]
+    },
+    "stat-duration": {
+      "type": "Stat",
+      "props": {
+        "label": "Quiet Period Duration",
+        "value": "41.7 hours"
+      }
+    },
+    "stat-last-clean": {
+      "type": "Stat",
+      "props": {
+        "label": "Last Clean Run",
+        "value": "09-22 21:25 UTC"
+      }
+    },
+    "stat-recovery": {
+      "type": "Stat",
+      "props": {
+        "label": "Recovery Catch-Up",
+        "value": "~1h late (09-24 14:00)"
+      }
+    },
+    "section-missed": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-missed",
+        "stack-slots"
+      ]
+    },
+    "heading-missed": {
+      "type": "Heading",
+      "props": {
+        "text": "Missed Dispatch Slots (4 consecutive)",
+        "level": "h3"
+      }
+    },
+    "stack-slots": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "slot-1",
+        "slot-2",
+        "slot-3",
+        "slot-4"
+      ]
+    },
+    "slot-1": {
+      "type": "Text",
+      "props": {
+        "text": "• 09-23 08:00 UTC",
+        "variant": "body"
+      }
+    },
+    "slot-2": {
+      "type": "Text",
+      "props": {
+        "text": "• 09-23 14:00 UTC",
+        "variant": "body"
+      }
+    },
+    "slot-3": {
+      "type": "Text",
+      "props": {
+        "text": "• 09-23 20:00 UTC",
+        "variant": "body"
+      }
+    },
+    "slot-4": {
+      "type": "Text",
+      "props": {
+        "text": "• 09-24 08:00 UTC",
+        "variant": "body"
+      }
+    },
+    "section-issue": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-issue",
+        "badge-iss007",
+        "stack-issue-details"
+      ]
+    },
+    "heading-issue": {
+      "type": "Heading",
+      "props": {
+        "text": "Issue Tracking",
+        "level": "h3"
+      }
+    },
+    "badge-iss007": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-007 (HIGH SEVERITY) — Open",
+        "variant": "destructive"
+      }
+    },
+    "stack-issue-details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text-gate",
+        "text-progress",
+        "text-skills",
+        "text-prs"
+      ]
+    },
+    "text-gate": {
+      "type": "Text",
+      "props": {
+        "text": "Final recovery gate (09-23 08:00) was missed",
+        "variant": "body"
+      }
+    },
+    "text-progress": {
+      "type": "Text",
+      "props": {
+        "text": "Resets 2/3 progress toward resolution",
+        "variant": "body"
+      }
+    },
+    "text-skills": {
+      "type": "Text",
+      "props": {
+        "text": "No skills failed or stuck",
+        "variant": "body"
+      }
+    },
+    "text-prs": {
+      "type": "Text",
+      "props": {
+        "text": "13 PRs stalled (all logged)",
+        "variant": "body"
+      }
+    },
+    "section-history": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-history",
+        "stack-history"
+      ]
+    },
+    "heading-history": {
+      "type": "Heading",
+      "props": {
+        "text": "Historical Context",
+        "level": "h3"
+      }
+    },
+    "stack-history": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text-signature",
+        "badge-frequency"
+      ]
+    },
+    "text-signature": {
+      "type": "Text",
+      "props": {
+        "text": "Same missed-dispatch signature as ISS-005 and ISS-006",
+        "variant": "body"
+      }
+    },
+    "badge-frequency": {
+      "type": "Badge",
+      "props": {
+        "text": "3rd quiet window this month",
+        "variant": "secondary"
+      }
+    },
+    "section-action": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-action",
+        "alert-fix"
+      ]
+    },
+    "heading-action": {
+      "type": "Heading",
+      "props": {
+        "text": "Recommended Action",
+        "level": "h3"
+      }
+    },
+    "alert-fix": {
+      "type": "Alert",
+      "props": {
+        "title": "Durable Fix Overdue",
+        "message": "Implement redundant offset cron / external dispatch ping to prevent future quiet windows and scheduler hangs.",
+        "type": "error"
+      }
+    }
+  }
+}
