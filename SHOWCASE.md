@@ -61,7 +61,7 @@ Aeon is one of many ways to build agentic systems. Here's where it sits next to 
 
 The real distinction is *operator posture*. AutoGen, CrewAI, and LangGraph are libraries you build *with*. n8n is a workflow editor you build *in*. Aeon is a runtime you point at a goal and leave alone — the cron, the memory, the self-healing, and the public dashboard come included.
 
-If you need an agent you watch, pick one of the others. If you need an agent that watches itself, this is the lane.
+Pick Aeon when your job is recurring (daily briefs, monitoring, PR reviews) and you want it to run without your attention — the agent scores itself and patches itself when it breaks.
 
 ---
 

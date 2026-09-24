@@ -40,12 +40,12 @@ Top-4 per fork, jaccard ≥ 0.30, ≥ 2 shared deltas. On the first snapshot thi
 
 The [`atlas` skill](https://github.com/swarm-ai-research/aeon-atlas/blob/main/skills/atlas/SKILL.md) runs every Sunday at 04:00 UTC. It fetches the fork list, parses each `aeon.yml`, regenerates these artifacts, and opens a PR only when something material changed — a new fork joined, a fork's ★ jumped, a dormant fork resumed activity, or a high-confidence overlap pair appeared.
 
-## What it isn't
+## Scope
 
-- **Not a skill marketplace.** It catalogs what's *enabled* in `aeon.yml`, not what's available in `skills/`. A fork can ship skills nobody runs; those don't show here.
-- **Not a contribution graph.** No committer or contributor data yet.
-- **Not real-time.** Weekly is enough for an ecosystem adding a few forks per day.
-- **Not portable.** Always maps `aaronjmars/aeon`'s descendants. `node scripts/atlas.mjs --upstream owner/repo` points it elsewhere if you fork the atlas for your own ecosystem.
+- **Tracks enabled skills only.** Charts what's turned on in `aeon.yml`, not all available skills in `skills/`. A fork can ship skills nobody runs; those won't appear here.
+- **Shows pushed forks, not contributions.** No committer or contributor data yet.
+- **Weekly updates.** Daily refresh would exhaust the GitHub API; weekly catches the ecosystem's few new forks per day.
+- **Scoped to aeon descendants.** Always maps `aaronjmars/aeon` family trees. Run `node scripts/atlas.mjs --upstream owner/repo` to point it at a different upstream.
 
 ## Source
 
