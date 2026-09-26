@@ -1,23 +1,22 @@
-Heartbeat complete. No notification sent (deduped per the 48h rule — same ISS-007 pattern already alerted 09-24, and this window is milder).
+All checks complete. No notification sent (deduped + positive development).
 
 ## Summary
 
-**Verdict: HEARTBEAT attention-tracked · STATUS_PAGE=WATCH** — 14:00 slot ran ~16m late as a catch-up.
+Ran the **heartbeat** skill for the **2026-09-26 20:00 slot** (executed 20:09 UTC, ~10m late — on time, no missed slots since the 14:00 run).
 
-**Findings**
-- **P0:** All clear. Heartbeat self-check did **not** fire — last success ~23h ago (09-25 15:18), under the 36h threshold. No failed, stuck, chronic, or degraded skills (heartbeat 90%, atlas 100%, atlas-layers 93%, atlas-improve 100%).
-- **ISS-007 recovery reset (4th time):** slots 09-25 20:00 + 09-26 08:00 both missed (same missed-dispatch signature). Overall = 🟡 WATCH, driven by ISS-007 being open+high, not a fresh P0 flag.
-- **New pattern flagged:** last three runs (09-24/25/26) were **all 14:00-slot catch-ups** while **every 20:00 and 08:00 slot missed** — a likely slot-of-day delivery bias, not random jitter. Durable fix should target the 20:00/08:00 boundaries specifically.
-- **P1:** 13 stalled PRs (all previously logged, deduped); 0 GitHub issues. **P2/P3:** no flags; all 4 enabled skills have state entries.
-- **Cohort test tomorrow:** atlas 09-27 04:00 / atlas-layers 05:00 sit in the failing overnight window — if either misses, the weakness is scheduler-wide.
+**Findings:**
+- **P0 — all clear.** No failed, stuck, chronically-failing, or degraded skills. Heartbeat self-check did not fire (last success ~5.9h ago, far under 36h). All 4 enabled skills healthy (heartbeat 90%, atlas 100%, atlas-layers 93%, atlas-improve 100%).
+- **Key positive:** The 20:00 slot — flagged last cycle as high-risk to miss — **fired cleanly**, advancing **ISS-007 recovery to 2/3**. It's the first clean non-14:00 slot in days, so the "20:00/08:00 slot-of-day drop" hypothesis is downgraded to tentative.
+- **Overall: 🟡 WATCH**, driven solely by ISS-007 remaining open (high) — no fresh P0 flag.
+- **P1:** 13 stalled PRs, 0 issues — all previously logged, deduped. **P2/P3:** clean.
+- **No notification** — the ISS-007 item is in the last 48h of logs and this development is positive; deduped per the 48h rule.
 
-**Files modified**
-- `memory/issues/ISS-007.md` — added "Update — 2026-09-26" (4th reset + slot-of-day pattern)
-- `memory/issues/INDEX.md` — re-titled ISS-007 open row
-- `docs/status.md` — rewrote (Overall 🟡 WATCH, updated 2026-09-26 14:16 UTC)
-- `memory/logs/2026-09-26.md` — new daily log
+**Next watch points:** final recovery gate **09-27 08:00** (clean → 3/3 → downgrade to medium); weekly cohort **atlas 09-27 04:00 / atlas-layers 05:00** — first cross-skill signal for ISS-007.
 
-**Follow-up needed**
-- Durable mitigation **overdue x4** — operator escalation recommended: offset redundant heartbeat crons (targeting 20:00/08:00) or an external `repository_dispatch` ping. skill-repair remains `enabled: false`, so no automated code fix will land.
+**Files modified:**
+- `docs/status.md` — regenerated (Overall 🟡 WATCH, updated 2026-09-26 20:09 UTC, next run atlas 04:00 UTC)
+- `memory/issues/ISS-007.md` — added "Update — 2026-09-26 20:09 UTC" (recovery 2/3, pattern downgraded)
+- `memory/issues/INDEX.md` — updated open row title
+- `memory/logs/2026-09-26.md` — appended 20:00-slot log entry
 
-Files land on `main` via the workflow's auto-commit step.
+**Follow-up needed:** Durable mitigation for the recurring scheduler quiet windows (offset redundant heartbeat crons or external `repository_dispatch` ping) remains overdue — operator escalation recommended since `skill-repair` is `enabled: false`. A clean 09-27 08:00 + clean weekly cohort would put ISS-007 on the self-resolve track.

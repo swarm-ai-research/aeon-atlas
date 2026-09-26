@@ -4,7 +4,7 @@
 
 | ID | Title | Severity | Category | Detected |
 |----|-------|----------|----------|----------|
-| ISS-007 | scheduler quiet windows — heartbeat missed dispatches; recovery reset 4× (4th window 09-25 20:00 + 09-26 08:00 missed, under 36h); emerging pattern: only 14:00 slot fires, 20:00/08:00 consistently dropped; recurrence of ISS-005/006 | high | unknown | 2026-09-22 |
+| ISS-007 | scheduler quiet windows — heartbeat missed dispatches (recurrence of ISS-005/006); recovery reset 4×, now at 2/3 after 09-26 20:00 slot fired clean against prediction; slot-of-day 20:00/08:00 bias now only tentative; final gate 09-27 08:00 + weekly cohort 09-27 04:00/05:00 | high | unknown | 2026-09-22 |
 
 ## Resolved
 
