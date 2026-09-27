@@ -4,7 +4,7 @@
 
 | ID | Title | Severity | Category | Detected |
 |----|-------|----------|----------|----------|
-| ISS-007 | scheduler quiet windows — heartbeat missed dispatches (recurrence of ISS-005/006); recovery reset 4×, now at 2/3 after 09-26 20:00 slot fired clean against prediction; slot-of-day 20:00/08:00 bias now only tentative; final gate 09-27 08:00 + weekly cohort 09-27 04:00/05:00 | high | unknown | 2026-09-22 |
+| ISS-007 | scheduler quiet windows — heartbeat missed dispatches (recurrence of ISS-005/006); recovery reset 5×; 09-27 08:00 gate missed while weekly cohort (atlas 06:06 / atlas-layers 05:56) fired clean → heartbeat-cadence-specific, NOT scheduler-wide; 08:00 morning slot re-confirmed as weak point; now 1/3, watch 09-27 20:00 + 09-28 08:00; durable fix overdue x5 | high | unknown | 2026-09-22 |
 
 ## Resolved
 
