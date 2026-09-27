@@ -1,19 +1,22 @@
-All artifacts written. No notification sent (deduped per the 48h rule — ISS-007 appears throughout recent logs and this run is WATCH, not DEGRADED). Files land on `main` via the workflow's auto-commit step.
+All updates complete. The workflow's auto-commit step will land these on `main`.
 
 ## Summary
 
-Ran the **heartbeat** skill for the 2026-09-27 14:00 slot (executed 15:22 UTC, ~82 min late; the 08:00 slot missed).
+Ran the **heartbeat** skill for the 2026-09-27 **20:00 slot** (executed ~21:59 UTC, ~2h late as a catch-up after the 08:00 slot missed).
 
 **Findings:**
-- **P0 — all clear.** No failed, stuck, chronic, or degrading skills. Heartbeat self-check ~19.2h < 36h threshold → did not fire.
-- **P1/P2/P3 — no new flags.** 13 pre-existing stalled bot PRs (all deduped); new PR #32 is <24h so not stalled; no urgent issues; no flagged memory items; all 4 enabled skills have fresh state entries.
-- **Overall = 🟡 WATCH**, driven solely by ISS-007 (open, high).
-- **Key finding:** the weekly cohort (**atlas** 06:06 UTC, **atlas-layers** 05:56 UTC) both fired clean overnight, proving the scheduler was alive — yet heartbeat's 08:00 slot still missed. This **rules out a scheduler-wide outage** and confirms ISS-007 is **heartbeat-cadence-specific**, with the 08:00 morning slot re-confirmed as the weak point. ISS-007 recovery reset for the 5th time (was 2/3 → 0/3, now 1/3).
+- **P0 — all clear.** No failed, stuck, degraded (`consecutive_failures ≥ 3`), or chronic skills. Heartbeat self-check did **not** fire: `last_success 2026-09-27T15:26:08Z` is ~6.5h ago, well under the 36h threshold. Fleet: heartbeat 90% (263/292), atlas 100% (12/12), atlas-layers 94% (15/16), atlas-improve 100% (3/3).
+- **ISS-007 recovery advances 1/3 → 2/3** (6th attempt): the 20:00 slot delivered (late), following the 14:00 catch-up. Final gate is the historically weak **09-28 08:00** morning slot.
+- **Overall = 🟡 WATCH**, driven solely by ISS-007 being open + high (no fresh P0 flag).
+- **P1:** 13 stalled PRs, all logged within 48h (PR #32 still under 24h → not stalled); 0 GitHub issues. **P2:** no flagged follow-ups. **P3:** all 4 enabled skills present in state.
+- **No notification sent** — deduped (ISS-007 throughout last 48h logs, WATCH not DEGRADED, positive development).
 
 **Files modified:**
-- `docs/status.md` — regenerated (WATCH, updated 15:22 UTC, cohort-clean banner, skill table re-sorted).
-- `memory/issues/ISS-007.md` — added "Update — 2026-09-27 15:22 UTC" (5th reset, cohort finding, narrowed durable-fix recommendation).
-- `memory/issues/INDEX.md` — updated ISS-007 open row.
-- `memory/logs/2026-09-27.md` — created with the 14:00 slot log entry.
+- `docs/status.md` — regenerated (🟡 WATCH, updated 2026-09-27 21:59 UTC, next run heartbeat 08:00, Token pulse omitted — no token report).
+- `memory/issues/ISS-007.md` — added "Update — 2026-09-27 21:59 UTC" (recovery 2/3).
+- `memory/issues/INDEX.md` — re-titled the ISS-007 open row.
+- `memory/logs/2026-09-27.md` — appended the 20:00 slot entry.
 
-**Follow-up needed:** Durable mitigation is **overdue ×5** — a redundant heartbeat cron offset from the 08:00 morning boundary (and secondarily 20:00), or an external `repository_dispatch` ping. Since skill-repair remains `enabled: false`, **operator escalation is recommended** for the code fix; self-resolution across ISS-005/006/007 is not converging. Next recovery gates: 09-27 20:00 and 09-28 08:00.
+**Follow-up needed:** ISS-007 durable fix is **overdue x5** — a redundant heartbeat cron offset from the 08:00 morning boundary (or external `repository_dispatch` ping). `skill-repair` remains `enabled: false`, so **operator escalation is recommended** for the code fix; self-resolve across ISS-005/006/007 is not converging.
+
+Status: **STATUS_PAGE=WATCH** — wrote docs/status.md. (HEARTBEAT_OK not applicable — ISS-007 tracked.)
