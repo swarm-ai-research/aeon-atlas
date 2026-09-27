@@ -1,16 +1,15 @@
 ---
 title: "skill-of-the-day"
 tags: [novel-skill]
-adoption: 6
+adoption: 5
 ---
 
 # `skill-of-the-day`
 
-Custom skill shipped by 6 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
+Custom skill shipped by 5 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
 
 ## Forks shipping this
 
-- [[forks/chxoky-aeon|chxoky/aeon]]
 - [[forks/mnemedb-aeon|mnemedb/aeon]]
 - [[forks/NASTYZUNI-aeon|NASTYZUNI/aeon]]
 - [[forks/alfahadgm-aeon|alfahadgm/aeon]]

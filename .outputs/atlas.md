@@ -1,1 +1,1 @@
-The extractor buffers output until completion. It's running in the background (ID: by0lk8rmh) and I'll be notified when it exits. This step involves GitHub API calls across ~200 forks, so it takes a few minutes. Waiting for it to finish before proceeding to the universe build and diff.
+I'll stop polling and wait for the completion notification.

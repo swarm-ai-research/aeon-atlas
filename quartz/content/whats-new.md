@@ -3,197 +3,292 @@ title: "What's new"
 tags: [meta]
 ---
 
-> Diff vs snapshot from **2026-06-05** (23 days ago). 39 new forks · 5 removed · 71 new novel skills · 0 new ecosystem entries · 6 new skill packs.
+> Diff vs snapshot from **2026-06-28** (91 days ago). 95 new forks · 14 removed · 220 new novel skills · 0 new ecosystem entries · 0 new skill packs.
 
-## New forks (39)
+## New forks (95)
 
-- [`madmystic/aeon`](https://github.com/madmystic/aeon) — 0 ★
-- [`SamsShow/aeon`](https://github.com/SamsShow/aeon) — 0 ★
-- [`Marr554/aeon`](https://github.com/Marr554/aeon) — 0 ★
-- [`alpenflow/aeon`](https://github.com/alpenflow/aeon) — 1 ★
-- [`stefrogovskyi/aeon`](https://github.com/stefrogovskyi/aeon) — 0 ★
-- [`usephylax/aeon`](https://github.com/usephylax/aeon) — 0 ★
-- [`saivarmadpr/aeon`](https://github.com/saivarmadpr/aeon) — 0 ★
-- [`Tholynceus/aeon`](https://github.com/Tholynceus/aeon) — 0 ★
-- [`logbookbase/aeon`](https://github.com/logbookbase/aeon) — 0 ★
-- [`maredek-bot/aeon`](https://github.com/maredek-bot/aeon) — 0 ★
-- [`CharonAI-code/aeon`](https://github.com/CharonAI-code/aeon) — 0 ★
-- [`KK-OS/aeon`](https://github.com/KK-OS/aeon) — 0 ★
-- [`P9LLI/aeon`](https://github.com/P9LLI/aeon) — 0 ★
-- [`adlai88/aeon`](https://github.com/adlai88/aeon) — 0 ★
-- [`vladimirvalcourt/aeon`](https://github.com/vladimirvalcourt/aeon) — 1 ★
-- [`clawhunter/add-clawhunter-pack`](https://github.com/clawhunter/add-clawhunter-pack) — 0 ★
-- [`hurley87/aeon`](https://github.com/hurley87/aeon) — 0 ★
-- [`runchr-org/aeon`](https://github.com/runchr-org/aeon) — 0 ★
-- [`brainlabors-dot/aeon`](https://github.com/brainlabors-dot/aeon) — 0 ★
-- [`rajkaria/aeon`](https://github.com/rajkaria/aeon) — 0 ★
-- [`tenequm/aeon`](https://github.com/tenequm/aeon) — 0 ★
-- [`ziyosteve/aeon`](https://github.com/ziyosteve/aeon) — 0 ★
-- [`zszkey/aeon-1`](https://github.com/zszkey/aeon-1) — 0 ★
-- [`modelcollapse/aeon`](https://github.com/modelcollapse/aeon) — 0 ★
-- [`wrenwealth/aeon`](https://github.com/wrenwealth/aeon) — 0 ★
+- [`Ant-Apex/aeon`](https://github.com/Ant-Apex/aeon) — 0 ★
+- [`Secure-Code-Pro-Zyloch/aeon`](https://github.com/Secure-Code-Pro-Zyloch/aeon) — 0 ★
+- [`Oscar-Williams/aeon`](https://github.com/Oscar-Williams/aeon) — 0 ★
+- [`brainsparker/aeon`](https://github.com/brainsparker/aeon) — 0 ★
+- [`Ditto190/aeon-automaton-modme`](https://github.com/Ditto190/aeon-automaton-modme) — 0 ★
+- [`rohitctrl/aeon`](https://github.com/rohitctrl/aeon) — 0 ★
+- [`Corykidios/aeon`](https://github.com/Corykidios/aeon) — 0 ★
+- [`iamziek/aeon`](https://github.com/iamziek/aeon) — 0 ★
+- [`traveler3022/aeon`](https://github.com/traveler3022/aeon) — 0 ★
+- [`niu12503/aeon`](https://github.com/niu12503/aeon) — 0 ★
+- [`0xsnackbaker/aeon`](https://github.com/0xsnackbaker/aeon) — 0 ★
+- [`Pinont/aeon.fun`](https://github.com/Pinont/aeon.fun) — 0 ★
+- [`corinth1ans/aeon`](https://github.com/corinth1ans/aeon) — 0 ★
+- [`krpx0341/aeon`](https://github.com/krpx0341/aeon) — 0 ★
+- [`darkstaryuri/aeon`](https://github.com/darkstaryuri/aeon) — 0 ★
+- [`cyborganeh/aeon`](https://github.com/cyborganeh/aeon) — 0 ★
+- [`Jason9720/aeon`](https://github.com/Jason9720/aeon) — 0 ★
+- [`dipanshuhappy/aeon`](https://github.com/dipanshuhappy/aeon) — 0 ★
+- [`forumchen388-debug/aeon`](https://github.com/forumchen388-debug/aeon) — 0 ★
+- [`keyurbodar/aeon`](https://github.com/keyurbodar/aeon) — 0 ★
+- [`MADRIGAL007/aeon`](https://github.com/MADRIGAL007/aeon) — 0 ★
+- [`weezyf1995-boop/aeon`](https://github.com/weezyf1995-boop/aeon) — 0 ★
+- [`elegarmco/aeon`](https://github.com/elegarmco/aeon) — 0 ★
+- [`MagIcKEarl/aeon`](https://github.com/MagIcKEarl/aeon) — 0 ★
+- [`Calcutatator/aeon`](https://github.com/Calcutatator/aeon) — 0 ★
 
-_…and 14 more._
+_…and 70 more._
 
-## Removed forks (5)
+## Removed forks (14)
 
-- `AISynthetics/aeon` (deleted or unforked)
-- `avalidurl/aeon` (deleted or unforked)
-- `Azh1er/aeon` (deleted or unforked)
-- `KevinFreistroffer/aeon` (deleted or unforked)
-- `ashneil12/aeon` (deleted or unforked)
+- `Marr554/aeon` (deleted or unforked)
+- `alpenflow/aeon` (deleted or unforked)
+- `maredek-bot/aeon` (deleted or unforked)
+- `zszkey/aeon-1` (deleted or unforked)
+- `SahilParikh03/aeon` (deleted or unforked)
+- `chxoky/aeon` (deleted or unforked)
+- `BuiltByEcho/aeon` (deleted or unforked)
+- `z-korp/aeon` (deleted or unforked)
+- `janicegrech1-hash/aeon` (deleted or unforked)
+- `VibeSan7/aeon` (deleted or unforked)
+- `sinan33644061-lab/aeon` (deleted or unforked)
+- `AntFleet/aeon-bench` (deleted or unforked)
+- `baseddevoloper/vvvkernel-skills` (deleted or unforked)
+- `varun86/aeon` (deleted or unforked)
 
-## New novel skills (71)
+## New novel skills (220)
 
-- `ai-framework-watch`
-- `api-health-probe`
-- `atlas-layers`
-- `atrium-catalog-watcher`
-- `bankr-communities`
-- `bankr-space-worker`
-- `capabilities-sweep`
-- `chart-request`
-- `close-trade`
-- `competitor-launch-radar`
-- `competitor-radar`
-- `concierge`
-- `daily-routine`
-- `defi-monitor`
-- `discord-trader-monitor`
-- `ecosystem-entrants`
-- `evening-recap`
-- `fear-divergence-scout`
-- `feature`
-- `fleet-skill-adoption`
-- `follow-up-patrol`
-- `fork-contributor-leaderboard`
-- `fork-first-run-alert`
-- `fork-health-score`
-- `fork-release-tracker`
-- `fork-skill-digest`
-- `fork-skill-gap`
-- `github-issues`
-- `hacker-news-digest`
-- `hyperstitions-ideas`
-- `kraken-execute`
-- `lp-lock-check`
-- `market-context-refresh`
-- `memory-flush`
-- `memory-structural-dedupe`
-- `monitor-runners`
-- `morning-brief`
-- `note-taking`
-- `on-chain-monitor`
-- `pm-intel`
-- `polymarket`
-- `polymarket-comments`
-- `pr-merge-queue`
-- `pr-skill-triage`
-- `price-threshold-alert`
-- `product-hunt-launch`
-- `pvr-triage-monitor`
-- `run-frequency-guard`
-- `show-hn-draft`
-- `skill-of-the-day`
-- `skill-security-scan`
-- `skill-update-check`
-- `smithery-manifest`
-- `star-momentum-alert`
-- `thread-formatter`
-- `token-alert`
-- `token-report`
-- `trader-bootstrap`
-- `trader-x-bootstrap`
-- `trading-brief`
-- `v4-readiness`
-- `vienna-apartments`
-- `wallet-digest`
-- `wallet-risk-audit`
-- `wallet-risk-weekly`
-- `wc-resale`
-- `weekly-review`
-- `weekly-shiplog`
-- `workflow-security-audit`
-- `write-tweet`
-- `x-trader-monitor`
-
-## Top ★ gainers
-
-- [`swarm-ai-research/aeon-atlas`](https://github.com/swarm-ai-research/aeon-atlas) +2 (now 2 ★)
-- [`0xWCME/aeon`](https://github.com/0xWCME/aeon) +1 (now 1 ★)
-- [`AITOBIAS04/CHORUS`](https://github.com/AITOBIAS04/CHORUS) +1 (now 1 ★)
+- `ab-testing`
+- `ad-creative`
+- `ads`
+- `aeonbook-onboarding`
+- `agent-buzz`
+- `agent-displacement`
+- `ai-seo`
+- `ai2human-handoff`
+- `ai2human-reward-campaign-reconciler`
+- `aixbt-pulse`
+- `analytics`
+- `api-health`
+- `approval-audit`
+- `article-queue`
+- `aso`
+- `atrium-watch`
+- `attribution`
+- `batch-health`
+- `beamr-route`
+- `beat-tracker`
+- `builder-map`
+- `capabilities-map`
+- `channel-recap`
+- `churn-prevention`
+- `co-marketing`
+- `code-health`
+- `cold-email`
+- `community-marketing`
+- `competitor-profiling`
+- `competitors`
+- `compute-pulse`
+- `config-validator`
+- `content-performance`
+- `content-strategy`
+- `contract-audit`
+- `contributor-leaderboard`
+- `contributor-reward`
+- `contributor-spotlight`
+- `copy-editing`
+- `copywriting`
+- `cost-report`
+- `create-campaign`
+- `cro`
+- `ctrl`
+- `customer-research`
+- `daily-shiplog`
+- `deal-flow`
+- `deep-research`
+- `dental-lead-scout`
+- `deployer-trace`
+- `directory-submissions`
+- `disclosure-emailer`
+- `disclosure-tracker`
+- `docs-sync`
+- `ecosystem-links`
+- `ecosystem-pulse`
+- `emails`
+- `engagement-act`
+- `epoch-build`
+- `epoch-review`
+- `epoch-spec`
+- `events`
+- `evolve`
+- `external-feature`
+- `farcaster-digest`
+- `fear-divergence`
+- `fleet-scorecard`
+- `fleet-state`
+- `followup-patrol`
+- `forecasting`
+- `fork-cohort`
+- `fork-digest`
+- `fork-events`
+- `fork-firstrun`
+- `fork-health`
+- `fork-release`
+- `framework-watch`
+- `free-tools`
+- `frequency-guard`
+- `fund-flow`
+- `gh-probe`
+- `github-releases`
+- `goal-tracker`
+- `hn-digest`
+- `holder-concentration`
+- `honeypot-check`
+- `huggingface-trending`
+- `hyperliquid`
+- `idea-capture`
+- `idea-validator`
+- `image`
+- `influencer-marketing`
+- `issue-triage`
+- `janitor`
+- `launch`
+- `launch-radar`
+- `lead-finder`
+- `lead-magnets`
+- `learning-loop`
+- `linked-wallets`
+- `liquidpad-launch`
+- `list-digest`
+- `lp-lock`
+- `market-context`
+- `marketing-council`
+- `marketing-ideas`
+- `marketing-loops`
+- `marketing-plan`
+- `marketing-psychology`
+- `marketing-seo-audit`
+- `mcp-pulse`
+- `memory-dedupe`
+- `milestone-tracker`
+- `moltycash-campaign-agent`
+- `money-radar`
+- `monitor-kalshi`
+- `monolith`
+- `nq-research-scout`
+- `offers`
+- `okf-export`
+- `okf-ingest`
+- `onboard`
+- `onboarding`
+- `ops-recap`
+- `paper-digest`
+- `paper-pick`
+- `paywalls`
+- `peng-pulse`
+- `peng-scout`
+- `phylax-audit`
+- `pm-pulse`
+- `popups`
+- `pr-merge`
+- `pr-tracker`
+- `preference-profile`
+- `pricing`
+- `priority-brief`
+- `product-hunt`
+- `product-marketing`
+- `product-pulse`
+- `programmatic-seo`
+- `project-lens`
+- `propose-work`
+- `prospecting`
+- `public-relations`
+- `push-recap`
+- `pvr-triage`
+- `pvr-watchlist`
+- `reddit-digest`
+- `referrals`
+- `reflect`
+- `refresh-x`
+- `reg-monitor`
+- `remix-tweets`
+- `repo-actions`
+- `repo-article`
+- `repo-pulse`
+- `repo-revive`
+- `repo-scanner`
+- `research-brief`
+- `retrospective`
+- `revops`
+- `routine`
+- `rss-digest`
+- `rss-feed`
+- `rug-scan`
+- `rwa-pulse`
+- `sales-enablement`
+- `schema`
+- `security-digest`
+- `self-repair-ledger`
+- `self-review`
+- `show-hn`
+- `signal-verdict`
+- `signup`
+- `site-architecture`
+- `skill-adoption`
+- `skill-analytics`
+- `skill-enabler`
+- `skill-evals`
+- `skill-freshness`
+- `skill-gap`
+- `skill-graph`
+- `skill-leaderboard`
+- `skill-scan`
+- `skill-spotlight`
+- `skill-triage`
+- `skill-update`
+- `skill-writer`
+- `slop-watch`
+- `sms`
+- `social`
+- `sparkleware-catalog`
+- `spend-monitor`
+- `star-milestone`
+- `star-momentum`
+- `startup-idea`
+- `syndicate-article`
+- `technical-explainer`
+- `telegram-digest`
+- `thread-writer`
+- `tool-builder`
+- `topic-momentum`
+- `treasury-info`
+- `tweet-digest`
+- `tweet-roundup`
+- `update-gallery`
+- `vch-plan-review`
+- `vch-program`
+- `vercel-projects`
+- `verdikta-hunter`
+- `vibecoding-digest`
+- `video`
+- `vigil`
+- `vigil-revoke`
+- `wallet-profile`
+- `wallet-risk`
+- `workflow-audit`
+- `x402-monitor`
+- `yield-farming`
 
 ## Went dormant (no push in 60+ days)
 
-- `DannyTsaii/aeon` — last push 2026-04-24
-- `MYJOR/aeon` — last push 2026-04-22
-- `jdwyer76/aeon` — last push 2026-04-21
-- `0xfreddy/aeon` — last push 2026-04-21
-- `moseslua/talon` — last push 2026-04-19
-- `morashad1010/aeon` — last push 2026-04-18
-- `brandong1987/aeon` — last push 2026-04-19
-- `maacx2022/aeon` — last push 2026-04-18
-- `roadtogideon222-byte/aeon` — last push 2026-04-17
-- `JayNgDigitalCaptain/aeon` — last push 2026-04-17
-- `jcksnykm/993` — last push 2026-04-17
-- `iilbell/aeon` — last push 2026-04-17
-- `AcidicSoil/aeon` — last push 2026-04-16
-- `kevingrondin/aeon` — last push 2026-04-15
-- `arnaudbellemare/aeon` — last push 2026-04-15
-
-## Removed ecosystem entries
-
-- AgentBounty
-- Amper
-- AntFleet
-- Autonomopoly
-- Bankr
-- Bankrsynth
-- BaseHouse
-- Baseline
-- Bean
-- Blue Agent
-- Capacitr
-- Claw Harbor
-- ClawBank
-- Clerk
-- Cobot
-- GitBlock
-- GitBounty
-- GitKernal
-- Gitlawb Terminal
-- LawbWorld
-- Liq
-- LiquidPad
-- Mei
-- MythosForge
-- NoelClaw
-- PancakeSwap
-- Powerloom
-- Precog
-- Reg Terminal
-- ResearchSwarm
-- Revault
-- RootAi
-- SAM
-- Signa
-- Solvr
-- Spoon
-- SyntheticsAI
-- Tachi
-- USIC
-- Venice Kernel
-- Vexor
-- Wake
-- aeonbook
-- x402Books
-- zer0
-
-## New skill packs
-
-- `CharonAI-code/Charon for AEON`
-- `UIZorrot/Careful Finance Aeon Skill Pack`
-- `clawhunter/clawhunter-skills`
-- `mnemedb/aeon-skill-pack-mneme`
-- `rajkaria/Hunch Prediction Markets`
-- `simmer/Polymarket Trader by Simmer`
+- `sinfronterasai/aeon` — last push 2026-07-27
+- `madmystic/aeon` — last push 2026-06-26
+- `SamsShow/aeon` — last push 2026-06-26
+- `usephylax/aeon` — last push 2026-07-01
+- `saivarmadpr/aeon` — last push 2026-06-21
+- `Tholynceus/aeon` — last push 2026-06-19
+- `logbookbase/aeon` — last push 2026-06-19
+- `CharonAI-code/aeon` — last push 2026-06-20
+- `KK-OS/aeon` — last push 2026-06-18
+- `P9LLI/aeon` — last push 2026-06-18
+- `adlai88/aeon` — last push 2026-06-18
+- `vladimirvalcourt/aeon` — last push 2026-06-18
+- `hurley87/aeon` — last push 2026-06-17
+- `runchr-org/aeon` — last push 2026-06-16
+- `brainlabors-dot/aeon` — last push 2026-06-15
