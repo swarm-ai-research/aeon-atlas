@@ -1,23 +1,23 @@
-Heartbeat complete. All checks ran; no notification sent (deduped per the 48h rule).
+Heartbeat complete for the **09-29 20:00 slot** (ran 20:11 UTC, ~11m late — effectively on-time). The headline: **ISS-007 resolved.**
 
 ## Summary
 
-**Run:** 09-29 14:00 slot, executed 15:33 UTC (~1h33m late catch-up). **Overall: 🟡 WATCH.**
+**P0 — clear.** Self-check did not fire (heartbeat last_success 15:35 UTC → ~4.6h ago, well under 36h). No failed, stuck, chronic, or degraded skills (heartbeat 90% 266/295, atlas 100%, atlas-layers 94%, atlas-improve 100%, all consec 0).
 
-**Checks:**
-- **P0 (failed/stuck skills):** all clear. No failed, stuck, chronic, or degraded skills. Heartbeat self-check ~6.5h since last success — well under the 36h threshold, did not fire. Fleet: heartbeat 90% (265/294), atlas 100%, atlas-layers 94%, atlas-improve 100%, all `consecutive_failures: 0`.
-- **P1 (PRs/issues):** 14 open PRs all >24h stalled but all logged within 48h (deduped); `gh issue list` empty, none urgent.
-- **P2 (memory):** no flagged follow-ups (only template placeholders).
-- **P3 (missing skills):** all 4 enabled skills have state entries; none overdue.
+**✅ ISS-007 RESOLVED.** The 20:00 final gate fired clean, completing **3 consecutive clean heartbeat slots on the 7th recovery attempt** (09-29 08:00 → 14:00 → 20:00). Self-resolved, matching the ISS-005/006 closure pattern. **0 open issues now.**
 
-**Key development:** ISS-007 recovery **advances 1/3 → 2/3** on its 7th attempt (09-29 08:00 → 14:00 both delivered as catch-ups). Final gate is the **09-29 20:00** slot — a clean fire takes it to 3/3 → downgrade to medium. Fault remains heartbeat-cadence-specific (09-27 weekly cohort fired clean), 08:00 morning slot the weak point. Durable fix (redundant morning-offset cron / external `repository_dispatch` ping) **overdue x6** — operator escalation strongly recommended since skill-repair stays `enabled: false`.
+**Overall = 🟡 WATCH**, driven now *solely* by the standing stalled-PR backlog (14 open PRs >24h, mostly bot atlas/atlas-layers refreshes) — no open high/critical issue remains. P2/P3 clean; all 4 enabled skills have state entries.
 
-**Notification:** none — WATCH (not DEGRADED), positive development, same item present throughout last 48h of logs → deduped.
+**No notification sent** — ISS-007 is logged throughout the last 48h, this run is WATCH (not DEGRADED) and the development is positive; deduped per the 48h rule.
+
+**Carry-forward:** This is the third self-resolve of the same missed-dispatch signature (ISS-005 → 006 → 007), heartbeat-cadence-specific with the 08:00 slot the weak point. Self-resolve works but doesn't prevent recurrence — if it recurs, file ISS-008 and treat the durable mitigation (redundant 08:00-offset cron / external `repository_dispatch` ping) as mandatory. skill-repair remains `enabled: false`, so operator action is required for any code-level fix.
 
 **Files modified:**
-- `docs/status.md` — regenerated (Overall 🟡 WATCH, Updated 2026-09-29 15:33 UTC, next run heartbeat 20:00 UTC; Token pulse omitted, no token report/table)
-- `memory/issues/ISS-007.md` — appended "Update — 2026-09-29 15:33 UTC" (recovery → 2/3)
-- `memory/issues/INDEX.md` — re-titled ISS-007 open row
-- `memory/logs/2026-09-29.md` — appended 14:00 slot entry
+- `docs/status.md` — Overall 🟡 WATCH, 0 open issues, updated 2026-09-29 20:11 UTC, next run heartbeat 08:00 UTC
+- `memory/issues/ISS-007.md` — status → resolved, resolved_at 2026-09-29, new RESOLVED section
+- `memory/issues/INDEX.md` — ISS-007 moved Open → Resolved
+- `memory/logs/2026-09-29.md` — appended 20:00 slot entry
 
-**Follow-up:** Watch the **09-29 20:00** heartbeat slot (final recovery gate). Operator action recommended: add a redundant heartbeat cron offset from the 08:00 boundary, or an external `repository_dispatch` ping — six recovery attempts have not converged.
+**Follow-up:** The durable fix (redundant morning-offset heartbeat cron or external dispatch ping) remains a recommended operator action despite the self-resolve — this signature has recurred three times in ~3 weeks.
+
+`STATUS_PAGE=WATCH` — wrote docs/status.md.

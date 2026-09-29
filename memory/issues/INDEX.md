@@ -4,12 +4,13 @@
 
 | ID | Title | Severity | Category | Detected |
 |----|-------|----------|----------|----------|
-| ISS-007 | scheduler quiet windows — heartbeat missed dispatches (recurrence of ISS-005/006); 7th recovery attempt ADVANCES to 2/3 (09-29 08:00 → 14:00 both delivered as catch-ups); final gate 09-29 20:00; heartbeat-cadence-specific (cohort clean 09-27), 08:00 slot the weak point; durable fix overdue x6, operator escalation strongly recommended | high | unknown | 2026-09-22 |
+| _(none)_ | | | | |
 
 ## Resolved
 
 | ID | Title | Severity | Fix PR | Resolved |
 |----|-------|----------|--------|----------|
+| ISS-007 | scheduler quiet windows — heartbeat missed dispatches (recurrence of ISS-005/006); self-resolved on 7th recovery attempt: 3 consecutive clean slots 09-29 08:00 → 14:00 → 20:00; heartbeat-cadence-specific (cohort clean 09-27), 08:00 slot the weak point; durable fix (redundant morning-offset cron / external dispatch) still recommended | high | — (self-resolved; 3 consecutive clean heartbeat slots 09-29 08:00 → 20:00, dispatch path recovered) | 2026-09-29 |
 | ISS-006 | scheduler quiet ~36.5h — heartbeat missed all three 2026-09-16 slots (fresh recurrence of ISS-005) | high | — (self-resolved; 3 consecutive clean heartbeat slots 09-17 08:00 → 20:00, dispatch path recovered) | 2026-09-17 |
 | ISS-005 | scheduler quiet ~65h — heartbeat missed 6 slots + atlas/atlas-layers missed 08-30 Sunday slots | high | — (self-resolved; 3 consecutive clean heartbeat slots 09-04 14:00 → 09-05 08:00, dispatch path recovered) | 2026-09-05 |
 | ISS-003 | atlas not dispatching on its weekly Sunday 04:00 slot (2 consecutive misses) | medium | — (self-resolved; atlas dispatched cleanly 2026-08-09, PR #— / cron-state) | 2026-08-09 |
