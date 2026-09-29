@@ -4,7 +4,7 @@
 
 | ID | Title | Severity | Category | Detected |
 |----|-------|----------|----------|----------|
-| ISS-007 | scheduler quiet windows — heartbeat missed dispatches (recurrence of ISS-005/006); 6th recovery RESET (was 2/3) — 09-28 08:00 morning gate missed as predicted, full 09-28 day dark (4-slot ~35h window, ~1h under 36h); now 1/3 on 7th attempt; heartbeat-cadence-specific (cohort clean 09-27), 08:00 slot the weak point; durable fix overdue x6, operator escalation strongly recommended | high | unknown | 2026-09-22 |
+| ISS-007 | scheduler quiet windows — heartbeat missed dispatches (recurrence of ISS-005/006); 7th recovery attempt ADVANCES to 2/3 (09-29 08:00 → 14:00 both delivered as catch-ups); final gate 09-29 20:00; heartbeat-cadence-specific (cohort clean 09-27), 08:00 slot the weak point; durable fix overdue x6, operator escalation strongly recommended | high | unknown | 2026-09-22 |
 
 ## Resolved
 
