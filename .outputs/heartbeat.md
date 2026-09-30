@@ -1,19 +1,18 @@
-Heartbeat complete for the 14:00 slot.
+Heartbeat complete for the 20:00 UTC slot (ran ~20:05, effectively on-time).
 
 ## Summary
 
-Ran the `heartbeat` skill (14:00 slot, executed 15:18 UTC — ~1h18m late catch-up).
+Ran the `heartbeat` skill (2026-09-30 20:00 slot). All priority checks clear except the standing stalled-PR backlog.
 
-**Findings — all clear, no notification sent:**
-- **P0:** No failed/stuck skills, no consecutive-failure runs, no chronic failures. Heartbeat self-check did not fire (last success ~6.5h ago, well under 36h). Health: heartbeat 90%, atlas 100%, atlas-layers 94%, atlas-improve 100%.
-- **P1:** 14 open PRs stalled >24h (unchanged set, all logged in last 48h → deduped); no GitHub issues.
-- **P2/P3:** No memory follow-ups; all 4 enabled skills tracked and current.
-- **0 open issues** (ISS-007 self-resolved 09-29). **Overall = 🟡 WATCH**, driven solely by the standing stalled-PR backlog. No fresh P0/DEGRADED signal → notification skipped per the 48h dedup rule.
+- **P0 — clear.** No failed/stuck skills, no consecutive-failure streaks, no chronic failures. Heartbeat self-check did not fire (last success ~4.75h ago, well under 36h). This was the first fully clean day-of-three (08:00 / 14:00 / 20:00 all fired within cron jitter) since ISS-007 resolved on 09-29 — no ISS-008 filed.
+- **P1 — WATCH.** 14 open PRs all >24h stalled; all already logged within the last 48h, so deduped (no notification). No open GitHub issues, none urgent.
+- **P2/P3 — clear.** No flagged memory follow-ups; all 4 enabled skills have state entries. Soonest upcoming run is atlas-improve on 10-01 06:00 UTC (monthly).
+- **Overall: 🟡 WATCH** — driven solely by the stalled-PR backlog; **0 open issues**.
 
 **Files modified:**
-- `docs/status.md` — regenerated (Overall 🟡 WATCH, updated 2026-09-30 15:18 UTC, 4 skills, 0 open issues, next run heartbeat 20:00 UTC; Token pulse omitted — no token report).
-- `memory/logs/2026-09-30.md` — appended 14:00-slot log entry.
+- `docs/status.md` — regenerated public status page (Overall WATCH, Updated 2026-09-30 20:05 UTC, 4 skills, 0 open issues, next run atlas-improve 06:00 UTC). Token pulse section omitted (no `articles/token-report-*.md`).
+- `memory/logs/2026-09-30.md` — appended 20:00 slot log entry.
 
-**Follow-up:** Both of today's slots (08:00, 14:00) landed within cron jitter — second clean day since ISS-007 resolved. Watch 09-30 20:00 and 10-01+ mornings; file ISS-008 if the missed-dispatch signature recurs. Durable morning-offset cron / external dispatch fix still recommended (`skill-repair` remains `enabled: false`).
+**Notification:** none sent (WATCH driven by stalled PRs, deduped per 48h rule).
 
-`STATUS_PAGE=WATCH`
+**Follow-up:** Durable morning-offset heartbeat mitigation (redundant 08:00-offset cron or external `repository_dispatch` ping) remains recommended if the missed-dispatch signature recurs → file ISS-008. `skill-repair` is still `enabled: false`, so any code fix needs operator action.
