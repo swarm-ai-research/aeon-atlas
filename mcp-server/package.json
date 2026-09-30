@@ -13,6 +13,7 @@
     "start": "node dist/index.js"
   },
   "dependencies": {
+    "@amplitude/ai": "^0.16.0",
     "@modelcontextprotocol/sdk": "^1.0.0"
   },
   "devDependencies": {

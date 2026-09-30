@@ -59,6 +59,7 @@ export function TopBar({ skill, view, repo, model, gateway, authStatus, authLoad
           ))}
         </select>
         <button onClick={onShowImport} className="btn-ghost-sm">+ Hire</button>
+        <a href="/crystalcore" target="_blank" rel="noopener noreferrer" className="btn-quiet">CrystalCore</a>
         {repo && (
           <a
             href={`https://github.com/${repo}`}

@@ -22,6 +22,9 @@ import { readFileSync, existsSync } from "fs";
 import { join, dirname } from "path";
 import { fileURLToPath } from "url";
 import { spawnSync } from "child_process";
+import { randomUUID } from "crypto";
+import type { Session } from "@amplitude/ai";
+import { ai, skillRunnerAgent } from "./amplitude.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -118,6 +121,18 @@ function categoryName(category: string): string {
   return labels[category] ?? category;
 }
 
+interface ClaudeCliResult {
+  result?: string;
+  is_error?: boolean;
+  total_cost_usd?: number;
+  usage?: {
+    input_tokens?: number;
+    output_tokens?: number;
+    cache_read_input_tokens?: number;
+    cache_creation_input_tokens?: number;
+  };
+}
+
 async function runSkill(slug: string, varValue: string): Promise<string> {
   const skillFile = join(REPO_ROOT, "skills", slug, "SKILL.md");
   if (!existsSync(skillFile)) {
@@ -137,6 +152,27 @@ async function runSkill(slug: string, varValue: string): Promise<string> {
 
   process.stderr.write(`[aeon-mcp] Running skill: ${slug}${varValue ? ` (var=${varValue})` : ""}\n`);
 
+  if (!skillRunnerAgent) {
+    return spawnClaudeCli(slug, prompt);
+  }
+
+  // Each MCP tool call is a single, self-contained skill run — not a
+  // continued conversation — so it gets its own session.
+  const session = skillRunnerAgent.session({ sessionId: randomUUID() });
+  try {
+    return await session.run(async (s) => {
+      s.trackUserMessage(`Run skill: ${slug}`, {
+        context: { slug, var: varValue.trim() || null },
+      });
+      return spawnClaudeCli(slug, prompt, s);
+    });
+  } finally {
+    await ai!.flush();
+  }
+}
+
+function spawnClaudeCli(slug: string, prompt: string, session?: Session): string {
+  const start = Date.now();
   const result = spawnSync("claude", ["-p", "-", "--output-format", "json"], {
     input: prompt,
     cwd: REPO_ROOT,
@@ -144,31 +180,74 @@ async function runSkill(slug: string, varValue: string): Promise<string> {
     maxBuffer: 10 * 1024 * 1024, // 10 MB
     encoding: "utf-8",
   });
+  const latencyMs = Date.now() - start;
 
   if (result.error) {
     const msg = (result.error as NodeJS.ErrnoException).code === "ENOENT"
       ? `'claude' command not found. Install it with: npm install -g @anthropic-ai/claude-code`
       : `Failed to spawn claude: ${result.error.message}`;
+    session?.trackAiMessage("", "claude-code-cli", "anthropic", latencyMs, {
+      isError: true,
+      errorMessage: msg,
+    });
     return `Error: ${msg}`;
   }
 
+  const stdout = (result.stdout || "").trim();
+  const parsed = parseClaudeCliOutput(stdout);
+
   if (result.status !== 0) {
-    const output = (result.stderr || result.stdout || "").trim();
+    const output = (result.stderr || stdout || "").trim();
+    session?.trackAiMessage(parsed?.result ?? "", "claude-code-cli", "anthropic", latencyMs, {
+      ...usageFields(parsed),
+      isError: true,
+      errorMessage: `Skill '${slug}' failed (exit ${result.status})`,
+    });
     return `Skill '${slug}' failed (exit ${result.status}):\n${output}`;
   }
 
-  const stdout = (result.stdout || "").trim();
   if (!stdout) {
+    session?.trackAiMessage("", "claude-code-cli", "anthropic", latencyMs, {
+      isError: true,
+      errorMessage: "empty output",
+    });
     return `Skill '${slug}' produced no output.`;
   }
 
-  // The claude CLI with --output-format json wraps result in { result: "..." }
+  session?.trackAiMessage(parsed?.result ?? stdout, "claude-code-cli", "anthropic", latencyMs, {
+    ...usageFields(parsed),
+    isError: parsed?.is_error === true,
+  });
+
+  return parsed?.result ?? stdout;
+}
+
+// The claude CLI with --output-format json wraps the reply in { result: "..." },
+// plus usage/cost fields when the run succeeds.
+function parseClaudeCliOutput(stdout: string): ClaudeCliResult | null {
   try {
-    const parsed = JSON.parse(stdout) as { result?: string };
-    return parsed.result ?? stdout;
+    return JSON.parse(stdout) as ClaudeCliResult;
   } catch {
-    return stdout;
+    return null;
   }
+}
+
+// Anthropic's raw `input_tokens` excludes cache tokens — the AI SDK expects
+// the cache-inclusive total. total_cost_usd comes straight from the CLI, so
+// it's passed through rather than re-derived from a (possibly unrecognized) model name.
+function usageFields(parsed: ClaudeCliResult | null) {
+  const usage = parsed?.usage;
+  if (!usage) return {};
+  const inputTokens =
+    (usage.input_tokens ?? 0) + (usage.cache_read_input_tokens ?? 0) + (usage.cache_creation_input_tokens ?? 0);
+  return {
+    inputTokens,
+    outputTokens: usage.output_tokens,
+    totalTokens: usage.output_tokens !== undefined ? inputTokens + usage.output_tokens : undefined,
+    cacheReadTokens: usage.cache_read_input_tokens,
+    cacheCreationTokens: usage.cache_creation_input_tokens,
+    totalCostUsd: parsed?.total_cost_usd,
+  };
 }
 
 // ---- Server setup ----
