@@ -1,23 +1,20 @@
-Heartbeat complete for the **09-29 20:00 slot** (ran 20:11 UTC, ~11m late — effectively on-time). The headline: **ISS-007 resolved.**
+Heartbeat complete.
 
 ## Summary
 
-**P0 — clear.** Self-check did not fire (heartbeat last_success 15:35 UTC → ~4.6h ago, well under 36h). No failed, stuck, chronic, or degraded skills (heartbeat 90% 266/295, atlas 100%, atlas-layers 94%, atlas-improve 100%, all consec 0).
+Ran the **heartbeat** skill for the 2026-09-30 08:00 slot (executed 08:43 UTC, ~43m late — effectively clean).
 
-**✅ ISS-007 RESOLVED.** The 20:00 final gate fired clean, completing **3 consecutive clean heartbeat slots on the 7th recovery attempt** (09-29 08:00 → 14:00 → 20:00). Self-resolved, matching the ISS-005/006 closure pattern. **0 open issues now.**
+**Findings:**
+- **P0 — all clear.** No failed/stuck skills, all `consecutive_failures: 0`, no chronic failures. Self-check ~12.5h (well under 36h). Skill health: heartbeat 90% (267/296), atlas 100%, atlas-layers 94%, atlas-improve 100%.
+- **Notable:** the historically fragile **08:00 morning slot fired clean this cycle** — the first on-time-ish morning fire since ISS-007 self-resolved on 09-29. No missed-dispatch window → **no ISS-008 filed**.
+- **P1:** 14 open PRs stalled >24h (bot atlas refreshes + #30/#16 human) — all logged within 48h → deduped. 0 GitHub issues.
+- **P2/P3:** no memory follow-ups; all 4 enabled skills present in state, none missing.
+- **Overall = 🟡 WATCH**, driven solely by the standing stalled-PR backlog (0 open issues).
 
-**Overall = 🟡 WATCH**, driven now *solely* by the standing stalled-PR backlog (14 open PRs >24h, mostly bot atlas/atlas-layers refreshes) — no open high/critical issue remains. P2/P3 clean; all 4 enabled skills have state entries.
-
-**No notification sent** — ISS-007 is logged throughout the last 48h, this run is WATCH (not DEGRADED) and the development is positive; deduped per the 48h rule.
-
-**Carry-forward:** This is the third self-resolve of the same missed-dispatch signature (ISS-005 → 006 → 007), heartbeat-cadence-specific with the 08:00 slot the weak point. Self-resolve works but doesn't prevent recurrence — if it recurs, file ISS-008 and treat the durable mitigation (redundant 08:00-offset cron / external `repository_dispatch` ping) as mandatory. skill-repair remains `enabled: false`, so operator action is required for any code-level fix.
+**No notification sent** — WATCH is driven only by the deduped stalled-PR backlog; no fresh P0/DEGRADED signal.
 
 **Files modified:**
-- `docs/status.md` — Overall 🟡 WATCH, 0 open issues, updated 2026-09-29 20:11 UTC, next run heartbeat 08:00 UTC
-- `memory/issues/ISS-007.md` — status → resolved, resolved_at 2026-09-29, new RESOLVED section
-- `memory/issues/INDEX.md` — ISS-007 moved Open → Resolved
-- `memory/logs/2026-09-29.md` — appended 20:00 slot entry
+- `docs/status.md` — regenerated (🟡 WATCH, Updated 2026-09-30 08:43 UTC, 0 open issues, next run heartbeat 14:00 UTC). Token pulse omitted (no token-report article). 
+- `memory/logs/2026-09-30.md` — created with the 08:00-slot log entry.
 
-**Follow-up:** The durable fix (redundant morning-offset heartbeat cron or external dispatch ping) remains a recommended operator action despite the self-resolve — this signature has recurred three times in ~3 weeks.
-
-`STATUS_PAGE=WATCH` — wrote docs/status.md.
+**Follow-up:** Watch 09-30 14:00 / 20:00 and upcoming mornings — one clean 08:00 fire isn't yet a trend. Durable morning-slot mitigation (redundant offset cron / external `repository_dispatch` ping) still recommended if the ISS-005→006→007 missed-dispatch signature recurs (file ISS-008). `skill-repair` remains `enabled: false`, so any code fix needs operator action.
