@@ -1,0 +1,225 @@
+{
+  "root": "card_heartbeat",
+  "state": {},
+  "elements": {
+    "card_heartbeat": {
+      "type": "Card",
+      "props": {
+        "title": "Heartbeat"
+      },
+      "children": [
+        "alert_missed",
+        "sep1",
+        "section_issue",
+        "sep2",
+        "section_slots",
+        "sep3",
+        "section_health",
+        "sep4",
+        "section_overall"
+      ]
+    },
+    "alert_missed": {
+      "type": "Alert",
+      "props": {
+        "title": "Scheduler missed 14:00 slot",
+        "message": "No run/state/log detected for 2026-10-01 14:00. Fresh missed-dispatch recurrence 2 days after ISS-007 resolved.",
+        "type": "warning"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_issue": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_issue",
+        "badges_issue"
+      ]
+    },
+    "heading_issue": {
+      "type": "Heading",
+      "props": {
+        "text": "Issue Filed",
+        "level": "h3"
+      }
+    },
+    "badges_issue": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_iss008",
+        "badge_medium"
+      ]
+    },
+    "badge_iss008": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-008",
+        "variant": "outline"
+      }
+    },
+    "badge_medium": {
+      "type": "Badge",
+      "props": {
+        "text": "medium severity",
+        "variant": "secondary"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_slots": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_slots",
+        "text_slots"
+      ]
+    },
+    "heading_slots": {
+      "type": "Heading",
+      "props": {
+        "text": "Other Slot Status",
+        "level": "h3"
+      }
+    },
+    "text_slots": {
+      "type": "Text",
+      "props": {
+        "text": "08:00 and 20:00 slots landed ~1h late but did fire",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_health": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_health",
+        "text_health",
+        "stat_success"
+      ]
+    },
+    "heading_health": {
+      "type": "Heading",
+      "props": {
+        "text": "Self-Check Health",
+        "level": "h3"
+      }
+    },
+    "text_health": {
+      "type": "Text",
+      "props": {
+        "text": "Stayed healthy",
+        "variant": "body"
+      }
+    },
+    "stat_success": {
+      "type": "Stat",
+      "props": {
+        "label": "Last success",
+        "value": "~12h ago",
+        "delta": "under 36h threshold"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_overall": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stack_status",
+        "sep5",
+        "section_recommend"
+      ]
+    },
+    "stack_status": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_status",
+        "badge_status"
+      ]
+    },
+    "heading_status": {
+      "type": "Heading",
+      "props": {
+        "text": "Overall Status",
+        "level": "h3"
+      }
+    },
+    "badge_status": {
+      "type": "Badge",
+      "props": {
+        "text": "🟡 WATCH",
+        "variant": "outline"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_recommend": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_recommend",
+        "text_recommend"
+      ]
+    },
+    "heading_recommend": {
+      "type": "Heading",
+      "props": {
+        "text": "Recommended Action",
+        "level": "h3"
+      }
+    },
+    "text_recommend": {
+      "type": "Text",
+      "props": {
+        "text": "Durable fix (redundant offset cron / external dispatch ping) still recommended if misses keep recurring.",
+        "variant": "body"
+      }
+    }
+  }
+}
