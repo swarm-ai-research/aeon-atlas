@@ -4,7 +4,7 @@
 
 | ID | Title | Severity | Category | Detected |
 |----|-------|----------|----------|----------|
-| ISS-008 | scheduler quiet window — heartbeat missed the 2026-10-01 14:00 slot (fresh recurrence of ISS-005/006/007 missed-dispatch pattern, 2 days after ISS-007 resolved) | medium | unknown | 2026-10-01 |
+| ISS-008 | scheduler quiet window — heartbeat missed 10-01 14:00 + 10-02 08:00 & 14:00 (3 slots); atlas-improve 10-01 06:00 monthly slot also dropped → scheduler-wide, escalated | high | unknown | 2026-10-01 |
 
 ## Resolved
 

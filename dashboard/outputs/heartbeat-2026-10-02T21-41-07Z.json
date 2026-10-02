@@ -1,0 +1,152 @@
+{
+  "root": "main_card",
+  "state": {},
+  "elements": {
+    "main_card": {
+      "type": "Card",
+      "props": {
+        "title": "heartbeat",
+        "description": "Scheduler availability monitoring"
+      },
+      "children": [
+        "status_alert",
+        "missed_slots_section",
+        "diagnosis_section",
+        "remediation_section",
+        "metrics_section"
+      ]
+    },
+    "status_alert": {
+      "type": "Alert",
+      "props": {
+        "title": "ISS-008 Escalated to HIGH",
+        "message": "Scheduler quiet window widened: heartbeat missed 10-02 08:00, 10-02 14:00, and 10-01 14:00 (3 of last 5 scheduled slots). atlas-improve's 10-01 06:00 monthly slot also dropped.",
+        "type": "warning"
+      }
+    },
+    "missed_slots_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "missed_slots_heading",
+        "missed_slots_detail",
+        "impact_text"
+      ]
+    },
+    "missed_slots_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Missed Slots",
+        "level": "h3"
+      }
+    },
+    "missed_slots_detail": {
+      "type": "Text",
+      "props": {
+        "text": "heartbeat: 2026-10-02 08:00, 2026-10-02 14:00, 2026-10-01 14:00 (3 of last 5 slots)\natlas-improve: 2026-10-01 06:00 monthly slot",
+        "variant": "body"
+      }
+    },
+    "impact_text": {
+      "type": "Text",
+      "props": {
+        "text": "A second skill on a different cadence also missed slots — this confirms a scheduler-wide GitHub Actions cron delivery gap, not heartbeat-specific.",
+        "variant": "muted"
+      }
+    },
+    "diagnosis_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "diagnosis_heading",
+        "diagnosis_text",
+        "self_check_text",
+        "fix_history_text"
+      ]
+    },
+    "diagnosis_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Diagnosis",
+        "level": "h3"
+      }
+    },
+    "diagnosis_text": {
+      "type": "Text",
+      "props": {
+        "text": "Root cause: scheduler-wide GitHub Actions cron delivery gap. Self-check status: last success ~24.5 hours ago (under 36h threshold, still within acceptable window).",
+        "variant": "body"
+      }
+    },
+    "self_check_text": {
+      "type": "Text",
+      "props": {
+        "text": "No skill is currently failing in the system.",
+        "variant": "body"
+      }
+    },
+    "fix_history_text": {
+      "type": "Text",
+      "props": {
+        "text": "The per-slot self-resolve loop has not been effective — has not fixed this issue through 4 recurrences (ISS-005 → ISS-008).",
+        "variant": "caption"
+      }
+    },
+    "remediation_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "remediation_heading",
+        "remediation_text"
+      ]
+    },
+    "remediation_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Required Remediation",
+        "level": "h3"
+      }
+    },
+    "remediation_text": {
+      "type": "Text",
+      "props": {
+        "text": "A redundant offset cron or external dispatch backstop is now the real remediation needed.",
+        "variant": "lead"
+      }
+    },
+    "metrics_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "metrics_heading",
+        "stalled_prs_stat"
+      ]
+    },
+    "metrics_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Operational Metrics",
+        "level": "h3"
+      }
+    },
+    "stalled_prs_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Pull requests stalled >24h (deduped)",
+        "value": "14"
+      }
+    }
+  }
+}
