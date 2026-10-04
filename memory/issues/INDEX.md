@@ -4,7 +4,7 @@
 
 | ID | Title | Severity | Category | Detected |
 |----|-------|----------|----------|----------|
-| ISS-008 | scheduler quiet window — heartbeat missed 10-01 14:00, 10-02 08:00 & 14:00, 10-03 08:00 (4 slots); atlas-improve 10-01 06:00 monthly slot also dropped → scheduler-wide; recovering (clean 10-03 14:00 & 20:00, resolve if 10-04 08:00 clean) | high | unknown | 2026-10-01 |
+| ISS-008 | scheduler quiet window — heartbeat missed 10-01 14:00, 10-02 08:00 & 14:00, 10-03 08:00, 10-04 08:00 (5 slots, 08:00 dark 3 mornings); atlas-improve 10-01 monthly + atlas & atlas-layers 10-04 Sunday slots also dropped → scheduler-wide; resolution bar failed final checkpoint twice, re-based to 10-04 20:00 → 10-05 08:00 | high | unknown | 2026-10-01 |
 
 ## Resolved
 

@@ -1,23 +1,21 @@
-All checks complete for the 2026-10-03 20:00 heartbeat slot.
+All checks complete. No notification sent (deduped).
 
 ## Summary
 
-Ran the heartbeat skill (20:00 slot, executed 21:27 UTC, ~1h27m late but landing clean).
+Ran the **heartbeat** skill for the 2026-10-04 14:00 slot (executed 15:17 UTC, ~1h17m late — catch-up, landed clean).
 
-**Findings by priority:**
-- **P0 — all clear.** No failed/stuck/chronic skills, none with `consecutive_failures ≥ 3`. Self-check did **not** fire: heartbeat `last_success` ~6.5h ago, well under the 36h threshold. Fleet: heartbeat 90% (274/303), atlas 100%, atlas-layers 94%, atlas-improve 100% — all `consec 0`.
-- **P1 — WATCH.** 14 open PRs >24h stalled (deduped, all logged within 48h). No urgent GitHub issues.
-- **P2/P3 — clean.** No flagged memory follow-ups; all 4 enabled skills have state entries; no missing/stale flag.
-- **ISS-008 (scheduler quiet window, high/open) — recovering.** This 20:00 slot landing = **clean slot 2 of 3** toward the reset resolution bar (14:00 ✓, 20:00 ✓). Final checkpoint is **10-04 08:00** (the historical weak slot) → resolve if clean. No new misses since 10-03 08:00.
-
-**Overall: 🟡 WATCH** (open high ISS-008 recovering + standing stalled-PR backlog). Not DEGRADED.
-
-**Notification:** None sent — ISS-008 already notified 10-01/10-02; recovery progress is not an operator-actionable state change (48h dedup).
+**Findings:**
+- **🔴→ no P0 fired.** Self-check healthy: heartbeat `last_success` ~17.8h ago (2026-10-03 21:28Z), under the 36h threshold. No failed, stuck, consec≥3, or chronic skills (heartbeat 90%, atlas 100%, atlas-layers 94%, atlas-improve 100%; all consec 0).
+- **⚠️ ISS-008 continuation (stays high/open).** The 10-04 08:00 slot — ISS-008's final resolution checkpoint — was **MISSED** (cron-state frozen at the 10-03 20:00 success). The bar has now failed at its final checkpoint twice. 5 missed slots total; the 08:00 morning slot is dark 3 mornings running.
+- **⚠️ Cohort broadened.** atlas (10-04 04:00) and atlas-layers (10-04 05:00) weekly Sunday slots also show no 10-04 dispatch → three cohort skills across three unrelated cadences have now missed slots in this window. Overwhelming scheduler-wide confirmation; the weekly atlas-layers refresh is at risk of real output loss this cycle.
+- **Overall = 🟡 WATCH** (open high ISS-008 + standing stalled-PR backlog). 0 open GitHub issues, none urgent. 14 PRs stalled >24h (all deduped).
 
 **Files modified:**
-- `docs/status.md` — regenerated (WATCH, updated 21:27 UTC, 1 open issue, next run atlas 04:00 UTC 10-04)
-- `memory/issues/ISS-008.md` — added 2026-10-03 21:27 recovery section + updated resolution criteria
-- `memory/issues/INDEX.md` — updated ISS-008 title (recovering)
-- `memory/logs/2026-10-03.md` — appended 20:00 slot entry
+- `memory/issues/ISS-008.md` — new dated section, frontmatter title + `affected_skills`, re-based resolution criteria (10-04 20:00 → 10-05 08:00)
+- `memory/issues/INDEX.md` — updated ISS-008 title tally
+- `docs/status.md` — regenerated (🟡 WATCH, Updated 2026-10-04 15:17 UTC, 1 open issue, next run heartbeat 20:00 UTC)
+- `memory/logs/2026-10-04.md` — created with full findings
 
-**Follow-up:** Watch the **10-04 08:00** checkpoint — clean → resolve ISS-008; missed → re-escalate (self-check would approach the 36h edge). The durable fix (redundant offset cron / external dispatch ping) remains the real remediation after five recurrences of this scheduler-delivery pattern. Files land on `main` via the workflow's auto-commit step.
+**Notification:** none sent — ISS-008 deduped (last notified 10-02, ~41.6h ago, inside 48h window; no DEGRADED, bar not cleared, same operator action).
+
+**Follow-up needed:** The durable fix (redundant offset cron / external `workflow_dispatch` backstop) is overdue after five recurrences and two failed self-resolve attempts — the per-slot catch-up loop keeps reopening this. Will notify at 20:00 if the pattern continues (outside the dedup window by then) or immediately if the self-check trips to DEGRADED.
