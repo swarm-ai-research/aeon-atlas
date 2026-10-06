@@ -1,0 +1,210 @@
+{
+  "root": "main-card",
+  "state": {},
+  "elements": {
+    "main-card": {
+      "type": "Card",
+      "props": {
+        "title": "Heartbeat Monitoring"
+      },
+      "children": [
+        "status-alert",
+        "sep-1",
+        "metrics-stack",
+        "sep-2",
+        "action-section"
+      ]
+    },
+    "status-alert": {
+      "type": "Alert",
+      "props": {
+        "title": "🔴 DEGRADED — ISS-008 Re-escalated to P0",
+        "message": "Heartbeat self-check breached 36h. Last clean run: 10-04 21:56 (~40.5h ago). Latest run on 10-05 20:00 HUNG (dispatched, never completed).",
+        "type": "error"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "metrics-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "timing-section",
+        "scheduler-section",
+        "resolution-section",
+        "state-section"
+      ]
+    },
+    "timing-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "timing-heading",
+        "last-clean",
+        "last-hung"
+      ]
+    },
+    "timing-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Timing",
+        "level": "h3"
+      }
+    },
+    "last-clean": {
+      "type": "Stat",
+      "props": {
+        "label": "Last clean run",
+        "value": "10-04 21:56",
+        "delta": "~40.5h ago"
+      }
+    },
+    "last-hung": {
+      "type": "Stat",
+      "props": {
+        "label": "Latest run (HUNG)",
+        "value": "10-05 20:00"
+      }
+    },
+    "scheduler-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "scheduler-heading",
+        "missed-text",
+        "dark-slot-text"
+      ]
+    },
+    "scheduler-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Missed Scheduler Slots",
+        "level": "h3"
+      }
+    },
+    "missed-text": {
+      "type": "Text",
+      "props": {
+        "text": "10-05 08:00, 10-05 14:00, 10-06 08:00"
+      }
+    },
+    "dark-slot-text": {
+      "type": "Text",
+      "props": {
+        "text": "08:00 slot now dark 5 consecutive mornings",
+        "variant": "caption"
+      }
+    },
+    "resolution-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "resolution-heading",
+        "resolution-stat",
+        "monitoring-text"
+      ]
+    },
+    "resolution-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Resolution & Monitoring",
+        "level": "h3"
+      }
+    },
+    "resolution-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Failed resolution attempts",
+        "value": "3"
+      }
+    },
+    "monitoring-text": {
+      "type": "Text",
+      "props": {
+        "text": "Monitoring still functioning via catch-up runs but unreliable",
+        "variant": "body"
+      }
+    },
+    "state-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "state-heading",
+        "system-health-badge"
+      ]
+    },
+    "state-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "System Health",
+        "level": "h3"
+      }
+    },
+    "system-health-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "✓ atlas/atlas-layers/atlas-improve otherwise healthy",
+        "variant": "secondary"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "action-heading",
+        "action-text",
+        "fix-detail"
+      ]
+    },
+    "action-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Required Action",
+        "level": "h3"
+      }
+    },
+    "action-text": {
+      "type": "Alert",
+      "props": {
+        "title": "Operator-action-required",
+        "message": "Implement durable fix: redundant offset cron and/or external workflow_dispatch backstop",
+        "type": "warning"
+      }
+    },
+    "fix-detail": {
+      "type": "Text",
+      "props": {
+        "text": "3rd failed resolution bar requires architectural changes to scheduler resilience",
+        "variant": "caption"
+      }
+    }
+  }
+}
