@@ -4,7 +4,7 @@
 
 | ID | Title | Severity | Category | Detected |
 |----|-------|----------|----------|----------|
-| ISS-008 | scheduler quiet window — heartbeat missed 8 slots (10-01→10-06, 08:00 dark 5 mornings) + 10-05 20:00 HUNG; atlas-improve 10-01 + atlas/atlas-layers 10-04 slots also dropped → scheduler-wide; **RE-ESCALATED to P0/DEGRADED 10-06** (self-check >36h), resolution bar failed final checkpoint 3× | high | unknown | 2026-10-01 |
+| ISS-008 | scheduler quiet window — heartbeat dropped slots 10-01→10-06 (incl. 10-05 20:00 HUNG run) + atlas-improve 10-01 monthly + atlas/atlas-layers 10-04 Sunday slots → scheduler-wide; P0/DEGRADED on 10-06 (self-check >36h) **CLEARED 10-07** (self-check <36h, hung run resolved) → back to 🟡 WATCH, still open; 10-06 20:00 missed, self-resolve bar reset 4× | high | unknown | 2026-10-01 |
 
 ## Resolved
 
