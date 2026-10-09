@@ -1,0 +1,262 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Heartbeat",
+        "description": "Fleet scheduler health check"
+      },
+      "children": [
+        "alert-status",
+        "sep-1",
+        "details-stack"
+      ]
+    },
+    "alert-status": {
+      "type": "Alert",
+      "props": {
+        "title": "DEGRADED — Scheduler Quiet Window",
+        "message": "ISS-009, fresh recurrence of ISS-005→008. Heartbeat went dark for all 5 slots across 10-08 and the 10-09 morning/midday — approximately 48.7 hours with no fleet health check, breaching the 36-hour self-check requirement.",
+        "type": "error"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "details-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "timeline-section",
+        "sep-2",
+        "recovery-section",
+        "sep-3",
+        "analysis-section",
+        "sep-4",
+        "action-section"
+      ]
+    },
+    "timeline-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "timeline-heading",
+        "timeline-event-1",
+        "timeline-event-2",
+        "timeline-event-3"
+      ]
+    },
+    "timeline-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Timeline",
+        "level": "h3"
+      }
+    },
+    "timeline-event-1": {
+      "type": "Text",
+      "props": {
+        "text": "10-07 20:00 UTC — Last successful heartbeat run (resolved ISS-008)",
+        "variant": "body"
+      }
+    },
+    "timeline-event-2": {
+      "type": "Text",
+      "props": {
+        "text": "10-08 through 10-09 midday — All 5 scheduler slots went dark",
+        "variant": "body"
+      }
+    },
+    "timeline-event-3": {
+      "type": "Text",
+      "props": {
+        "text": "10-09 20:00 UTC — Catch-up run succeeded (slot 1 of 3 toward recovery)",
+        "variant": "body"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "recovery-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "recovery-heading",
+        "downtime-stat",
+        "recovery-progress"
+      ]
+    },
+    "recovery-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Recovery Status",
+        "level": "h3"
+      }
+    },
+    "downtime-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Total downtime",
+        "value": "48.7 hours",
+        "delta": "+12.7h over 36h target",
+        "trend": "down"
+      }
+    },
+    "recovery-progress": {
+      "type": "Progress",
+      "props": {
+        "value": 33,
+        "max": 100,
+        "label": "Recovery progress (1 of 3 slots)"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "analysis-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "analysis-heading",
+        "pattern-badge",
+        "recurrence-text",
+        "root-cause-text",
+        "other-skills-text"
+      ]
+    },
+    "analysis-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Analysis",
+        "level": "h3"
+      }
+    },
+    "pattern-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Missed-dispatch pattern (no hung run)",
+        "variant": "outline"
+      }
+    },
+    "recurrence-text": {
+      "type": "Text",
+      "props": {
+        "text": "Sixth recurrence — per-slot self-resolve loop keeps clearing then reopening (gap reopened within 48 hours of last fix)",
+        "variant": "body"
+      }
+    },
+    "root-cause-text": {
+      "type": "Text",
+      "props": {
+        "text": "Root cause: Lack of durable backstop; loop relies only on self-healing which is insufficient",
+        "variant": "body"
+      }
+    },
+    "other-skills-text": {
+      "type": "Text",
+      "props": {
+        "text": "All other skills healthy",
+        "variant": "body"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action-heading",
+        "action-badge",
+        "action-detail",
+        "issue-links"
+      ]
+    },
+    "action-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Action Required",
+        "level": "h3"
+      }
+    },
+    "action-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Operator Action Overdue",
+        "variant": "destructive"
+      }
+    },
+    "action-detail": {
+      "type": "Text",
+      "props": {
+        "text": "Implement durable backstop: redundant offset cron schedule and/or external workflow_dispatch ping to prevent recurrence of this pattern",
+        "variant": "lead"
+      }
+    },
+    "issue-links": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "issue-009-link",
+        "issue-008-link",
+        "issue-005-link"
+      ]
+    },
+    "issue-009-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "ISS-009",
+        "href": "memory/issues/ISS-009.md",
+        "source": "Current issue"
+      }
+    },
+    "issue-008-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "ISS-008",
+        "href": "memory/issues/ISS-008.md",
+        "source": "Previous resolution"
+      }
+    },
+    "issue-005-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "ISS-005",
+        "href": "memory/issues/ISS-005.md",
+        "source": "Original issue"
+      }
+    }
+  }
+}
