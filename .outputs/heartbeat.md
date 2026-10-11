@@ -1,25 +1,24 @@
-All checks complete. Here's the rundown.
+Heartbeat complete. `HEARTBEAT_OK · STATUS_PAGE=WATCH`
 
 ## Summary
 
-Ran the **heartbeat** skill for the **2026-10-10 20:00 slot** (executed 20:51 UTC, ~51m late).
+Ran the heartbeat skill for the 2026-10-11 08:00 slot (executed 09:02 UTC, ~1h late).
 
-**Verdict: 🟡 WATCH** — de-escalated from last run's 🔴 DEGRADED.
+**Findings by tier:**
+- **P0 — clear.** heartbeat self-check ~12.1h (well under 36h); no failed/stuck/consec≥3/chronic skills.
+- **Recovery progress:** heartbeat advanced to **clean slot 2 of 3** (10-10 20:00 → 10-11 08:00, no drops between). Final checkpoint 10-11 14:00 would resolve ISS-009.
+- **New escalation (P3):** atlas and atlas-layers both **dropped their 10-11 Sunday slots** and crossed the >2× weekly interval threshold (~14.1d since last success). This re-confirms the quiet window is **scheduler-wide**, not heartbeat-only — even while heartbeat recovers.
+- **P1:** 14 stalled PRs (unchanged set, deduped); 0 open GitHub issues.
+- **P2:** none.
 
-**Checks:**
-- **P0 — clear.** No failed/stuck skills, no `consecutive_failures ≥ 3`, no chronic failures (atlas 100%, atlas-layers 94%, atlas-improve 100%, heartbeat 91%, all `success`/consec 0). Self-check: heartbeat `last_success` is `2026-10-09T21:39Z` → **~23.2h stale, under the 36h threshold → does not fire**.
-- **ISS-009 recurred, milder.** State advanced only to the 10-09 catch-up and nothing since, so **10-10 08:00 and 14:00 were both missed** (2 dropped slots vs the prior 5-slot blackout). The gap never breached self-check → WATCH, not DEGRADED. The recovery counter **reset**; this run is clean slot 1 of 3 again.
-- **P1:** 14 PRs stalled >24h (same set as 10-09, deduped); 0 open issues.
-- **P2/P3:** no memory follow-ups; all 4 enabled skills have state entries, none past its 2× schedule threshold (atlas/atlas-layers due again tomorrow 10-11).
+**Overall:** 🟡 WATCH (P0 clear; open high issue ISS-009 + cohort P3 + stalled PRs).
 
-**Notification:** none sent — no fresh P0, and all surviving items (missed slots, ISS-009, stalled PRs) appear in the last 48h of logs → deduped per the notify rule.
+**Notification:** none sent — all items are the same already-tracked ISS-009 root issue logged within 48h; no fresh P0 → deduped.
 
 **Files modified:**
-- `docs/status.md` — regenerated (Overall 🟡 WATCH, Updated 2026-10-10 20:51 UTC, next run atlas 04:00 UTC; Token pulse omitted — no token-report article).
-- `memory/issues/ISS-009.md` — appended 10-10 update (recurrence + counter reset).
-- `memory/issues/INDEX.md` — refreshed ISS-009 row (stays open/high).
-- `memory/logs/2026-10-10.md` — created with full findings.
+- `docs/status.md` — regenerated (WATCH, updated 09:02 UTC, next run heartbeat 14:00 UTC)
+- `memory/issues/ISS-009.md` — appended 10-11 update (recovery slot 2 of 3; cohort scheduler-wide confirmation)
+- `memory/issues/INDEX.md` — refreshed ISS-009 row
+- `memory/logs/2026-10-11.md` — created, logged this run
 
-**Follow-up needed (operator):** the durable backstop (redundant offset cron and/or external `workflow_dispatch` ping) is **overdue** after the 7th effective recurrence of the ISS-005→009 lineage; `skill-repair` is still `enabled: false`, so no automated fix will land. Files land on `main` via the workflow's auto-commit step.
-
-`STATUS_PAGE=WATCH`
+**Follow-up needed (operator):** the durable backstop (redundant offset cron / external `workflow_dispatch` ping) is overdue — the cohort now dropping Sunday slots is exactly the failure mode it would cover. `skill-repair` remains disabled, so no automated fix will land.

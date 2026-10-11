@@ -4,7 +4,7 @@
 
 | ID | Title | Severity | Category | Detected |
 |----|-------|----------|----------|----------|
-| ISS-009 | scheduler quiet window (ISS-005→008 lineage) — heartbeat dark 5 slots 10-08→10-09 14:00 (self-check ~48.7h → P0); recurred 10-10 08:00/14:00 (2 slots, P0 clear this cycle → WATCH); recovery reset, 10-10 20:00 = clean slot 1 of 3; durable offset-cron / external-dispatch backstop operator-action-required | high | unknown | 2026-10-09 |
+| ISS-009 | scheduler quiet window (ISS-005→008 lineage) — heartbeat dark 5 slots 10-08→10-09 14:00 (self-check ~48.7h → P0), recurred 10-10 (2 slots); heartbeat now recovering (10-11 08:00 = clean slot 2 of 3, final checkpoint 10-11 14:00); but atlas+atlas-layers dropped 10-11 Sunday slots → scheduler-wide, both >2× weekly P3; durable offset-cron / external-dispatch backstop operator-action-required | high | unknown | 2026-10-09 |
 
 ## Resolved
 
