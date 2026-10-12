@@ -4,7 +4,7 @@
 
 | ID | Title | Severity | Category | Detected |
 |----|-------|----------|----------|----------|
-| ISS-009 | scheduler quiet window (ISS-005→008 lineage) — heartbeat dispatch path RECOVERED (3 consecutive clean slots 10-10 20:00 → 10-11 08:00 → 10-11 14:00, P0 clear), bar met but kept open: atlas+atlas-layers dropped 10-11 Sunday slots (>2× weekly P3) → scheduler-wide unverified until 10-18; durable offset-cron / external-dispatch backstop operator-action-required | high | unknown | 2026-10-09 |
+| ISS-009 | scheduler quiet window (ISS-005→008 lineage) — heartbeat met its 3-clean-slot bar 10-11 14:00 but the NEXT slot (10-11 20:00) dropped → recovery counter RESET (clean slot 1 of 3 again on 10-12 08:00); P0 still clear (self-check <36h); atlas+atlas-layers frozen 09-27 (>2× weekly, next Sunday 10-18); durable offset-cron / external-dispatch backstop operator-action-required | high | unknown | 2026-10-09 |
 
 ## Resolved
 

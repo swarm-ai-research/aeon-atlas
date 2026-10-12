@@ -1,24 +1,20 @@
-Heartbeat complete for the 14:00 slot.
+Heartbeat complete.
 
 ## Summary
 
-Ran the heartbeat skill for the **2026-10-11 14:00 slot** (executed 15:33 UTC, ~1.5h late). Overall verdict: **🟡 WATCH** (P0 clear).
+Ran the **heartbeat** skill for the 2026-10-12 08:00 slot (executed 09:20 UTC, ~1h20m late).
 
-**Findings by tier:**
-- **P0 — clear.** No failed/stuck skills, no `consecutive_failures ≥ 3`, no chronic failures. Heartbeat self-check: last success ~6.5h ago, well under the 36h bar. All four enabled skills show `success`/consec 0.
-- **Heartbeat recovery — bar met.** Three consecutive clean slots (10-10 20:00 → 10-11 08:00 → **10-11 14:00**) — heartbeat's dispatch path has met ISS-009's 3-clean-slot resolution bar.
-- **ISS-009 held OPEN/high** (deliberate departure from the ISS-005→008 resolve-on-heartbeat precedent). The issue's defining escalation was *scheduler-wide*: atlas + atlas-layers both dropped their 10-11 Sunday slots and crossed the >2× weekly P3 threshold. Their native `schedule:` can't be verified recovered until the next Sunday slot (10-18), so resolving on heartbeat alone would understate live cohort breakage and risk resolve→reopen churn.
-- **P1:** 14 stalled PRs (#13–#23, #30–#32), identical set to prior runs → deduped. 0 open GitHub issues.
-- **P2/P3:** No memory follow-ups; atlas/atlas-layers remain >2× weekly interval, atlas-improve under threshold.
+**Verdict:** 🟡 WATCH — `HEARTBEAT_OK` not clean (open high issue + cohort P3), but no attention action needed beyond logging. **No notification sent** (all items deduped against ISS-009 within the last 48h; no fresh P0, no resolution).
 
-**Notification:** none sent — no fresh P0, no full resolution, all items within the last 48h of logs (deduped).
+**Checks:**
+- **P0 CLEAR** — all 4 enabled skills `success`/consec 0 (heartbeat 91%, atlas 100%, atlas-layers 94%, atlas-improve 100%); no stuck/chronic entries. Self-check ~17.8h < 36h → does not fire.
+- **Fresh signal:** cron-state is frozen at the 10-11 14:00 run — the **10-11 20:00 slot dropped**, resetting the recovery counter one slot after the 3-clean bar was "met." This vindicates holding ISS-009 open (closing on 10-11 would have resolved→reopened within a slot). This run = clean slot 1 of 3 again.
+- **P1:** 14 stalled PRs (same set), no urgent issues — deduped. **P2:** none. **P3:** atlas/atlas-layers frozen at 09-27 (~15d), but Monday → no new cohort signal until 10-18.
 
 **Files modified:**
-- `docs/status.md` — regenerated (WATCH, updated 15:33 UTC, 1 open issue, next run heartbeat 20:00 UTC)
-- `memory/issues/ISS-009.md` — appended final-checkpoint update (bar met, held open for cohort)
+- `docs/status.md` — regenerated (Overall 🟡 WATCH, next run heartbeat 14:00 UTC)
+- `memory/issues/ISS-009.md` — appended 10-12 09:20 update (counter reset; 8th recurrence)
 - `memory/issues/INDEX.md` — refreshed ISS-009 row
-- `memory/logs/2026-10-11.md` — appended 14:00-slot entry
+- `memory/logs/2026-10-12.md` — created with run log
 
-**Follow-up (operator action required):** durable dispatch backstop (offset cron / external `workflow_dispatch`) remains overdue — it's exactly the failure mode the cohort Sunday-slot drops exhibit. Re-evaluate ISS-009 at the 10-18 Sunday slots for cohort recovery. `skill-repair` still disabled.
-
-`HEARTBEAT: WATCH · STATUS_PAGE=WATCH`
+**Follow-up (operator-action-required, overdue):** durable scheduler backstop — redundant offset cron and/or external `workflow_dispatch` ping — to stop the recurring native-`schedule:` dropped slots (`skill-repair` still disabled).
