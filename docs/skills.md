@@ -41,6 +41,7 @@ Install any skill into your own agent:
 | Skill | Description | Default Schedule |
 |-------|-------------|-----------------|
 | `pr-review` | Auto-review open PRs on watched repos and post summary comments | Daily 9 AM UTC |
+| `pr-merge-queue` | Serialize merging of `merge-queue`-labeled PRs one at a time, refreshing the next in line against base after each merge | Daily 2:20 PM UTC |
 | `github-monitor` | Watch repos for stale PRs, new issues, and new releases | Daily 9 AM UTC |
 | `github-issues` | Check all your repos for new open issues in the last 24 hours | Daily 9 AM UTC |
 | `github-trending` | Top 10 trending repos on GitHub right now | Daily 9 AM UTC |
@@ -96,6 +97,7 @@ Install any skill into your own agent:
 | `memory-flush` | Promote important recent log entries into MEMORY.md | Daily 6 PM UTC |
 | `reflect` | Review recent activity, consolidate memory, prune stale entries | Daily 6 PM UTC |
 | `skill-health` | Check which scheduled skills haven't run recently | Daily 6 PM UTC |
+| `api-health-probe` | Proactively probe external API hosts the fleet depends on; alert on UP/DOWN/SLOW transitions | Daily 10 AM UTC |
 | `self-review` | Weekly audit of what Aeon did, what failed, and what to improve | Daily 6 PM UTC |
 | `rss-feed` | Generate an Atom XML feed from articles in the repo | Daily 5:30 PM UTC |
 | `update-gallery` | Sync articles to GitHub Pages gallery with proper Jekyll frontmatter | Weekly Sunday 6 PM UTC |

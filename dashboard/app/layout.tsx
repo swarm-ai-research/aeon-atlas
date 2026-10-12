@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Dela_Gothic_One, Inter, Space_Mono } from 'next/font/google'
+import { Analytics } from '../components/Analytics'
 import './globals.css'
 
 // Chunky uppercase display face — the signature voice of aeon.fun.
@@ -42,7 +43,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${dela.variable} ${inter.variable} ${mono.variable}`}>
-      <body className="antialiased">{children}</body>
+      <body className="antialiased">
+        <Analytics />
+        {children}
+      </body>
     </html>
   )
 }
