@@ -4,7 +4,7 @@
 
 | ID | Title | Severity | Category | Detected |
 |----|-------|----------|----------|----------|
-| ISS-009 | scheduler quiet window (ISS-005→008 lineage) — THREE slots dropped 10-12 14:00 → 10-13 08:00 (widest window since the opening 48.7h blackout); recovery counter RESET again (clean slot 1 of 3 on 10-13 14:00); P0 still clear but self-check at ~30h nearing 36h — one more dropped slot (10-13 20:00) tips DEGRADED; atlas+atlas-layers frozen 09-27 (>2× weekly, next Sunday 10-18); durable offset-cron / external-dispatch backstop operator-action-required | high | unknown | 2026-10-09 |
+| ISS-009 | scheduler quiet window (ISS-005→008 lineage) — 10-13 20:00 slot did NOT drop → DEGRADED escalation averted, self-check recovered ~30h→~5.4h; heartbeat clean slot 2 of 3 (14:00 + 20:00), final checkpoint 10-14 08:00; held open/high pending cohort confirm — atlas+atlas-layers frozen 09-27 (>2× weekly, next Sunday 10-18); durable offset-cron / external-dispatch backstop operator-action-required | high | unknown | 2026-10-09 |
 
 ## Resolved
 
