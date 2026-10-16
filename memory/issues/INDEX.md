@@ -4,7 +4,7 @@
 
 | ID | Title | Severity | Category | Detected |
 |----|-------|----------|----------|----------|
-| ISS-009 | scheduler quiet window (ISS-005→008 lineage) — final checkpoint 10-14 08:00 DROPPED (+ 10-14 14:00), counter reset 4th time → clean slot 1 of 3 again; P0 clear (self-check ~24.3h <36h); per-slot self-resolve loop is reprieve-not-fix (11th effective recurrence); atlas+atlas-layers frozen 09-27 (>2× weekly, cohort recovery unverified until Sunday 10-18); durable offset-cron / external-dispatch backstop operator-action-required | high | unknown | 2026-10-09 |
+| ISS-009 | scheduler quiet window (ISS-005→008 lineage) — 🔴 ESCALATED 10-16: full 10-15 blackout (3 slots) + late 10-16 08:00 catch-up → 36h self-check FIRED (~36.6h stale), fresh P0, DEGRADED, NOTIFIED; counter reset 5th time (12th effective recurrence); atlas+atlas-layers frozen 09-27 (>2× weekly, cohort recovery unverified until Sunday 10-18); durable offset-cron / external-dispatch backstop now proven necessary (operator-action-required) | high | unknown | 2026-10-09 |
 
 ## Resolved
 
