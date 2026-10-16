@@ -4,7 +4,7 @@
 
 | ID | Title | Severity | Category | Detected |
 |----|-------|----------|----------|----------|
-| ISS-009 | scheduler quiet window (ISS-005→008 lineage) — DEGRADED on 10-16 08:00 (full 10-15 blackout → 36h self-check fired ~36.6h stale, NOTIFIED) DE-ESCALATED to 🟡 WATCH on 10-16 14:00 clean on-time dispatch (P0 clear, self-check ~4.5h); clean slot 2 of 3, 10-16 20:00 is slot 3; 12th recurrence, counter reset 5× this cycle; atlas+atlas-layers frozen 09-27 (>2× weekly, cohort recovery unverified until Sunday 10-18); durable offset-cron / external-dispatch backstop proven necessary (operator-action-required) | high | unknown | 2026-10-09 |
+| ISS-009 | scheduler quiet window (ISS-005→008 lineage) — DEGRADED on 10-16 08:00 (full 10-15 blackout → 36h self-check fired ~36.6h stale, NOTIFIED), de-escalated to 🟡 WATCH 10-16 14:00; **heartbeat 3-slot clean progression COMPLETE 10-16 08:00→14:00→20:00** (dispatch path recovered, P0 clear throughout, self-check ~6.6h) — cond (a) met; held open/high on cond (b): atlas+atlas-layers frozen 09-27 (>2× weekly), cohort recovery unverified until Sunday 10-18; 12th recurrence, counter reset 5× this cycle; durable offset-cron / external-dispatch backstop proven necessary (operator-action-required) | high | unknown | 2026-10-09 |
 
 ## Resolved
 
