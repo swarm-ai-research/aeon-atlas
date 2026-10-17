@@ -1,22 +1,22 @@
-Heartbeat complete for the **2026-10-16 20:00 slot** (ran ~54m late at 20:54 UTC).
+Heartbeat complete.
 
 ## Summary
 
-**Verdict: 🟡 WATCH — P0 clear; heartbeat 3-slot clean progression COMPLETE.**
+Ran the heartbeat ambient check for the 2026-10-17 08:00 slot (executed 09:38 UTC, ~1h38m late).
 
-- **P0 — clear.** heartbeat self-check ~6.6h stale (last_success 14:16 UTC), well under 36h. No failed/stuck/chronic skills, no consecutive-failure streaks. atlas 100%, atlas-layers 94%, atlas-improve 100%, heartbeat 91% — all `success`, consec 0.
-- **Recovery milestone.** This slot is **3 of 3** in the clean progression (10-16 08:00 → 14:00 → 20:00), so the heartbeat dispatch-path dimension of ISS-009 has met its self-resolve bar. The 09:41 DEGRADED state (36.6h stale off the full-day 10-15 blackout) is fully behind us.
-- **P1:** 14 PRs stalled >24h (#13–#23, #30–#32) — identical set, deduped. 0 open GitHub issues.
-- **P2/P3:** No flagged follow-ups. atlas + atlas-layers still frozen at 09-27 (~19d, >2× weekly) — next Sunday slots 10-18, no new cohort signal today.
-- **ISS-009 held open/high.** Two-condition close: (a) heartbeat 3-slot clear ✅ now met; (b) 10-18 Sunday cohort recovery ❌ unverified. Holds until Sunday. Operator backstop (redundant offset cron / external `workflow_dispatch`) remains **operator-action-required** — proven necessary this cycle.
-- **No notification** — no fresh P0, no full resolution; partial recovery of an already-communicated WATCH → deduped.
+**Findings by priority:**
+- **P0 — CLEAR.** All 4 enabled skills show `success` / consec 0. Heartbeat self-check: last_success (2026-10-16 20:56 UTC) is ~12.7h old, well under the 36h threshold → does not fire. No failed, stuck, degraded, or chronic skills. The 10-16 DEGRADED breach (from the full 10-15 blackout) stayed cleared through its 3-slot recovery into today.
+- **P1** — 14 open PRs stalled >24h (#13–#23, #30–#32), identical to prior days → deduped. 0 open GitHub issues.
+- **P2** — no real memory follow-ups (template placeholders only).
+- **P3** — atlas + atlas-layers frozen since 09-27 (~20d, >2× their weekly interval) → WATCH signal, deduped. Next Sunday slots are 10-18 (tomorrow); no new cohort signal today.
 
-**Files modified:**
-- `memory/issues/ISS-009.md` — appended 20:54 slot-3 update
-- `memory/issues/INDEX.md` — refreshed ISS-009 row
-- `docs/status.md` — regenerated (🟡 WATCH, updated 20:54 UTC)
-- `memory/logs/2026-10-16.md` — logged 20:00 slot
+**Overall: 🟡 WATCH** (P0 clear, but P3 cohort staleness + open high issue ISS-009).
 
-**Follow-up:** 10-18 Sunday slots must confirm atlas/atlas-layers cohort recovery to close ISS-009. Durable scheduler backstop still needs operator action.
+**Actions:**
+- Rewrote `docs/status.md` (STATUS_PAGE=WATCH, updated 2026-10-17 09:38 UTC, next run heartbeat 14:00 UTC). Token pulse omitted — no `articles/token-report-*.md` exists.
+- Logged the run to `memory/logs/2026-10-17.md`.
+- **No notification sent** — no fresh P0, no full resolution; all items deduped against the last 48h of logs.
 
-`HEARTBEAT: WATCH · STATUS_PAGE=WATCH` (P0 clear, heartbeat 3-slot bar met, held on cohort)
+**Files modified:** `docs/status.md`, `memory/logs/2026-10-17.md`.
+
+**Follow-up:** ISS-009 held open/high on its one remaining condition — atlas/atlas-layers cohort recovery, verifiable at the Sunday 10-18 slots. Operator backstop (redundant offset cron / external dispatch) remains operator-action-required. Both land on `main` via the workflow auto-commit step.
