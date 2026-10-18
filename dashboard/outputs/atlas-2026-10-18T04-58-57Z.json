@@ -1,0 +1,101 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Atlas updated"
+      },
+      "children": [
+        "text_forks",
+        "badge_top",
+        "separator_1",
+        "stats_row",
+        "separator_2",
+        "text_regen",
+        "link_pr"
+      ]
+    },
+    "text_forks": {
+      "type": "Text",
+      "props": {
+        "text": "24 new fork(s)"
+      },
+      "children": []
+    },
+    "badge_top": {
+      "type": "Badge",
+      "props": {
+        "text": "Top: AragAgg/aeon"
+      },
+      "children": []
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "stats_row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_repos",
+        "stat_edges",
+        "stat_stars"
+      ]
+    },
+    "stat_repos": {
+      "type": "Stat",
+      "props": {
+        "label": "Repos",
+        "value": "301"
+      },
+      "children": []
+    },
+    "stat_edges": {
+      "type": "Stat",
+      "props": {
+        "label": "Fork edges",
+        "value": "298"
+      },
+      "children": []
+    },
+    "stat_stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars",
+        "value": "26"
+      },
+      "children": []
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "text_regen": {
+      "type": "Text",
+      "props": {
+        "text": "First clean regen since 09-27",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "link_pr": {
+      "type": "Link",
+      "props": {
+        "label": "View PR",
+        "href": "https://github.com/swarm-ai-research/aeon-atlas/pull/33"
+      },
+      "children": []
+    }
+  }
+}
