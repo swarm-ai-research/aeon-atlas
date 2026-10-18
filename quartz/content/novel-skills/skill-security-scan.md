@@ -1,12 +1,12 @@
 ---
 title: "skill-security-scan"
 tags: [novel-skill]
-adoption: 141
+adoption: 139
 ---
 
 # `skill-security-scan`
 
-Custom skill shipped by 141 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
+Custom skill shipped by 139 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
 
 ## Forks shipping this
 
@@ -42,7 +42,6 @@ Custom skill shipped by 141 forks. Not present in upstream `aaronjmars/aeon/skil
 - [[forks/loessy-aeon|loessy/aeon]]
 - [[forks/AntFleet-aeon|AntFleet/aeon]]
 - [[forks/houndflow-aeon|houndflow/aeon]]
-- [[forks/AIRYDER-aeon|AIRYDER/aeon]]
 - [[forks/ScoutAeon-Scout|ScoutAeon/Scout]]
 - [[forks/NoctelXBT-aeon|NoctelXBT/aeon]]
 - [[forks/richard7463-aeon|richard7463/aeon]]
@@ -122,7 +121,6 @@ Custom skill shipped by 141 forks. Not present in upstream `aaronjmars/aeon/skil
 - [[forks/traewang-aeon-contrib|traewang/aeon-contrib]]
 - [[forks/SyxonQ-Dev-aeon|SyxonQ-Dev/aeon]]
 - [[forks/fsgaleti-create-aeon|fsgaleti-create/aeon]]
-- [[forks/ether-btc-aeon|ether-btc/aeon]]
 - [[forks/jimimased-aeon|jimimased/aeon]]
 - [[forks/Aldine-aeon|Aldine/aeon]]
 - [[forks/FreyjasWrath-aeon|FreyjasWrath/aeon]]

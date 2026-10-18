@@ -1,12 +1,12 @@
 ---
 title: "sparkleware-catalog"
 tags: [novel-skill]
-adoption: 71
+adoption: 70
 ---
 
 # `sparkleware-catalog`
 
-Custom skill shipped by 71 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
+Custom skill shipped by 70 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
 
 ## Forks shipping this
 
@@ -74,7 +74,6 @@ Custom skill shipped by 71 forks. Not present in upstream `aaronjmars/aeon/skill
 - [[forks/loessy-aeon|loessy/aeon]]
 - [[forks/AntFleet-aeon|AntFleet/aeon]]
 - [[forks/houndflow-aeon|houndflow/aeon]]
-- [[forks/AIRYDER-aeon|AIRYDER/aeon]]
 - [[forks/ScoutAeon-Scout|ScoutAeon/Scout]]
 - [[forks/NoctelXBT-aeon|NoctelXBT/aeon]]
 - [[forks/KanekiCraynet-aeon|KanekiCraynet/aeon]]

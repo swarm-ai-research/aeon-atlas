@@ -1,12 +1,12 @@
 ---
 title: "okf-ingest"
 tags: [novel-skill]
-adoption: 18
+adoption: 17
 ---
 
 # `okf-ingest`
 
-Custom skill shipped by 18 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
+Custom skill shipped by 17 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
 
 ## Forks shipping this
 
@@ -21,7 +21,6 @@ Custom skill shipped by 18 forks. Not present in upstream `aaronjmars/aeon/skill
 - [[forks/bspacer-aeon|bspacer/aeon]]
 - [[forks/wasabinetwork-aeon|wasabinetwork/aeon]]
 - [[forks/alexverify-aeon|alexverify/aeon]]
-- [[forks/mouse-value-add-aeon|mouse-value-add/aeon]]
 - [[forks/aiagentho-aeon|aiagentho/aeon]]
 - [[forks/sinfronterasai-aeon|sinfronterasai/aeon]]
 - [[forks/aganoob-aeon|aganoob/aeon]]

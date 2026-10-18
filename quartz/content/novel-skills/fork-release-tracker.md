@@ -1,12 +1,12 @@
 ---
 title: "fork-release-tracker"
 tags: [novel-skill]
-adoption: 107
+adoption: 106
 ---
 
 # `fork-release-tracker`
 
-Custom skill shipped by 107 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
+Custom skill shipped by 106 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
 
 ## Forks shipping this
 
@@ -42,7 +42,6 @@ Custom skill shipped by 107 forks. Not present in upstream `aaronjmars/aeon/skil
 - [[forks/loessy-aeon|loessy/aeon]]
 - [[forks/AntFleet-aeon|AntFleet/aeon]]
 - [[forks/houndflow-aeon|houndflow/aeon]]
-- [[forks/AIRYDER-aeon|AIRYDER/aeon]]
 - [[forks/ScoutAeon-Scout|ScoutAeon/Scout]]
 - [[forks/NoctelXBT-aeon|NoctelXBT/aeon]]
 - [[forks/richard7463-aeon|richard7463/aeon]]

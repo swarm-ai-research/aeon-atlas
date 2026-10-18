@@ -2,9 +2,9 @@
 title: "naolnegassa/aeon"
 tags: [fork]
 stars: 0
-pushed: "2026-03-10"
-enabled_skills: 25
-shipped_skills: 32
+pushed: "2026-09-29"
+enabled_skills: 2
+shipped_skills: 85
 ---
 
 # naolnegassa/aeon
@@ -14,42 +14,18 @@ Background intelligence that evolves with you
 [Repository on GitHub](https://github.com/naolnegassa/aeon)
 
 - **★** 0
-- **Last push:** 2026-03-10
+- **Last push:** 2026-09-29
 - **Default branch:** `main`
-- **Enabled skills in `aeon.yml`:** 25
-- **Skills shipped in `skills/`:** 32
+- **Enabled skills in `aeon.yml`:** 2
+- **Skills shipped in `skills/`:** 85
 
 ## Activity (last 30 days)
 
-**0** commits.
+**18** commits.
 
-<svg xmlns="http://www.w3.org/2000/svg" width="65" height="91" viewBox="0 0 65 91" aria-label="0 commits in the last 35 days"><rect x="0" y="0" width="11" height="11" rx="2" ry="2" fill="var(--lightgray, #ebedf0)"><title>2026-08-30: 0 commits</title></rect><rect x="0" y="13" width="11" height="11" rx="2" ry="2" fill="var(--lightgray, #ebedf0)"><title>2026-08-31: 0 commits</title></rect><rect x="0" y="26" width="11" height="11" rx="2" ry="2" fill="var(--lightgray, #ebedf0)"><title>2026-09-01: 0 commits</title></rect><rect x="0" y="39" width="11" height="11" rx="2" ry="2" fill="var(--lightgray, #ebedf0)"><title>2026-09-02: 0 commits</title></rect><rect x="0" y="52" width="11" height="11" rx="2" ry="2" fill="var(--lightgray, #ebedf0)"><title>2026-09-03: 0 commits</title></rect><rect x="0" y="65" width="11" height="11" rx="2" ry="2" fill="var(--lightgray, #ebedf0)"><title>2026-09-04: 0 commits</title></rect><rect x="0" y="78" width="11" height="11" rx="2" ry="2" fill="var(--lightgray, #ebedf0)"><title>2026-09-05: 0 commits</title></rect><rect x="13" y="0" width="11" height="11" rx="2" ry="2" fill="var(--lightgray, #ebedf0)"><title>2026-09-06: 0 commits</title></rect><rect x="13" y="13" width="11" height="11" rx="2" ry="2" fill="var(--lightgray, #ebedf0)"><title>2026-09-07: 0 commits</title></rect><rect x="13" y="26" width="11" height="11" rx="2" ry="2" fill="var(--lightgray, #ebedf0)"><title>2026-09-08: 0 commits</title></rect><rect x="13" y="39" width="11" height="11" rx="2" ry="2" fill="var(--lightgray, #ebedf0)"><title>2026-09-09: 0 commits</title></rect><rect x="13" y="52" width="11" height="11" rx="2" ry="2" fill="var(--lightgray, #ebedf0)"><title>2026-09-10: 0 commits</title></rect><rect x="13" y="65" width="11" height="11" rx="2" ry="2" fill="var(--lightgray, #ebedf0)"><title>2026-09-11: 0 commits</title></rect><rect x="13" y="78" width="11" height="11" rx="2" ry="2" fill="var(--lightgray, #ebedf0)"><title>2026-09-12: 0 commits</title></rect><rect x="26" y="0" width="11" height="11" rx="2" ry="2" fill="var(--lightgray, #ebedf0)"><title>2026-09-13: 0 commits</title></rect><rect x="26" y="13" width="11" height="11" rx="2" ry="2" fill="var(--lightgray, #ebedf0)"><title>2026-09-14: 0 commits</title></rect><rect x="26" y="26" width="11" height="11" rx="2" ry="2" fill="var(--lightgray, #ebedf0)"><title>2026-09-15: 0 commits</title></rect><rect x="26" y="39" width="11" height="11" rx="2" ry="2" fill="var(--lightgray, #ebedf0)"><title>2026-09-16: 0 commits</title></rect><rect x="26" y="52" width="11" height="11" rx="2" ry="2" fill="var(--lightgray, #ebedf0)"><title>2026-09-17: 0 commits</title></rect><rect x="26" y="65" width="11" height="11" rx="2" ry="2" fill="var(--lightgray, #ebedf0)"><title>2026-09-18: 0 commits</title></rect><rect x="26" y="78" width="11" height="11" rx="2" ry="2" fill="var(--lightgray, #ebedf0)"><title>2026-09-19: 0 commits</title></rect><rect x="39" y="0" width="11" height="11" rx="2" ry="2" fill="var(--lightgray, #ebedf0)"><title>2026-09-20: 0 commits</title></rect><rect x="39" y="13" width="11" height="11" rx="2" ry="2" fill="var(--lightgray, #ebedf0)"><title>2026-09-21: 0 commits</title></rect><rect x="39" y="26" width="11" height="11" rx="2" ry="2" fill="var(--lightgray, #ebedf0)"><title>2026-09-22: 0 commits</title></rect><rect x="39" y="39" width="11" height="11" rx="2" ry="2" fill="var(--lightgray, #ebedf0)"><title>2026-09-23: 0 commits</title></rect><rect x="39" y="52" width="11" height="11" rx="2" ry="2" fill="var(--lightgray, #ebedf0)"><title>2026-09-24: 0 commits</title></rect><rect x="39" y="65" width="11" height="11" rx="2" ry="2" fill="var(--lightgray, #ebedf0)"><title>2026-09-25: 0 commits</title></rect><rect x="39" y="78" width="11" height="11" rx="2" ry="2" fill="var(--lightgray, #ebedf0)"><title>2026-09-26: 0 commits</title></rect><rect x="52" y="0" width="11" height="11" rx="2" ry="2" fill="var(--lightgray, #ebedf0)"><title>2026-09-27: 0 commits</title></rect><rect x="52" y="13" width="11" height="11" rx="2" ry="2" fill="var(--lightgray, #ebedf0)"><title>2026-09-28: 0 commits</title></rect><rect x="52" y="26" width="11" height="11" rx="2" ry="2" fill="var(--lightgray, #ebedf0)"><title>2026-09-29: 0 commits</title></rect><rect x="52" y="39" width="11" height="11" rx="2" ry="2" fill="var(--lightgray, #ebedf0)"><title>2026-09-30: 0 commits</title></rect><rect x="52" y="52" width="11" height="11" rx="2" ry="2" fill="var(--lightgray, #ebedf0)"><title>2026-10-01: 0 commits</title></rect><rect x="52" y="65" width="11" height="11" rx="2" ry="2" fill="var(--lightgray, #ebedf0)"><title>2026-10-02: 0 commits</title></rect><rect x="52" y="78" width="11" height="11" rx="2" ry="2" fill="var(--lightgray, #ebedf0)"><title>2026-10-03: 0 commits</title></rect></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="65" height="91" viewBox="0 0 65 91" aria-label="18 commits in the last 35 days"><rect x="0" y="0" width="11" height="11" rx="2" ry="2" fill="var(--lightgray, #ebedf0)"><title>2026-09-20: 0 commits</title></rect><rect x="0" y="13" width="11" height="11" rx="2" ry="2" fill="#30a14e"><title>2026-09-21: 4 commits</title></rect><rect x="0" y="26" width="11" height="11" rx="2" ry="2" fill="#9be9a8"><title>2026-09-22: 1 commit</title></rect><rect x="0" y="39" width="11" height="11" rx="2" ry="2" fill="#216e39"><title>2026-09-23: 6 commits</title></rect><rect x="0" y="52" width="11" height="11" rx="2" ry="2" fill="#40c463"><title>2026-09-24: 2 commits</title></rect><rect x="0" y="65" width="11" height="11" rx="2" ry="2" fill="var(--lightgray, #ebedf0)"><title>2026-09-25: 0 commits</title></rect><rect x="0" y="78" width="11" height="11" rx="2" ry="2" fill="var(--lightgray, #ebedf0)"><title>2026-09-26: 0 commits</title></rect><rect x="13" y="0" width="11" height="11" rx="2" ry="2" fill="var(--lightgray, #ebedf0)"><title>2026-09-27: 0 commits</title></rect><rect x="13" y="13" width="11" height="11" rx="2" ry="2" fill="#216e39"><title>2026-09-28: 5 commits</title></rect><rect x="13" y="26" width="11" height="11" rx="2" ry="2" fill="var(--lightgray, #ebedf0)"><title>2026-09-29: 0 commits</title></rect><rect x="13" y="39" width="11" height="11" rx="2" ry="2" fill="var(--lightgray, #ebedf0)"><title>2026-09-30: 0 commits</title></rect><rect x="13" y="52" width="11" height="11" rx="2" ry="2" fill="var(--lightgray, #ebedf0)"><title>2026-10-01: 0 commits</title></rect><rect x="13" y="65" width="11" height="11" rx="2" ry="2" fill="var(--lightgray, #ebedf0)"><title>2026-10-02: 0 commits</title></rect><rect x="13" y="78" width="11" height="11" rx="2" ry="2" fill="var(--lightgray, #ebedf0)"><title>2026-10-03: 0 commits</title></rect><rect x="26" y="0" width="11" height="11" rx="2" ry="2" fill="var(--lightgray, #ebedf0)"><title>2026-10-04: 0 commits</title></rect><rect x="26" y="13" width="11" height="11" rx="2" ry="2" fill="var(--lightgray, #ebedf0)"><title>2026-10-05: 0 commits</title></rect><rect x="26" y="26" width="11" height="11" rx="2" ry="2" fill="var(--lightgray, #ebedf0)"><title>2026-10-06: 0 commits</title></rect><rect x="26" y="39" width="11" height="11" rx="2" ry="2" fill="var(--lightgray, #ebedf0)"><title>2026-10-07: 0 commits</title></rect><rect x="26" y="52" width="11" height="11" rx="2" ry="2" fill="var(--lightgray, #ebedf0)"><title>2026-10-08: 0 commits</title></rect><rect x="26" y="65" width="11" height="11" rx="2" ry="2" fill="var(--lightgray, #ebedf0)"><title>2026-10-09: 0 commits</title></rect><rect x="26" y="78" width="11" height="11" rx="2" ry="2" fill="var(--lightgray, #ebedf0)"><title>2026-10-10: 0 commits</title></rect><rect x="39" y="0" width="11" height="11" rx="2" ry="2" fill="var(--lightgray, #ebedf0)"><title>2026-10-11: 0 commits</title></rect><rect x="39" y="13" width="11" height="11" rx="2" ry="2" fill="var(--lightgray, #ebedf0)"><title>2026-10-12: 0 commits</title></rect><rect x="39" y="26" width="11" height="11" rx="2" ry="2" fill="var(--lightgray, #ebedf0)"><title>2026-10-13: 0 commits</title></rect><rect x="39" y="39" width="11" height="11" rx="2" ry="2" fill="var(--lightgray, #ebedf0)"><title>2026-10-14: 0 commits</title></rect><rect x="39" y="52" width="11" height="11" rx="2" ry="2" fill="var(--lightgray, #ebedf0)"><title>2026-10-15: 0 commits</title></rect><rect x="39" y="65" width="11" height="11" rx="2" ry="2" fill="var(--lightgray, #ebedf0)"><title>2026-10-16: 0 commits</title></rect><rect x="39" y="78" width="11" height="11" rx="2" ry="2" fill="var(--lightgray, #ebedf0)"><title>2026-10-17: 0 commits</title></rect><rect x="52" y="0" width="11" height="11" rx="2" ry="2" fill="var(--lightgray, #ebedf0)"><title>2026-10-18: 0 commits</title></rect><rect x="52" y="13" width="11" height="11" rx="2" ry="2" fill="var(--lightgray, #ebedf0)"><title>2026-10-19: 0 commits</title></rect><rect x="52" y="26" width="11" height="11" rx="2" ry="2" fill="var(--lightgray, #ebedf0)"><title>2026-10-20: 0 commits</title></rect><rect x="52" y="39" width="11" height="11" rx="2" ry="2" fill="var(--lightgray, #ebedf0)"><title>2026-10-21: 0 commits</title></rect><rect x="52" y="52" width="11" height="11" rx="2" ry="2" fill="var(--lightgray, #ebedf0)"><title>2026-10-22: 0 commits</title></rect><rect x="52" y="65" width="11" height="11" rx="2" ry="2" fill="var(--lightgray, #ebedf0)"><title>2026-10-23: 0 commits</title></rect><rect x="52" y="78" width="11" height="11" rx="2" ry="2" fill="var(--lightgray, #ebedf0)"><title>2026-10-24: 0 commits</title></rect></svg>
 
 
 ## Parent
 
 - [[forks/aaronjmars-aeon|aaronjmars/aeon]]
-
-## Novel skills shipped (spread to ≥ 2 forks)
-
-- [[novel-skills/build-skill|build-skill]]
-- [[novel-skills/code-health|code-health]]
-- [[novel-skills/defi-monitor|defi-monitor]]
-- [[novel-skills/goal-tracker|goal-tracker]]
-- [[novel-skills/hacker-news-digest|hacker-news-digest]]
-- [[novel-skills/idea-capture|idea-capture]]
-- [[novel-skills/issue-triage|issue-triage]]
-- [[novel-skills/morning-brief|morning-brief]]
-- [[novel-skills/on-chain-monitor|on-chain-monitor]]
-- [[novel-skills/paper-digest|paper-digest]]
-- [[novel-skills/reddit-digest|reddit-digest]]
-- [[novel-skills/reflect|reflect]]
-- [[novel-skills/research-brief|research-brief]]
-- [[novel-skills/rss-digest|rss-digest]]
-- [[novel-skills/search-papers|search-papers]]
-- [[novel-skills/security-digest|security-digest]]
-- [[novel-skills/self-review|self-review]]
-- [[novel-skills/token-alert|token-alert]]
-- [[novel-skills/tweet-digest|tweet-digest]]
-- [[novel-skills/wallet-digest|wallet-digest]]
-- [[novel-skills/weekly-review|weekly-review]]
