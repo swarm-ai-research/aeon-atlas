@@ -1,20 +1,23 @@
-All checks complete for the **20:00 slot** (ran 2026-10-17 20:53 UTC).
+Heartbeat complete. No notification sent (no fresh P0, no full resolution — all deduped).
 
 ## Summary
 
-**Verdict:** `HEARTBEAT_OK (WATCH)` · `STATUS_PAGE=WATCH` — no notification sent (all signals deduped).
+**08:00 heartbeat slot (ran 09:06 UTC, ~1h late) — 🟡 WATCH · P0 CLEAR.** Today (Sun 10-18) was the critical cohort-verification day for ISS-009.
 
-**Checks run:**
-- **P0 — CLEAR.** heartbeat `last_success 2026-10-17T09:39:21Z`, success, consec 0, 91% (293/322). Self-check ~11.2h < 36h → does not fire. No failed/stuck/chronic skills (atlas 100%, atlas-layers 94%, atlas-improve 100%, heartbeat 91%).
-- **P1:** 14 PRs stalled >24h (#13–23, #30–32) — same set since 10-10, deduped. 0 open issues.
-- **P2:** no real memory follow-ups (template placeholders).
-- **P3:** atlas/atlas-layers frozen since 09-27 (~20d, >2× weekly) → WATCH, deduped. Sunday cohort slots (10-18) will test recovery.
-- **Overall → 🟡 WATCH** (open high ISS-009 + cohort P3; P0 clear).
+**Findings:**
+- **P0 clear** — no failed/stuck skills, no consecutive failures, no chronic failures. Heartbeat self-check ~12.2h < 36h.
+- **atlas ✅ RECOVERED** — fresh 10-18 run (04:43 dispatch → 04:59 success, 13/13 100%), opened PR #33. First atlas run since 09-27; the frozen Sunday cohort can dispatch again.
+- **atlas-layers ❌ pending** — its 05:00 Sunday slot is ~4h overdue (still last-run 09-27, no new PR). May catch up; verify at 14:00.
+- **P1:** 0 open issues; 14 stalled PRs (deduped set) + 1 fresh (#33). **P2/P3:** only atlas-layers staleness flags.
+- **ISS-009** held open/high at WATCH — condition (a) met (3-slot clean heartbeat progression, held through 10-17), condition (b) now **partial** (atlas confirmed, atlas-layers pending). atlas-layers slot drift today is live evidence the operator-action backstop (redundant offset cron) is still needed.
 
-**No notification:** no fresh P0 and no full resolution (cohort unverified until 10-18) — everything is within the 48h dedup window.
+**No notification** — no fresh P0, no full resolution; atlas recovery is positive but the saga is deduped within 48h.
 
 **Files modified:**
-- `docs/status.md` — regenerated (Overall 🟡 WATCH, updated 2026-10-17 20:53 UTC, next run corrected to **atlas at 04:00 UTC Sun 10-18**, now the soonest upcoming slot ahead of heartbeat 08:00; Token pulse omitted — no token report).
-- `memory/logs/2026-10-17.md` — appended the 20:00-slot entry.
+- `docs/status.md` — rewrote (🟡 WATCH, updated 09:06 UTC, atlas now top of health table at 10-18 04:59)
+- `memory/issues/INDEX.md` — updated ISS-009 row with the 10-18 partial-recovery split
+- `memory/logs/2026-10-18.md` — created with full slot log
 
-**Follow-up (operator-action-required):** ISS-009 stays open/high — heartbeat dispatch path has held clean since the 10-16 recovery, but cohort recovery is unverified until the 10-18 Sunday slots. The durable backstop (redundant offset cron / external `workflow_dispatch`) remains an operator action; `skill-repair` is still `enabled: false`.
+**Follow-up:** 14:00 heartbeat slot should confirm whether atlas-layers caught up → full ISS-009 cohort resolution, or missed → operator backstop escalation.
+
+`HEARTBEAT (WATCH) · STATUS_PAGE=WATCH — wrote docs/status.md`
