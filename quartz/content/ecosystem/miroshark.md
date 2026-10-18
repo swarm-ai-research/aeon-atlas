@@ -1,6 +1,6 @@
 ---
 title: "MiroShark"
-tags: [ecosystem, unmatched]
+tags: [ecosystem, matched]
 ---
 
 # MiroShark
@@ -12,4 +12,6 @@ Project listed in upstream's [ECOSYSTEM.md](https://github.com/aaronjmars/aeon/b
 - [github](https://github.com/aaronjmars/MiroShark)
 - [@miroshark_](https://x.com/miroshark_)
 
-_(no known public fork — runs privately or uses non-obvious owner name)_
+## Public fork
+
+- [[forks/elegarmco-miroshark-aeon|elegarmco/miroshark-aeon]]

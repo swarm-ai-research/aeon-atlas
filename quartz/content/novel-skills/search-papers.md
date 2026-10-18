@@ -1,12 +1,12 @@
 ---
 title: "search-papers"
 tags: [novel-skill]
-adoption: 15
+adoption: 14
 ---
 
 # `search-papers`
 
-Custom skill shipped by 15 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
+Custom skill shipped by 14 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
 
 ## Forks shipping this
 
@@ -23,5 +23,4 @@ Custom skill shipped by 15 forks. Not present in upstream `aaronjmars/aeon/skill
 - [[forks/Anas-k-Tawfeeq-aeon|Anas-k-Tawfeeq/aeon]]
 - [[forks/maxlife-symbiostreams-aeon|maxlife-symbiostreams/aeon]]
 - [[forks/dennisonbertram-fork-aeon|dennisonbertram/fork-aeon]]
-- [[forks/naolnegassa-aeon|naolnegassa/aeon]]
 - [[forks/keysemails-aeon|keysemails/aeon]]

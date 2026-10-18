@@ -4,8 +4,80 @@
   <id>https://swarm-ai-research.github.io/aeon-atlas/feed.xml</id>
   <link href="https://swarm-ai-research.github.io/aeon-atlas/" rel="alternate"/>
   <link href="https://swarm-ai-research.github.io/aeon-atlas/feed.xml" rel="self"/>
-  <updated>2026-09-27T00:00:00Z</updated>
+  <updated>2026-10-18T00:00:00Z</updated>
   <author><name>scripts/atlas.mjs</name></author>
+  <entry>
+    <title>Digest 2026-10-18: 24 new forks · 3 removed</title>
+    <id>https://swarm-ai-research.github.io/aeon-atlas/digest/2026-10-18/</id>
+    <link href="https://swarm-ai-research.github.io/aeon-atlas/digest/2026-10-18/" rel="alternate"/>
+    <updated>2026-10-18T00:00:00Z</updated>
+    <summary>24 new forks · 3 removed</summary>
+    <content type="html">&lt;blockquote&gt;
+&lt;p&gt;Diff vs snapshot from &lt;strong&gt;2026-09-27&lt;/strong&gt; (21 days ago). 24 new forks · 3 removed · 0 new novel skills · 0 new ecosystem entries · 0 new skill packs.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;New forks (24)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/AragAgg/aeon&quot;&gt;&lt;code&gt;AragAgg/aeon&lt;/code&gt;&lt;/a&gt; — 0 ★&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/mervwtf/aeon-mervwtf&quot;&gt;&lt;code&gt;mervwtf/aeon-mervwtf&lt;/code&gt;&lt;/a&gt; — 0 ★&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/sentinelhood/aeon&quot;&gt;&lt;code&gt;sentinelhood/aeon&lt;/code&gt;&lt;/a&gt; — 0 ★&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/FggDarkOnee420/Fgg-aeon&quot;&gt;&lt;code&gt;FggDarkOnee420/Fgg-aeon&lt;/code&gt;&lt;/a&gt; — 1 ★&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/0xAnvesaka/aeon&quot;&gt;&lt;code&gt;0xAnvesaka/aeon&lt;/code&gt;&lt;/a&gt; — 0 ★&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/nhutminh159/aeon-nhutminh159&quot;&gt;&lt;code&gt;nhutminh159/aeon-nhutminh159&lt;/code&gt;&lt;/a&gt; — 0 ★&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/gelo11/aeon&quot;&gt;&lt;code&gt;gelo11/aeon&lt;/code&gt;&lt;/a&gt; — 0 ★&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/rauhaton/aeon-rauhaton&quot;&gt;&lt;code&gt;rauhaton/aeon-rauhaton&lt;/code&gt;&lt;/a&gt; — 0 ★&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/unifirer/aeon&quot;&gt;&lt;code&gt;unifirer/aeon&lt;/code&gt;&lt;/a&gt; — 0 ★&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/stevenclaus00/aeon-AIGUY&quot;&gt;&lt;code&gt;stevenclaus00/aeon-AIGUY&lt;/code&gt;&lt;/a&gt; — 0 ★&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/rikomuslimnur1001/aeon-rikomuslimnur1001&quot;&gt;&lt;code&gt;rikomuslimnur1001/aeon-rikomuslimnur1001&lt;/code&gt;&lt;/a&gt; — 0 ★&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/divyesh54/aeon&quot;&gt;&lt;code&gt;divyesh54/aeon&lt;/code&gt;&lt;/a&gt; — 0 ★&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/djh4ck3r/aeon&quot;&gt;&lt;code&gt;djh4ck3r/aeon&lt;/code&gt;&lt;/a&gt; — 0 ★&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/CHEYCKIT/aeon&quot;&gt;&lt;code&gt;CHEYCKIT/aeon&lt;/code&gt;&lt;/a&gt; — 0 ★&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/Svector-anu/aeon&quot;&gt;&lt;code&gt;Svector-anu/aeon&lt;/code&gt;&lt;/a&gt; — 0 ★&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/normancomics/aeon&quot;&gt;&lt;code&gt;normancomics/aeon&lt;/code&gt;&lt;/a&gt; — 1 ★&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/Domimueller85/aeon&quot;&gt;&lt;code&gt;Domimueller85/aeon&lt;/code&gt;&lt;/a&gt; — 1 ★&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/Blockchains/aeon&quot;&gt;&lt;code&gt;Blockchains/aeon&lt;/code&gt;&lt;/a&gt; — 0 ★&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/nkipa/aeon&quot;&gt;&lt;code&gt;nkipa/aeon&lt;/code&gt;&lt;/a&gt; — 0 ★&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/mardemsean/aeon-autonomous-agent-platform&quot;&gt;&lt;code&gt;mardemsean/aeon-autonomous-agent-platform&lt;/code&gt;&lt;/a&gt; — 0 ★&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/googio/aeon&quot;&gt;&lt;code&gt;googio/aeon&lt;/code&gt;&lt;/a&gt; — 0 ★&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/super-ai-8453/aeon&quot;&gt;&lt;code&gt;super-ai-8453/aeon&lt;/code&gt;&lt;/a&gt; — 0 ★&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/elegarmco/aeon-agent&quot;&gt;&lt;code&gt;elegarmco/aeon-agent&lt;/code&gt;&lt;/a&gt; — 0 ★&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/elegarmco/miroshark-aeon&quot;&gt;&lt;code&gt;elegarmco/miroshark-aeon&lt;/code&gt;&lt;/a&gt; — 0 ★&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Removed forks (3)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Ant-Apex/aeon&lt;/code&gt; (deleted or unforked)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;traveler3022/aeon&lt;/code&gt; (deleted or unforked)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Svector-anu/svectors-lab&lt;/code&gt; (deleted or unforked)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Top ★ gainers&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/Corykidios/aeon&quot;&gt;&lt;code&gt;Corykidios/aeon&lt;/code&gt;&lt;/a&gt; +1 (now 1 ★)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/alfahadgm/aeon&quot;&gt;&lt;code&gt;alfahadgm/aeon&lt;/code&gt;&lt;/a&gt; +1 (now 1 ★)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/gcampton/aeon&quot;&gt;&lt;code&gt;gcampton/aeon&lt;/code&gt;&lt;/a&gt; +1 (now 1 ★)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Went dormant (no push in 60+ days)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;JDMD21/aeon&lt;/code&gt; — last push 2026-08-18&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pkhr/aeon&lt;/code&gt; — last push 2026-08-16&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pablorq/aeon&lt;/code&gt; — last push 2026-08-16&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Cristian35s/aeon&lt;/code&gt; — last push 2026-08-12&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;robertluciu-wq/aeon&lt;/code&gt; — last push 2026-08-12&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;yghffhgx/aeon&lt;/code&gt; — last push 2026-08-11&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Akshmit/aeon&lt;/code&gt; — last push 2026-08-11&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;kdegeek/aeon&lt;/code&gt; — last push 2026-08-11&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;evrimulgen/aeon&lt;/code&gt; — last push 2026-08-10&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;thisless/aeon&lt;/code&gt; — last push 2026-08-10&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;carsam2021/aeon&lt;/code&gt; — last push 2026-08-10&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;dacode-dev/aeon&lt;/code&gt; — last push 2026-08-11&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;sysvhurtstop/susfux&lt;/code&gt; — last push 2026-08-10&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;hatari07/aeon&lt;/code&gt; — last push 2026-08-08&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;MEMIX-AI/aeon&lt;/code&gt; — last push 2026-08-08&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Woke up&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;AIRYDER/aeon&lt;/code&gt; — pushed 2026-10-17&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;naolnegassa/aeon&lt;/code&gt; — pushed 2026-09-29&lt;/li&gt;
+&lt;/ul&gt;</content>
+  </entry>
   <entry>
     <title>Digest 2026-09-27: 95 new forks · 14 removed · 220 new novel skills</title>
     <id>https://swarm-ai-research.github.io/aeon-atlas/digest/2026-09-27/</id>

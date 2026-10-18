@@ -1,12 +1,12 @@
 ---
 title: "build-skill"
 tags: [novel-skill]
-adoption: 16
+adoption: 15
 ---
 
 # `build-skill`
 
-Custom skill shipped by 16 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
+Custom skill shipped by 15 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
 
 ## Forks shipping this
 
@@ -24,5 +24,4 @@ Custom skill shipped by 16 forks. Not present in upstream `aaronjmars/aeon/skill
 - [[forks/Anas-k-Tawfeeq-aeon|Anas-k-Tawfeeq/aeon]]
 - [[forks/maxlife-symbiostreams-aeon|maxlife-symbiostreams/aeon]]
 - [[forks/dennisonbertram-fork-aeon|dennisonbertram/fork-aeon]]
-- [[forks/naolnegassa-aeon|naolnegassa/aeon]]
 - [[forks/keysemails-aeon|keysemails/aeon]]

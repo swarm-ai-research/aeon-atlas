@@ -1,12 +1,12 @@
 ---
 title: "wallet-digest"
 tags: [novel-skill]
-adoption: 87
+adoption: 85
 ---
 
 # `wallet-digest`
 
-Custom skill shipped by 87 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
+Custom skill shipped by 85 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
 
 ## Forks shipping this
 
@@ -55,7 +55,6 @@ Custom skill shipped by 87 forks. Not present in upstream `aaronjmars/aeon/skill
 - [[forks/loessy-aeon|loessy/aeon]]
 - [[forks/AntFleet-aeon|AntFleet/aeon]]
 - [[forks/houndflow-aeon|houndflow/aeon]]
-- [[forks/AIRYDER-aeon|AIRYDER/aeon]]
 - [[forks/ScoutAeon-Scout|ScoutAeon/Scout]]
 - [[forks/NoctelXBT-aeon|NoctelXBT/aeon]]
 - [[forks/richard7463-aeon|richard7463/aeon]]
@@ -95,5 +94,4 @@ Custom skill shipped by 87 forks. Not present in upstream `aaronjmars/aeon/skill
 - [[forks/Anas-k-Tawfeeq-aeon|Anas-k-Tawfeeq/aeon]]
 - [[forks/maxlife-symbiostreams-aeon|maxlife-symbiostreams/aeon]]
 - [[forks/dennisonbertram-fork-aeon|dennisonbertram/fork-aeon]]
-- [[forks/naolnegassa-aeon|naolnegassa/aeon]]
 - [[forks/keysemails-aeon|keysemails/aeon]]

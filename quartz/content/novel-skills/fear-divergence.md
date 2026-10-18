@@ -1,12 +1,12 @@
 ---
 title: "fear-divergence"
 tags: [novel-skill]
-adoption: 35
+adoption: 34
 ---
 
 # `fear-divergence`
 
-Custom skill shipped by 35 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
+Custom skill shipped by 34 forks. Not present in upstream `aaronjmars/aeon/skills/` — strong candidate for upstream contribution.
 
 ## Forks shipping this
 
@@ -44,4 +44,3 @@ Custom skill shipped by 35 forks. Not present in upstream `aaronjmars/aeon/skill
 - [[forks/yindaqiu-aeon|yindaqiu/aeon]]
 - [[forks/nigelon11-aeon|nigelon11/aeon]]
 - [[forks/webguy-cloud-aeon|webguy-cloud/aeon]]
-- [[forks/Svector-anu-svectors-lab|Svector-anu/svectors-lab]]
