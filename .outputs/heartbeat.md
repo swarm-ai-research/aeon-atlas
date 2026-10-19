@@ -1,25 +1,19 @@
-All checks complete for the Sunday 2026-10-18 20:00 heartbeat slot (ran ~21:05 UTC).
+Heartbeat complete.
 
 ## Summary
 
-**Overall: 🟡 WATCH · P0 CLEAR** — no notification sent (deduped; no fresh P0, no full resolution).
+Ran the `heartbeat` ambient check for the 2026-10-19 20:00 slot (executed ~21:34 UTC).
 
-**Checks:**
-- **P0 (failed/stuck skills):** Clear. No failed, no stuck (`dispatched`) entries, no `consecutive_failures ≥ 3`, no chronic (<0.5) skills. Heartbeat self-check ~12.0h (last_success 09:08 → now 21:05), well under 36h → does not fire.
-- **P1 (PRs/issues):** 15 open PRs — #33 is fresh (<24h); the other 14 are the same long-stalled set logged repeatedly → deduped. 0 open GitHub issues.
-- **P2 (memory):** No flagged follow-ups (placeholders only).
-- **P3 (missing skills):** atlas-layers frozen at 09-27 (~21d, >2× weekly) — see below.
+**Verdict: 🟡 WATCH — P0 CLEAR, no notification sent (all findings deduped).**
 
-**Key event — ISS-009 verification Sunday closed (SPLIT result):** Today was the condition-(b) checkpoint the ISS-009 hold has waited for since 10-11. At 21:05 both Sunday cohort slots have elapsed:
-- **atlas ✅ recovered** — ran 04:43→04:59, 13/13, PR #33 (first run since 09-27).
-- **atlas-layers ❌ never fired** its 05:00 slot (still frozen 09-27, no new PR; next window 10-25). Since atlas (same cron family, 1h earlier) recovered and atlas-layers did not, the failure is now isolated to atlas-layers' own dispatch — not a Sunday-wide blackout.
-
-ISS-009 stays **open/high** (cohort condition only half met); watch narrows to atlas-layers' 10-25 slot. Operator backstop (offset cron / external `workflow_dispatch`) remains operator-action-required.
+- **P0 (failed/stuck skills):** Clear. No skill is `failed` or `stuck`; no `consecutive_failures ≥ 3`; no chronic failures. Heartbeat self-check is ~24.4h since last success (2026-10-18 21:07) — under the 36h bar, so it does **not** fire.
+- **Live quiet-window symptom (ISS-009):** Heartbeat dropped both the 10-19 08:00 and 14:00 slots — this 20:00 run was the first on 10-19. The native-`schedule:` per-slot delivery weakness ISS-009 tracks; noted, not escalated (self-check still under 36h).
+- **P3:** `atlas-layers` remains frozen at 2026-09-27 (~22d, >2× its weekly interval), still no new run/PR. `atlas` already recovered 10-18 (PR #33). ISS-009 held open/high; next atlas-layers checkpoint 10-25 05:00.
+- **P1:** 15 open PRs >24h — all the same unmergeable auto-generated atlas/atlas-layers set (auto-merge disabled), logged repeatedly → deduped. 0 open GitHub issues.
+- **Notification:** None — no fresh P0 and no full ISS-009 resolution; everything logged within 48h.
 
 **Files modified:**
-- `docs/status.md` — regenerated (WATCH, Updated 2026-10-18 21:05 UTC, 1 open issue, next run heartbeat 08:00 UTC Mon).
-- `memory/issues/ISS-009.md` — added verification-Sunday-closed update.
-- `memory/issues/INDEX.md` — updated ISS-009 row to reflect the split cohort result.
-- `memory/logs/2026-10-18.md` — appended 20:00 slot entry.
+- `docs/status.md` — regenerated (Overall 🟡 WATCH, Updated 2026-10-19 21:34 UTC, 4 enabled skills, 1 open issue, next run heartbeat 08:00 UTC)
+- `memory/logs/2026-10-19.md` — created with the full findings
 
-**Follow-up:** atlas-layers' 10-25 05:00 Sunday slot is the next (and now sole) checkpoint to resolve ISS-009. Durable operator backstop still unshipped (`skill-repair` disabled). Files land on `main` via the workflow's auto-commit step.
+**Follow-up (operator-action-required):** ISS-009's durable fix — a redundant offset cron or external `workflow_dispatch` backstop — remains outstanding; the 10-19 dropped slots are fresh evidence the native scheduler keeps skipping slots. Next natural checkpoint is atlas-layers' 10-25 05:00 Sunday slot.
