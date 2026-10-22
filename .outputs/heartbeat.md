@@ -1,19 +1,19 @@
-Heartbeat complete for the 14:00 slot.
+Heartbeat complete. **P0 CLEAR · STATUS_PAGE=WATCH**
 
 ## Summary
 
-Ran the **heartbeat** skill for the 2026-10-21 14:00 slot (executed 14:38 UTC, ~38m late).
+Ran the heartbeat skill (10-22 14:00 slot, fired ~15:08 UTC, ~1h08m late).
 
-**Findings — 🟡 WATCH (P0 CLEAR):**
-- **P0 clear.** No failed, stuck, degrading (consec≥3), or chronic (<50%) skills. Heartbeat self-check: last success 09:37 UTC today → ~5h ago, well under the 36h threshold, so it does not fire.
-- **P1:** 15 open PRs (all stalled >24h) — identical auto-generated atlas/atlas-layers refresh PRs with no merge path (`auto-merge` disabled), logged repeatedly through 10-20 → deduped. No open GitHub issues.
-- **P3:** `atlas-layers` still frozen since 2026-09-27 (~24d, >2× its weekly interval) — tracked under open issue **ISS-009** (high). Next checkpoint 10-25 05:00. `atlas` recovered (10-18), `atlas-improve` under threshold (next 11-01).
+**Checks:**
+- **P0 — CLEAR.** No failed/stuck skills, no `consecutive_failures ≥ 3`, no chronic failures. Heartbeat self-check: last success 2026-10-21 14:39 → now = ~24.5h, under the 36h bar → does not fire.
+- **Quiet-window gap (ISS-009 symptom):** No cron-state updates since 10-21 14:37 — the **10-21 20:00** and **10-22 08:00** slots did not record. This run is 10-22 14:00 firing late. Two dropped slots noted, **not escalated** (self-check still < 36h). Flag point: if the 20:00 slot also drops, the Fri 10-23 slots risk a 36h breach.
+- **ISS-009 (open/high):** atlas-layers still frozen since 09-27 (~25d, no new run/PR). Next checkpoint **10-25 05:00**. atlas already recovered (PR #33). Held open.
+- **P1:** 15 stalled auto-generated atlas/atlas-layers PRs (no merge path, `auto-merge: disabled`), 0 open issues — deduped.
 
-**Actions:**
-- **No notification sent** — every flag is the same ISS-009 pattern already logged within 48h (deduped); no fresh P0 and no full resolution.
-- Regenerated `docs/status.md` → **Overall 🟡 WATCH**, updated 2026-10-21 14:38 UTC, 4 enabled skills (all ✅ success), 1 open issue, next run heartbeat 20:00 UTC. Token pulse section omitted (no `articles/token-report-*.md`).
-- Appended the 14:00 slot entry to `memory/logs/2026-10-21.md`.
+**No notification sent** — no fresh P0, no full ISS-009 resolution; all findings already logged within 48h.
 
-**Files modified:** `docs/status.md`, `memory/logs/2026-10-21.md`
+**Files modified:**
+- `docs/status.md` — regenerated (Overall 🟡 WATCH, Updated 2026-10-22 15:08 UTC, 1 open issue, next run heartbeat 20:00 UTC).
+- `memory/logs/2026-10-22.md` — created with the 14:00 slot entry.
 
-**Follow-up:** Re-notify only on a fresh P0 or full ISS-009 resolution (atlas-layers recovery, next checkpoint 10-25 05:00). Status: `HEARTBEAT_OK · STATUS_PAGE=WATCH` (P0 clear; WATCH held open for ISS-009).
+**Follow-up:** Watch the 10-22 20:00 and 10-23 heartbeat slots for a possible 36h self-check breach if the quiet window persists; atlas-layers recovery checkpoint 10-25 05:00.
