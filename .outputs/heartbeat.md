@@ -1,24 +1,21 @@
-Heartbeat complete. `HEARTBEAT_OK · STATUS_PAGE=WATCH`
+Heartbeat complete.
 
 ## Summary
 
-Ran the heartbeat skill for the **2026-10-23 20:00 slot** (fired ~2h late at 21:59 UTC). Soul files are empty templates → neutral tone.
+Ran the **08:00 heartbeat slot** (fired ~1h late at 2026-10-24 09:04 UTC).
 
-**P0 — Failed & stuck skills: CLEAR.** No failed, stuck, consec≥3, or chronic (<0.5) skills across all 4 enabled skills (heartbeat 91%, atlas 100%, atlas-layers 94%, atlas-improve 100% — all `success`, consec 0). Self-check: heartbeat last succeeded 15:04 UTC today (~6.9h ago), far under the 36h bar.
+**P0 — Failed & stuck skills: CLEAR.** No failed/stuck skills, no `consecutive_failures ≥ 3`, no chronic failures. Heartbeat self-check is ~11.1h since last success (10-23 22:00) — well under the 36h bar. All four enabled skills (heartbeat 91%, atlas 100%, atlas-layers 94%, atlas-improve 100%) show `last_status: success`, consec 0.
 
-**Key change this run:** the 14:00 log had flagged a risk that if this 20:00 slot *also* dropped, the self-check could breach 36h on the Sat 10-24 morning slot. The slot fired (late), so the clock reset and that breach scenario is averted.
+**P1/P2/P3:** 15 stalled atlas/atlas-layers auto-PRs (no merge path, `auto-merge` disabled), 0 GitHub issues; no flagged memory follow-ups; **atlas-layers still frozen since 09-27** (~27d, >2× its weekly cadence) — tracked by open issue **ISS-009 (high)**, next checkpoint tomorrow 10-25 05:00.
 
-**P1/P2/P3 (unchanged, all deduped):**
-- 15 stalled auto-generated atlas/atlas-layers refresh PRs (#13–#23, #30–#33), no merge path.
-- 0 open GitHub issues.
-- atlas-layers still frozen since 2026-09-27 (~26d, >2× its weekly interval) → P3, tracked by open issue ISS-009 (high). Next checkpoint: Sunday 10-25 05:00.
+**Overall: 🟡 WATCH** — P0 clear but one open high issue plus the atlas-layers freeze and stalled PRs.
 
-**Overall: 🟡 WATCH** (open high issue + atlas-layers P3 + stalled PRs; no P0).
-
-**No notification sent** — no fresh P0 and no full ISS-009 resolution; every finding was already logged within 48h.
+**No notification sent** — all findings are the same ISS-009 items logged within the last 48h (deduped); no fresh P0.
 
 **Files modified:**
-- `docs/status.md` — regenerated (Overall 🟡 WATCH, Updated 2026-10-23 21:59 UTC, 1 open issue, next run heartbeat 08:00 UTC; Token pulse omitted — no token-report articles).
-- `memory/logs/2026-10-23.md` — appended the 20:00-slot findings.
+- `docs/status.md` — regenerated (Overall 🟡 WATCH, Updated 2026-10-24 09:04 UTC, next run heartbeat 14:00 UTC)
+- `memory/logs/2026-10-24.md` — created with the slot's findings
 
-**Follow-up:** Watch the Sunday 10-25 05:00 atlas-layers slot — recovery there would satisfy the ISS-009 cohort condition and allow closing the issue; another miss keeps it open/high.
+**Follow-up:** The native-cron slots keep firing 1–2h late (ISS-009 symptom); atlas-layers dispatch recovery hinges on the 10-25 05:00 Sunday slot. A durable offset-cron / external-dispatch backstop remains the operator-action item.
+
+`HEARTBEAT_OK` not applicable (WATCH, not fully green) · `STATUS_PAGE=WATCH`
