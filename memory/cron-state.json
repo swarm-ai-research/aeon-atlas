@@ -42,5 +42,17 @@
     "total_failures": 0,
     "consecutive_failures": 0,
     "success_rate": 1
+  },
+  "skill-health": {
+    "last_dispatch": "2026-10-25T18:10:31Z",
+    "last_status": "dispatched"
+  },
+  "skill-leaderboard": {
+    "last_dispatch": "2026-10-25T18:10:31Z",
+    "last_status": "dispatched"
+  },
+  "fork-contributor-leaderboard": {
+    "last_dispatch": "2026-10-25T18:10:31Z",
+    "last_status": "dispatched"
   }
 }
