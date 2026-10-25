@@ -12,7 +12,7 @@
     "last_success": "2026-10-24T21:24:10Z"
   },
   "atlas-layers": {
-    "last_status": "success",
+    "last_status": "dispatched",
     "last_failed": "2026-06-06T13:52:55Z",
     "total_runs": 16,
     "total_successes": 15,
@@ -21,7 +21,7 @@
     "success_rate": 0.94,
     "last_error": "1e17804\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\"",
     "last_success": "2026-09-27T05:56:04Z",
-    "last_dispatch": "2026-09-27T05:52:58Z"
+    "last_dispatch": "2026-10-25T06:14:09Z"
   },
   "atlas": {
     "last_dispatch": "2026-10-18T04:43:48Z",
