@@ -1,0 +1,183 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Heartbeat"
+      },
+      "children": [
+        "resolution-alert",
+        "sep-1",
+        "status-stack",
+        "sep-2",
+        "recovery-stack",
+        "sep-3",
+        "issues-stack"
+      ]
+    },
+    "resolution-alert": {
+      "type": "Alert",
+      "props": {
+        "title": "🟢 ISS-009 RESOLVED",
+        "message": "atlas-layers recovered. Weekly Sun 05:00 slot dispatched cleanly today (10-25 06:14→06:17 UTC, PR #34).",
+        "type": "success"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "status-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "status-heading",
+        "status-badges",
+        "status-context"
+      ]
+    },
+    "status-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Overall Status",
+        "level": "h3"
+      }
+    },
+    "status-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-p0-clear",
+        "badge-watch"
+      ]
+    },
+    "badge-p0-clear": {
+      "type": "Badge",
+      "props": {
+        "text": "🟢 P0 clear",
+        "variant": "default"
+      }
+    },
+    "badge-watch": {
+      "type": "Badge",
+      "props": {
+        "text": "🟡 WATCH",
+        "variant": "secondary"
+      }
+    },
+    "status-context": {
+      "type": "Text",
+      "props": {
+        "text": "Completes last open condition of scheduler-quiet-window issue. Heartbeat 3-slot progression met 10-16; atlas recovered 10-18.",
+        "variant": "body"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "recovery-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "recovery-heading",
+        "frozen-duration",
+        "dispatch-window",
+        "first-success-note"
+      ]
+    },
+    "recovery-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Recovery Timeline",
+        "level": "h3"
+      }
+    },
+    "frozen-duration": {
+      "type": "Text",
+      "props": {
+        "text": "Frozen since 09-27 (~28 days). First success since 09-27.",
+        "variant": "body"
+      }
+    },
+    "dispatch-window": {
+      "type": "Text",
+      "props": {
+        "text": "Weekly Sun 05:00 slot: 10-25 06:14→06:17 UTC (PR #34)",
+        "variant": "body"
+      }
+    },
+    "first-success-note": {
+      "type": "Badge",
+      "props": {
+        "text": "✓ First success in 28 days",
+        "variant": "default"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "issues-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "issues-heading",
+        "pr-alert",
+        "scheduling-alert",
+        "recommendation-alert"
+      ]
+    },
+    "issues-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Open Issues",
+        "level": "h3"
+      }
+    },
+    "pr-alert": {
+      "type": "Alert",
+      "props": {
+        "title": "15 Auto-Refresh PRs Unmerged",
+        "message": "No merge path identified.",
+        "type": "warning"
+      }
+    },
+    "scheduling-alert": {
+      "type": "Alert",
+      "props": {
+        "title": "Native Schedule Latency",
+        "message": "Native schedule fires ~1-2h late and dropped atlas's 04:00 slot today (10-25).",
+        "type": "warning"
+      }
+    },
+    "recommendation-alert": {
+      "type": "Alert",
+      "props": {
+        "title": "Recommended Operator Fix",
+        "message": "Use offset-cron / external-dispatch backstop to work around native schedule latency.",
+        "type": "info"
+      }
+    }
+  }
+}
