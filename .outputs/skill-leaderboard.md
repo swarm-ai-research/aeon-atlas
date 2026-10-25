@@ -1,0 +1,1 @@
+Skill Leaderboard 2026-10-25: 4 forks enabled aeon-update not in upstream. Top 5 across 62 configured forks of 64 active: 1. token-movers 8 forks 12.9% 2. narrative-tracker 6 forks 9.7% 3. token-pick 4 forks 6.5% 4. skill-health 4 forks 6.5% 5. aeon-update fork-only 4 forks 6.5%. Fleet-only: aeon-update built independently in 4 forks
