@@ -24,6 +24,7 @@ import { join, dirname } from "path";
 import { fileURLToPath } from "url";
 import { spawn, ChildProcess } from "child_process";
 import { randomUUID } from "crypto";
+import { ai, skillRunnerAgent } from "./amplitude.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -160,6 +161,46 @@ function parseSkillFromMessage(message: A2AMessage): { slug: string; varValue: s
 
 // ── Skill execution ───────────────────────────────────────────────────────────
 
+interface ClaudeCliResult {
+  result?: string;
+  is_error?: boolean;
+  total_cost_usd?: number;
+  usage?: {
+    input_tokens?: number;
+    output_tokens?: number;
+    cache_read_input_tokens?: number;
+    cache_creation_input_tokens?: number;
+  };
+}
+
+// The claude CLI with --output-format json wraps the reply in { result: "..." },
+// plus usage/cost fields when the run succeeds.
+function parseClaudeCliOutput(stdout: string): ClaudeCliResult | null {
+  try {
+    return JSON.parse(stdout) as ClaudeCliResult;
+  } catch {
+    return null;
+  }
+}
+
+// Anthropic's raw `input_tokens` excludes cache tokens — the AI SDK expects
+// the cache-inclusive total. total_cost_usd comes straight from the CLI, so
+// it's passed through rather than re-derived from a (possibly unrecognized) model name.
+function usageFields(parsed: ClaudeCliResult | null) {
+  const usage = parsed?.usage;
+  if (!usage) return {};
+  const inputTokens =
+    (usage.input_tokens ?? 0) + (usage.cache_read_input_tokens ?? 0) + (usage.cache_creation_input_tokens ?? 0);
+  return {
+    inputTokens,
+    outputTokens: usage.output_tokens,
+    totalTokens: usage.output_tokens !== undefined ? inputTokens + usage.output_tokens : undefined,
+    cacheReadTokens: usage.cache_read_input_tokens,
+    cacheCreationTokens: usage.cache_creation_input_tokens,
+    totalCostUsd: parsed?.total_cost_usd,
+  };
+}
+
 function runSkillAsync(task: Task, slug: string, varValue: string): void {
   const skillFile = join(REPO_ROOT, "skills", slug, "SKILL.md");
   if (!existsSync(skillFile)) {
@@ -179,6 +220,17 @@ function runSkillAsync(task: Task, slug: string, varValue: string): void {
 
   setTaskState(task, "working");
 
+  // Each A2A task is a single, self-contained skill run — not a continued
+  // conversation — so it gets its own session. There's no session.run()
+  // wrapper here since the work completes in async spawn callbacks, not a
+  // single awaited call.
+  const sessionId = randomUUID();
+  skillRunnerAgent?.trackUserMessage(`Run skill: ${slug}`, {
+    sessionId,
+    context: { slug, var: varValue || null },
+  });
+
+  const start = Date.now();
   const chunks: string[] = [];
   const child = spawn("claude", ["-p", "-", "--output-format", "json"], {
     cwd: REPO_ROOT,
@@ -193,16 +245,24 @@ function runSkillAsync(task: Task, slug: string, varValue: string): void {
 
   child.on("close", (code) => {
     const raw = chunks.join("").trim();
+    const latencyMs = Date.now() - start;
+    const parsed = parseClaudeCliOutput(raw);
+    const result = parsed?.result ?? raw;
+
+    if (skillRunnerAgent) {
+      skillRunnerAgent.trackAiMessage(result, "claude-code-cli", "anthropic", latencyMs, {
+        sessionId,
+        ...usageFields(parsed),
+        isError: code !== 0 || parsed?.is_error === true,
+        errorMessage: code !== 0 ? `Skill '${slug}' failed (exit ${code})` : undefined,
+      });
+      skillRunnerAgent.trackSessionEnd({ sessionId });
+      void ai!.flush();
+    }
+
     if (code !== 0) {
       completeTask(task, "failed", `Skill '${slug}' failed (exit ${code}):\n${raw}`);
       return;
-    }
-    let result = raw;
-    try {
-      const parsed = JSON.parse(raw) as { result?: string };
-      result = parsed.result ?? raw;
-    } catch {
-      // use raw output
     }
     completeTask(task, "completed", result);
   });
@@ -213,6 +273,17 @@ function runSkillAsync(task: Task, slug: string, varValue: string): void {
       code === "ENOENT"
         ? "'claude' CLI not found. Install: npm install -g @anthropic-ai/claude-code"
         : `Failed to spawn claude: ${err.message}`;
+
+    if (skillRunnerAgent) {
+      skillRunnerAgent.trackAiMessage("", "claude-code-cli", "anthropic", Date.now() - start, {
+        sessionId,
+        isError: true,
+        errorMessage: msg,
+      });
+      skillRunnerAgent.trackSessionEnd({ sessionId });
+      void ai!.flush();
+    }
+
     completeTask(task, "failed", msg);
   });
 }
