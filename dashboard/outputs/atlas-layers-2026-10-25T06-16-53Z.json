@@ -1,0 +1,47 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Atlas layers"
+      },
+      "children": [
+        "stack"
+      ]
+    },
+    "stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "fleet-entry",
+        "promotions-note",
+        "pr-link"
+      ]
+    },
+    "fleet-entry": {
+      "type": "Text",
+      "props": {
+        "text": "Svector-anu/svectors-lab entered the fleet (★2, 30 skills)"
+      }
+    },
+    "promotions-note": {
+      "type": "Text",
+      "props": {
+        "text": "No curated-layer promotions or new ecosystem candidates this week",
+        "variant": "muted"
+      }
+    },
+    "pr-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #34",
+        "href": "https://github.com/swarm-ai-research/aeon-atlas/pull/34"
+      }
+    }
+  }
+}
