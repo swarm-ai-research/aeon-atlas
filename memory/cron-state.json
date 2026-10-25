@@ -1,7 +1,7 @@
 {
   "heartbeat": {
-    "last_dispatch": "2026-10-25T14:59:27Z",
-    "last_status": "success",
+    "last_dispatch": "2026-10-25T20:46:12Z",
+    "last_status": "dispatched",
     "last_failed": "2026-06-06T12:56:45Z",
     "total_runs": 337,
     "total_successes": 308,
@@ -72,5 +72,25 @@
     "total_failures": 0,
     "consecutive_failures": 0,
     "success_rate": 1
+  },
+  "fork-cohort": {
+    "last_dispatch": "2026-10-25T20:46:12Z",
+    "last_status": "dispatched"
+  },
+  "fork-release-tracker": {
+    "last_dispatch": "2026-10-25T20:46:12Z",
+    "last_status": "dispatched"
+  },
+  "contributor-spotlight": {
+    "last_dispatch": "2026-10-25T20:46:12Z",
+    "last_status": "dispatched"
+  },
+  "fork-first-run-alert": {
+    "last_dispatch": "2026-10-25T20:46:12Z",
+    "last_status": "dispatched"
+  },
+  "skill-update-check": {
+    "last_dispatch": "2026-10-25T20:46:12Z",
+    "last_status": "dispatched"
   }
 }
