@@ -1,0 +1,170 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Fork Skill Gap",
+        "description": "2026-10-25 · Audit of 27 active forks"
+      },
+      "children": [
+        "alert_wide_gap",
+        "sep1",
+        "stats_section",
+        "sep2",
+        "top_forks_section",
+        "sep3",
+        "ahead_section",
+        "sep4",
+        "report_link"
+      ]
+    },
+    "alert_wide_gap": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "WIDE_GAP",
+        "message": "5 forks each missing 50+ upstream skills"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "stats_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_audited",
+        "stat_upstream",
+        "stat_median"
+      ]
+    },
+    "stat_audited": {
+      "type": "Stat",
+      "props": {
+        "label": "Forks Audited",
+        "value": "7 of 27"
+      }
+    },
+    "stat_upstream": {
+      "type": "Stat",
+      "props": {
+        "label": "Upstream Skills",
+        "value": "171"
+      }
+    },
+    "stat_median": {
+      "type": "Stat",
+      "props": {
+        "label": "Median Fork Gap",
+        "value": "50 skills"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "top_forks_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_top_forks",
+        "table_forks"
+      ]
+    },
+    "heading_top_forks": {
+      "type": "Heading",
+      "props": {
+        "text": "Top 3 Forks by Gap",
+        "level": "h3"
+      }
+    },
+    "table_forks": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Owner",
+          "Fork",
+          "Missing Skills",
+          "Categories"
+        ],
+        "rows": [
+          [
+            "@Boodszw",
+            "Boodszw_Bread",
+            "58",
+            "other, dev, crypto"
+          ],
+          [
+            "@madebyshun",
+            "blueagent-aeon",
+            "53",
+            "other, dev, crypto"
+          ],
+          [
+            "@damo-nu11",
+            "aeon-minebean",
+            "51",
+            "other, dev, research"
+          ]
+        ]
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "ahead_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_ahead",
+        "ahead_item1",
+        "ahead_item2"
+      ]
+    },
+    "heading_ahead": {
+      "type": "Heading",
+      "props": {
+        "text": "Forks Ahead of Upstream",
+        "level": "h3"
+      }
+    },
+    "ahead_item1": {
+      "type": "Text",
+      "props": {
+        "text": "beijiangqukuailian/aeon — 180 skills (carrying custom skills not yet in upstream)",
+        "variant": "body"
+      }
+    },
+    "ahead_item2": {
+      "type": "Text",
+      "props": {
+        "text": "NurstarK/aeon-upstream — 181 skills (carrying custom skills not yet in upstream)",
+        "variant": "body"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "report_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full Report",
+        "href": "articles/fork-skill-gap-2026-10-25.md"
+      }
+    }
+  }
+}
