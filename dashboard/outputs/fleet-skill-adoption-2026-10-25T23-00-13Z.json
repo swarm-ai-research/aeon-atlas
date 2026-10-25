@@ -1,0 +1,140 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Fleet Skill Adoption",
+        "description": "2026-10-25 — aeonfun/aeon"
+      },
+      "children": [
+        "main-stack"
+      ]
+    },
+    "main-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "overview-text",
+        "sep1",
+        "adopted-section",
+        "sep2",
+        "action-alert",
+        "sep3",
+        "leaderboard-link"
+      ]
+    },
+    "overview-text": {
+      "type": "Text",
+      "props": {
+        "text": "11 active forks measured against 86 upstream skills (baseline run).",
+        "variant": "body"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "adopted-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "adopted-heading",
+        "adopted-table"
+      ]
+    },
+    "adopted-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Most adopted",
+        "level": "h3"
+      }
+    },
+    "adopted-table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Rank",
+          "Skill",
+          "Adoption",
+          "Coverage"
+        ],
+        "rows": [
+          [
+            "1",
+            "heartbeat",
+            "100%",
+            "11/11"
+          ],
+          [
+            "2",
+            "aeon-update",
+            "18%",
+            "2/11"
+          ],
+          [
+            "3",
+            "auto-merge",
+            "18%",
+            "2/11"
+          ],
+          [
+            "4",
+            "auto-workflow",
+            "18%",
+            "2/11"
+          ],
+          [
+            "5",
+            "operator-scorecard",
+            "18%",
+            "2/11"
+          ],
+          [
+            "6",
+            "skill-health",
+            "18%",
+            "2/11"
+          ]
+        ]
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action-alert": {
+      "type": "Alert",
+      "props": {
+        "title": "Low adoption flagged",
+        "message": "1 established skill still at 0% fleet adoption: action-converter",
+        "type": "warning"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "leaderboard-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full leaderboard",
+        "href": "articles/fleet-skill-adoption-2026-10-25.md",
+        "source": "articles"
+      }
+    }
+  }
+}
