@@ -1,0 +1,16 @@
+{
+  "hash": "761833a902da0a9d007a7cfeac830406a22ba94afba0f55190d125f93867b0e0",
+  "last_notified_at": "2026-10-25T18:12:34Z",
+  "last_run_at": "2026-10-25T18:12:34Z",
+  "classification": {
+    "critical": [],
+    "degraded": [],
+    "flapping": [],
+    "warning": [],
+    "healthy_count": 4,
+    "healthy": ["heartbeat", "atlas", "atlas-layers", "atlas-improve"],
+    "no_data": [],
+    "partial": true,
+    "notes": "skill-runs unavailable (permission-denied in this run) -> cron-state-only partial mode. Only the 4 telemetry-bearing skills classified. ~22 aeon.yml enabled:true fleet-intelligence/weekly skills have no cron-state entry; NO DATA is undeterminable without skill-runs and the scheduler-gap for that cohort is a known, operator-acknowledged characteristic (ISS-005->009 lineage, resolved 2026-10-25). Not re-filed to avoid duplicating a known issue."
+  }
+}

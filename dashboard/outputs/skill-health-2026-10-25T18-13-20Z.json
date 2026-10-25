@@ -1,0 +1,157 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Skill Health — 2026-10-25"
+      },
+      "children": [
+        "alert-status",
+        "sep1",
+        "stack-skills",
+        "sep2",
+        "stack-summary"
+      ]
+    },
+    "alert-status": {
+      "type": "Alert",
+      "props": {
+        "title": "HEALTH: OK",
+        "message": "4 tracked skills healthy (partial: skill-runs unavailable, cron-state only)",
+        "type": "success"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack-skills": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-skills",
+        "skill-heartbeat",
+        "skill-atlas",
+        "skill-atlas-layers",
+        "skill-atlas-improve"
+      ]
+    },
+    "heading-skills": {
+      "type": "Heading",
+      "props": {
+        "text": "Skill Status",
+        "level": "h3"
+      }
+    },
+    "skill-heartbeat": {
+      "type": "Stat",
+      "props": {
+        "label": "heartbeat",
+        "value": "91%"
+      }
+    },
+    "skill-atlas": {
+      "type": "Stat",
+      "props": {
+        "label": "atlas",
+        "value": "100%"
+      }
+    },
+    "skill-atlas-layers": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat-atlas-layers",
+        "badge-recovered"
+      ]
+    },
+    "stat-atlas-layers": {
+      "type": "Stat",
+      "props": {
+        "label": "atlas-layers",
+        "value": "94%"
+      }
+    },
+    "badge-recovered": {
+      "type": "Badge",
+      "props": {
+        "text": "recovered",
+        "variant": "secondary"
+      }
+    },
+    "skill-atlas-improve": {
+      "type": "Stat",
+      "props": {
+        "label": "atlas-improve",
+        "value": "100%"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack-summary": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-summary",
+        "grid-counts"
+      ]
+    },
+    "heading-summary": {
+      "type": "Heading",
+      "props": {
+        "text": "Summary",
+        "level": "h3"
+      }
+    },
+    "grid-counts": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat-open-issues",
+        "stat-resolved",
+        "stat-consecutive"
+      ]
+    },
+    "stat-open-issues": {
+      "type": "Stat",
+      "props": {
+        "label": "Open issues",
+        "value": "0"
+      }
+    },
+    "stat-resolved": {
+      "type": "Stat",
+      "props": {
+        "label": "Resolved this run",
+        "value": "0"
+      }
+    },
+    "stat-consecutive": {
+      "type": "Stat",
+      "props": {
+        "label": "Consecutive failures",
+        "value": "0"
+      }
+    }
+  }
+}
