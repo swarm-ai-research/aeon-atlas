@@ -324,4 +324,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-10-24,heartbeat,claude-opus-4-8,16,5954,291947,41741
 2026-10-25,heartbeat,claude-opus-4-8,28,16314,646243,56954
 2026-10-25,skill-leaderboard,claude-sonnet-4-6,21,19775,1115766,59470
-2026-10-25,heartbeat,claude-opus-4-8,18,15312,417966,58947
+2026-10-25,fork-release-tracker,claude-sonnet-4-6,40,20480,1990291,58543
