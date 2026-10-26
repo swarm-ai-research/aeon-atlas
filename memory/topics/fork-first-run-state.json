@@ -1,7 +1,7 @@
 {
   "parent_repo": "aeonfun/aeon",
-  "last_run": "2026-10-25",
-  "last_status": "FORK_FIRST_RUN_ALERT_QUIET",
+  "last_run": "2026-10-26",
+  "last_status": "FORK_FIRST_RUN_ALERT_OK",
   "seen": {
     "swarm-ai-research/aeon-atlas": {
       "first_seen_active_at": "2026-10-25",
@@ -169,6 +169,12 @@
       "first_seen_active_at": "2026-10-25",
       "first_seen_active_run_at": "2026-10-25T19:56:51Z",
       "announced_at": "2026-10-25",
+      "stargazers": 0
+    },
+    "nurstark/aeon-upstream": {
+      "first_seen_active_at": "2026-10-26",
+      "first_seen_active_run_at": "2026-10-26T21:22:38Z",
+      "announced_at": "2026-10-26",
       "stargazers": 0
     }
   }
