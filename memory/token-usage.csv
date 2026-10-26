@@ -326,4 +326,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-10-25,skill-leaderboard,claude-sonnet-4-6,21,19775,1115766,59470
 2026-10-25,fork-first-run-alert,claude-sonnet-4-6,45,29664,2064937,51994
 2026-10-25,fork-skill-gap,claude-sonnet-4-6,124,54557,6816446,93005
-2026-10-26,operator-scorecard,claude-sonnet-4-6,13,12222,575424,52450
+2026-10-26,api-health-probe,claude-opus-4-8,58,27807,1482051,58072
