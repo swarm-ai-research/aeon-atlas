@@ -1,0 +1,205 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Heartbeat",
+        "description": "Skill health and incident status"
+      },
+      "children": [
+        "status_alert",
+        "sep1",
+        "details_section",
+        "sep2",
+        "impact_section",
+        "sep3",
+        "recovery_section",
+        "sep4",
+        "health_section"
+      ]
+    },
+    "status_alert": {
+      "type": "Alert",
+      "props": {
+        "title": "🔴 DEGRADED",
+        "message": "fork-cohort stuck in 'dispatched' since 2026-10-25 20:46 UTC (~25h, well past the 45-minute threshold)",
+        "type": "error"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "details_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "details_heading",
+        "event_detail"
+      ]
+    },
+    "details_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Incident Details",
+        "level": "h3"
+      }
+    },
+    "event_detail": {
+      "type": "Text",
+      "props": {
+        "text": "Sunday run hung before the state-update step while 4 sibling skills in the same batch completed"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "impact_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "impact_heading",
+        "impact_consequence",
+        "downstream_skills_stack"
+      ]
+    },
+    "impact_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Impact",
+        "level": "h3"
+      }
+    },
+    "impact_consequence": {
+      "type": "Text",
+      "props": {
+        "text": "This week's cohort output never landed and downstream skills ran on stale data"
+      }
+    },
+    "downstream_skills_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "skill1_badge",
+        "skill2_badge",
+        "skill3_badge"
+      ]
+    },
+    "skill1_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "fork-skill-gap",
+        "variant": "destructive"
+      }
+    },
+    "skill2_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "fleet-skill-adoption",
+        "variant": "destructive"
+      }
+    },
+    "skill3_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "fork-health-score",
+        "variant": "destructive"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "recovery_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "recovery_heading",
+        "recovery_text"
+      ]
+    },
+    "recovery_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Recovery",
+        "level": "h3"
+      }
+    },
+    "recovery_text": {
+      "type": "Text",
+      "props": {
+        "text": "Next scheduled retry: Sun 2026-11-01 19:00 UTC"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "health_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "health_heading",
+        "self_check_stat",
+        "other_skills_stat",
+        "open_issues_stat"
+      ]
+    },
+    "health_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Health Summary",
+        "level": "h3"
+      }
+    },
+    "self_check_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Heartbeat self-check",
+        "value": "clean",
+        "delta": "~25h < 36h"
+      }
+    },
+    "other_skills_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Other skills",
+        "value": "17",
+        "delta": "green"
+      }
+    },
+    "open_issues_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Open issues",
+        "value": "0"
+      }
+    }
+  }
+}
