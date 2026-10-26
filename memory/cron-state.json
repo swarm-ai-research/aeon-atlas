@@ -136,5 +136,21 @@
     "total_failures": 0,
     "consecutive_failures": 0,
     "success_rate": 1
+  },
+  "api-health-probe": {
+    "last_dispatch": "2026-10-26T11:15:16Z",
+    "last_status": "dispatched"
+  },
+  "ecosystem-pulse": {
+    "last_dispatch": "2026-10-26T11:15:16Z",
+    "last_status": "dispatched"
+  },
+  "operator-scorecard": {
+    "last_dispatch": "2026-10-26T11:15:16Z",
+    "last_status": "dispatched"
+  },
+  "fork-health-score": {
+    "last_dispatch": "2026-10-26T11:15:16Z",
+    "last_status": "dispatched"
   }
 }
