@@ -25,7 +25,6 @@ the lightest read-only endpoint available). Probed by `skills/api-health-probe`.
 | api.etherscan.io | https://api.etherscan.io/api?module=stats&action=ethprice | contract-audit, deployer-trace, holder-concentration, rug-scan, on-chain-monitor, wallet-profile |
 | api.elections.kalshi.com | https://api.elections.kalshi.com/trade-api/v2/exchange/status | last30, monitor-kalshi |
 | api.openalex.org | https://api.openalex.org/works?per_page=1 | research-brief |
-| api.semanticscholar.org | https://api.semanticscholar.org/graph/v1/paper/search?query=ai&limit=1 | research-brief, technical-explainer, deep-research |
 | export.arxiv.org | http://export.arxiv.org/api/query?max_results=1 | paper-digest, paper-pick, deep-research, write-tweet |
 | huggingface.co | https://huggingface.co/api/models?limit=1 | huggingface-trending, paper-digest, paper-pick |
 | hn.algolia.com | https://hn.algolia.com/api/v1/search?tags=front_page&hitsPerPage=1 | hacker-news-digest, last30, competitor-launch-radar |
