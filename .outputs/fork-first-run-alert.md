@@ -1,10 +1,10 @@
-*New fork live — 2026-10-26 — NurstarK/aeon-upstream*
+*New fork live — 2026-10-27 — enuno/noesis-aeon*
 
-@NurstarK just ran their first workflow on Aeon. Welcome to the running fleet.
+@enuno just ran their first workflow on Aeon. Welcome to the running fleet.
 
 Stars: 0
-First run: skill: heartbeat
-When: < 1h ago
+First run: scheduler: cron
+When: ~20 min ago
 
-Fork: https://github.com/NurstarK/aeon-upstream
-Run: https://github.com/NurstarK/aeon-upstream/actions/runs/40403577845
+Fork: https://github.com/enuno/noesis-aeon
+Run: https://github.com/enuno/noesis-aeon/actions/runs/40580220932

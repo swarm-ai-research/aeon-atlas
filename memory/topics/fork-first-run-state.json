@@ -1,8 +1,14 @@
 {
   "parent_repo": "aeonfun/aeon",
-  "last_run": "2026-10-26",
+  "last_run": "2026-10-27",
   "last_status": "FORK_FIRST_RUN_ALERT_OK",
   "seen": {
+    "enuno/noesis-aeon": {
+      "first_seen_active_at": "2026-10-27",
+      "first_seen_active_run_at": "2026-10-27T20:41:10Z",
+      "announced_at": "2026-10-27",
+      "stargazers": 0
+    },
     "swarm-ai-research/aeon-atlas": {
       "first_seen_active_at": "2026-10-25",
       "first_seen_active_run_at": "2026-10-25T20:48:00Z",

@@ -1,0 +1,86 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "New fork live — 2026-10-27 — enuno/noesis-aeon"
+      },
+      "children": [
+        "text_welcome",
+        "separator_1",
+        "table_stats",
+        "separator_2",
+        "stack_links"
+      ]
+    },
+    "text_welcome": {
+      "type": "Text",
+      "props": {
+        "text": "@enuno just ran their first workflow on Aeon. Welcome to the running fleet.",
+        "variant": "body"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "table_stats": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Metric",
+          "Value"
+        ],
+        "rows": [
+          [
+            "Stars",
+            "0"
+          ],
+          [
+            "First run",
+            "scheduler: cron"
+          ],
+          [
+            "When",
+            "~20 min ago"
+          ]
+        ]
+      }
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_links": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "link_fork",
+        "link_run"
+      ]
+    },
+    "link_fork": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Fork: enuno/noesis-aeon",
+        "href": "https://github.com/enuno/noesis-aeon"
+      }
+    },
+    "link_run": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Run",
+        "href": "https://github.com/enuno/noesis-aeon/actions/runs/40580220932"
+      }
+    }
+  }
+}
