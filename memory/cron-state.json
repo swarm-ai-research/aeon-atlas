@@ -1,7 +1,7 @@
 {
   "heartbeat": {
-    "last_dispatch": "2026-10-27T20:38:25Z",
-    "last_status": "success",
+    "last_dispatch": "2026-10-28T21:15:41Z",
+    "last_status": "dispatched",
     "last_failed": "2026-06-06T12:56:45Z",
     "total_runs": 340,
     "total_successes": 311,
@@ -98,8 +98,8 @@
     "success_rate": 1
   },
   "fork-first-run-alert": {
-    "last_dispatch": "2026-10-27T20:38:25Z",
-    "last_status": "success",
+    "last_dispatch": "2026-10-28T21:15:41Z",
+    "last_status": "dispatched",
     "last_success": "2026-10-27T20:43:30Z",
     "total_runs": 3,
     "total_successes": 3,
