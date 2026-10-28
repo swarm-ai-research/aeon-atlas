@@ -1,0 +1,84 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "New fork live — 2026-10-28 — o8613844-cpu/aeon-o8613844-cpu",
+        "description": "@o8613844-cpu just ran their first workflow on Aeon. Welcome to the running fleet."
+      },
+      "children": [
+        "stats-stack",
+        "separator1",
+        "links-stack"
+      ]
+    },
+    "stats-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "stat-stars",
+        "stat-first-run",
+        "stat-when"
+      ]
+    },
+    "stat-stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars",
+        "value": "0"
+      }
+    },
+    "stat-first-run": {
+      "type": "Stat",
+      "props": {
+        "label": "First run",
+        "value": "skill: heartbeat"
+      }
+    },
+    "stat-when": {
+      "type": "Stat",
+      "props": {
+        "label": "When",
+        "value": "~1h ago"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "links-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-fork",
+        "link-run"
+      ]
+    },
+    "link-fork": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Fork: o8613844-cpu/aeon-o8613844-cpu",
+        "href": "https://github.com/o8613844-cpu/aeon-o8613844-cpu",
+        "source": "GitHub"
+      }
+    },
+    "link-run": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Workflow Run #40755343018",
+        "href": "https://github.com/o8613844-cpu/aeon-o8613844-cpu/actions/runs/40755343018",
+        "source": "GitHub Actions"
+      }
+    }
+  }
+}
