@@ -1,22 +1,20 @@
-Heartbeat complete.
+`HEARTBEAT_OK · STATUS_PAGE=DEGRADED`
 
 ## Summary
 
-Ran the heartbeat skill for the 2026-10-27 20:00 UTC slot (executed 20:38 UTC).
+Ran the heartbeat ambient check for the 2026-10-28 20:00 UTC slot (executed 21:16 UTC, ~1.3h late — within native-schedule jitter).
 
-**Checks performed (against `memory/cron-state.json`, `aeon.yml`, issues, PRs, logs):**
-- **P0:** `fork-cohort` is still STUCK — stuck in `dispatched` state since 2026-10-25 20:46 UTC (~48h, no `last_success`). This flag fires → overall status **🔴 DEGRADED**. But it was already flagged and notified on 2026-10-26 (within the 48h dedup window) with no state change since, so **no new notification was sent**. Next retry Sun 2026-11-01 19:00 UTC; escalate to an issue only if that run also hangs.
-- **Self-check:** CLEAR — heartbeat's own `last_success` is ~23h old (under 36h).
-- **No other P0:** no failed skills, no other stuck, no `consecutive_failures ≥ 3`, no chronic failures.
-- **P1:** 15 open PRs >24h (#13–#34, all bot-managed atlas/atlas-layers + #16 deslop) — known tracked set, deduped. No open GitHub issues.
-- **P3 watch:** `skill-health` crossed 2x-interval staleness (~50h, missed its 10-26/10-27 slots) + 8 never-dispatched skills — all the same operator-acknowledged scheduler-drift (ISS-005→009 lineage) already notified about, so deduped.
-
-**Notification:** None sent — the sole active flag is deduped; nothing fresh crossed the bar.
+**Findings (all deduped → no notification sent):**
+- **🔴 P0 — fork-cohort stuck:** dispatched 2026-10-25 20:46 UTC, never reported back (~72h in `dispatched` state). First flagged + notified 2026-10-26, present in the 10-27 log (within 48h) → dedup rule suppresses re-notification. Next retry Sun 2026-11-01 19:00 UTC; escalate to an issue only if that run also hangs.
+- **Self-check clear:** heartbeat last succeeded 2026-10-27 20:41 UTC (~24.6h < 36h threshold).
+- No failed skills, no consecutive-failure degradation, no chronic failures.
+- **P1:** 15 bot-managed PRs (#13–#34) stalled >24h, no urgent GitHub issues — known/tracked/deduped.
+- **P3:** skill-health stale (~75h vs daily cadence) + 8 never-run skills — same operator-acknowledged scheduler-drift lineage (ISS-005→009), deduped.
 
 **Files modified:**
-- `docs/status.md` — regenerated: Overall 🔴 DEGRADED, updated 2026-10-27 20:38 UTC, 0 open issues, next run heartbeat 2026-10-28 08:00 UTC. All 26 enabled skills listed (18 with state sorted by last-run desc, fork-cohort shown 🕸 stuck; 8 never-run at bottom). Token pulse section omitted (no `token-report` articles, no Tracked Token table).
-- `memory/logs/2026-10-27.md` — appended heartbeat findings and verdict (`HEARTBEAT_OK · STATUS_PAGE=DEGRADED`).
+- `docs/status.md` — regenerated public status page: **Overall 🔴 DEGRADED**, 26 enabled skills listed (18 with run history sorted by last-run desc, fork-cohort marked 🕸 stuck; 8 never-run at bottom), 0 open issues. Token pulse section omitted (no token-report files, no Tracked Token table).
+- `memory/logs/2026-10-28.md` — appended heartbeat run log.
 
-**Follow-up needed:** Watch the fork-cohort Sunday 2026-11-01 19:00 UTC retry — if it hangs again, file an issue. Underlying native-`schedule:` dispatch drift (daily skills like skill-health missing slots) remains the recommended operator action (durable offset-cron / external-dispatch backstop).
+**No notification** dispatched — the sole active flag (fork-cohort stuck) was already notified 2026-10-26; nothing fresh crossed the bar.
 
-The workflow's auto-commit step will land both file changes on `main`.
+**Follow-up:** If fork-cohort's 2026-11-01 19:00 UTC retry also hangs, file an issue. Discord notification channel remains blocked on the missing `DISCORD_WEBHOOK_URL` secret (operator action, long-standing).
