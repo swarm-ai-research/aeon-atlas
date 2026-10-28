@@ -1,19 +1,20 @@
-Probe run complete. Here's the outcome.
+That's fine — the scratch file in `/tmp` is harmless and never executed. I'll leave it rather than seek approval for a cleanup. The probe run is complete.
 
 ## Summary
 
-Ran **api-health-probe** across the full registry (no `${var}` filter).
+Executed the **api-health-probe** skill against the full 25-host registry.
 
-**Probe result:** All **25 active hosts UP** (HTTP 2xx/3xx, all responding in ~0.03–0.38s — none SLOW, none DOWN). Versus the 2026-10-26 state, **no transitions** → steady-state run → **no notification sent** (per the skill's steady-state rule).
+**Result: NOOP — all 25 hosts steady UP, no state transitions, no notification sent.**
 
-**One anomaly, investigated and dispositioned:** `api.semanticscholar.org` returned HTTP **429** (keyless rate-limit) on two consecutive probes. It initially looked like a first-ever DOWN, but the full registry showed it was **already in the "Excluded — needs a better probe" section** (added on the 2026-10-26 seed, with the `x-api-key` re-enable note). Its 429 is a known, documented, non-liveness signal — not an outage. It got probed only because the seed run **also** left a duplicate row for it in the *active* table. So it's not a real transition, and the actual defect was the registry duplication.
+- **Probed:** all 25 active hosts in `memory/api-health/registry.md`. Every one returned 2xx/3xx within the 8s budget and well under the 3s SLOW threshold. Slowest was `api.openalex.org` at 0.745s; the rest were ≤ 0.36s.
+- **Diff vs previous state** (2026-10-27, all UP): no changes. No UP→DOWN/SLOW or recovery transitions.
+- **Issue reconciliation:** nothing to do — no DOWN transitions, and `memory/issues/INDEX.md` has zero open issues (ISS-010 was the only api-health item, resolved `wontfix` 10-27).
+- **Notification:** correctly suppressed per skill rule (no transitions = no `./notify`).
 
-**Actions taken (memory-data writes, not code):**
-- `memory/api-health/registry.md` — removed the stale duplicate `api.semanticscholar.org` active-table row; the Excluded-section entry is now the single source of truth.
-- `memory/api-health/state.json` — recorded this run's results for the 25 active hosts (all UP); dropped `api.semanticscholar.org` (excluded hosts aren't tracked for transitions).
-- `memory/issues/ISS-010.md` + `INDEX.md` — filed ISS-010 during triage, then **closed it `wontfix`** once I found the excluded-section entry; it stands as the audit trail (couldn't `rm` the file — approval-gated in this sandbox). INDEX Open table is back to empty; ISS-010 is under Resolved.
-- `memory/logs/2026-10-27.md` — logged `API_PROBE_NOOP — 25 hosts, all steady` with the full investigation.
+**Files modified:**
+- `memory/api-health/state.json` — updated `last_run_at` to 2026-10-28T10:04:31Z and refreshed per-host http_code/time_total (statuses and `since` timestamps unchanged).
+- `memory/logs/2026-10-28.md` — created with `API_PROBE_NOOP — 25 hosts, all steady UP` entry.
 
-**Verification:** state.json is valid with 25 hosts and no semanticscholar; registry active table has no leftover gap.
+**Follow-up:** none required. Registry still carries the 2026-10-26 operator-review request (curate active hosts, re-enable the 4 Excluded hosts with better probes) — unchanged from prior runs, operator action still pending.
 
-**Follow-up (operator action, carried from the seed):** the excluded hosts need better probes to re-enable liveness tracking — `api.semanticscholar.org` (add `SEMANTIC_SCHOLAR_API_KEY`/`x-api-key`), `eth.llamarpc.com` + `mainnet.base.org` (read-only JSON-RPC POST), `www.reddit.com` (custom User-Agent). No PR opened — these are the skill's own in-place memory writes, not source changes.
+(One harmless scratch file remains at `/tmp/probe-scratch/probe.sh`; never executed, outside the working dir — left in place to avoid an approval prompt for cleanup.)
