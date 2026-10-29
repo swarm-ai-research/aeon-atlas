@@ -176,5 +176,9 @@
     "total_failures": 0,
     "consecutive_failures": 0,
     "success_rate": 1
+  },
+  "fleet-scorecard": {
+    "last_dispatch": "2026-10-29T13:43:54Z",
+    "last_status": "dispatched"
   }
 }
