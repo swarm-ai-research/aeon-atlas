@@ -1,0 +1,128 @@
+{
+  "root": "card-health",
+  "state": {},
+  "elements": {
+    "card-health": {
+      "type": "Card",
+      "props": {
+        "title": "Skill Health",
+        "description": "2026-10-29"
+      },
+      "children": [
+        "alert-status",
+        "separator-1",
+        "text-mode",
+        "text-steady",
+        "stack-metrics",
+        "separator-2",
+        "text-notes",
+        "separator-3",
+        "stack-issues"
+      ]
+    },
+    "alert-status": {
+      "type": "Alert",
+      "props": {
+        "title": "HEALTH: OK",
+        "message": "18 skills healthy",
+        "type": "success"
+      }
+    },
+    "separator-1": {
+      "type": "Separator"
+    },
+    "text-mode": {
+      "type": "Text",
+      "props": {
+        "text": "Partial mode: skill-runs unavailable (sandbox), classified from cron-state only.",
+        "variant": "body"
+      }
+    },
+    "text-steady": {
+      "type": "Text",
+      "props": {
+        "text": "All 18 telemetry-bearing skills steady.",
+        "variant": "body"
+      }
+    },
+    "stack-metrics": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat-heartbeat",
+        "stat-atlas",
+        "stat-fleet",
+        "stat-failures"
+      ]
+    },
+    "stat-heartbeat": {
+      "type": "Stat",
+      "props": {
+        "label": "Heartbeat",
+        "value": "0.91"
+      }
+    },
+    "stat-atlas": {
+      "type": "Stat",
+      "props": {
+        "label": "Atlas Cohort",
+        "value": "0.94–1.0"
+      }
+    },
+    "stat-fleet": {
+      "type": "Stat",
+      "props": {
+        "label": "Fleet-Intelligence Dailies",
+        "value": "1.0"
+      }
+    },
+    "stat-failures": {
+      "type": "Stat",
+      "props": {
+        "label": "Consecutive Failures",
+        "value": "0"
+      }
+    },
+    "separator-2": {
+      "type": "Separator"
+    },
+    "text-notes": {
+      "type": "Text",
+      "props": {
+        "text": "fork-cohort shows a stale 'dispatched' (10-25) with no recorded outcome — within known scheduler jitter, not escalated. 7 weekly skills carry no cron-state; NO DATA is undeterminable without skill-runs (known cohort characteristic, ISS-005→009 lineage, resolved 10-25).",
+        "variant": "body"
+      }
+    },
+    "separator-3": {
+      "type": "Separator"
+    },
+    "stack-issues": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat-open-issues",
+        "stat-resolved"
+      ]
+    },
+    "stat-open-issues": {
+      "type": "Stat",
+      "props": {
+        "label": "Open Issues",
+        "value": "0"
+      }
+    },
+    "stat-resolved": {
+      "type": "Stat",
+      "props": {
+        "label": "Resolved This Run",
+        "value": "0"
+      }
+    }
+  }
+}
