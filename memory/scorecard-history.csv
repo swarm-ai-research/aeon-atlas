@@ -1,0 +1,2 @@
+date,total_runs,total_failures,generations,prompt_tokens,cached_tokens,completion_tokens,total_tokens,est_cost_usd,cache_discount_usd
+2026-10-29,0,0,0,0,0,0,0,0.00,0.00
