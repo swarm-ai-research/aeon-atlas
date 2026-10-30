@@ -44,8 +44,8 @@
     "success_rate": 1
   },
   "skill-health": {
-    "last_dispatch": "2026-10-29T19:12:54Z",
-    "last_status": "success",
+    "last_dispatch": "2026-10-30T19:58:38Z",
+    "last_status": "dispatched",
     "last_success": "2026-10-29T19:15:53Z",
     "total_runs": 2,
     "total_successes": 2,
