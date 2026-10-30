@@ -334,4 +334,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-10-28,fork-first-run-alert,claude-sonnet-4-6,20,9788,863597,52189
 2026-10-29,fleet-scorecard,claude-sonnet-4-6,13,3055,354963,17877
 2026-10-29,skill-health,claude-opus-4-8,26,10233,513366,40099
-2026-10-30,heartbeat,claude-opus-4-8,24,13488,509233,51636
+2026-10-30,skill-freshness,claude-sonnet-4-6,19,39174,1078499,72475
