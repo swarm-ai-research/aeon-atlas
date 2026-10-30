@@ -1,0 +1,190 @@
+{
+  "root": "skill-health-card",
+  "state": {},
+  "elements": {
+    "skill-health-card": {
+      "type": "Card",
+      "props": {
+        "title": "Skill Health",
+        "description": "2026-10-30"
+      },
+      "children": [
+        "health-alert",
+        "divider-1",
+        "no-data-section",
+        "divider-2",
+        "fork-cohort-section",
+        "divider-3",
+        "summary-section"
+      ]
+    },
+    "health-alert": {
+      "type": "Alert",
+      "props": {
+        "title": "HEALTH: OK",
+        "message": "19/26 skills healthy (cron-state-only; skill-runs unavailable → partial mode)",
+        "type": "success"
+      }
+    },
+    "divider-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "no-data-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "no-data-heading",
+        "no-data-list",
+        "no-data-note"
+      ]
+    },
+    "no-data-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "⚪ NO DATA (6)",
+        "level": "h3"
+      }
+    },
+    "no-data-list": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "skill-1",
+        "skill-2",
+        "skill-3",
+        "skill-4",
+        "skill-5",
+        "skill-6"
+      ]
+    },
+    "skill-1": {
+      "type": "Badge",
+      "props": {
+        "text": "ai-framework-watch",
+        "variant": "outline"
+      }
+    },
+    "skill-2": {
+      "type": "Badge",
+      "props": {
+        "text": "fleet-state",
+        "variant": "outline"
+      }
+    },
+    "skill-3": {
+      "type": "Badge",
+      "props": {
+        "text": "skill-evals",
+        "variant": "outline"
+      }
+    },
+    "skill-4": {
+      "type": "Badge",
+      "props": {
+        "text": "follow-up-patrol",
+        "variant": "outline"
+      }
+    },
+    "skill-5": {
+      "type": "Badge",
+      "props": {
+        "text": "fork-skill-digest",
+        "variant": "outline"
+      }
+    },
+    "skill-6": {
+      "type": "Badge",
+      "props": {
+        "text": "workflow-security-audit",
+        "variant": "outline"
+      }
+    },
+    "no-data-note": {
+      "type": "Text",
+      "props": {
+        "text": "Known never-dispatched weekly cohort (ISS-005→009 lineage, operator-ack); undeterminable without skill-runs, not re-filed.",
+        "variant": "caption"
+      }
+    },
+    "divider-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "fork-cohort-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "fork-cohort-heading",
+        "fork-cohort-status",
+        "fork-cohort-note"
+      ]
+    },
+    "fork-cohort-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "🕸 fork-cohort",
+        "level": "h3"
+      }
+    },
+    "fork-cohort-status": {
+      "type": "Alert",
+      "props": {
+        "title": "Status",
+        "message": "Stuck 'dispatched' since 10-25 (~5d), no outcome.",
+        "type": "warning"
+      }
+    },
+    "fork-cohort-note": {
+      "type": "Text",
+      "props": {
+        "text": "Tracked as heartbeat P0 (notified 10-26); next retry Sun 11-01 19:00 UTC → file ISS only if it hangs again.",
+        "variant": "caption"
+      }
+    },
+    "divider-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "summary-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "open-issues-stat",
+        "resolved-stat"
+      ]
+    },
+    "open-issues-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Open Issues",
+        "value": "0"
+      }
+    },
+    "resolved-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Resolved This Run",
+        "value": "0"
+      }
+    }
+  }
+}

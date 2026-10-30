@@ -1,16 +1,18 @@
 {
-  "hash": "761833a902da0a9d007a7cfeac830406a22ba94afba0f55190d125f93867b0e0",
-  "last_notified_at": "2026-10-29T19:15:00Z",
-  "last_run_at": "2026-10-29T19:15:00Z",
+  "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "last_notified_at": "2026-10-30T20:00:46Z",
+  "last_run_at": "2026-10-30T20:00:46Z",
   "classification": {
     "critical": [],
     "degraded": [],
     "flapping": [],
     "warning": [],
-    "healthy_count": 18,
-    "healthy": ["heartbeat", "atlas", "atlas-layers", "atlas-improve", "skill-health", "skill-leaderboard", "fork-contributor-leaderboard", "fork-release-tracker", "contributor-spotlight", "fork-first-run-alert", "skill-update-check", "fork-skill-gap", "fleet-skill-adoption", "api-health-probe", "ecosystem-pulse", "operator-scorecard", "fork-health-score", "fleet-scorecard"],
-    "no_data": [],
+    "healthy_count": 19,
+    "healthy": ["skill-health", "api-health-probe", "ecosystem-pulse", "fork-release-tracker", "contributor-spotlight", "fork-first-run-alert", "skill-update-check", "fleet-scorecard", "skill-leaderboard", "fork-contributor-leaderboard", "operator-scorecard", "fork-skill-gap", "fleet-skill-adoption", "fork-health-score", "atlas", "atlas-layers", "atlas-improve", "skill-freshness", "heartbeat"],
+    "no_data": ["ai-framework-watch", "fleet-state", "skill-evals", "follow-up-patrol", "fork-skill-digest", "workflow-security-audit"],
+    "stuck": ["fork-cohort"],
     "partial": true,
-    "notes": "skill-runs unavailable (permission-denied in this run) -> cron-state-only partial mode. 18 telemetry-bearing skills classified HEALTHY (all success_rate >= 0.91, 0 consecutive failures). fork-cohort has a stale 'dispatched' (2026-10-25T20:46:12Z) with no recorded outcome -> within known scheduler jitter, not escalated. 7 enabled weekly skills (ai-framework-watch, fleet-state, skill-evals, follow-up-patrol, fork-skill-digest, workflow-security-audit, skill-freshness) carry no cron-state entry; NO DATA is undeterminable without skill-runs and is a known, operator-acknowledged cohort characteristic (ISS-005->009 lineage, resolved 2026-10-25). Not re-filed. Signature unchanged vs prev run (empty CRITICAL/DEGRADED/FLAPPING) so hash held; notified because >24h elapsed since last OK confirmation (prev 2026-10-25)."
+    "hash_scheme": "sha256 of empty signature (no CRITICAL/FLAPPING/DEGRADED/SYSTEMIC) = empty-string digest e3b0c442...; adopted this run for forward consistency since prior hash encoded a richer payload that did not reproduce. Future all-clear runs will match this and suppress within 24h.",
+    "notes": "skill-runs unavailable (permission-gated in this run) -> cron-state-only partial mode. 26 enabled skills. 19 telemetry-bearing skills classified HEALTHY (all success_rate >= 0.92, 0 consecutive failures). fork-cohort carries a stale 'dispatched' (2026-10-25T20:46:12Z, ~5d) with no recorded outcome -> tracked as heartbeat P0 (first flagged+notified 10-26), does NOT meet skill-health CRITICAL rule (status is 'dispatched' not 'failed', no consecutive_failures count) -> excluded from hashed signature, not escalated; file ISS only if next retry (Sun 11-01 19:00 UTC) also hangs. 6 enabled weekly skills carry no cron-state entry (NO DATA); undeterminable without skill-runs, known operator-acknowledged never-dispatched cohort (ISS-005->009 lineage, resolved 2026-10-25), not re-filed. skill-freshness recorded its first success 2026-10-30 -> dropped from the prior 7-skill NO DATA cohort. Signature empty (no CRITICAL/DEGRADED/FLAPPING/SYSTEMIC). Notified because >24h elapsed since last OK confirmation (prev 2026-10-29T19:15Z, ~24.8h). INDEX.md present: reconcile ran, nothing to file/resolve, 0 open issues."
   }
 }
