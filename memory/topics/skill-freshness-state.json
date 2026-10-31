@@ -1,9 +1,13 @@
 {
-  "last_run_at": "2026-10-30T08:58:36Z",
-  "last_verdict": "FRESHNESS_OK",
-  "last_flagged_fingerprint": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+  "last_run_at": "2026-10-31T08:50:23Z",
+  "last_verdict": "FRESHNESS_STALE",
+  "last_flagged_fingerprint": "7b0ddff4e688b47636fbcd9f4ed4bbe4ae75a819",
   "consumer_count": 26,
   "dependency_count": 31,
-  "flagged_count": 0,
-  "first_seen_at": {}
+  "flagged_count": 3,
+  "first_seen_at": {
+    "fleet-state:articles/contributor-spotlight-*.md": "2026-10-31T08:50:23Z",
+    "fleet-state:articles/fork-cohort-*.md": "2026-10-31T08:50:23Z",
+    "fleet-state:articles/fork-release-*.md": "2026-10-31T08:50:23Z"
+  }
 }
