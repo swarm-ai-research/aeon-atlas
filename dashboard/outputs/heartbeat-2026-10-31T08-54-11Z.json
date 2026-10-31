@@ -1,0 +1,297 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Heartbeat"
+      },
+      "children": [
+        "alert_degraded",
+        "sep_1",
+        "issue_section",
+        "sep_2",
+        "skills_section",
+        "sep_3",
+        "checks_section",
+        "sep_4",
+        "fix_section"
+      ]
+    },
+    "alert_degraded": {
+      "type": "Alert",
+      "props": {
+        "title": "DEGRADED",
+        "message": "Scheduler quiet-window recurrence (ISS-005→009 lineage). Daily skills dropping dispatch slots.",
+        "type": "error"
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "issue_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "issue_heading",
+        "issue_id"
+      ]
+    },
+    "issue_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Issue Filed",
+        "level": "h4"
+      }
+    },
+    "issue_id": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-011 (medium)",
+        "variant": "outline"
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "skills_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "skills_heading",
+        "skill_api_health",
+        "skill_fork_alert",
+        "skill_heartbeat"
+      ]
+    },
+    "skills_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Affected Skills",
+        "level": "h4"
+      }
+    },
+    "skill_api_health": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "skill_api_name",
+        "skill_api_stat"
+      ]
+    },
+    "skill_api_name": {
+      "type": "Text",
+      "props": {
+        "text": "api-health-probe",
+        "variant": "body"
+      }
+    },
+    "skill_api_stat": {
+      "type": "Stat",
+      "props": {
+        "value": "70.7h",
+        "label": "stale",
+        "delta": "missed 10-29/10-30 10:00"
+      }
+    },
+    "skill_fork_alert": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "skill_fork_name",
+        "skill_fork_stat"
+      ]
+    },
+    "skill_fork_name": {
+      "type": "Text",
+      "props": {
+        "text": "fork-first-run-alert",
+        "variant": "body"
+      }
+    },
+    "skill_fork_stat": {
+      "type": "Stat",
+      "props": {
+        "value": "59.5h",
+        "label": "stale",
+        "delta": "missed 10-29/10-30 20:30"
+      }
+    },
+    "skill_heartbeat": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "skill_hb_name",
+        "skill_hb_stat"
+      ]
+    },
+    "skill_hb_name": {
+      "type": "Text",
+      "props": {
+        "text": "heartbeat",
+        "variant": "body"
+      }
+    },
+    "skill_hb_stat": {
+      "type": "Stat",
+      "props": {
+        "value": "10-30 20:00",
+        "label": "slot dropped"
+      }
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "checks_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "checks_heading",
+        "check_self",
+        "check_tripwire",
+        "check_cohort"
+      ]
+    },
+    "checks_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Status Checks",
+        "level": "h4"
+      }
+    },
+    "check_self": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "check_self_label",
+        "check_self_badge"
+      ]
+    },
+    "check_self_label": {
+      "type": "Text",
+      "props": {
+        "text": "Self-check",
+        "variant": "body"
+      }
+    },
+    "check_self_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "NOT breached (~17.3h)",
+        "variant": "secondary"
+      }
+    },
+    "check_tripwire": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "check_trip_label",
+        "check_trip_badge"
+      ]
+    },
+    "check_trip_label": {
+      "type": "Text",
+      "props": {
+        "text": "Pre-committed 10-30 trip-wire",
+        "variant": "body"
+      }
+    },
+    "check_trip_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "TRIPPED",
+        "variant": "destructive"
+      }
+    },
+    "check_cohort": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "check_cohort_label",
+        "check_cohort_badge"
+      ]
+    },
+    "check_cohort_label": {
+      "type": "Text",
+      "props": {
+        "text": "fork-cohort",
+        "variant": "body"
+      }
+    },
+    "check_cohort_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Stuck ~132h (notified 10-26, retries Sun 19:00 UTC)",
+        "variant": "destructive"
+      }
+    },
+    "sep_4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "fix_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "fix_heading",
+        "fix_text"
+      ]
+    },
+    "fix_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Durable Fix Required",
+        "level": "h4"
+      }
+    },
+    "fix_text": {
+      "type": "Text",
+      "props": {
+        "text": "offset-cron / external workflow_dispatch backstop — operator-action-required",
+        "variant": "body"
+      }
+    }
+  }
+}

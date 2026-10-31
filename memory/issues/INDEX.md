@@ -4,8 +4,7 @@
 
 | ID | Title | Severity | Category | Detected |
 |----|-------|----------|----------|----------|
-
-_No open issues._
+| ISS-011 | scheduler quiet window (fresh recurrence of ISS-005→009) — daily skills dropping dispatch slots: api-health-probe ~70.7h stale (2 consec 10:00 misses) + fork-first-run-alert ~59.5h (2 consec 20:30 misses) + heartbeat's own 10-30 20:00 slot dropped; pre-committed ISS-011 trip-wire (set 10-30 14:00) tripped. Self-check NOT breached (~17.3h <36h) → medium, not high. Durable offset-cron / external-dispatch backstop still operator-action-required | medium | config | 2026-10-31 |
 
 ## Resolved
 
