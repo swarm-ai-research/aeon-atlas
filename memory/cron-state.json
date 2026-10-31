@@ -189,10 +189,10 @@
   },
   "skill-freshness": {
     "last_dispatch": "2026-10-31T08:48:32Z",
-    "last_status": "dispatched",
-    "last_success": "2026-10-30T09:06:34Z",
-    "total_runs": 1,
-    "total_successes": 1,
+    "last_status": "success",
+    "last_success": "2026-10-31T08:57:26Z",
+    "total_runs": 2,
+    "total_successes": 2,
     "total_failures": 0,
     "consecutive_failures": 0,
     "success_rate": 1
