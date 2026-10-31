@@ -1,10 +1,10 @@
-*New fork live — 2026-10-28 — o8613844-cpu/aeon-o8613844-cpu*
+*New fork live — 2026-10-31 — njfyanf9-a11y/aeon-njfyanf9-a11y*
 
-@o8613844-cpu just ran their first workflow on Aeon. Welcome to the running fleet.
+@njfyanf9-a11y just ran their first workflow on Aeon. Welcome to the running fleet.
 
 Stars: 0
-First run: skill: heartbeat
-When: ~1h ago
+First run: skill: fleet-control
+When: less than 1h ago
 
-Fork: https://github.com/o8613844-cpu/aeon-o8613844-cpu
-Run: https://github.com/o8613844-cpu/aeon-o8613844-cpu/actions/runs/40755343018
+Fork: https://github.com/njfyanf9-a11y/aeon-njfyanf9-a11y
+Run: https://github.com/njfyanf9-a11y/aeon-njfyanf9-a11y/actions/runs/41245954592
