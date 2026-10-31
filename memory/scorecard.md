@@ -1,16 +1,16 @@
-# 🛰️ Aeon Fleet Scorecard — as of 2026-10-29
+# 🛰️ Aeon Fleet Scorecard — as of 2026-10-31
 
 _Auto-generated daily by skills/fleet-scorecard. Tokens reported OpenRouter-style (cached_tokens ⊆ prompt_tokens)._
 
 ## Since last update (~24h)
 | Metric | Δ |
 |---|---:|
-| Runs | — |
-| Failures | — |
-| Generations | — |
-| Total tokens | — |
-| Est. cost | — |
-| Cache discount | — |
+| Runs | +0 |
+| Failures | +0 |
+| Generations | +0 |
+| Total tokens | +0 |
+| Est. cost | +$0.00 |
+| Cache discount | +$0.00 |
 
 ## Alerts
 ✅ No anomalies — fleet healthy.
