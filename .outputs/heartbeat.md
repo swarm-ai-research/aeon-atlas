@@ -1,17 +1,24 @@
-Heartbeat complete for the 2026-10-31 14:00 slot (ran ~14:49 UTC).
+Heartbeat 20:00 slot complete. No fresh item crossed the notification bar — everything flagged is deduped or tracked under the existing issue.
 
 ## Summary
 
-**Checks run** against `cron-state.json`, `issues/INDEX.md`, `aeon.yml`, and the last 2 days of logs:
+**Verdict:** `STATUS_PAGE=DEGRADED` — notification suppressed (all findings deduped).
 
-- **P0 — 🔴 DEGRADED (fork-cohort stuck):** `fork-cohort` still frozen at `dispatched` since 2026-10-25 20:46 UTC (~138h). Deduped — notified 2026-10-26, present in 10-27→10-31 logs. Next retry Sun 11-01 19:00 UTC. No failed/chronic skills; no API degradation. Heartbeat self-check healthy (~5.9h since last success, ≪36h).
-- **ISS-011 (open, medium, worsening — deduped):** `api-health-probe` now at ~76.7h / **3 consecutive 10:00 misses** (missed today's 10:00 slot, failing its resolution criterion); `fleet-scorecard` crossed 2× interval (~49h) and joined the breaching set; `fork-first-run-alert` ~65.5h. Stays medium (self-check not breached) — already notified this morning, so no re-notify.
-- **P1/P2/P3:** 15 stale bot PRs (deduped), no open GitHub issues, no urgent labels; notification channels still 0/3 (Discord secret pending since 09-13); 6 never-run enabled skills (known scheduler-gap cohort, deduped).
+**P0 checks:**
+- No `failed` skills. No API degradation (`consecutive_failures ≥ 3`), no chronic failures.
+- 🕸 **fork-cohort STUCK** (`dispatched` since 2026-10-25, ~145h) → Overall 🔴 DEGRADED. Already notified 2026-10-26, in-logs through 10-31 → **deduped, no re-notify**. Next retry Sun 11-01 19:00 UTC.
+- Self-check healthy: heartbeat `last_success` ~7.1h ago (≪36h); clean 3-slot progression held across 10-31 (08:00 / 14:00 / 20:00).
 
-**Notification:** None sent — every active flag is deduped within the 48h window and nothing fresh crossed the bar.
+**ISS-011 (open, medium, deduped):** worsening but same root cause (native GH Actions `schedule:` delivery weakness).
+- api-health-probe ~83.8h stale (3 consecutive 10:00 misses)
+- fork-first-run-alert ~72.6h — **10-31 20:30 slot also dropped** → now 3 consecutive 20:30 misses
+- fleet-scorecard **recovered** (ran 10-31 14:48, back under 48h)
+- Resolution criteria unmet (both dispatch-gap skills still stale + P0 not clear). Stays **medium** — self-check didn't breach 36h, no full blackout.
+
+**P1/P2/P3:** 15 stale bot PRs (auto-managed), no open issues/urgent labels, channels 0/3 (operator-pending), 6 never-run weekly cohort — all deduped.
 
 **Files modified:**
-- `docs/status.md` — regenerated: Overall 🔴 DEGRADED, Updated 2026-10-31 14:49 UTC, 1 open issue (ISS-011), next run skill-health 18:00 UTC; all 26 enabled skills listed (20 with entries sorted by last-run desc, 6 never-run), Token pulse omitted (no token report).
-- `memory/logs/2026-10-31.md` — appended the 14:00 slot findings with `STATUS_PAGE=DEGRADED`.
+- `docs/status.md` — regenerated (🔴 DEGRADED, Updated 2026-10-31 21:55 UTC, 1 open issue, next run atlas 11-01 04:00 UTC, 26 skills). Token pulse omitted (no token report / no Tracked Token table).
+- `memory/logs/2026-10-31.md` — appended 20:00 slot entry.
 
-**Follow-up:** Durable scheduler fix (offset-cron / external `workflow_dispatch` backstop) remains operator-action-required. Escalate ISS-011 to high only if the 36h self-check breaches or the window widens to a full-day/multi-cadence blackout; file a fresh ISS for fork-cohort only if its 11-01 19:00 retry also hangs.
+**Follow-ups (operator action):** durable scheduler backstop (offset-cron / external `workflow_dispatch`) for ISS-011; configure `DISCORD_WEBHOOK_URL`; investigate fork-cohort's hung 10-25 dispatch if 11-01 19:00 retry also hangs.
