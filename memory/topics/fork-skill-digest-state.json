@@ -1,0 +1,51 @@
+{
+  "last_run": "2026-11-01",
+  "target_repo": "aaronjmars/aeon",
+  "n_active": 68,
+  "n_configured": 67,
+  "n_template": 1,
+  "n_unreadable": 0,
+  "buckets": {
+    "DEFAULT_FLIP_ENABLE": [],
+    "DEFAULT_FLIP_DISABLE": [
+      {"skill": "operator-scorecard", "forks": 65, "pct": 0.97},
+      {"skill": "skill-health", "forks": 63, "pct": 0.94}
+    ],
+    "MODEL_CONSENSUS": [],
+    "VAR_HOTSPOT": [],
+    "EMERGING": []
+  },
+  "fork_only_skills": [
+    {"fork": "duan521127/aeon", "skill": "deploy-uni-hook"},
+    {"fork": "duan521127/aeon", "skill": "sc-audit"},
+    {"fork": "duan521127/aeon", "skill": "compute-resell"},
+    {"fork": "duan521127/aeon", "skill": "miroshark-matchday"},
+    {"fork": "duan521127/aeon", "skill": "investigation-report"},
+    {"fork": "vaubandev/aeon", "skill": "deploy-uni-hook"},
+    {"fork": "vaubandev/aeon", "skill": "sc-audit"},
+    {"fork": "icepy/aeon-token", "skill": "sc-audit"},
+    {"fork": "icepy/aeon-token", "skill": "investigation-report"},
+    {"fork": "icepy/aeon-token", "skill": "aeon-update"},
+    {"fork": "icepy/aeon-token", "skill": "arxiv-radar"},
+    {"fork": "icepy/aeon-token", "skill": "github-radar"},
+    {"fork": "icepy/aeon-token", "skill": "narrative-brief"},
+    {"fork": "icepy/aeon-token", "skill": "defillama-radar"},
+    {"fork": "enuno/noesis-aeon", "skill": "glim-mcp"},
+    {"fork": "enuno/noesis-aeon", "skill": "executor-mcp"},
+    {"fork": "enuno/noesis-aeon", "skill": "install-skill"},
+    {"fork": "enuno/noesis-aeon", "skill": "pack-submit"},
+    {"fork": "enuno/noesis-aeon", "skill": "strategy-builder"},
+    {"fork": "enuno/noesis-aeon", "skill": "aeon-doctor"},
+    {"fork": "enuno/noesis-aeon", "skill": "aeon-update"},
+    {"fork": "enuno/noesis-aeon", "skill": "soul-builder"},
+    {"fork": "anondevv69/bankr-space-aeon", "skill": "bankr-space-worker"},
+    {"fork": "00288/aeon", "skill": "base-mcp"}
+  ],
+  "fingerprints": [
+    {"fork": "enuno/noesis-aeon", "total_overrides": 20, "dominant_category": "meta"},
+    {"fork": "TakamiyaZee/aeon", "total_overrides": 18, "dominant_category": "meta"},
+    {"fork": "lawbworld-tech/aeon", "total_overrides": 15, "dominant_category": "meta"},
+    {"fork": "icepy/aeon-token", "total_overrides": 11, "dominant_category": "content"},
+    {"fork": "madebyshun/blueagent-aeon", "total_overrides": 8, "dominant_category": "content"}
+  ]
+}

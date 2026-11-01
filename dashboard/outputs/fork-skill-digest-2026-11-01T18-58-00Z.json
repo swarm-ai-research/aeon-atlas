@@ -1,0 +1,175 @@
+{
+  "root": "digest-card",
+  "state": {},
+  "elements": {
+    "digest-card": {
+      "type": "Card",
+      "props": {
+        "title": "Fork Skill Digest — 2026-11-01"
+      },
+      "children": [
+        "summary-text",
+        "sep-1",
+        "key-metrics",
+        "sep-2",
+        "flip-section",
+        "sep-3",
+        "new-skills-section",
+        "sep-4",
+        "customizer-text",
+        "sep-5",
+        "full-report-link"
+      ]
+    },
+    "summary-text": {
+      "type": "Text",
+      "props": {
+        "text": "63 forks disable skill-health (upstream defaults on) — fleet is voting it as noise. Scanned 68 active forks; 67 are configured."
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "key-metrics": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "metric-forks",
+        "metric-configured"
+      ]
+    },
+    "metric-forks": {
+      "type": "Stat",
+      "props": {
+        "label": "Active forks scanned",
+        "value": "68"
+      }
+    },
+    "metric-configured": {
+      "type": "Stat",
+      "props": {
+        "label": "Configured",
+        "value": "67"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "flip-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "flip-heading",
+        "flip-table"
+      ]
+    },
+    "flip-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Flip disable (upstream on → fleet off):",
+        "level": "h3"
+      }
+    },
+    "flip-table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Skill",
+          "Forks"
+        ],
+        "rows": [
+          [
+            "skill-health",
+            "63 forks (94%)"
+          ],
+          [
+            "operator-scorecard",
+            "65 forks (97%)"
+          ]
+        ]
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "new-skills-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "new-skills-heading",
+        "new-skill-1",
+        "new-skill-2",
+        "new-skill-3"
+      ]
+    },
+    "new-skills-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "New fork-only skills (first snapshot):",
+        "level": "h3"
+      }
+    },
+    "new-skill-1": {
+      "type": "Text",
+      "props": {
+        "text": "deploy-uni-hook — ~44 forks (v5 template ecosystem addition)"
+      }
+    },
+    "new-skill-2": {
+      "type": "Text",
+      "props": {
+        "text": "sc-audit — ~44 forks (v5 template, enabled in icepy)"
+      }
+    },
+    "new-skill-3": {
+      "type": "Text",
+      "props": {
+        "text": "soul-builder, glim-mcp, executor-mcp + 16 more across custom forks"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "customizer-text": {
+      "type": "Text",
+      "props": {
+        "text": "Heaviest customizer: enuno/noesis-aeon (~20 overrides, meta/dev)"
+      }
+    },
+    "sep-5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "full-report-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full report",
+        "href": "https://github.com/aeonframework/aeon-atlas/blob/main/articles/fork-skill-digest-2026-11-01.md",
+        "source": "GitHub"
+      }
+    }
+  }
+}
