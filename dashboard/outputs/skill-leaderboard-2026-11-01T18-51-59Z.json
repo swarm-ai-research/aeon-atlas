@@ -1,0 +1,195 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Skill Leaderboard"
+      },
+      "children": [
+        "date-text",
+        "separator-1",
+        "notable-section",
+        "separator-2",
+        "top5-section",
+        "separator-3",
+        "fleet-section",
+        "separator-4",
+        "report-section"
+      ]
+    },
+    "date-text": {
+      "type": "Text",
+      "props": {
+        "text": "2026-11-01",
+        "variant": "muted"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "notable-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "notable-heading",
+        "notable-text"
+      ]
+    },
+    "notable-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h3"
+      }
+    },
+    "notable-text": {
+      "type": "Text",
+      "props": {
+        "text": "Domimueller85/aeon shipped aeon-update — not in upstream (5 configured forks adopted it independently)"
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "top5-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "top5-heading",
+        "top5-table"
+      ]
+    },
+    "top5-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top 5 across 62 configured forks (of 68 active)",
+        "level": "h3"
+      }
+    },
+    "top5-table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Rank",
+          "Skill",
+          "Forks",
+          "Adoption",
+          "Status"
+        ],
+        "rows": [
+          [
+            "1",
+            "heartbeat",
+            "62",
+            "100%",
+            ""
+          ],
+          [
+            "2",
+            "auto-workflow",
+            "45",
+            "72.6%",
+            "NEW"
+          ],
+          [
+            "3",
+            "skill-enabler",
+            "8",
+            "12.9%",
+            "NEW"
+          ],
+          [
+            "4",
+            "fleet-skill-adoption",
+            "7",
+            "11.3%",
+            "NEW"
+          ],
+          [
+            "5",
+            "token-movers",
+            "7",
+            "11.3%",
+            ""
+          ]
+        ]
+      }
+    },
+    "separator-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "fleet-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "fleet-heading",
+        "fleet-text"
+      ]
+    },
+    "fleet-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Fleet-only",
+        "level": "h3"
+      }
+    },
+    "fleet-text": {
+      "type": "Text",
+      "props": {
+        "text": "aeon-update adopted by 5 forks — not in upstream"
+      }
+    },
+    "separator-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "report-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "report-label",
+        "report-link"
+      ]
+    },
+    "report-label": {
+      "type": "Text",
+      "props": {
+        "text": "Full report:",
+        "variant": "caption"
+      }
+    },
+    "report-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "skill-leaderboard-2026-11-01.md",
+        "href": "https://github.com/swarm-ai-research/aeon-atlas/blob/main/articles/skill-leaderboard-2026-11-01.md",
+        "source": "GitHub"
+      }
+    }
+  }
+}
