@@ -3,7 +3,7 @@ title: "Aeon Atlas — Seven Layers"
 tags: [atlas, ecosystem, meta]
 ---
 # Aeon Atlas — Seven Layers
-> Auto-rendered by `scripts/atlas-layers.mjs` from `data/atlas-layers.json` + `atlas.json` + `skill-packs.json` on 2026-06-05.
+> Auto-rendered by `scripts/atlas-layers.mjs` from `data/atlas-layers.json` + `atlas.json` + `skill-packs.json` on 2026-09-27.
 A categorical map of the constellation around aaronjmars/aeon. Layers 1–3 list who. Layers 4–7 list what makes the orbit legible.
 ## Layer 1 — Operator's fork
 
@@ -16,36 +16,36 @@ The maintainer's own working test bed. Runs the same skill catalog one day behin
 
 Forks running their own cron schedules in production. Every entry is a live agent operating on its operator's behalf. The layer that turned Aeon from a tool into a workload.
 
-- [`anomit/aeon`](https://github.com/anomit/aeon) — 4 skills · ★0 · last push 2026-06-05
-- [`damo-nu11/aeon-minebean`](https://github.com/damo-nu11/aeon-minebean) — 2 skills · ★0 · last push 2026-06-04
-- [`swarm-ai-research/aeon-atlas`](https://github.com/swarm-ai-research/aeon-atlas) — 5 skills · ★0 · last push 2026-06-04
-- [`pezetel/aeon`](https://github.com/pezetel/aeon) — 2 skills · ★0 · last push 2026-06-04
-- [`enzoonchain/aeon`](https://github.com/enzoonchain/aeon) — 7 skills · ★0 · last push 2026-06-04
-- [`taekwonv89/aeon`](https://github.com/taekwonv89/aeon) — 13 skills · ★0 · last push 2026-06-04
-- [`youpsla/aeon`](https://github.com/youpsla/aeon) — 1 skills · ★0 · last push 2026-06-04
-- [`lawbworld-tech/aeon`](https://github.com/lawbworld-tech/aeon) — 2 skills · ★0 · last push 2026-06-04
-- [`VibeSan7/aeon`](https://github.com/VibeSan7/aeon) — 6 skills · ★0 · last push 2026-06-04
-- [`TakamiyaZee/aeon`](https://github.com/TakamiyaZee/aeon) — 3 skills · ★0 · last push 2026-06-04
-- [`antfleet-ops/aeon`](https://github.com/antfleet-ops/aeon) — 1 skills · ★0 · last push 2026-06-04
-- [`Boodszw/Boodszw_Bread`](https://github.com/Boodszw/Boodszw_Bread) — 13 skills · ★0 · last push 2026-06-04
-- [`0xMal0u/aeon`](https://github.com/0xMal0u/aeon) — 8 skills · ★0 · last push 2026-06-04
-- [`gitlawbounty/aeon`](https://github.com/gitlawbounty/aeon) — 1 skills · ★1 · last push 2026-06-04
-- [`yugo-engineer/aeon`](https://github.com/yugo-engineer/aeon) — 1 skills · ★0 · last push 2026-06-04
-- [`Azh1er/aeon`](https://github.com/Azh1er/aeon) — 12 skills · ★0 · last push 2026-06-04
-- [`takanafur/aeon`](https://github.com/takanafur/aeon) — 1 skills · ★0 · last push 2026-06-04
-- [`Da6hkin/aeon`](https://github.com/Da6hkin/aeon) — 2 skills · ★0 · last push 2026-06-04
-- [`avalidurl/aeon`](https://github.com/avalidurl/aeon) — 1 skills · ★0 · last push 2026-06-04
-- [`beijiangqukuailian/aeon`](https://github.com/beijiangqukuailian/aeon) — 3 skills · ★0 · last push 2026-06-04
-- [`AITOBIAS04/CHORUS`](https://github.com/AITOBIAS04/CHORUS) — 14 skills · ★0 · last push 2026-06-04
-- [`UIZorrot/aeon`](https://github.com/UIZorrot/aeon) — 3 skills · ★0 · last push 2026-06-04
-- [`madebyshun/blueagent-aeon`](https://github.com/madebyshun/blueagent-aeon) — 7 skills · ★0 · last push 2026-06-04
-- [`yyayourt/aeon`](https://github.com/yyayourt/aeon) — 2 skills · ★0 · last push 2026-06-04
-- [`Damoncrypto/aeon`](https://github.com/Damoncrypto/aeon) — 3 skills · ★0 · last push 2026-06-04
-- [`NurstarK/aeon-upstream`](https://github.com/NurstarK/aeon-upstream) — 3 skills · ★0 · last push 2026-06-03
-- [`aeoncity-hub/aeon`](https://github.com/aeoncity-hub/aeon) — 3 skills · ★0 · last push 2026-06-03
-- [`seuzht/aeon`](https://github.com/seuzht/aeon) — 3 skills · ★0 · last push 2026-06-03
-- [`ikkeflikkeri/aeon`](https://github.com/ikkeflikkeri/aeon) — 3 skills · ★0 · last push 2026-06-02
-- [`rsavitt/aeon-upstream`](https://github.com/rsavitt/aeon-upstream) — 3 skills · ★0 · last push 2026-06-02
+- [`swarm-ai-research/aeon-atlas`](https://github.com/swarm-ai-research/aeon-atlas) — 6 skills · ★2 · last push 2026-09-27
+- [`pezetel/aeon`](https://github.com/pezetel/aeon) — 2 skills · ★0 · last push 2026-09-27
+- [`damo-nu11/aeon-minebean`](https://github.com/damo-nu11/aeon-minebean) — 2 skills · ★0 · last push 2026-09-27
+- [`lawbworld-tech/aeon`](https://github.com/lawbworld-tech/aeon) — 2 skills · ★0 · last push 2026-09-27
+- [`Svector-anu/svectors-lab`](https://github.com/Svector-anu/svectors-lab) — 30 skills · ★2 · last push 2026-09-27
+- [`antfleet-ops/aeon`](https://github.com/antfleet-ops/aeon) — 1 skills · ★0 · last push 2026-09-27
+- [`sparkleware/aeon`](https://github.com/sparkleware/aeon) — 3 skills · ★0 · last push 2026-09-27
+- [`Ant-Apex/aeon`](https://github.com/Ant-Apex/aeon) — 3 skills · ★0 · last push 2026-09-27
+- [`taekwonv89/aeon`](https://github.com/taekwonv89/aeon) — 13 skills · ★0 · last push 2026-09-27
+- [`enzoonchain/aeon`](https://github.com/enzoonchain/aeon) — 7 skills · ★0 · last push 2026-09-27
+- [`TakamiyaZee/aeon`](https://github.com/TakamiyaZee/aeon) — 3 skills · ★0 · last push 2026-09-27
+- [`UIZorrot/aeon`](https://github.com/UIZorrot/aeon) — 3 skills · ★0 · last push 2026-09-27
+- [`abhirajprasad/aeon`](https://github.com/abhirajprasad/aeon) — 1 skills · ★0 · last push 2026-09-27
+- [`Boodszw/Boodszw_Bread`](https://github.com/Boodszw/Boodszw_Bread) — 13 skills · ★0 · last push 2026-09-27
+- [`gitlawbounty/aeon`](https://github.com/gitlawbounty/aeon) — 1 skills · ★1 · last push 2026-09-27
+- [`youpsla/aeon`](https://github.com/youpsla/aeon) — 1 skills · ★0 · last push 2026-09-27
+- [`0xMal0u/aeon`](https://github.com/0xMal0u/aeon) — 8 skills · ★0 · last push 2026-09-27
+- [`gdalabs/aeon`](https://github.com/gdalabs/aeon) — 2 skills · ★0 · last push 2026-09-27
+- [`thanhdat3007-create/aeon`](https://github.com/thanhdat3007-create/aeon) — 2 skills · ★0 · last push 2026-09-27
+- [`amritmirch/aeon`](https://github.com/amritmirch/aeon) — 3 skills · ★0 · last push 2026-09-26
+- [`hansj73/aeon`](https://github.com/hansj73/aeon) — 4 skills · ★0 · last push 2026-09-26
+- [`danbuildss/aeon`](https://github.com/danbuildss/aeon) — 2 skills · ★0 · last push 2026-09-26
+- [`AwesomeAgentTools/aeon`](https://github.com/AwesomeAgentTools/aeon) — 2 skills · ★0 · last push 2026-09-26
+- [`AITOBIAS04/CHORUS`](https://github.com/AITOBIAS04/CHORUS) — 14 skills · ★1 · last push 2026-09-26
+- [`madebyshun/blueagent-aeon`](https://github.com/madebyshun/blueagent-aeon) — 7 skills · ★0 · last push 2026-09-26
+- [`stefrogovskyi/aeon`](https://github.com/stefrogovskyi/aeon) — 2 skills · ★0 · last push 2026-09-26
+- [`alexverify/aeon`](https://github.com/alexverify/aeon) — 2 skills · ★0 · last push 2026-09-26
+- [`beijiangqukuailian/aeon`](https://github.com/beijiangqukuailian/aeon) — 3 skills · ★0 · last push 2026-09-26
+- [`takanafur/aeon`](https://github.com/takanafur/aeon) — 1 skills · ★0 · last push 2026-09-25
+- [`czijian729-oss/aeon`](https://github.com/czijian729-oss/aeon) — 8 skills · ★0 · last push 2026-09-25
 
 ## Layer 3 — Community skill packs
 
@@ -110,55 +110,9 @@ Categories Hermes Atlas has and Aeon doesn't — yet. Each one is a slot waiting
 
 Entities present in the underlying data that no layer has claimed yet. Promote them by editing `data/atlas-layers.json` and re-running `scripts/atlas-layers.mjs`.
 
-**Ecosystem projects:**
+**Active forks beyond the Layer 2 cutoff (top 30 of 33):**
 
-- [AgentBounty](https://x.com/agentbountydev)
-- [Amper](https://x.com/ampera_xyze)
-- [Autonomopoly](https://x.com/AUTONOMOPOLY_)
-- [Bankr](https://x.com/bankrbot)
-- [Bankrsynth](https://x.com/bankrsynth)
-- [BaseHouse](https://x.com/basehouse_org)
-- [Baseline](https://x.com/BaselineMarkets)
-- [Bean](https://x.com/minebean_)
-- [Blue Agent](https://x.com/blueagent_)
-- [Capacitr](https://x.com/capacitr_)
-- [Claw Harbor](https://x.com/ClawHarbor)
-- [ClawBank](https://x.com/ClawBankHQ)
-- [Clerk](https://x.com/clerk)
-- [Cobot](https://x.com/cobotgg)
-- [GitBlock](https://x.com/gitblock_)
-- [GitBounty](https://x.com/Git_Bounty)
-- [GitKernal](https://x.com/gitkernal)
-- [Gitlawb Terminal](https://x.com/Gitlawbterminal)
-- [LawbWorld](https://x.com/LawbWorld)
-- [LiquidPad](https://x.com/LiquidPadBot)
-- [Liq](https://x.com/_proxystudio)
-- [Mei](https://x.com/MeiMighty1)
-- [MythosForge](https://x.com/mythosforgebot)
-- [NoelClaw](https://x.com/noelclawfun)
-- [PancakeSwap](https://x.com/PancakeSwap)
-- [Powerloom](https://x.com/Powerloom)
-- [Precog](https://x.com/precog)
-- [Reg Terminal](https://x.com/regterminal)
-- [ResearchSwarm](https://x.com/ResearchSwarmAI)
-- [Revault](https://x.com/revaultdrops)
-- [RootAi](https://x.com/rootaichad)
-- [SAM](https://x.com/prmrsamm)
-- [Signa](https://x.com/Signa_Agent)
-- [Solvr](https://x.com/solvrbot)
-- [Spoon](https://x.com/Spoonautobot)
-- [SyntheticsAI](https://x.com/SyntheticsAI_)
-- [Tachi](https://x.com/smolekoma)
-- [USIC](https://x.com/USICAI)
-- [Venice Kernel](https://x.com/VeniceKernel)
-- [Vexor](https://x.com/Vexora_x)
-- [Wake](https://x.com/WakeOnBase)
-- [x402Books](https://x.com/x402Books)
-- [zer0](https://x.com/Jaineon0G)
-
-**Active forks beyond the Layer 2 cutoff (top 30 of 97):**
-
-`AISynthetics/aeon`, `vigilcodes/aeon`, `BuiltByEcho/aeon`, `LiamVisionary/aeon`, `jianggaoyi/aeon`, `yindaqiu/aeon`, `gdalabs/aeon`, `Atrium-Hermes/aeon`, `z-korp/aeon`, `BBridgeers/aeon`, `0xNN/aeon`, `simistern/aeon`, `shulthz/aeon-work`, `0xbobzilla/aeon`, `likenow66/aeon`, `mandateseal/aeon`, `loessy/aeon`, `AntFleet/aeon`, `houndflow/aeon`, `AIRYDER/aeon`, `ScoutAeon/Scout`, `NoctelXBT/aeon`, `KanekiCraynet/aeon`, `xBalbinus/aeon`, `needsomevibe/aeon`, `0xWCME/aeon`, `richard7463/aeon`, `janicegrech1-hash/aeon`, `Keeleran/aeon`, `sparkleware/aeon`
+`Secure-Code-Pro-Zyloch/aeon`, `Oscar-Williams/aeon`, `brainsparker/aeon`, `Ditto190/aeon-automaton-modme`, `rohitctrl/aeon`, `Corykidios/aeon`, `iamziek/aeon`, `traveler3022/aeon`, `niu12503/aeon`, `0xsnackbaker/aeon`, `Pinont/aeon.fun`, `corinth1ans/aeon`, `krpx0341/aeon`, `darkstaryuri/aeon`, `cyborganeh/aeon`, `Jason9720/aeon`, `dipanshuhappy/aeon`, `forumchen388-debug/aeon`, `keyurbodar/aeon`, `MADRIGAL007/aeon`, `weezyf1995-boop/aeon`, `elegarmco/aeon`, `MagIcKEarl/aeon`, `Calcutatator/aeon`, `cultosagent/aeon`, `nigelon11/aeon`, `clawhunter/add-clawhunter-pack`, `gitlumen-team/aeon`, `ashneil12/aeon-upstream`, `aeoncity-hub/aeon`
 
 ## How this page is built
 Hand-curated layer assignments live in [`data/atlas-layers.json`](https://github.com/aaronjmars/aeon/blob/main/data/atlas-layers.json). Bulk layers (the fleet, the pack registry) auto-fill from `atlas.json` and `skill-packs.json` respectively. Anything in those feeds that no layer has claimed surfaces under *Unclassified candidates* above — promote an entry by adding it to the right layer in the curation file and re-running.
