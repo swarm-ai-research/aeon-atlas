@@ -1,1 +1,15 @@
-Fork Contributor Leaderboard 2026-10-25: ether-btc is 67 commits deep with an open PR for a persistent GitHub filing ledger - one merge away from breaking in. Svector-anu holds #1 with 78 merged PRs. Top 5: 1) Svector-anu 814pts 2) antfleet-ops 149pts 3) houndflow 98pts 4) alexverify 85pts 5) NurstarK 79pts. Full leaderboard in articles/fork-contributor-leaderboard-2026-10-25.md
+*Fork Contributor Leaderboard — 2026-11-01*
+
+sparkleware jumped from #20 to #9 — five unreleased skills in their fork now on radar.
+
+Top 5:
+1. @Svector-anu — score 818 (78 merged PRs, 2 reviews)
+2. @antfleet-ops — score 149 (14 merged PRs)
+3. @houndflow — score 98 (8 merged PRs)
+4. @NurstarK — score 98 (7 merged PRs, 5 new skills)
+5. @sentinelhood — score 95 (7 merged PRs, 5 new skills)
+
+First PRs this week: none
+Top reviewer: @Svector-anu (2 comments)
+
+Full leaderboard: https://github.com/swarm-ai-research/aeon-atlas/blob/main/articles/fork-contributor-leaderboard-2026-11-01.md
