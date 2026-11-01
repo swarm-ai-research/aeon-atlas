@@ -1,0 +1,40 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Atlas layers"
+      },
+      "children": [
+        "stack-content"
+      ]
+    },
+    "stack-content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text-main",
+        "pr-link"
+      ]
+    },
+    "text-main": {
+      "type": "Text",
+      "props": {
+        "text": "Svector-anu/svectors-lab entered the fleet (★2)"
+      }
+    },
+    "pr-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #35",
+        "href": "https://github.com/swarm-ai-research/aeon-atlas/pull/35",
+        "source": "GitHub"
+      }
+    }
+  }
+}
