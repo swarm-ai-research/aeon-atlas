@@ -1,4 +1,4 @@
-# 🛰️ Aeon Fleet Scorecard — as of 2026-10-31
+# 🛰️ Aeon Fleet Scorecard — as of 2026-11-01
 
 _Auto-generated daily by skills/fleet-scorecard. Tokens reported OpenRouter-style (cached_tokens ⊆ prompt_tokens)._
 
