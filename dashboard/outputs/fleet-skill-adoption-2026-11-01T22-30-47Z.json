@@ -1,0 +1,219 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Fleet Skill Adoption — 2026-11-01",
+        "description": "7 active forks measured against 87 upstream skills"
+      },
+      "children": [
+        "header-stats",
+        "sep-1",
+        "adopted-heading",
+        "adopted-heartbeat",
+        "adopted-auto-workflow",
+        "adopted-autoresearch",
+        "sep-2",
+        "operator-info-1",
+        "operator-info-2",
+        "sep-3",
+        "decliners-heading",
+        "decliner-auto-merge",
+        "decliner-operator-scorecard",
+        "decliner-arc-studio",
+        "decliner-article",
+        "decliner-more",
+        "sep-4",
+        "faststart-heading",
+        "faststart-text",
+        "sep-5",
+        "zero-adoption",
+        "sep-6",
+        "leaderboard"
+      ]
+    },
+    "header-stats": {
+      "type": "Grid",
+      "props": {
+        "columns": 4,
+        "gap": "md"
+      },
+      "children": [
+        "stat-forks",
+        "stat-skills",
+        "stat-contraction",
+        "stat-stale"
+      ]
+    },
+    "stat-forks": {
+      "type": "Stat",
+      "props": {
+        "label": "Active forks",
+        "value": "7"
+      }
+    },
+    "stat-skills": {
+      "type": "Stat",
+      "props": {
+        "label": "Upstream skills",
+        "value": "87"
+      }
+    },
+    "stat-contraction": {
+      "type": "Stat",
+      "props": {
+        "label": "Fleet (this week)",
+        "value": "11→7"
+      }
+    },
+    "stat-stale": {
+      "type": "Stat",
+      "props": {
+        "label": "Gone stale",
+        "value": "4"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "adopted-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Most Adopted",
+        "level": "h3"
+      }
+    },
+    "adopted-heartbeat": {
+      "type": "Stat",
+      "props": {
+        "label": "heartbeat",
+        "value": "100%",
+        "delta": "7/7"
+      }
+    },
+    "adopted-auto-workflow": {
+      "type": "Stat",
+      "props": {
+        "label": "auto-workflow",
+        "value": "14%",
+        "delta": "1/7"
+      }
+    },
+    "adopted-autoresearch": {
+      "type": "Stat",
+      "props": {
+        "label": "autoresearch",
+        "value": "14%",
+        "delta": "1/7"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "operator-info-1": {
+      "type": "Text",
+      "props": {
+        "text": "One operator (tomscaria/aeon) runs 19 skills; all others are heartbeat-only.",
+        "variant": "body"
+      }
+    },
+    "operator-info-2": {
+      "type": "Text",
+      "props": {
+        "text": "All % shifts are denominator-driven — no new adoptions or intentional drops detected.",
+        "variant": "body"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "decliners-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Decliners (fleet contraction)",
+        "level": "h3"
+      }
+    },
+    "decliner-auto-merge": {
+      "type": "Text",
+      "props": {
+        "text": "auto-merge −18pts",
+        "variant": "body"
+      }
+    },
+    "decliner-operator-scorecard": {
+      "type": "Text",
+      "props": {
+        "text": "operator-scorecard −18pts",
+        "variant": "body"
+      }
+    },
+    "decliner-arc-studio": {
+      "type": "Text",
+      "props": {
+        "text": "arc-studio −9pts",
+        "variant": "body"
+      }
+    },
+    "decliner-article": {
+      "type": "Text",
+      "props": {
+        "text": "article −9pts",
+        "variant": "body"
+      }
+    },
+    "decliner-more": {
+      "type": "Text",
+      "props": {
+        "text": "+50 more (fleet contraction)",
+        "variant": "muted"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "faststart-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Fast Start",
+        "level": "h3"
+      }
+    },
+    "faststart-text": {
+      "type": "Text",
+      "props": {
+        "text": "vuln-scanner shipped 2026-10-28, already at 14%",
+        "variant": "body"
+      }
+    },
+    "sep-5": {
+      "type": "Separator",
+      "props": {}
+    },
+    "zero-adoption": {
+      "type": "Text",
+      "props": {
+        "text": "65 established skills at 0% fleet adoption",
+        "variant": "muted"
+      }
+    },
+    "sep-6": {
+      "type": "Separator",
+      "props": {}
+    },
+    "leaderboard": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full leaderboard",
+        "href": "articles/fleet-skill-adoption-2026-11-01.md",
+        "source": "aeon"
+      }
+    }
+  }
+}
