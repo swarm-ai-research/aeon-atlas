@@ -1,0 +1,135 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Fork Skill Gap",
+        "description": "Analysis of upstream skill adoption across 30 active forks — 2026-11-01"
+      },
+      "children": [
+        "heading1",
+        "stat1",
+        "stat2",
+        "stat3",
+        "text1",
+        "separator1",
+        "heading2",
+        "table1",
+        "separator2",
+        "heading3",
+        "text2",
+        "separator3",
+        "link1"
+      ]
+    },
+    "heading1": {
+      "type": "Heading",
+      "props": {
+        "text": "WIDE_GAP: 7 Forks Missing 20+ Upstream Skills",
+        "level": "h2"
+      }
+    },
+    "stat1": {
+      "type": "Stat",
+      "props": {
+        "label": "Readable Forks with Major Gaps",
+        "value": "7",
+        "delta": "median gap: 47 skills"
+      }
+    },
+    "stat2": {
+      "type": "Stat",
+      "props": {
+        "label": "Forks with Readable Manifests",
+        "value": "12 of 30"
+      }
+    },
+    "stat3": {
+      "type": "Stat",
+      "props": {
+        "label": "Upstream Skills Available",
+        "value": "171"
+      }
+    },
+    "text1": {
+      "type": "Text",
+      "props": {
+        "text": "Upstream ships 171 skills; the median fork is missing 47."
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading2": {
+      "type": "Heading",
+      "props": {
+        "text": "Top 3 Forks by Gap",
+        "level": "h3"
+      }
+    },
+    "table1": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Fork",
+          "Missing Skills",
+          "Categories"
+        ],
+        "rows": [
+          [
+            "@nigelon11 — aeon",
+            "101",
+            "other, dev, productivity"
+          ],
+          [
+            "@Boodszw — Boodszw_Bread",
+            "58",
+            "other, dev, crypto"
+          ],
+          [
+            "@madebyshun — blueagent-aeon",
+            "53",
+            "other, dev, crypto"
+          ]
+        ]
+      }
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading3": {
+      "type": "Heading",
+      "props": {
+        "text": "Universally Unadopted Upstream Skills",
+        "level": "h3"
+      }
+    },
+    "text2": {
+      "type": "Text",
+      "props": {
+        "text": "fork-health-score, follow-up-patrol — both missing in 8 of 12 forks"
+      }
+    },
+    "separator3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "link1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full Report",
+        "href": "articles/fork-skill-gap-2026-11-01.md"
+      }
+    }
+  }
+}
