@@ -1,0 +1,306 @@
+{
+  "root": "card_heartbeat",
+  "state": {},
+  "elements": {
+    "card_heartbeat": {
+      "type": "Card",
+      "props": {
+        "title": "Heartbeat"
+      },
+      "children": [
+        "alert_degraded",
+        "separator_1",
+        "heading_iss011",
+        "stack_details"
+      ]
+    },
+    "alert_degraded": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "🔴 DEGRADED",
+        "message": "ISS-011 escalated medium→high"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_iss011": {
+      "type": "Heading",
+      "props": {
+        "text": "ISS-011: System Dispatch Gap Event",
+        "level": "h2"
+      }
+    },
+    "stack_details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "section_heartbeat",
+        "separator_2",
+        "section_api_health",
+        "separator_3",
+        "section_atlas",
+        "separator_4",
+        "section_root_cause",
+        "separator_5",
+        "section_related_skills",
+        "separator_6",
+        "section_action"
+      ]
+    },
+    "section_heartbeat": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_heartbeat",
+        "text_blackout",
+        "text_slots",
+        "text_self_check"
+      ]
+    },
+    "heading_heartbeat": {
+      "type": "Heading",
+      "props": {
+        "text": "Heartbeat Status",
+        "level": "h3"
+      }
+    },
+    "text_blackout": {
+      "type": "Text",
+      "props": {
+        "text": "Blacked out entire 2026-11-01 day (all 08:00/14:00/20:00 slots dropped)"
+      }
+    },
+    "text_slots": {
+      "type": "Text",
+      "props": {
+        "text": "All scheduled time slots dropped across single day"
+      }
+    },
+    "text_self_check": {
+      "type": "Text",
+      "props": {
+        "text": "Self-check now ~34h, nearing the 36h fire line"
+      }
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_api_health": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_api_health",
+        "text_missed_probes",
+        "text_staleness"
+      ]
+    },
+    "heading_api_health": {
+      "type": "Heading",
+      "props": {
+        "text": "API Health Probe",
+        "level": "h3"
+      }
+    },
+    "text_missed_probes": {
+      "type": "Text",
+      "props": {
+        "text": "Missed 4 consecutive 10:00 probes"
+      }
+    },
+    "text_staleness": {
+      "type": "Text",
+      "props": {
+        "text": "Data ~118h stale"
+      }
+    },
+    "separator_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_atlas": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_atlas",
+        "text_atlas"
+      ]
+    },
+    "heading_atlas": {
+      "type": "Heading",
+      "props": {
+        "text": "Atlas Service",
+        "level": "h3"
+      }
+    },
+    "text_atlas": {
+      "type": "Text",
+      "props": {
+        "text": "Crossed 2× its weekly interval (15d)"
+      }
+    },
+    "separator_4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_root_cause": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_root_cause",
+        "text_root_cause",
+        "text_lineage"
+      ]
+    },
+    "heading_root_cause": {
+      "type": "Heading",
+      "props": {
+        "text": "Root Cause",
+        "level": "h3"
+      }
+    },
+    "text_root_cause": {
+      "type": "Text",
+      "props": {
+        "text": "Recurring native GitHub Actions schedule: dispatch gap"
+      }
+    },
+    "text_lineage": {
+      "type": "Text",
+      "props": {
+        "text": "Issue lineage: ISS-005→009"
+      }
+    },
+    "separator_5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_related_skills": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_related_skills",
+        "text_recovered",
+        "badge_fork_alert",
+        "badge_fleet_scorecard",
+        "text_stuck",
+        "badge_fork_cohort"
+      ]
+    },
+    "heading_related_skills": {
+      "type": "Heading",
+      "props": {
+        "text": "Related Skills Status",
+        "level": "h3"
+      }
+    },
+    "text_recovered": {
+      "type": "Text",
+      "props": {
+        "text": "Recovered:"
+      }
+    },
+    "badge_fork_alert": {
+      "type": "Badge",
+      "props": {
+        "text": "fork-first-run-alert",
+        "variant": "secondary"
+      }
+    },
+    "badge_fleet_scorecard": {
+      "type": "Badge",
+      "props": {
+        "text": "fleet-scorecard",
+        "variant": "secondary"
+      }
+    },
+    "text_stuck": {
+      "type": "Text",
+      "props": {
+        "text": "Stuck:"
+      }
+    },
+    "badge_fork_cohort": {
+      "type": "Badge",
+      "props": {
+        "text": "fork-cohort (stuck since 2026-10-25, deduped)",
+        "variant": "outline"
+      }
+    },
+    "separator_6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_action": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_action",
+        "text_backstop",
+        "text_no_failures",
+        "text_status_page"
+      ]
+    },
+    "heading_action": {
+      "type": "Heading",
+      "props": {
+        "text": "Action Required",
+        "level": "h3"
+      }
+    },
+    "text_backstop": {
+      "type": "Text",
+      "props": {
+        "text": "Durable offset-cron / external-dispatch backstop remains operator action"
+      }
+    },
+    "text_no_failures": {
+      "type": "Text",
+      "props": {
+        "text": "No failed or API-down skills"
+      }
+    },
+    "text_status_page": {
+      "type": "Text",
+      "props": {
+        "text": "Status page refreshed"
+      }
+    }
+  }
+}

@@ -4,7 +4,7 @@
 
 | ID | Title | Severity | Category | Detected |
 |----|-------|----------|----------|----------|
-| ISS-011 | scheduler quiet window (fresh recurrence of ISS-005→009) — daily skills dropping dispatch slots: api-health-probe ~70.7h stale (2 consec 10:00 misses) + fork-first-run-alert ~59.5h (2 consec 20:30 misses) + heartbeat's own 10-30 20:00 slot dropped; pre-committed ISS-011 trip-wire (set 10-30 14:00) tripped. Self-check NOT breached (~17.3h <36h) → medium, not high. Durable offset-cron / external-dispatch backstop still operator-action-required | medium | config | 2026-10-31 |
+| ISS-011 | scheduler quiet window (fresh recurrence of ISS-005→009) — native GitHub Actions `schedule:` dispatch gap. **Escalated medium→high 2026-11-02**: heartbeat blacked out its entire 11-01 day (all 3 slots), api-health-probe ~118h stale (4 consec 10:00 misses), atlas past 2× weekly (15d); self-check ~34.2h (on the brink of 36h). fork-first-run-alert + fleet-scorecard recovered. Durable offset-cron / external-dispatch backstop still operator-action-required | high | config | 2026-10-31 |
 
 ## Resolved
 
