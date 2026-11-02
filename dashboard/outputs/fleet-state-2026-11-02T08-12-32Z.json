@@ -1,0 +1,101 @@
+{
+  "root": "card_fleet",
+  "state": {},
+  "elements": {
+    "card_fleet": {
+      "type": "Card",
+      "props": {
+        "title": "Fleet State — 2026-11-02"
+      },
+      "children": [
+        "text_author",
+        "alert_cold_start",
+        "sep1",
+        "info_stack",
+        "sep2",
+        "action_text",
+        "digest_link"
+      ]
+    },
+    "text_author": {
+      "type": "Text",
+      "props": {
+        "text": "aeonfun/aeon",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "alert_cold_start": {
+      "type": "Alert",
+      "props": {
+        "title": "COLD START: first fleet-state run",
+        "message": "Cohort data pending",
+        "type": "info"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "info_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_cohort",
+        "text_releases",
+        "text_spotlight"
+      ]
+    },
+    "text_cohort": {
+      "type": "Text",
+      "props": {
+        "text": "This is fleet-state's first run. Cohort data is not yet available (fork-cohort has not written its state file)."
+      },
+      "children": []
+    },
+    "text_releases": {
+      "type": "Text",
+      "props": {
+        "text": "Release tracker shows 0 tagged releases in the last 7 days."
+      },
+      "children": []
+    },
+    "text_spotlight": {
+      "type": "Text",
+      "props": {
+        "text": "No spotlight pick on record."
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "action_text": {
+      "type": "Text",
+      "props": {
+        "text": "Run fork-cohort to populate bucket counts for next week's delta."
+      },
+      "children": []
+    },
+    "digest_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full digest",
+        "href": "articles/fleet-state-2026-11-02.md",
+        "source": "Fleet State"
+      },
+      "children": []
+    }
+  }
+}

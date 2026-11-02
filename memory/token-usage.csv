@@ -345,3 +345,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-11-01,fleet-scorecard,claude-sonnet-4-6,13,3423,360374,18808
 2026-11-01,fork-skill-digest,claude-sonnet-4-6,8,10023,267727,40454
 2026-11-01,fork-skill-gap,claude-sonnet-4-6,140,91402,11490858,139041
+2026-11-02,fleet-state,claude-sonnet-4-6,17,6591,582315,26972
