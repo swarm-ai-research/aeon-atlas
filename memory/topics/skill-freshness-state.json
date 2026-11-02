@@ -1,13 +1,14 @@
 {
-  "last_run_at": "2026-10-31T08:50:23Z",
+  "last_run_at": "2026-11-02T08:15:00Z",
   "last_verdict": "FRESHNESS_STALE",
-  "last_flagged_fingerprint": "7b0ddff4e688b47636fbcd9f4ed4bbe4ae75a819",
+  "last_flagged_fingerprint": "5ac877e8fe7ea3c1dab1c72a64c6e50a83097cd9",
   "consumer_count": 26,
-  "dependency_count": 31,
-  "flagged_count": 3,
+  "dependency_count": 32,
+  "flagged_count": 4,
   "first_seen_at": {
     "fleet-state:articles/contributor-spotlight-*.md": "2026-10-31T08:50:23Z",
     "fleet-state:articles/fork-cohort-*.md": "2026-10-31T08:50:23Z",
-    "fleet-state:articles/fork-release-*.md": "2026-10-31T08:50:23Z"
+    "fleet-state:articles/fork-release-*.md": "2026-10-31T08:50:23Z",
+    "contributor-spotlight:articles/fork-cohort-*.md": "2026-11-02T08:15:00Z"
   }
 }
