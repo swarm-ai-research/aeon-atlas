@@ -1,0 +1,80 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "New fork live — 2026-11-03 — duan521127/aeon",
+        "description": "@duan521127 just ran their first workflow on Aeon. Welcome to the running fleet."
+      },
+      "children": [
+        "stack_stats",
+        "separator1",
+        "stack_links"
+      ]
+    },
+    "stack_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat_stars",
+        "stat_first_run",
+        "stat_when"
+      ]
+    },
+    "stat_stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars",
+        "value": "0"
+      }
+    },
+    "stat_first_run": {
+      "type": "Stat",
+      "props": {
+        "label": "First run",
+        "value": "chore: set model to openai/gpt-6.1-sol"
+      }
+    },
+    "stat_when": {
+      "type": "Stat",
+      "props": {
+        "label": "When",
+        "value": "2026-11-03 18:39 UTC"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "stack_links": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "link_fork",
+        "link_run"
+      ]
+    },
+    "link_fork": {
+      "type": "Link",
+      "props": {
+        "label": "Fork",
+        "href": "https://github.com/duan521127/aeon"
+      }
+    },
+    "link_run": {
+      "type": "Link",
+      "props": {
+        "label": "Run",
+        "href": "https://github.com/duan521127/aeon/actions/runs/41695758105"
+      }
+    }
+  }
+}
