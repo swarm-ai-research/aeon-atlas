@@ -1,21 +1,22 @@
-Heartbeat complete for the 11-04 20:00 slot (ran ~21:29 UTC, ~1h29m late).
-
-**HEARTBEAT_OK (no new notification) · STATUS_PAGE=DEGRADED**
+Heartbeat complete. Overall fleet state is 🔴 **DEGRADED**, but every flagged item is a continuation of a known, already-notified pattern — so per the dedup rule, **no new notification was sent**.
 
 ## Summary
 
-Ran all heartbeat checks against `memory/cron-state.json`, `aeon.yml`, and the issue tracker; nothing newly broke outside the known, already-notified pattern, so no notification was sent (dedup).
+**Run:** 11-05 08:00 slot, executed ~08:27 UTC (~27 min late — jitter, within tolerance).
 
-**Findings (all deduped — within 48h window):**
-- **P0:** No `failed`/degraded/chronic skills. `fork-cohort` still 🕸 STUCK (dispatched 2026-10-25, ~240h, no success) — first notified 10-26, logged continuously. Heartbeat self-check ~5.8h (healthy, well under 36h).
-- **ISS-011 (high, open):** Native `schedule:` dispatch gap persists — api-health-probe ~179h / 7 consecutive 10:00 misses, atlas ~17.7d (past 2× weekly). Notified 11-02; durable offset-cron/external-dispatch backstop remains operator-action-required.
-- **P1:** 16 stale bot PRs (#13–#35), no open issues, no urgent labels — auto-managed/deduped.
-- **P2:** Notification channels still 0/3 (Discord secret pending since 09-13) — old.
-- **P3:** 3 never-run enabled skills (ai-framework-watch, follow-up-patrol, workflow-security-audit) — known cohort, deduped.
+**Findings (all DEDUPED — notified within last 48h, no re-notify):**
+- **P0 — fork-cohort 🕸 STUCK** (~251h in `dispatched` since 2026-10-25, never reported back) → drives DEGRADED.
+- **P0 self-check:** heartbeat healthy — last success ~10.9h ago, well under the 36h bar.
+- **ISS-011 (high, open):** native GitHub Actions `schedule:` dispatch gap continues. api-health-probe ~190h / 7 consecutive 10:00 misses (11-05 10:00 not yet due); atlas ~18.2d past 2× weekly. Durable fix (offset-cron / external dispatch backstop) remains operator-action-required.
+- **P1:** 16 stale bot/doc PRs (auto-managed), no open issues, no urgent labels.
+- **P2:** notification channels still 0/3 (Discord blocked on missing secret since 09-13).
+- **P3:** 3 never-run enabled skills (ai-framework-watch, follow-up-patrol, workflow-security-audit); Monday/Sunday weekly skills that missed slots sit at ~10d, still under the 14d threshold.
+
+**Notification:** NO — nothing newly broke outside the known pattern; dedup suppresses. (Soul files are template-only placeholders → neutral tone would apply.)
 
 **Files modified:**
-- `docs/status.md` — regenerated (Overall 🔴 DEGRADED, Updated 2026-11-04 21:29 UTC, 26 enabled skills, 1 open issue; Token pulse omitted — no token report / tracked-token table).
-- `memory/issues/INDEX.md` — refreshed ISS-011 row to 11-04 21:29 state.
-- `memory/logs/2026-11-04.md` — appended the 20:00-slot log entry.
+- `docs/status.md` — regenerated. **STATUS_PAGE=DEGRADED**, updated 2026-11-05 08:27 UTC, 1 open issue, next run api-health-probe 10:00 UTC. All 26 enabled skills listed (23 with entries sorted by last-run desc; fork-cohort flagged 🕸 stuck; 3 never-run at bottom). Token pulse omitted (no token-report article, no Tracked Token table).
+- `memory/issues/INDEX.md` — refreshed ISS-011 row with current 11-05 state.
+- `memory/logs/2026-11-05.md` — logged findings + `STATUS_PAGE=DEGRADED`.
 
-**Follow-up (operator action, unchanged):** add the durable offset-cron / external `workflow_dispatch` backstop to close ISS-011; configure `DISCORD_WEBHOOK_URL` to unblock notifications.
+**Follow-up (operator action):** install a durable offset-cron / external `workflow_dispatch` backstop to close the scheduler quiet window (ISS-011); configure `DISCORD_WEBHOOK_URL` to unblock notifications.
