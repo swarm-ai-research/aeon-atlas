@@ -1,0 +1,114 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "New fork live"
+      },
+      "children": [
+        "subtitle",
+        "description",
+        "sep1",
+        "metadata_section",
+        "sep2",
+        "links_section"
+      ]
+    },
+    "subtitle": {
+      "type": "Text",
+      "props": {
+        "text": "2026-11-06 — SorenMoussavian/SorenOS-Aeon",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "description": {
+      "type": "Text",
+      "props": {
+        "text": "@SorenMoussavian just ran their first workflow on Aeon. Welcome to the running fleet.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "metadata_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "stars_line",
+        "first_run_line",
+        "when_line"
+      ]
+    },
+    "stars_line": {
+      "type": "Text",
+      "props": {
+        "text": "Stars: 0",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "first_run_line": {
+      "type": "Text",
+      "props": {
+        "text": "First run: scheduler: cron",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "when_line": {
+      "type": "Text",
+      "props": {
+        "text": "When: today",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "links_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "fork_link",
+        "run_link"
+      ]
+    },
+    "fork_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "SorenMoussavian/SorenOS-Aeon",
+        "href": "https://github.com/SorenMoussavian/SorenOS-Aeon",
+        "source": "GitHub"
+      },
+      "children": []
+    },
+    "run_link": {
+      "type": "Link",
+      "props": {
+        "label": "Run: Workflow #42288269995",
+        "href": "https://github.com/SorenMoussavian/SorenOS-Aeon/actions/runs/42288269995"
+      },
+      "children": []
+    }
+  }
+}

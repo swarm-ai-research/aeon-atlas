@@ -1,7 +1,7 @@
 {
   "parent_repo": "aeonfun/aeon",
-  "last_run": "2026-11-04",
-  "last_status": "FORK_FIRST_RUN_ALERT_QUIET",
+  "last_run": "2026-11-06",
+  "last_status": "FORK_FIRST_RUN_ALERT_OK",
   "seen": {
     "njfyanf9-a11y/aeon-njfyanf9-a11y": {
       "first_seen_active_at": "2026-10-31",
@@ -205,6 +205,12 @@
       "first_seen_active_at": "2026-11-03",
       "first_seen_active_run_at": "2026-11-03T18:39:22Z",
       "announced_at": "2026-11-03",
+      "stargazers": 0
+    },
+    "sorenmoussavian/sorenos-aeon": {
+      "first_seen_active_at": "2026-11-06",
+      "first_seen_active_run_at": "2026-11-06T20:25:54Z",
+      "announced_at": "2026-11-06",
       "stargazers": 0
     }
   }
