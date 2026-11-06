@@ -4,7 +4,7 @@
 
 | ID | Title | Severity | Category | Detected |
 |----|-------|----------|----------|----------|
-| ISS-011 | scheduler quiet window (fresh recurrence of ISS-005→009) — native GitHub Actions `schedule:` dispatch gap. Escalated medium→high 2026-11-02. **11-05 08:27 still DEGRADED (deduped, no re-notify):** heartbeat cadence healthy (self-check ~10.9h, well under 36h; 11-05 08:00 slot ~27m late = jitter). api-health-probe now ~190h / **7 consecutive 10:00 misses** (10-29→11-04; 11-05 10:00 not yet due). atlas ~18.2d (still past 2× weekly; also missed 11-01 Sunday slot). fork-cohort separately 🕸 STUCK ~251h. Durable offset-cron / external-dispatch backstop still operator-action-required | high | config | 2026-10-31 |
+| ISS-011 | scheduler quiet window (fresh recurrence of ISS-005→009) — native GitHub Actions `schedule:` dispatch gap. Escalated medium→high 2026-11-02. **11-06 09:33 still DEGRADED (deduped, no re-notify):** heartbeat cadence now degraded — dropped 3 consecutive own slots (11-05 14:00, 11-05 20:00, 11-06 08:00; this run ~1.5h late), self-check ~25h (still <36h → self-check not fired). api-health-probe now ~215h / **8 consecutive 10:00 misses** (10-29→11-05; 11-06 10:00 not yet due). atlas ~19.2d (still past 2× weekly). fork-cohort separately 🕸 STUCK ~276h. Durable offset-cron / external-dispatch backstop still operator-action-required | high | config | 2026-10-31 |
 
 ## Resolved
 
