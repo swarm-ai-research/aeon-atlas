@@ -1,20 +1,23 @@
-Heartbeat complete. `HEARTBEAT_OK` with findings deduped · `STATUS_PAGE=DEGRADED`.
+Heartbeat complete. Here's the summary.
 
 ## Summary
 
-Ran the full heartbeat check at 2026-11-06 09:33 UTC (the 08:00 slot fired ~1.5h late — itself a symptom of ISS-011).
+Ran the **heartbeat** skill for the 2026-11-06 20:00 UTC slot (executed ~21:48 UTC, ~1h48m late — itself a symptom of the tracked scheduler issue).
 
-**Findings (all within the known, already-notified ISS-011 scheduler quiet window → no new notification):**
-- 🔴 **P0 — fork-cohort still 🕸 STUCK** (`dispatched` since 2026-10-25, ~276h). Deduped — flagged/notified since 10-26.
-- 🔴 **ISS-011 (high, open) worsened within pattern:** heartbeat cadence itself has now degraded — it dropped 3 consecutive own slots (11-05 14:00, 11-05 20:00, 11-06 08:00). Self-check is ~25h (under the 36h alarm threshold, so it did not fire). api-health-probe now at 8 consecutive 10:00 misses (~215h); atlas ~19.2d past its 2× weekly window.
-- **P1:** 16 stale bot PRs (#13–#35), auto-managed; no open issues; no urgent labels.
-- **P2/P3:** Notification channels still 0/3 (Discord secret pending since 09-13); 3 never-run skills (ai-framework-watch, follow-up-patrol, workflow-security-audit) — all old/deduped.
+**Findings (all within known, already-notified patterns → no new notification):**
+- 🔴 **Overall DEGRADED** — `fork-cohort` still 🕸 STUCK (~287h dispatched since 10-25, no success). Deduped (notified 10-26, continuous in logs).
+- **No** failed skills, API degradation, or chronic failures.
+- **Self-check passed:** heartbeat last success 09:36 → ~12.2h, under the 36h threshold, so no self-alarm.
+- **ISS-011 broadening** (high, open): same native `schedule:` dispatch gap now visibly affecting more daily skills — heartbeat dropped 4 recent slots; api-health-probe ~227h/9 misses; atlas ~19.7d; **newly surfaced** daily `skill-health` (~4.1d/4 misses) and `fleet-scorecard` (~5.3d/5 misses). These fold into ISS-011 (operator action unchanged), so logged but not separately pinged.
+- **P1/P2/P3:** 16 stale bot PRs + no issues (deduped); notification channels 0/3 (deduped); 3 never-run skills (deduped).
 
-**Notification:** None sent — every flagged item was notified within the last 48h and self-check hasn't crossed 36h; nothing newly broke outside the known pattern.
+**Notification:** None sent — every flagged item is the same root cause already notified within 48h; nothing crossed a new threshold. Soul files are template-only, so neutral tone would have applied.
 
 **Files modified:**
-- `docs/status.md` — regenerated (Overall 🔴 DEGRADED, updated 2026-11-06 09:33 UTC, 1 open issue, next run api-health-probe 10:00 UTC; all 26 enabled skills, Token pulse omitted).
-- `memory/issues/INDEX.md` — refreshed ISS-011 row with current 11-06 figures (incl. heartbeat 3-slot drop).
-- `memory/logs/2026-11-06.md` — created with full check log.
+- `docs/status.md` — regenerated (🔴 DEGRADED, updated 2026-11-06 21:48 UTC, 1 open issue, all 26 enabled skills, next run heartbeat 08:00 UTC; Token pulse omitted — no token report / tracked token).
+- `memory/issues/INDEX.md` — updated ISS-011 row with current state + broadened daily-skill impact.
+- `memory/logs/2026-11-06.md` — appended 20:00-slot entry.
 
-**Follow-up (operator action required):** The durable fix for ISS-011 — a redundant offset-cron or external `workflow_dispatch` backstop so the fleet stops depending solely on GitHub's best-effort `schedule:` dispatch — remains outstanding. If heartbeat's 11-06 14:00 and 20:00 slots also drop, the next run will cross 36h and fire the self-check alarm.
+**Follow-up (operator action required):** ISS-011 durable fix — add a redundant offset-cron or external `workflow_dispatch` backstop; the native GitHub Actions scheduler quiet window keeps dropping slots. `fork-cohort` needs a manual re-dispatch to clear its stuck state.
+
+**`HEARTBEAT_OK` does not apply — STATUS_PAGE=DEGRADED.**

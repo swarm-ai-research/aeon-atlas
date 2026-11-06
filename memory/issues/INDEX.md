@@ -4,7 +4,7 @@
 
 | ID | Title | Severity | Category | Detected |
 |----|-------|----------|----------|----------|
-| ISS-011 | scheduler quiet window (fresh recurrence of ISS-005→009) — native GitHub Actions `schedule:` dispatch gap. Escalated medium→high 2026-11-02. **11-06 09:33 still DEGRADED (deduped, no re-notify):** heartbeat cadence now degraded — dropped 3 consecutive own slots (11-05 14:00, 11-05 20:00, 11-06 08:00; this run ~1.5h late), self-check ~25h (still <36h → self-check not fired). api-health-probe now ~215h / **8 consecutive 10:00 misses** (10-29→11-05; 11-06 10:00 not yet due). atlas ~19.2d (still past 2× weekly). fork-cohort separately 🕸 STUCK ~276h. Durable offset-cron / external-dispatch backstop still operator-action-required | high | config | 2026-10-31 |
+| ISS-011 | scheduler quiet window (fresh recurrence of ISS-005→009) — native GitHub Actions `schedule:` dispatch gap. Escalated medium→high 2026-11-02. **11-06 21:48 still DEGRADED (deduped, no re-notify):** quiet window now broadening across daily skills. heartbeat dropped 4 recent slots (11-05 14:00, 11-05 20:00, 11-06 08:00 late, 11-06 14:00; this 20:00 run ~1h48m late), self-check ~12.2h (last success 11-06 09:36 → still <36h, not fired). api-health-probe ~227h / **9 consecutive 10:00 misses** (10-29→11-06). **NEW within-pattern:** skill-health (daily) stale ~4.1d / 4 missed 18:00 slots since 11-02; fleet-scorecard (daily) stale ~5.3d / 5 missed 13:00 slots since 11-01 — same root cause. atlas ~19.7d (past 2× weekly). fork-cohort separately 🕸 STUCK ~287h. Durable offset-cron / external-dispatch backstop still operator-action-required | high | config | 2026-10-31 |
 
 ## Resolved
 
