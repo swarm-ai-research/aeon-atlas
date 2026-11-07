@@ -1,0 +1,182 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Skill Health — 2026-11-07"
+      },
+      "children": [
+        "heading_health",
+        "stat_main",
+        "text_metrics",
+        "sep1",
+        "heading_nodata",
+        "stack_nodata",
+        "text_reason_nodata",
+        "sep2",
+        "heading_stuck",
+        "badge_fork",
+        "text_fork",
+        "sep3",
+        "alert_iss011",
+        "sep4",
+        "heading_issues",
+        "stack_issues"
+      ]
+    },
+    "heading_health": {
+      "type": "Heading",
+      "props": {
+        "text": "Overall Status",
+        "level": "h2"
+      }
+    },
+    "stat_main": {
+      "type": "Stat",
+      "props": {
+        "label": "Skills Healthy",
+        "value": "22/26"
+      }
+    },
+    "text_metrics": {
+      "type": "Text",
+      "props": {
+        "text": "HEALTH: OK — No critical/degraded/flapping on quality metrics. All success_rate ≥ 0.92, 0 consecutive failures."
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_nodata": {
+      "type": "Heading",
+      "props": {
+        "text": "No Data (3 skills)",
+        "level": "h3"
+      }
+    },
+    "stack_nodata": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_aifw",
+        "badge_followup",
+        "badge_worksec"
+      ]
+    },
+    "badge_aifw": {
+      "type": "Badge",
+      "props": {
+        "text": "ai-framework-watch",
+        "variant": "outline"
+      }
+    },
+    "badge_followup": {
+      "type": "Badge",
+      "props": {
+        "text": "follow-up-patrol",
+        "variant": "outline"
+      }
+    },
+    "badge_worksec": {
+      "type": "Badge",
+      "props": {
+        "text": "workflow-security-audit",
+        "variant": "outline"
+      }
+    },
+    "text_reason_nodata": {
+      "type": "Text",
+      "props": {
+        "text": "Never dispatched (scheduler gap, operator-ack'd)",
+        "variant": "caption"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_stuck": {
+      "type": "Heading",
+      "props": {
+        "text": "Stuck Skills",
+        "level": "h3"
+      }
+    },
+    "badge_fork": {
+      "type": "Badge",
+      "props": {
+        "text": "fork-cohort STUCK ~290h",
+        "variant": "secondary"
+      }
+    },
+    "text_fork": {
+      "type": "Text",
+      "props": {
+        "text": "Heartbeat P0 issue, not a quality fault.",
+        "variant": "caption"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "alert_iss011": {
+      "type": "Alert",
+      "props": {
+        "title": "ISS-011: Scheduler Quiet Window",
+        "message": "api-health-probe ~248h stale (10 missed 10:00 slots), atlas ~20.6d, heartbeat dropped 2 slots today. Issue stays OPEN.",
+        "type": "warning"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_issues": {
+      "type": "Heading",
+      "props": {
+        "text": "Issues Summary",
+        "level": "h3"
+      }
+    },
+    "stack_issues": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_open",
+        "stat_resolved"
+      ]
+    },
+    "stat_open": {
+      "type": "Stat",
+      "props": {
+        "label": "Open Issues",
+        "value": "1 (ISS-011 high)"
+      }
+    },
+    "stat_resolved": {
+      "type": "Stat",
+      "props": {
+        "label": "Resolved This Run",
+        "value": "0"
+      }
+    }
+  }
+}
