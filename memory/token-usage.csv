@@ -358,4 +358,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-11-07,skill-health,claude-opus-4-8,34,18218,825936,61243
 2026-11-08,skill-evals,claude-sonnet-4-6,22,21120,994439,53550
 2026-11-08,heartbeat,claude-opus-4-8,40,18450,1054355,64524
-2026-11-08,skill-health,claude-opus-4-8,34,12833,783697,49488
+2026-11-08,fork-contributor-leaderboard,claude-sonnet-4-6,7,2641,171814,17674
