@@ -1,0 +1,225 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "Fork Skill Digest"
+      },
+      "children": [
+        "date_text",
+        "sep1",
+        "config_section",
+        "sep2",
+        "sentiment_section",
+        "sep3",
+        "new_skills_section",
+        "sep4",
+        "customizer_section"
+      ]
+    },
+    "date_text": {
+      "type": "Text",
+      "props": {
+        "text": "2026-11-08",
+        "variant": "muted"
+      }
+    },
+    "sep1": {
+      "type": "Separator"
+    },
+    "config_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "config_heading",
+        "config_grid"
+      ]
+    },
+    "config_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Fleet Configuration",
+        "level": "h2"
+      }
+    },
+    "config_grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat_disabled",
+        "stat_scanned",
+        "stat_config_rate"
+      ]
+    },
+    "stat_disabled": {
+      "type": "Stat",
+      "props": {
+        "label": "Forks disabling skill-health",
+        "value": "63"
+      }
+    },
+    "stat_scanned": {
+      "type": "Stat",
+      "props": {
+        "label": "Active forks scanned",
+        "value": "67"
+      }
+    },
+    "stat_config_rate": {
+      "type": "Stat",
+      "props": {
+        "label": "Configured",
+        "value": "66 (98.5%)"
+      }
+    },
+    "sep2": {
+      "type": "Separator"
+    },
+    "sentiment_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "sentiment_heading",
+        "sentiment_note",
+        "flip_grid"
+      ]
+    },
+    "sentiment_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Fleet Consensus",
+        "level": "h2"
+      }
+    },
+    "sentiment_note": {
+      "type": "Alert",
+      "props": {
+        "message": "Fleet is voting skill-health as noise. Upstream defaults it on.",
+        "type": "info"
+      }
+    },
+    "flip_grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "flip_health",
+        "flip_scorecard"
+      ]
+    },
+    "flip_health": {
+      "type": "Stat",
+      "props": {
+        "label": "skill-health disabled",
+        "value": "95.5%"
+      }
+    },
+    "flip_scorecard": {
+      "type": "Stat",
+      "props": {
+        "label": "operator-scorecard disabled",
+        "value": "95.5%"
+      }
+    },
+    "sep3": {
+      "type": "Separator"
+    },
+    "new_skills_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "new_skills_heading",
+        "new_skills_stack"
+      ]
+    },
+    "new_skills_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "New Fork-Only Skills",
+        "level": "h2"
+      }
+    },
+    "new_skills_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "skill_entry_1",
+        "skill_entry_2",
+        "skill_entry_3",
+        "skill_entry_rest"
+      ]
+    },
+    "skill_entry_1": {
+      "type": "Text",
+      "props": {
+        "text": "bounty-hunter (airdropia)"
+      }
+    },
+    "skill_entry_2": {
+      "type": "Text",
+      "props": {
+        "text": "mine-bean (damo-nu11)"
+      }
+    },
+    "skill_entry_3": {
+      "type": "Text",
+      "props": {
+        "text": "lawb-pool-monitor (lawbworld-tech)"
+      }
+    },
+    "skill_entry_rest": {
+      "type": "Text",
+      "props": {
+        "text": "+35 more from duan521127"
+      }
+    },
+    "sep4": {
+      "type": "Separator"
+    },
+    "customizer_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "customizer_heading",
+        "customizer_stat"
+      ]
+    },
+    "customizer_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Customizer",
+        "level": "h2"
+      }
+    },
+    "customizer_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "duan521127/aeon",
+        "value": "~66 overrides",
+        "delta": "NEW #1"
+      }
+    }
+  }
+}
