@@ -179,10 +179,10 @@
   },
   "fleet-scorecard": {
     "last_dispatch": "2026-11-08T14:27:06Z",
-    "last_status": "dispatched",
-    "last_success": "2026-11-07T14:00:34Z",
-    "total_runs": 4,
-    "total_successes": 4,
+    "last_status": "success",
+    "last_success": "2026-11-08T14:28:19Z",
+    "total_runs": 5,
+    "total_successes": 5,
     "total_failures": 0,
     "consecutive_failures": 0,
     "success_rate": 1
