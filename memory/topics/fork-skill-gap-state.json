@@ -2,7 +2,7 @@
   "parent": "aeonfun/aeon",
   "baseline_repo": "swarm-ai-research/aeon-atlas",
   "baseline_note": "parent has no skills.json; atlas repo used as reference",
-  "last_run": "2026-11-01",
+  "last_run": "2026-11-08",
   "last_status": "FORK_SKILL_GAP_OK",
   "upstream_skill_count": 171,
   "top_missing_slugs": [
@@ -30,8 +30,8 @@
         "fork-health-score","fork-release-tracker","fork-skill-digest","fork-skill-gap",
         "github-issues","github-releases","hacker-news-digest","holder-concentration",
         "huggingface-trending","idea-capture","idea-validator","janitor","list-digest",
-        "market-context-refresh","memory-structural-dedupe","milestone-tracker","monitor-kalshi",
-        "monitor-runners","morning-brief","narrative-convergence","on-chain-monitor","pm-intel",
+        "market-context-refresh","mcp-pulse","memory-structural-dedupe","milestone-tracker",
+        "monitor-kalshi","monitor-runners","morning-brief","on-chain-monitor","pm-intel",
         "polymarket","polymarket-comments","pr-skill-triage","pr-tracker","price-threshold-alert",
         "product-hunt-launch","project-lens","push-recap","pvr-triage-monitor","pvr-watchlist",
         "refresh-x","remix-tweets","repo-actions","repo-article","repo-pulse","repo-revive",
@@ -41,12 +41,11 @@
         "smithery-manifest","sparkleware-catalog","spend-monitor","star-momentum-alert","startup-idea",
         "technical-explainer","thread-formatter","token-alert","token-report","topic-momentum",
         "tweet-digest","tweet-roundup","update-gallery","v4-readiness","vercel-projects",
-        "vibecoding-digest","vuln-tracker","wallet-digest","weekly-review","weekly-shiplog",
-        "workflow-security-audit"
+        "vibecoding-digest","wallet-digest","weekly-review","weekly-shiplog","workflow-security-audit"
       ],
-      "top_missing_categories": [["other", 38], ["dev", 19], ["productivity", 14]],
+      "top_missing_categories": [["other", 55], ["dev", 19], ["productivity", 14]],
       "unreadable": false,
-      "last_seen": "2026-11-01",
+      "last_seen": "2026-11-08",
       "classification_source": "live"
     },
     "Boodszw/Boodszw_Bread": {
@@ -67,7 +66,7 @@
       ],
       "top_missing_categories": [["other", 37], ["dev", 8], ["crypto", 7]],
       "unreadable": false,
-      "last_seen": "2026-11-01",
+      "last_seen": "2026-11-08",
       "classification_source": "live"
     },
     "madebyshun/blueagent-aeon": {
@@ -87,7 +86,7 @@
       ],
       "top_missing_categories": [["other", 34], ["dev", 8], ["crypto", 6]],
       "unreadable": false,
-      "last_seen": "2026-11-01",
+      "last_seen": "2026-11-08",
       "classification_source": "live"
     },
     "damo-nu11/aeon-minebean": {
@@ -107,7 +106,7 @@
       ],
       "top_missing_categories": [["other", 34], ["dev", 6], ["research", 3]],
       "unreadable": false,
-      "last_seen": "2026-11-01",
+      "last_seen": "2026-11-08",
       "classification_source": "live"
     },
     "lawbworld-tech/aeon": {
@@ -126,7 +125,7 @@
       ],
       "top_missing_categories": [["other", 34], ["dev", 6], ["crypto", 6]],
       "unreadable": false,
-      "last_seen": "2026-11-01",
+      "last_seen": "2026-11-08",
       "classification_source": "live"
     },
     "youpsla/aeon": {
@@ -145,7 +144,7 @@
       ],
       "top_missing_categories": [["other", 34], ["dev", 6], ["crypto", 6]],
       "unreadable": false,
-      "last_seen": "2026-11-01",
+      "last_seen": "2026-11-08",
       "classification_source": "live"
     },
     "gitlumen-team/aeon": {
@@ -165,7 +164,7 @@
       ],
       "top_missing_categories": [["other", 15], ["dev", 9], ["productivity", 8]],
       "unreadable": false,
-      "last_seen": "2026-11-01",
+      "last_seen": "2026-11-08",
       "classification_source": "live"
     },
     "richard7463/aeon": {
@@ -178,7 +177,7 @@
       ],
       "top_missing_categories": [["crypto", 6], ["dev", 5], ["productivity", 2]],
       "unreadable": false,
-      "last_seen": "2026-11-01",
+      "last_seen": "2026-11-08",
       "classification_source": "live"
     },
     "NurstarK/aeon-upstream": {
@@ -186,7 +185,7 @@
       "missing_slugs": [],
       "top_missing_categories": [],
       "unreadable": false,
-      "last_seen": "2026-11-01",
+      "last_seen": "2026-11-08",
       "classification_source": "live",
       "extra_skills": ["approval-audit","capabilities-map","ecosystem-entrants","fund-flow","honeypot-check","investigation-report","linked-wallets","liquidpad-launch","lp-lock-check","pr-merge-queue"]
     },
@@ -195,7 +194,7 @@
       "missing_slugs": [],
       "top_missing_categories": [],
       "unreadable": false,
-      "last_seen": "2026-11-01",
+      "last_seen": "2026-11-08",
       "classification_source": "live",
       "extra_skills": ["approval-audit","capabilities-map","fund-flow","honeypot-check","investigation-report","linked-wallets","liquidpad-launch","lp-lock-check","pr-merge-queue"]
     },
@@ -204,7 +203,7 @@
       "missing_slugs": [],
       "top_missing_categories": [],
       "unreadable": false,
-      "last_seen": "2026-11-01",
+      "last_seen": "2026-11-08",
       "classification_source": "live"
     },
     "aeoncity-hub/aeon": {
@@ -212,7 +211,43 @@
       "missing_slugs": [],
       "top_missing_categories": [],
       "unreadable": false,
-      "last_seen": "2026-11-01",
+      "last_seen": "2026-11-08",
+      "classification_source": "live"
+    },
+    "SorenMoussavian/SorenOS-Aeon": {
+      "missing_count": null,
+      "missing_slugs": [],
+      "top_missing_categories": [],
+      "unreadable": true,
+      "unreadable_reason": "404",
+      "last_seen": "2026-11-08",
+      "classification_source": "live"
+    },
+    "nhutminh159/aeon-nhutminh159": {
+      "missing_count": null,
+      "missing_slugs": [],
+      "top_missing_categories": [],
+      "unreadable": true,
+      "unreadable_reason": "404",
+      "last_seen": "2026-11-08",
+      "classification_source": "live"
+    },
+    "unifirer/aeon": {
+      "missing_count": null,
+      "missing_slugs": [],
+      "top_missing_categories": [],
+      "unreadable": true,
+      "unreadable_reason": "404",
+      "last_seen": "2026-11-08",
+      "classification_source": "live"
+    },
+    "duan521127/aeon": {
+      "missing_count": null,
+      "missing_slugs": [],
+      "top_missing_categories": [],
+      "unreadable": true,
+      "unreadable_reason": "404",
+      "last_seen": "2026-11-08",
       "classification_source": "live"
     },
     "enuno/noesis-aeon": {

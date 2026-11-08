@@ -1,0 +1,243 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Fork Skill Gap",
+        "description": "2026-11-08 — aeonfun/aeon"
+      },
+      "children": [
+        "alert-wide-gap",
+        "sep-1",
+        "stats-container",
+        "sep-2",
+        "heading-top-forks",
+        "table-top-forks",
+        "sep-3",
+        "undertapped-section",
+        "sep-4",
+        "link-report"
+      ]
+    },
+    "alert-wide-gap": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "Fleet-wide Drift",
+        "message": "7 forks each missing 20+ upstream skills — drift persisting into week 2"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stats-container": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat-audited",
+        "stat-upstream",
+        "stat-median"
+      ]
+    },
+    "stat-audited": {
+      "type": "Stat",
+      "props": {
+        "label": "Forks Audited",
+        "value": "12 of 16"
+      }
+    },
+    "stat-upstream": {
+      "type": "Stat",
+      "props": {
+        "label": "Upstream Skills",
+        "value": "171"
+      }
+    },
+    "stat-median": {
+      "type": "Stat",
+      "props": {
+        "label": "Median Missing",
+        "value": "47"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-top-forks": {
+      "type": "Heading",
+      "props": {
+        "text": "Top 3 Forks by Gap",
+        "level": "h3"
+      }
+    },
+    "table-top-forks": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Owner",
+          "Fork Name",
+          "Missing",
+          "Categories"
+        ],
+        "rows": [
+          [
+            "@nigelon11",
+            "aeon",
+            "101",
+            "other, dev, productivity"
+          ],
+          [
+            "@Boodszw",
+            "Boodszw_Bread",
+            "58",
+            "other, dev, crypto"
+          ],
+          [
+            "@madebyshun",
+            "blueagent-aeon",
+            "53",
+            "other, dev, crypto"
+          ]
+        ]
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "undertapped-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-undertapped",
+        "undertapped-items"
+      ]
+    },
+    "heading-undertapped": {
+      "type": "Heading",
+      "props": {
+        "text": "Universally Undertapped Skills",
+        "level": "h3"
+      }
+    },
+    "undertapped-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "undertapped-1",
+        "undertapped-2",
+        "undertapped-3"
+      ]
+    },
+    "undertapped-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text-skill-1",
+        "progress-1"
+      ]
+    },
+    "text-skill-1": {
+      "type": "Text",
+      "props": {
+        "text": "fork-health-score",
+        "variant": "lead"
+      }
+    },
+    "progress-1": {
+      "type": "Progress",
+      "props": {
+        "value": 8,
+        "max": 12,
+        "label": "8/12 forks"
+      }
+    },
+    "undertapped-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text-skill-2",
+        "progress-2"
+      ]
+    },
+    "text-skill-2": {
+      "type": "Text",
+      "props": {
+        "text": "follow-up-patrol",
+        "variant": "lead"
+      }
+    },
+    "progress-2": {
+      "type": "Progress",
+      "props": {
+        "value": 8,
+        "max": 12,
+        "label": "8/12 forks"
+      }
+    },
+    "undertapped-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text-skill-3",
+        "progress-3"
+      ]
+    },
+    "text-skill-3": {
+      "type": "Text",
+      "props": {
+        "text": "spend-monitor",
+        "variant": "lead"
+      }
+    },
+    "progress-3": {
+      "type": "Progress",
+      "props": {
+        "value": 7,
+        "max": 12,
+        "label": "7/12 forks"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "link-report": {
+      "type": "Link",
+      "props": {
+        "label": "Full report: articles/fork-skill-gap-2026-11-08.md",
+        "href": "articles/fork-skill-gap-2026-11-08.md"
+      }
+    }
+  }
+}
