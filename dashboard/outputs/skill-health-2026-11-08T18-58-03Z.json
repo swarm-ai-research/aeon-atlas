@@ -1,0 +1,202 @@
+{
+  "root": "card_health",
+  "state": {},
+  "elements": {
+    "card_health": {
+      "type": "Card",
+      "props": {
+        "title": "Skill Health — 2026-11-08"
+      },
+      "children": [
+        "status_section",
+        "breakdown_section",
+        "issues_section",
+        "summary_section"
+      ]
+    },
+    "status_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "status_heading",
+        "status_stat"
+      ]
+    },
+    "status_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "HEALTH: OK",
+        "level": "h2"
+      }
+    },
+    "status_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Skills Healthy (success_rate ≥ 0.92, 0 consecutive failures)",
+        "value": "22"
+      }
+    },
+    "breakdown_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "breakdown_heading",
+        "breakdown_separator",
+        "no_data_group",
+        "stuck_group"
+      ]
+    },
+    "breakdown_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Status Breakdown",
+        "level": "h3"
+      }
+    },
+    "breakdown_separator": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "no_data_group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "no_data_label",
+        "no_data_items"
+      ]
+    },
+    "no_data_label": {
+      "type": "Text",
+      "props": {
+        "text": "⚪ NO DATA (3) — weekly, operator-ack'd (DISPATCH-SKILL):",
+        "variant": "lead"
+      }
+    },
+    "no_data_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "no_data_1",
+        "no_data_2",
+        "no_data_3"
+      ]
+    },
+    "no_data_1": {
+      "type": "Badge",
+      "props": {
+        "text": "ai-framework-watch",
+        "variant": "secondary"
+      }
+    },
+    "no_data_2": {
+      "type": "Badge",
+      "props": {
+        "text": "follow-up-patrol",
+        "variant": "secondary"
+      }
+    },
+    "no_data_3": {
+      "type": "Badge",
+      "props": {
+        "text": "workflow-security-audit",
+        "variant": "secondary"
+      }
+    },
+    "stuck_group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "stuck_label",
+        "stuck_detail"
+      ]
+    },
+    "stuck_label": {
+      "type": "Text",
+      "props": {
+        "text": "🕸 STUCK (1):",
+        "variant": "lead"
+      }
+    },
+    "stuck_detail": {
+      "type": "Text",
+      "props": {
+        "text": "fork-cohort — dispatched ~290h, heartbeat P0 (deduped)"
+      }
+    },
+    "issues_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "issues_heading",
+        "issues_separator",
+        "issue_011"
+      ]
+    },
+    "issues_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Issues",
+        "level": "h3"
+      }
+    },
+    "issues_separator": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "issue_011": {
+      "type": "Alert",
+      "props": {
+        "title": "ISS-011 (scheduler quiet-window, high)",
+        "message": "Still open — heartbeat-owned; its affected skills read metric-healthy because missed dispatches are invisible to success-rate telemetry → left open, not falsely resolved. heartbeat itself recovered (ran 11-08 14:31).",
+        "type": "warning"
+      }
+    },
+    "summary_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "open_issues_stat",
+        "resolved_stat"
+      ]
+    },
+    "open_issues_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Open Issues",
+        "value": "1"
+      }
+    },
+    "resolved_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Resolved This Run",
+        "value": "0"
+      }
+    }
+  }
+}
