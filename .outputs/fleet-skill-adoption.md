@@ -1,18 +1,16 @@
-*Fleet Skill Adoption — 2026-11-01 — aeonfun/aeon*
+*Fleet Skill Adoption — 2026-11-08 — aeonfun/aeon*
 
-7 active forks measured against 87 upstream skills (fleet contracted: 11→7 this week, 4 forks went stale).
+18 active forks measured against 92 upstream skills.
 
 Most adopted:
-1. heartbeat — 100% (7/7)
-2. auto-workflow — 14% (1/7)
-3. autoresearch — 14% (1/7)
+1. heartbeat — 100% (18/18)
+2. aeon-update — 17% (3/18)
+3. auto-merge — 11% (2/18)
+4. auto-workflow — 11% (2/18)
+5. memory-flush — 11% (2/18)
 
-One operator (tomscaria/aeon) runs 19 skills; all others are heartbeat-only. All % shifts are denominator-driven — no new adoptions or intentional drops detected.
+Rising: memory-flush +11pts, base-mcp +6pts, narrative-convergence +6pts
+Declining: autoresearch −14pts, spawn-instance −8pts (+14 others — cohort expanded 7→18 forks)
+22 established skills still at 0% fleet adoption.
 
-Decliners: auto-merge −18pts, operator-scorecard −18pts, arc-studio −9pts, article −9pts (+50 more — fleet contraction).
-
-Fast start: vuln-scanner shipped 2026-10-28, already at 14%.
-
-65 established skills at 0% fleet adoption.
-
-Full leaderboard: articles/fleet-skill-adoption-2026-11-01.md
+Full leaderboard: articles/fleet-skill-adoption-2026-11-08.md

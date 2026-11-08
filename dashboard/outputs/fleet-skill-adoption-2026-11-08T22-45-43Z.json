@@ -1,0 +1,327 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Fleet Skill Adoption",
+        "description": "2026-11-08 — aeonfun/aeon"
+      },
+      "children": [
+        "metric-stat",
+        "sep1",
+        "adopted-heading",
+        "adopted-stack",
+        "sep2",
+        "trends-heading",
+        "trends-stack",
+        "sep3",
+        "established-alert",
+        "leaderboard-link"
+      ]
+    },
+    "metric-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Active forks measured against upstream skills",
+        "value": "18 / 92"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "adopted-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Most Adopted",
+        "level": "h2"
+      }
+    },
+    "adopted-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "skill1",
+        "skill2",
+        "skill3",
+        "skill4",
+        "skill5"
+      ]
+    },
+    "skill1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "skill1-label",
+        "skill1-bar"
+      ]
+    },
+    "skill1-label": {
+      "type": "Text",
+      "props": {
+        "text": "heartbeat (18/18)"
+      }
+    },
+    "skill1-bar": {
+      "type": "Progress",
+      "props": {
+        "value": 100,
+        "label": "100%"
+      }
+    },
+    "skill2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "skill2-label",
+        "skill2-bar"
+      ]
+    },
+    "skill2-label": {
+      "type": "Text",
+      "props": {
+        "text": "aeon-update (3/18)"
+      }
+    },
+    "skill2-bar": {
+      "type": "Progress",
+      "props": {
+        "value": 17,
+        "label": "17%"
+      }
+    },
+    "skill3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "skill3-label",
+        "skill3-bar"
+      ]
+    },
+    "skill3-label": {
+      "type": "Text",
+      "props": {
+        "text": "auto-merge (2/18)"
+      }
+    },
+    "skill3-bar": {
+      "type": "Progress",
+      "props": {
+        "value": 11,
+        "label": "11%"
+      }
+    },
+    "skill4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "skill4-label",
+        "skill4-bar"
+      ]
+    },
+    "skill4-label": {
+      "type": "Text",
+      "props": {
+        "text": "auto-workflow (2/18)"
+      }
+    },
+    "skill4-bar": {
+      "type": "Progress",
+      "props": {
+        "value": 11,
+        "label": "11%"
+      }
+    },
+    "skill5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "skill5-label",
+        "skill5-bar"
+      ]
+    },
+    "skill5-label": {
+      "type": "Text",
+      "props": {
+        "text": "memory-flush (2/18)"
+      }
+    },
+    "skill5-bar": {
+      "type": "Progress",
+      "props": {
+        "value": 11,
+        "label": "11%"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "trends-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Trends",
+        "level": "h2"
+      }
+    },
+    "trends-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "rising-section",
+        "declining-section"
+      ]
+    },
+    "rising-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "rising-label",
+        "rising-items"
+      ]
+    },
+    "rising-label": {
+      "type": "Text",
+      "props": {
+        "text": "Rising",
+        "variant": "lead"
+      }
+    },
+    "rising-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "rising1",
+        "rising2",
+        "rising3"
+      ]
+    },
+    "rising1": {
+      "type": "Badge",
+      "props": {
+        "text": "memory-flush +11pts",
+        "variant": "secondary"
+      }
+    },
+    "rising2": {
+      "type": "Badge",
+      "props": {
+        "text": "base-mcp +6pts",
+        "variant": "secondary"
+      }
+    },
+    "rising3": {
+      "type": "Badge",
+      "props": {
+        "text": "narrative-convergence +6pts",
+        "variant": "secondary"
+      }
+    },
+    "declining-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "declining-label",
+        "declining-items"
+      ]
+    },
+    "declining-label": {
+      "type": "Text",
+      "props": {
+        "text": "Declining",
+        "variant": "lead"
+      }
+    },
+    "declining-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "declining1",
+        "declining2",
+        "declining-note"
+      ]
+    },
+    "declining1": {
+      "type": "Badge",
+      "props": {
+        "text": "autoresearch −14pts",
+        "variant": "destructive"
+      }
+    },
+    "declining2": {
+      "type": "Badge",
+      "props": {
+        "text": "spawn-instance −8pts",
+        "variant": "destructive"
+      }
+    },
+    "declining-note": {
+      "type": "Text",
+      "props": {
+        "text": "+14 others declining — cohort expanded 7→18 forks",
+        "variant": "caption"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "established-alert": {
+      "type": "Alert",
+      "props": {
+        "title": "Established Skills at 0%",
+        "message": "22 established skills still have zero fleet adoption",
+        "type": "info"
+      }
+    },
+    "leaderboard-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full Leaderboard",
+        "href": "articles/fleet-skill-adoption-2026-11-08.md",
+        "source": "aeon-atlas"
+      }
+    }
+  }
+}
