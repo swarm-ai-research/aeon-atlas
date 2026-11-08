@@ -1,0 +1,119 @@
+{
+  "root": "main-card",
+  "state": {},
+  "elements": {
+    "main-card": {
+      "type": "Card",
+      "props": {
+        "title": "Skill Leaderboard — 2026-11-08"
+      },
+      "children": [
+        "content-stack"
+      ]
+    },
+    "content-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "domimueller-text",
+        "sep1",
+        "top5-heading",
+        "leaderboard-table",
+        "sep2",
+        "fleet-text",
+        "report-link"
+      ]
+    },
+    "domimueller-text": {
+      "type": "Text",
+      "props": {
+        "text": "Domimueller85/aeon shipped aeon-update (and 50+ more) — not in upstream"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "top5-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top 5 across 64 configured forks (of 65 active)",
+        "level": "h3"
+      }
+    },
+    "leaderboard-table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Rank",
+          "Skill",
+          "Forks",
+          "Percentage",
+          "Trend"
+        ],
+        "rows": [
+          [
+            "1",
+            "token-movers",
+            "7",
+            "10.9%",
+            ""
+          ],
+          [
+            "2",
+            "narrative-tracker",
+            "6",
+            "9.4%",
+            "↑"
+          ],
+          [
+            "3",
+            "auto-merge",
+            "4",
+            "6.3%",
+            ""
+          ],
+          [
+            "3",
+            "auto-workflow",
+            "4",
+            "6.3%",
+            "↓"
+          ],
+          [
+            "3",
+            "skill-health",
+            "4",
+            "6.3%",
+            ""
+          ]
+        ]
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "fleet-text": {
+      "type": "Text",
+      "props": {
+        "text": "Fleet-only: aeon-update adopted independently by 5 forks — not in upstream"
+      }
+    },
+    "report-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full report",
+        "href": "https://github.com/swarm-ai-research/aeon-atlas/blob/main/articles/skill-leaderboard-2026-11-08.md",
+        "source": "GitHub"
+      }
+    }
+  }
+}
