@@ -1,9 +1,20 @@
-Fleet State — 2026-11-02 — aeonfun/aeon
+## Summary
 
-COLD START: first fleet-state run · cohort data pending
+**fleet-state ran: `FLEET_STATE_PARTIAL`** — notification skipped (quiet verdict gate).
 
-This is fleet-state's first run. Cohort data is not yet available (fork-cohort has not written its state file). Release tracker shows 0 tagged releases in the last 7 days. No spotlight pick on record.
+**What happened:**
 
-Run fork-cohort to populate bucket counts for next week's delta.
+| Source | Status | Detail |
+|--------|--------|--------|
+| fork-cohort-state.json | unavailable | fork-cohort still STUCK (last dispatched 2026-10-25, no success) |
+| fork-release-state.json | ok | `announced=[]` → 0 releases this week |
+| contributor-spotlight-history.json | ok (empty) | `history=[]` → no spotlight pick |
 
-Full digest: articles/fleet-state-2026-11-02.md
+**Verdict:** `STEADY: 0 releases this week (cohort data pending)` — notify gate triggered quiet (STEADY + 0 releases + 0 transitions + not first run → no notification).
+
+**Files written:**
+- `articles/fleet-state-2026-11-09.md` — digest article
+- `memory/topics/fleet-state.json` — updated snapshot + history (now 2 entries)
+- `memory/logs/2026-11-09.md` — activity log
+
+**Follow-up:** The root blocker is fork-cohort still stuck (ISS-011 / ISS-ongoing). Until fork-cohort runs successfully and writes `fork-cohort-state.json`, fleet-state will continue to degrade to `FLEET_STATE_PARTIAL` with no cohort counts or transition data.
