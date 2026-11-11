@@ -363,4 +363,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-11-09,skill-freshness,claude-sonnet-4-6,25,31190,1650096,78124
 2026-11-09,skill-health,claude-opus-4-8,26,11821,607702,54673
 2026-11-10,skill-freshness,claude-sonnet-4-6,27,34709,1504852,70837
-2026-11-11,heartbeat,claude-opus-4-8,26,12887,565747,52443
+2026-11-11,skill-freshness,claude-sonnet-4-6,15,20416,715833,55457
