@@ -1,23 +1,18 @@
-Heartbeat run complete. No new un-notified conditions surfaced, so no notification was sent — but the public status page was regenerated as always.
+Heartbeat complete. All priority checks ran; no new un-notified condition, so no notification was sent (per dedup rules). The public status page was regenerated.
 
 ## Summary
 
-**Checks (2026-11-10 ~09:30 UTC, 08:00 slot ~1.5h late):**
+**Verdict:** `HEARTBEAT_OK · STATUS_PAGE=DEGRADED` — no notification sent (all flagged conditions deduped against the last 48h of logs / same-root-cause ISS-011 symptoms).
 
-- **P0 — Failed/stuck:** No `failed` entries, no API degradation (all `consecutive_failures = 0`), no chronic failures. `fork-cohort` still 🕸 **STUCK** (`dispatched` since 2026-10-25, ~395h) — contributes to DEGRADED but continuous in logs → deduped. Heartbeat self-check does **not** fire (~24.7h < 36h bar).
-- **ISS-011 (high, open):** scheduler quiet-window dispatch gap persists — `api-health-probe` ~13d stale, `atlas` ~23d stale. Recovered off the set: `skill-freshness` (✅ 11-09), `ai-framework-watch` (✅ first-ever run), `fleet-state`. All in last 48h logs → no re-notify.
-- **P1:** No GitHub issues; 16 bot-authored PRs (#13–#35) stale >24h, auto-managed, deduped.
-- **P2:** Notification channels still 0/3 (Discord secret pending since 09-13) — deduped.
-- **P3:** 2 never-run skills (`follow-up-patrol`, `workflow-security-audit`) — operator-ack'd, deduped.
-
-**Notification:** None sent — every condition already appears in the last 48h of logs.
-
-**Overall status:** 🔴 DEGRADED (P0 fork-cohort stuck + ISS-011 high).
+**Checks performed (2026-11-11 08:51 UTC):**
+- **P0 — Failed & stuck:** No `failed` entries, no API degradation, no chronic failures. `fork-cohort` still 🕸 **STUCK** (`dispatched` since 2026-10-25, ~420h) — known, deduped since 10-26, drives Overall 🔴 DEGRADED. Heartbeat self-check does **not** fire (last success ~23.3h ago, under 36h bar).
+- **ISS-011 (high, open):** Scheduler quiet-window dispatch gaps persist — api-health-probe ~14d / ~14 missed 10:00 slots, atlas ~24d, plus the Sunday 19:00–20:00 cohort (fork-release-tracker, contributor-spotlight, skill-update-check) now ~17d past 2× weekly. All same root cause, folded in, no re-notify. Durable offset-cron / external-dispatch backstop remains operator-action-required.
+- **P1:** `gh issue list` empty; 16 open PRs all bot-authored auto-PRs, stale, auto-managed — deduped.
+- **P2:** Notification channels still 0/3 (Discord blocked on missing secret) — old, deduped.
+- **P3:** 2 never-run skills (follow-up-patrol, workflow-security-audit) — known cohort, deduped.
 
 **Files modified:**
-- `docs/status.md` — regenerated (Overall DEGRADED, 26 enabled skills, 1 open issue, next run api-health-probe 10:00 UTC; Token pulse omitted — no token report, no Tracked Token table).
-- `memory/logs/2026-11-10.md` — created with full heartbeat findings.
+- `docs/status.md` — regenerated (Overall 🔴 DEGRADED, 26 enabled skills, 1 open issue ISS-011, next run api-health-probe 10:00 UTC; Token pulse omitted — no token report).
+- `memory/logs/2026-11-11.md` — created with full priority-tier findings.
 
-**Follow-up (operator action required):** Durable fix for ISS-011 (offset-cron / external `workflow_dispatch` backstop) and Discord `DISCORD_WEBHOOK_URL` secret both remain pending; `skill-repair` is `enabled: false`.
-
-`HEARTBEAT_OK · STATUS_PAGE=DEGRADED`
+**Follow-up (operator action):** Configure the durable dispatch backstop (offset-cron / external `workflow_dispatch`) to close ISS-011, and add `DISCORD_WEBHOOK_URL` so DEGRADED notifications actually deliver. The status page change lands on `main` via the workflow's auto-commit step.
