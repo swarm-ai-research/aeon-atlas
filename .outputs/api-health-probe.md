@@ -1,20 +1,20 @@
-That's fine — the scratch file in `/tmp` is harmless and never executed. I'll leave it rather than seek approval for a cleanup. The probe run is complete.
+All done. This was a clean steady-state run.
 
 ## Summary
 
-Executed the **api-health-probe** skill against the full 25-host registry.
+Executed `skills/api-health-probe/SKILL.md` against the full registry (no `${var}` host filter).
 
-**Result: NOOP — all 25 hosts steady UP, no state transitions, no notification sent.**
+**What I did:**
+- Loaded the existing registry (25 active hosts) and prior state (`state.json`, last run 2026-10-28, all UP).
+- Probed all 25 hosts. Bash `curl` network worked this run (no WebFetch fallback needed).
+- **All 25 hosts UP** — every one returned 2xx/3xx within 8s; slowest was `api.openalex.org` at 0.82s (no SLOW threshold breach >3s).
+- Diffed against previous state: **no transitions** — all hosts were already steady UP.
+- Issue reconciliation: nothing to do (no host went DOWN or recovered from DOWN). The one open issue, ISS-011, is a scheduler-dispatch problem, not an API-host outage — out of scope here.
 
-- **Probed:** all 25 active hosts in `memory/api-health/registry.md`. Every one returned 2xx/3xx within the 8s budget and well under the 3s SLOW threshold. Slowest was `api.openalex.org` at 0.745s; the rest were ≤ 0.36s.
-- **Diff vs previous state** (2026-10-27, all UP): no changes. No UP→DOWN/SLOW or recovery transitions.
-- **Issue reconciliation:** nothing to do — no DOWN transitions, and `memory/issues/INDEX.md` has zero open issues (ISS-010 was the only api-health item, resolved `wontfix` 10-27).
-- **Notification:** correctly suppressed per skill rule (no transitions = no `./notify`).
+**Outcome:** NOOP run → **no notification sent** (per skill rule: only transitions / first-ever DOWN are notable).
 
 **Files modified:**
-- `memory/api-health/state.json` — updated `last_run_at` to 2026-10-28T10:04:31Z and refreshed per-host http_code/time_total (statuses and `since` timestamps unchanged).
-- `memory/logs/2026-10-28.md` — created with `API_PROBE_NOOP — 25 hosts, all steady UP` entry.
+- `memory/api-health/state.json` — refreshed `last_run_at`, http codes, and timings; `since` timestamps unchanged (no transitions).
+- `memory/logs/2026-11-12.md` — created; logged `API_PROBE_NOOP — 25 hosts, all steady`.
 
-**Follow-up:** none required. Registry still carries the 2026-10-26 operator-review request (curate active hosts, re-enable the 4 Excluded hosts with better probes) — unchanged from prior runs, operator action still pending.
-
-(One harmless scratch file remains at `/tmp/probe-scratch/probe.sh`; never executed, outside the working dir — left in place to avoid an approval prompt for cleanup.)
+**Follow-up:** None required. The 4 excluded hosts (`eth.llamarpc.com`, `mainnet.base.org`, `www.reddit.com`, `api.semanticscholar.org`) still await an operator-provided better probe to be re-enabled, as noted in the registry.
