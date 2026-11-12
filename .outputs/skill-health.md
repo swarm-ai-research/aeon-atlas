@@ -1,9 +1,9 @@
-*Skill Health — 2026-11-09*
-HEALTH: OK — 23 skills healthy (metric; success_rate ≥ 0.92, 0 consecutive failures)
+*Skill Health — 2026-11-12*
+HEALTH: OK — 23 skills healthy
 
-⚪ NO DATA (2): follow-up-patrol, workflow-security-audit — DISPATCH-SKILL (known never-dispatched weekly cohort). ai-framework-watch cleared this set on its first-ever run today.
-🕸 STUCK: fork-cohort — 'dispatched' ~372h with no outcome (heartbeat P0, not a skill-health CRITICAL).
+⚪ NO DATA (2): follow-up-patrol, workflow-security-audit — DISPATCH-SKILL (weekly, never dispatched; ISS-011 lineage)
+🕸 STUCK (1): fork-cohort — dispatched 10-25, no outcome ~18d (missed 11-02 + 11-09 slots → scheduler gap, ISS-011)
+🟢 HEALTHY: 23 (all success_rate ≥ 0.92, 0 consecutive failures)
 
-Note: ISS-011 (high, open) tracks the scheduler dispatch-gap — heartbeat-owned. Its affected skills read metric-healthy because missed *dispatches* don't dent success-rate, so skill-health leaves it untouched (out of its reconciliation scope).
-
-Open issues: 1 (ISS-011) · Filed: 0 · Resolved this run: 0
+Open issues: 1 (ISS-011 high) · Resolved this run: 0
+Partial mode: skill-runs unavailable (permission-gated) — cron-state only.

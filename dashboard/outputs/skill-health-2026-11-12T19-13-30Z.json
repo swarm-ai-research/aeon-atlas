@@ -1,0 +1,183 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Skill Health — 2026-11-12"
+      },
+      "children": [
+        "alert-health-status",
+        "separator-1",
+        "stack-statuses",
+        "separator-2",
+        "stack-issues",
+        "separator-3",
+        "alert-partial"
+      ]
+    },
+    "alert-health-status": {
+      "type": "Alert",
+      "props": {
+        "title": "HEALTH: OK",
+        "message": "23 skills healthy",
+        "type": "success"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack-statuses": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "section-no-data",
+        "section-stuck",
+        "section-healthy"
+      ]
+    },
+    "section-no-data": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-no-data",
+        "text-no-data-skills",
+        "text-no-data-detail"
+      ]
+    },
+    "heading-no-data": {
+      "type": "Heading",
+      "props": {
+        "text": "⚪ NO DATA (2)",
+        "level": "h3"
+      }
+    },
+    "text-no-data-skills": {
+      "type": "Text",
+      "props": {
+        "text": "follow-up-patrol, workflow-security-audit",
+        "variant": "body"
+      }
+    },
+    "text-no-data-detail": {
+      "type": "Text",
+      "props": {
+        "text": "DISPATCH-SKILL (weekly, never dispatched; ISS-011 lineage)",
+        "variant": "caption"
+      }
+    },
+    "section-stuck": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-stuck",
+        "text-stuck-skill",
+        "text-stuck-detail"
+      ]
+    },
+    "heading-stuck": {
+      "type": "Heading",
+      "props": {
+        "text": "🕸 STUCK (1)",
+        "level": "h3"
+      }
+    },
+    "text-stuck-skill": {
+      "type": "Text",
+      "props": {
+        "text": "fork-cohort",
+        "variant": "body"
+      }
+    },
+    "text-stuck-detail": {
+      "type": "Text",
+      "props": {
+        "text": "dispatched 10-25, no outcome ~18d (missed 11-02 + 11-09 slots → scheduler gap, ISS-011)",
+        "variant": "caption"
+      }
+    },
+    "section-healthy": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-healthy",
+        "text-healthy-detail"
+      ]
+    },
+    "heading-healthy": {
+      "type": "Heading",
+      "props": {
+        "text": "🟢 HEALTHY: 23",
+        "level": "h3"
+      }
+    },
+    "text-healthy-detail": {
+      "type": "Text",
+      "props": {
+        "text": "All success_rate ≥ 0.92, 0 consecutive failures",
+        "variant": "caption"
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack-issues": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text-open-issues",
+        "text-resolved"
+      ]
+    },
+    "text-open-issues": {
+      "type": "Text",
+      "props": {
+        "text": "Open issues: 1 (ISS-011 high)",
+        "variant": "body"
+      }
+    },
+    "text-resolved": {
+      "type": "Text",
+      "props": {
+        "text": "Resolved this run: 0",
+        "variant": "body"
+      }
+    },
+    "separator-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "alert-partial": {
+      "type": "Alert",
+      "props": {
+        "title": "Partial Mode",
+        "message": "skill-runs unavailable (permission-gated) — cron-state only",
+        "type": "info"
+      }
+    }
+  }
+}
