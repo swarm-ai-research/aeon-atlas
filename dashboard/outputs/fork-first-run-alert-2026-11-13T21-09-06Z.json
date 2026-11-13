@@ -1,0 +1,114 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "4 new forks live — 2026-11-13",
+        "description": "The fleet picked up 4 first-time activators in the last day."
+      },
+      "children": [
+        "forks-list",
+        "separator-1",
+        "parent-section",
+        "separator-2",
+        "note"
+      ]
+    },
+    "forks-list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "fork-1",
+        "fork-2",
+        "fork-3",
+        "fork-4"
+      ]
+    },
+    "fork-1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "domosta/aeon",
+        "href": "https://github.com/domosta/aeon",
+        "source": "GitHub",
+        "score": "0 stars"
+      }
+    },
+    "fork-2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "mohammadi0011/aeon",
+        "href": "https://github.com/mohammadi0011/aeon",
+        "source": "GitHub",
+        "score": "0 stars"
+      }
+    },
+    "fork-3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "hypurr-inc/aeon",
+        "href": "https://github.com/hypurr-inc/aeon",
+        "source": "GitHub",
+        "score": "0 stars"
+      }
+    },
+    "fork-4": {
+      "type": "StoryLink",
+      "props": {
+        "title": "unifirer/aeon",
+        "href": "https://github.com/unifirer/aeon",
+        "source": "GitHub",
+        "score": "0 stars"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "parent-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "parent-label",
+        "parent-link"
+      ]
+    },
+    "parent-label": {
+      "type": "Text",
+      "props": {
+        "text": "Parent:",
+        "variant": "muted"
+      }
+    },
+    "parent-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "aeonfun/aeon",
+        "href": "https://github.com/aeonfun/aeon",
+        "source": "GitHub"
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "note": {
+      "type": "Text",
+      "props": {
+        "text": "Full list will land in Sunday's fork-cohort digest.",
+        "variant": "caption"
+      }
+    }
+  }
+}

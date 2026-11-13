@@ -1,10 +1,11 @@
-*New fork live — 2026-11-06 — SorenMoussavian/SorenOS-Aeon*
+*4 new forks live — 2026-11-13*
 
-@SorenMoussavian just ran their first workflow on Aeon. Welcome to the running fleet.
+The fleet picked up 4 first-time activators in the last day.
 
-Stars: 0
-First run: scheduler: cron
-When: today
+- @domosta — domosta/aeon (0 stars)
+- @mohammadi0011 — mohammadi0011/aeon (0 stars)
+- @hypurr-inc — hypurr-inc/aeon (0 stars)
+- @unifirer — unifirer/aeon (0 stars)
 
-Fork: https://github.com/SorenMoussavian/SorenOS-Aeon
-Run: https://github.com/SorenMoussavian/SorenOS-Aeon/actions/runs/42288269995
+Parent: aeonfun/aeon
+Full list will land in Sunday's fork-cohort digest.
