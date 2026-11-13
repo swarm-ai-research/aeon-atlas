@@ -1,0 +1,193 @@
+{
+  "root": "card-heartbeat",
+  "state": {},
+  "elements": {
+    "card-heartbeat": {
+      "type": "Card",
+      "props": {
+        "title": "Heartbeat"
+      },
+      "children": [
+        "alert-status",
+        "sep-1",
+        "stack-main"
+      ]
+    },
+    "alert-status": {
+      "type": "Alert",
+      "props": {
+        "title": "DEGRADED",
+        "message": "No successful heartbeat since 11-11 08:54 UTC (~54h, 6 dropped own slots). Fresh ISS-011 scheduler-quiet-window recurrence.",
+        "type": "error"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "section-stale",
+        "sep-2",
+        "section-recovered",
+        "sep-3",
+        "section-action"
+      ]
+    },
+    "section-stale": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-stale",
+        "stale-items"
+      ]
+    },
+    "heading-stale": {
+      "type": "Heading",
+      "props": {
+        "text": "Stale Services",
+        "level": "h3"
+      }
+    },
+    "stale-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "item-fork-cohort",
+        "item-fork-first",
+        "item-fleet",
+        "item-atlas",
+        "item-weekly"
+      ]
+    },
+    "item-fork-cohort": {
+      "type": "Text",
+      "props": {
+        "text": "fork-cohort 🕸 — stuck ~454h",
+        "variant": "body"
+      }
+    },
+    "item-fork-first": {
+      "type": "Text",
+      "props": {
+        "text": "fork-first-run-alert — ~6.7 days",
+        "variant": "body"
+      }
+    },
+    "item-fleet": {
+      "type": "Text",
+      "props": {
+        "text": "fleet-scorecard — ~5 days",
+        "variant": "body"
+      }
+    },
+    "item-atlas": {
+      "type": "Text",
+      "props": {
+        "text": "atlas — ~26 days",
+        "variant": "body"
+      }
+    },
+    "item-weekly": {
+      "type": "Text",
+      "props": {
+        "text": "Sunday-evening & Monday weekly cohorts — ~18-19 days",
+        "variant": "body"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-recovered": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-recovered",
+        "recovered-items"
+      ]
+    },
+    "heading-recovered": {
+      "type": "Heading",
+      "props": {
+        "text": "Recovered",
+        "level": "h3"
+      }
+    },
+    "recovered-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "item-api-health",
+        "item-skill-health"
+      ]
+    },
+    "item-api-health": {
+      "type": "Text",
+      "props": {
+        "text": "api-health-probe — ran 11-12, was the dominant ~15d breach",
+        "variant": "body"
+      }
+    },
+    "item-skill-health": {
+      "type": "Text",
+      "props": {
+        "text": "skill-health",
+        "variant": "body"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-action": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-action",
+        "alert-action"
+      ]
+    },
+    "heading-action": {
+      "type": "Heading",
+      "props": {
+        "text": "Action Required",
+        "level": "h3"
+      }
+    },
+    "alert-action": {
+      "type": "Alert",
+      "props": {
+        "title": "Durable offset-cron / external-dispatch backstop",
+        "message": "Operator action required. skill-repair is currently disabled.",
+        "type": "warning"
+      }
+    }
+  }
+}
