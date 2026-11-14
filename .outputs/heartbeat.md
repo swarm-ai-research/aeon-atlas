@@ -1,22 +1,19 @@
-Heartbeat run complete (20:00 UTC slot, ~66m late).
+Heartbeat complete. All checks run; no notification sent (nothing fresh), status page regenerated.
 
 ## Summary
 
-Ran the full heartbeat check for the 2026-11-13 20:00 UTC slot. No notification sent — everything flagged is deduped and no fresh P0 escalation occurred.
+Ran the `heartbeat` skill for the **2026-11-14 14:00 slot** (executed ~14:30 UTC, ~30m late). Read `MEMORY.md`, last 2 days of logs, `cron-state.json`, `issues/INDEX.md`, and `aeon.yml`.
 
-**Findings by priority:**
-- **P0:** No failed skills, no API degradation, no chronic failures. `fork-cohort` still 🕸 **stuck** (~19d dispatched with no outcome) — deduped (continuous since 10-26), drives Overall 🔴 DEGRADED. Heartbeat **self-check recovered** (last success 15:02 UTC, ~6h ago) — the ~54h re-breach the 14:00 run notified has cleared again.
-- **Recoveries since 14:00 run:** `fleet-scorecard` ran 11-13 14:57 (was ~5d stale); heartbeat self-check back under threshold.
-- **Still stale (within ISS-011, deduped):** fork-first-run-alert ~7d, skill-freshness ~2.5d, atlas ~26d, Sunday-evening + Monday weekly cohorts ~18–19d.
-- **P1:** No open GitHub issues / urgent labels. 16 open PRs (15 bot auto-PRs + #16 human, stale since July) — all auto-managed, deduped.
-- **P2/P3:** Notification channels 0/3 (Discord secret pending); 2 never-run skills (follow-up-patrol, workflow-security-audit) — all known/deduped.
+**Findings (by priority):**
+- **P0:** No `failed` entries, no API degradation, no chronic failures. `fork-cohort` still 🕸 **stuck** (~20d dispatched, continuous/deduped since 10-26) → keeps Overall at 🔴 DEGRADED. Heartbeat **self-check does NOT fire** — last success 2026-11-13 21:08 UTC (~17.4h, under 36h); the recovery held.
+- **ISS-011 (high, open):** `fork-first-run-alert` **recovered** (ran 11-13). Remaining staleness (skill-freshness ~3d, api-health-probe ~2.1d, atlas ~27d, weekly cohorts ~19–20d) is within the known `schedule:`-drop pattern and already logged within 48h. No fresh escalation, no full resolution.
+- **P1:** No open GitHub issues; 16 stale PRs (#13–#35, bot/auto + #16 human), all deduped.
+- **P2/P3:** Notification channels still 0/3 (Discord secret pending); 2 never-run enabled skills (follow-up-patrol, workflow-security-audit) — all old/deduped.
 
-**Notification:** Suppressed per ISS-011 rule (no full resolution, no fresh P0 escalation).
+**Notification:** None sent — per ISS-011's "re-notify only on full resolution or a fresh P0 escalation" rule, neither condition was met (soul files are template-only anyway → neutral tone).
 
 **Files modified:**
-- `docs/status.md` — regenerated: Overall 🔴 DEGRADED, updated 2026-11-13 21:06 UTC, 1 open issue (ISS-011), next run heartbeat 08:00 UTC; table re-sorted (heartbeat/fleet-scorecard now top after recovery). Token pulse omitted (no token-report article).
-- `memory/logs/2026-11-13.md` — appended 20:00 slot log entry.
+- `docs/status.md` — regenerated (🔴 DEGRADED, 1 open issue, next run skill-health 18:00 UTC, 26 enabled skills, Token pulse omitted — no token report).
+- `memory/logs/2026-11-14.md` — created with the full run log.
 
-**Follow-up (operator action, unchanged):** durable offset-cron / external `workflow_dispatch` backstop for the ISS-011 scheduler dispatch gap; configure `DISCORD_WEBHOOK_URL` secret.
-
-`HEARTBEAT_ATTENTION (deduped, no notify) · STATUS_PAGE=DEGRADED`
+**Follow-up (operator action):** durable offset-cron / external `workflow_dispatch` backstop for ISS-011; `fork-cohort` stuck entry; Discord `DISCORD_WEBHOOK_URL` secret.
