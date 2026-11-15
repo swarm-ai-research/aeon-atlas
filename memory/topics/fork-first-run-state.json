@@ -1,7 +1,7 @@
 {
   "parent_repo": "aeonfun/aeon",
-  "last_run": "2026-11-13",
-  "last_status": "FORK_FIRST_RUN_ALERT_OK",
+  "last_run": "2026-11-15",
+  "last_status": "FORK_FIRST_RUN_ALERT_QUIET",
   "seen": {
     "domosta/aeon": {
       "first_seen_active_at": "2026-11-13",
