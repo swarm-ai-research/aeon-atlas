@@ -1,13 +1,11 @@
-*Fork Skill Gap — 2026-11-08 — aeonfun/aeon*
-WIDE_GAP: 7 forks each missing 20+ upstream skills — fleet-wide drift persisting into week 2
+*Fork Skill Gap — 2026-11-15 — aeonfun/aeon*
+WIDE_GAP: 5 forks each missing 50+ upstream skills
 
-12 of 16 active forks audited. Upstream ships 171 skills; the median fork is missing 47.
+8 of 26 active forks audited. Upstream ships 171 skills; the median fork is missing 50.
 
 Top 3 forks by gap:
-- @nigelon11 — aeon missing 101 (other, dev, productivity)
-- @Boodszw — Boodszw_Bread missing 58 (other, dev, crypto)
-- @madebyshun — blueagent-aeon missing 53 (other, dev, crypto)
+- @Boodszw — Boodszw_Bread missing 58 (other: 35, dev: 11, crypto: 7)
+- @madebyshun — blueagent-aeon missing 53 (other: 34, dev: 11, crypto: 6)
+- @damo-nu11 — aeon-minebean missing 51 (other: 34, dev: 8, crypto: 6)
 
-Universally undertapped: fork-health-score (8/12), follow-up-patrol (8/12), spend-monitor (7/12)
-
-Full report: articles/fork-skill-gap-2026-11-08.md
+Full report: articles/fork-skill-gap-2026-11-15.md
