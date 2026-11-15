@@ -236,5 +236,9 @@
     "total_failures": 0,
     "consecutive_failures": 0,
     "success_rate": 1
+  },
+  "workflow-security-audit": {
+    "last_dispatch": "2026-11-15T16:38:16Z",
+    "last_status": "dispatched"
   }
 }
