@@ -1,0 +1,146 @@
+{
+  "root": "card_audit",
+  "state": {},
+  "elements": {
+    "card_audit": {
+      "type": "Card",
+      "props": {
+        "title": "Workflow Security Audit",
+        "description": "2026-11-15"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "alert_critical",
+        "stack_stats",
+        "text_status",
+        "sep1",
+        "heading_issue",
+        "text_location",
+        "text_vulnerability",
+        "text_context",
+        "sep2",
+        "text_push_blocked",
+        "text_scan_degraded",
+        "sep3",
+        "storylink_pr"
+      ]
+    },
+    "alert_critical": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "Script Injection Found",
+        "message": "WORKFLOW_AUDIT_NEW_CRITICAL — 1 new critical, 2 new high (all script injection)"
+      }
+    },
+    "stack_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_critical",
+        "stat_high"
+      ]
+    },
+    "stat_critical": {
+      "type": "Stat",
+      "props": {
+        "label": "Critical",
+        "value": "1"
+      }
+    },
+    "stat_high": {
+      "type": "Stat",
+      "props": {
+        "label": "High",
+        "value": "2"
+      }
+    },
+    "text_status": {
+      "type": "Text",
+      "props": {
+        "text": "Fixes prepared (3) · Manual review (3)",
+        "variant": "body"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_issue": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Chain: messages.yml:577",
+        "level": "h3"
+      }
+    },
+    "text_location": {
+      "type": "Text",
+      "props": {
+        "text": "echoes toJson(client_payload) into a single-quoted shell string",
+        "variant": "body"
+      }
+    },
+    "text_vulnerability": {
+      "type": "Text",
+      "props": {
+        "text": "An inbound chat message with a quote breaks out of the string → RCE with access to GH_GLOBAL and every job secret",
+        "variant": "body"
+      }
+    },
+    "text_context": {
+      "type": "Text",
+      "props": {
+        "text": "This vulnerability was missed in the April audit.",
+        "variant": "caption"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "text_push_blocked": {
+      "type": "Text",
+      "props": {
+        "text": "Workflow-file push blocked — the Actions token lacks 'workflows' permission. Ready-to-apply patch is in the report Appendix.",
+        "variant": "body"
+      }
+    },
+    "text_scan_degraded": {
+      "type": "Text",
+      "props": {
+        "text": "Scan ran DEGRADED: zizmor/actionlint install blocked; hand-rolled analysis + manual review used instead.",
+        "variant": "muted"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "storylink_pr": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Security Audit Report & Fixes",
+        "href": "https://github.com/swarm-ai-research/aeon-atlas/pull/36",
+        "source": "GitHub PR #36"
+      }
+    }
+  }
+}
