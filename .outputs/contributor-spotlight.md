@@ -1,13 +1,12 @@
+Done. The skill exited cleanly with `SPOTLIGHT_NO_COHORT_DATA`.
+
 ## Summary
 
-**Status: `SPOTLIGHT_NO_COHORT_DATA`** — exited cleanly without notifying.
+**Status: `SPOTLIGHT_NO_COHORT_DATA` — no article written, no notification sent.**
 
-**What happened:**
-- No `articles/fork-cohort-*.md` article exists in the repo, and `memory/topics/fork-cohort-state.json` is also absent.
-- Per the skill's rules: the skill cannot fabricate cohort assignments, so it exits without picking a fork or writing an article.
+The contributor-spotlight skill requires `fork-cohort` output (either `articles/fork-cohort-*.md` from the last 14 days or `memory/topics/fork-cohort-state.json`) to pick a featured fork. Neither exists — the heartbeat log confirms `fork-cohort` has been stuck since 2026-10-25 (~20 days). The skill cannot fabricate cohort bucket assignments (POWER/ACTIVE), so it exited cleanly per the defined exit taxonomy.
 
-**Files created/modified:**
-- `memory/topics/contributor-spotlight-history.json` — bootstrapped with empty `{"history":[]}` (first run)
-- `memory/logs/2026-10-25.md` — appended `SPOTLIGHT_NO_COHORT_DATA` log block
+**Files modified:**
+- `memory/logs/2026-11-15.md` — appended the `Contributor Spotlight` log block
 
-**Follow-up needed:** `fork-cohort` must run first (scheduled Sunday 19:00 UTC) to produce the cohort data this skill picks from. Once `fork-cohort` completes and writes either an article or `memory/topics/fork-cohort-state.json`, contributor-spotlight can feature its first operator.
+**Follow-up needed:** Fork-cohort is the upstream dependency. Once it runs successfully and produces either an article or a state file, contributor-spotlight will auto-select a POWER fork on its next scheduled run (Sunday 20:00 UTC).
