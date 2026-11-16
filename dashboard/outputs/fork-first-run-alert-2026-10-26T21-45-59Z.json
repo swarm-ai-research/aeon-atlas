@@ -1,0 +1,120 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "New fork live — 2026-10-26 — NurstarK/aeon-upstream",
+        "description": "@NurstarK just ran their first workflow on Aeon. Welcome to the running fleet."
+      },
+      "children": [
+        "metadata-section",
+        "separator",
+        "links-section"
+      ]
+    },
+    "metadata-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stars-stat",
+        "first-run-row",
+        "when-row"
+      ]
+    },
+    "stars-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars",
+        "value": "0"
+      }
+    },
+    "first-run-row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "first-run-label",
+        "skill-badge"
+      ]
+    },
+    "first-run-label": {
+      "type": "Text",
+      "props": {
+        "text": "First run:",
+        "variant": "caption"
+      }
+    },
+    "skill-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "heartbeat",
+        "variant": "default"
+      }
+    },
+    "when-row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "when-label",
+        "when-value"
+      ]
+    },
+    "when-label": {
+      "type": "Text",
+      "props": {
+        "text": "When:",
+        "variant": "caption"
+      }
+    },
+    "when-value": {
+      "type": "Text",
+      "props": {
+        "text": "< 1h ago",
+        "variant": "caption"
+      }
+    },
+    "separator": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "links-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "fork-link",
+        "run-link"
+      ]
+    },
+    "fork-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Fork",
+        "href": "https://github.com/NurstarK/aeon-upstream",
+        "source": "GitHub"
+      }
+    },
+    "run-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Run",
+        "href": "https://github.com/NurstarK/aeon-upstream/actions/runs/40403577845",
+        "source": "GitHub Actions"
+      }
+    }
+  }
+}

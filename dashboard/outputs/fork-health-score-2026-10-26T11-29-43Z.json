@@ -1,0 +1,294 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Fork Health Score",
+        "description": "aeonfun/aeon — 2026-10-26"
+      },
+      "children": [
+        "stat-main",
+        "text-baseline",
+        "sep-1",
+        "heading-tier",
+        "grid-tiers",
+        "sep-2",
+        "heading-top3",
+        "stack-top3",
+        "link-leaderboard"
+      ]
+    },
+    "stat-main": {
+      "type": "Stat",
+      "props": {
+        "label": "Active Forks",
+        "value": "3 of 78",
+        "delta": "4%"
+      }
+    },
+    "text-baseline": {
+      "type": "Text",
+      "props": {
+        "text": "Baseline run — no prior week to compare.",
+        "variant": "muted"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-tier": {
+      "type": "Heading",
+      "props": {
+        "text": "Tier Mix",
+        "level": "h3"
+      }
+    },
+    "grid-tiers": {
+      "type": "Grid",
+      "props": {
+        "columns": 4,
+        "gap": "md"
+      },
+      "children": [
+        "stat-active",
+        "stat-warm",
+        "stat-stale",
+        "stat-quiet"
+      ]
+    },
+    "stat-active": {
+      "type": "Stat",
+      "props": {
+        "label": "ACTIVE",
+        "value": "3"
+      }
+    },
+    "stat-warm": {
+      "type": "Stat",
+      "props": {
+        "label": "WARM",
+        "value": "31"
+      }
+    },
+    "stat-stale": {
+      "type": "Stat",
+      "props": {
+        "label": "STALE",
+        "value": "44"
+      }
+    },
+    "stat-quiet": {
+      "type": "Stat",
+      "props": {
+        "label": "QUIET",
+        "value": "0"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-top3": {
+      "type": "Heading",
+      "props": {
+        "text": "Top 3 ACTIVE",
+        "level": "h3"
+      }
+    },
+    "stack-top3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "card-fork-1",
+        "card-fork-2",
+        "card-fork-3"
+      ]
+    },
+    "card-fork-1": {
+      "type": "Card",
+      "props": {},
+      "children": [
+        "heading-fork-1",
+        "stack-fork-1-stats"
+      ]
+    },
+    "heading-fork-1": {
+      "type": "Heading",
+      "props": {
+        "text": "1. icepy/aeon-token",
+        "level": "h4"
+      }
+    },
+    "stack-fork-1-stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat-fork-1-score",
+        "stat-fork-1-days",
+        "stat-fork-1-skills",
+        "stat-fork-1-prs"
+      ]
+    },
+    "stat-fork-1-score": {
+      "type": "Stat",
+      "props": {
+        "label": "Score",
+        "value": "90"
+      }
+    },
+    "stat-fork-1-days": {
+      "type": "Stat",
+      "props": {
+        "label": "Last Active",
+        "value": "0d"
+      }
+    },
+    "stat-fork-1-skills": {
+      "type": "Stat",
+      "props": {
+        "label": "Skills",
+        "value": "8"
+      }
+    },
+    "stat-fork-1-prs": {
+      "type": "Stat",
+      "props": {
+        "label": "PRs/30d",
+        "value": "4"
+      }
+    },
+    "card-fork-2": {
+      "type": "Card",
+      "props": {},
+      "children": [
+        "heading-fork-2",
+        "stack-fork-2-stats"
+      ]
+    },
+    "heading-fork-2": {
+      "type": "Heading",
+      "props": {
+        "text": "2. bgiesing/pepper-bgiesing",
+        "level": "h4"
+      }
+    },
+    "stack-fork-2-stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat-fork-2-score",
+        "stat-fork-2-days",
+        "stat-fork-2-skills",
+        "stat-fork-2-prs"
+      ]
+    },
+    "stat-fork-2-score": {
+      "type": "Stat",
+      "props": {
+        "label": "Score",
+        "value": "87"
+      }
+    },
+    "stat-fork-2-days": {
+      "type": "Stat",
+      "props": {
+        "label": "Last Active",
+        "value": "1d"
+      }
+    },
+    "stat-fork-2-skills": {
+      "type": "Stat",
+      "props": {
+        "label": "Skills",
+        "value": "15"
+      }
+    },
+    "stat-fork-2-prs": {
+      "type": "Stat",
+      "props": {
+        "label": "PRs/30d",
+        "value": "2"
+      }
+    },
+    "card-fork-3": {
+      "type": "Card",
+      "props": {},
+      "children": [
+        "heading-fork-3",
+        "stack-fork-3-stats"
+      ]
+    },
+    "heading-fork-3": {
+      "type": "Heading",
+      "props": {
+        "text": "3. Domimueller85/aeon",
+        "level": "h4"
+      }
+    },
+    "stack-fork-3-stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat-fork-3-score",
+        "stat-fork-3-days",
+        "stat-fork-3-skills",
+        "stat-fork-3-prs"
+      ]
+    },
+    "stat-fork-3-score": {
+      "type": "Stat",
+      "props": {
+        "label": "Score",
+        "value": "83"
+      }
+    },
+    "stat-fork-3-days": {
+      "type": "Stat",
+      "props": {
+        "label": "Last Active",
+        "value": "1d"
+      }
+    },
+    "stat-fork-3-skills": {
+      "type": "Stat",
+      "props": {
+        "label": "Skills",
+        "value": "84"
+      }
+    },
+    "stat-fork-3-prs": {
+      "type": "Stat",
+      "props": {
+        "label": "PRs/30d",
+        "value": "1"
+      }
+    },
+    "link-leaderboard": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full leaderboard",
+        "href": "articles/fork-health-score-2026-10-26.md",
+        "source": "articles"
+      }
+    }
+  }
+}

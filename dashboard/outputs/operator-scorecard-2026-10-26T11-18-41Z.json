@@ -1,0 +1,235 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Operator Scorecard — 2026-10-26",
+        "description": "Performance and health metrics"
+      },
+      "children": [
+        "status-alert",
+        "sep-1",
+        "main-stack",
+        "sep-2",
+        "footer-stack"
+      ]
+    },
+    "status-alert": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "🔴 DEGRADED",
+        "message": "Economic lane dark; Agent stack P0-clear all week; Fleet-intelligence first dispatches"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "main-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "agent-section",
+        "community-section",
+        "economic-section"
+      ]
+    },
+    "agent-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "agent-heading",
+        "agent-stack"
+      ]
+    },
+    "agent-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Agent Health",
+        "level": "h3"
+      }
+    },
+    "agent-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "agent-nodata",
+        "agent-heartbeat",
+        "agent-issues",
+        "agent-resolved"
+      ]
+    },
+    "agent-nodata": {
+      "type": "Text",
+      "props": {
+        "text": "No pass rate data",
+        "variant": "muted"
+      }
+    },
+    "agent-heartbeat": {
+      "type": "Stat",
+      "props": {
+        "value": "13",
+        "label": "Heartbeat runs (P0 clear)"
+      }
+    },
+    "agent-issues": {
+      "type": "Stat",
+      "props": {
+        "value": "0",
+        "label": "Open issues"
+      }
+    },
+    "agent-resolved": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-009 resolved 2026-10-25",
+        "variant": "secondary"
+      }
+    },
+    "community-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "community-heading",
+        "community-stack"
+      ]
+    },
+    "community-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Community Growth",
+        "level": "h3"
+      }
+    },
+    "community-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "community-nodelta",
+        "community-contributors",
+        "community-forks",
+        "community-new"
+      ]
+    },
+    "community-nodelta": {
+      "type": "Text",
+      "props": {
+        "text": "No star/fork delta",
+        "variant": "muted"
+      }
+    },
+    "community-contributors": {
+      "type": "Stat",
+      "props": {
+        "value": "78",
+        "label": "Contributors"
+      }
+    },
+    "community-forks": {
+      "type": "Stat",
+      "props": {
+        "value": "65",
+        "label": "Active forks"
+      }
+    },
+    "community-new": {
+      "type": "Stat",
+      "props": {
+        "value": "0",
+        "label": "New contributors this period"
+      }
+    },
+    "economic-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "economic-heading",
+        "economic-stack"
+      ]
+    },
+    "economic-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Economic Activity",
+        "level": "h3"
+      }
+    },
+    "economic-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "economic-aeon",
+        "economic-notoken"
+      ]
+    },
+    "economic-aeon": {
+      "type": "Stat",
+      "props": {
+        "value": "$0",
+        "label": "in $AEON to recipients"
+      }
+    },
+    "economic-notoken": {
+      "type": "Text",
+      "props": {
+        "text": "No token data (economic skills not enabled in this instance)",
+        "variant": "muted"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "footer-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "window-text",
+        "full-link"
+      ]
+    },
+    "window-text": {
+      "type": "Text",
+      "props": {
+        "text": "Window: last 7 days",
+        "variant": "caption"
+      }
+    },
+    "full-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full Report",
+        "href": "articles/operator-scorecard-2026-10-26.md",
+        "source": "Operator Scorecard"
+      }
+    }
+  }
+}

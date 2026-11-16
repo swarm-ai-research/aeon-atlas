@@ -1,0 +1,129 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Fork Contributor Leaderboard — 2026-11-01"
+      },
+      "children": [
+        "sparkleware-note",
+        "sep1",
+        "top-5-heading",
+        "top-5-table",
+        "sep2",
+        "other-notes",
+        "sep3",
+        "full-leaderboard-link"
+      ]
+    },
+    "sparkleware-note": {
+      "type": "Text",
+      "props": {
+        "text": "sparkleware jumped from #20 to #9 — five unreleased skills in their fork now on radar.",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "top-5-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top 5",
+        "level": "h2"
+      }
+    },
+    "top-5-table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Rank",
+          "Contributor",
+          "Score",
+          "Details"
+        ],
+        "rows": [
+          [
+            "1",
+            "@Svector-anu",
+            "818",
+            "78 merged PRs, 2 reviews"
+          ],
+          [
+            "2",
+            "@antfleet-ops",
+            "149",
+            "14 merged PRs"
+          ],
+          [
+            "3",
+            "@houndflow",
+            "98",
+            "8 merged PRs"
+          ],
+          [
+            "4",
+            "@NurstarK",
+            "98",
+            "7 merged PRs, 5 new skills"
+          ],
+          [
+            "5",
+            "@sentinelhood",
+            "95",
+            "7 merged PRs, 5 new skills"
+          ]
+        ]
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "other-notes": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "first-prs-note",
+        "top-reviewer-note"
+      ]
+    },
+    "first-prs-note": {
+      "type": "Text",
+      "props": {
+        "text": "First PRs this week: none",
+        "variant": "muted"
+      }
+    },
+    "top-reviewer-note": {
+      "type": "Text",
+      "props": {
+        "text": "Top reviewer: @Svector-anu (2 comments)",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "full-leaderboard-link": {
+      "type": "Link",
+      "props": {
+        "label": "Full leaderboard",
+        "href": "https://github.com/swarm-ai-research/aeon-atlas/blob/main/articles/fork-contributor-leaderboard-2026-11-01.md"
+      }
+    }
+  }
+}

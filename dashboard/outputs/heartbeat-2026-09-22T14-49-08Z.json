@@ -1,0 +1,293 @@
+{
+  "root": "heartbeat_card",
+  "state": {},
+  "elements": {
+    "heartbeat_card": {
+      "type": "Card",
+      "props": {
+        "title": "heartbeat",
+        "description": "Scheduler health check"
+      },
+      "children": [
+        "alert_section",
+        "sep_1",
+        "incident_section",
+        "sep_2",
+        "recovery_section",
+        "sep_3",
+        "fleet_section",
+        "sep_4",
+        "status_page_note"
+      ]
+    },
+    "alert_section": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "🔴 DEGRADED",
+        "message": "Heartbeat scheduler went quiet ~41 hours — missed 4 consecutive slots"
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "incident_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "incident_heading",
+        "missed_slots_stat",
+        "missed_times_text",
+        "threshold_info_stack"
+      ]
+    },
+    "incident_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Incident",
+        "level": "h3"
+      }
+    },
+    "missed_slots_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Consecutive missed slots",
+        "value": "4"
+      }
+    },
+    "missed_times_text": {
+      "type": "Text",
+      "props": {
+        "text": "Times: 09-21 08:00, 09-21 14:00, 09-21 20:00, 09-22 08:00",
+        "variant": "body"
+      }
+    },
+    "threshold_info_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "threshold_text",
+        "last_clean_text"
+      ]
+    },
+    "threshold_text": {
+      "type": "Text",
+      "props": {
+        "text": "Self-check breached the 36h threshold",
+        "variant": "body"
+      }
+    },
+    "last_clean_text": {
+      "type": "Text",
+      "props": {
+        "text": "Last clean run: 09-20 21:35 UTC",
+        "variant": "caption"
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "recovery_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "recovery_heading",
+        "issue_info_stack",
+        "pattern_stack",
+        "recovery_status_stack"
+      ]
+    },
+    "recovery_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Issue & Recovery",
+        "level": "h3"
+      }
+    },
+    "issue_info_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "filed_label",
+        "issue_badge",
+        "severity_badge"
+      ]
+    },
+    "filed_label": {
+      "type": "Text",
+      "props": {
+        "text": "Filed:",
+        "variant": "body"
+      }
+    },
+    "issue_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-007",
+        "variant": "outline"
+      }
+    },
+    "severity_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "HIGH",
+        "variant": "destructive"
+      }
+    },
+    "pattern_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pattern_text",
+        "recurrence_text"
+      ]
+    },
+    "pattern_text": {
+      "type": "Text",
+      "props": {
+        "text": "Same missed-dispatch signature as ISS-005/006",
+        "variant": "body"
+      }
+    },
+    "recurrence_text": {
+      "type": "Text",
+      "props": {
+        "text": "3rd recurrence in ~3 weeks",
+        "variant": "caption"
+      }
+    },
+    "recovery_status_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "recovering_label",
+        "slot_info_text",
+        "progress_bar",
+        "recovery_detail_text"
+      ]
+    },
+    "recovering_label": {
+      "type": "Text",
+      "props": {
+        "text": "Recovering now:",
+        "variant": "body"
+      }
+    },
+    "slot_info_text": {
+      "type": "Text",
+      "props": {
+        "text": "Current 09-22 14:00 slot ran ~46 minutes late",
+        "variant": "body"
+      }
+    },
+    "progress_bar": {
+      "type": "Progress",
+      "props": {
+        "value": 33,
+        "max": 100,
+        "label": "Recovery progress"
+      }
+    },
+    "recovery_detail_text": {
+      "type": "Text",
+      "props": {
+        "text": "1 of 3 clean slots needed to resolve",
+        "variant": "caption"
+      }
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "fleet_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "fleet_heading",
+        "fleet_status_badge",
+        "fleet_details_stack"
+      ]
+    },
+    "fleet_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Fleet Status",
+        "level": "h3"
+      }
+    },
+    "fleet_status_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "🟢 GREEN",
+        "variant": "secondary"
+      }
+    },
+    "fleet_details_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "no_failures_text",
+        "no_stuck_text",
+        "no_urgent_text"
+      ]
+    },
+    "no_failures_text": {
+      "type": "Text",
+      "props": {
+        "text": "No failed skills",
+        "variant": "body"
+      }
+    },
+    "no_stuck_text": {
+      "type": "Text",
+      "props": {
+        "text": "No stuck skills",
+        "variant": "body"
+      }
+    },
+    "no_urgent_text": {
+      "type": "Text",
+      "props": {
+        "text": "0 urgent issues",
+        "variant": "body"
+      }
+    },
+    "sep_4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "status_page_note": {
+      "type": "Text",
+      "props": {
+        "text": "Status page → DEGRADED",
+        "variant": "muted"
+      }
+    }
+  }
+}

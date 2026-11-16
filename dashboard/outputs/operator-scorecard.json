@@ -1,0 +1,44 @@
+{
+  "version": "1",
+  "generated_at": "2026-10-26T00:00:00Z",
+  "skill": "operator-scorecard",
+  "title": "Operator Scorecard — 2026-10-26",
+  "spec": {
+    "type": "Stack",
+    "props": {"direction": "vertical", "gap": "md"},
+    "children": [
+      {"type": "Heading", "props": {"level": 2, "children": "Operator Scorecard — 2026-10-26"}},
+      {"type": "Alert", "props": {"variant": "destructive", "children": "DEGRADED — economic lane dark; agent stack P0-clear all week; fleet-intelligence first dispatches"}},
+      {"type": "Grid", "props": {"columns": 3, "gap": "sm"}, "children": [
+        {"type": "Card", "props": {"children": [
+          {"type": "Text", "props": {"variant": "muted", "children": "Agent health"}},
+          {"type": "Heading", "props": {"level": 3, "children": "N/A%"}},
+          {"type": "Text", "props": {"children": "13 hb runs · 0 anomalies · 0 open issues"}}
+        ]}},
+        {"type": "Card", "props": {"children": [
+          {"type": "Text", "props": {"variant": "muted", "children": "Stars added"}},
+          {"type": "Heading", "props": {"level": 3, "children": "N/A"}},
+          {"type": "Text", "props": {"children": "N/A forks · 0 new contributors"}}
+        ]}},
+        {"type": "Card", "props": {"children": [
+          {"type": "Text", "props": {"variant": "muted", "children": "$AEON distributed"}},
+          {"type": "Heading", "props": {"level": 3, "children": "$0.00"}},
+          {"type": "Text", "props": {"children": "0 recipients · token N/A% 7d"}}
+        ]}}
+      ]},
+      {"type": "Heading", "props": {"level": 3, "children": "Verdicts by lane"}},
+      {"type": "Table", "props": {
+        "columns": [
+          {"key": "lane", "header": "Lane"},
+          {"key": "verdict", "header": "Verdict"},
+          {"key": "headline", "header": "Headline"}
+        ],
+        "rows": [
+          {"lane": "Agent health", "verdict": "INSUFFICIENT_DATA → WATCH", "headline": "P0 clear 13/13 · 0 open issues · ISS-009 resolved"},
+          {"lane": "Community growth", "verdict": "INSUFFICIENT_DATA → WATCH", "headline": "No star/fork delta · 78 contributors · 65 active forks"},
+          {"lane": "Economic activity", "verdict": "DEGRADED", "headline": "$0 distributed · no token data · economic skills not enabled"}
+        ]
+      }}
+    ]
+  }
+}

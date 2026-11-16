@@ -1,0 +1,381 @@
+{
+  "parent": "aeonfun/aeon",
+  "baseline_repo": "swarm-ai-research/aeon-atlas",
+  "baseline_note": "parent has no skills.json; atlas repo used as reference",
+  "last_run": "2026-11-15",
+  "last_status": "FORK_SKILL_GAP_OK",
+  "upstream_skill_count": 171,
+  "top_missing_slugs": [
+    {"slug": "contract-audit", "fork_count": 6, "category": "crypto"},
+    {"slug": "deployer-trace", "fork_count": 6, "category": "crypto"},
+    {"slug": "fleet-scorecard", "fork_count": 6, "category": "dev"},
+    {"slug": "follow-up-patrol", "fork_count": 6, "category": "productivity"},
+    {"slug": "fork-health-score", "fork_count": 6, "category": "dev"},
+    {"slug": "holder-concentration", "fork_count": 6, "category": "crypto"},
+    {"slug": "mcp-pulse", "fork_count": 6, "category": "dev"},
+    {"slug": "narrative-convergence", "fork_count": 6, "category": "research"},
+    {"slug": "pr-skill-triage", "fork_count": 6, "category": "dev"},
+    {"slug": "rug-scan", "fork_count": 6, "category": "crypto"}
+  ],
+  "forks": {
+    "Boodszw/Boodszw_Bread": {
+      "missing_count": 58,
+      "missing_slugs": ["agent-displacement","ai-framework-watch","batch-health","builder-map","competitor-launch-radar","compute-pulse","config-validator","contract-audit","deployer-trace","disclosure-tracker","ecosystem-pulse","engagement-act","feature","fleet-scorecard","fleet-skill-adoption","fleet-state","follow-up-patrol","fork-first-run-alert","fork-health-score","fork-release-tracker","fork-skill-gap","holder-concentration","idea-pipeline","idea-validator","janitor","launch-radar","mcp-pulse","memory-flush","memory-structural-dedupe","milestone-tracker","narrative-convergence","note-taking","pm-intel","pm-manipulation","pm-pulse","polymarket","pr-skill-triage","pr-tracker","price-threshold-alert","product-hunt-launch","pvr-triage-monitor","pvr-watchlist","repo-revive","rug-scan","run-frequency-guard","rwa-pulse","self-review","signal-verdict","skill-enabler","sparkleware-catalog","spend-monitor","topic-momentum","tweet-digest","tx-explain","vuln-tracker","wallet-digest","wallet-profile","x402-monitor"],
+      "top_missing_categories": [["other", 35], ["dev", 11], ["crypto", 7]],
+      "unreadable": false,
+      "last_seen": "2026-11-15",
+      "classification_source": "live"
+    },
+    "madebyshun/blueagent-aeon": {
+      "missing_count": 53,
+      "missing_slugs": ["agent-displacement","batch-health","builder-map","competitor-launch-radar","compute-pulse","config-validator","contract-audit","deployer-trace","disclosure-tracker","ecosystem-pulse","engagement-act","feature","fleet-scorecard","fleet-skill-adoption","follow-up-patrol","fork-first-run-alert","fork-health-score","fork-skill-gap","holder-concentration","idea-pipeline","idea-validator","janitor","launch-radar","mcp-pulse","memory-flush","memory-structural-dedupe","milestone-tracker","narrative-convergence","note-taking","pm-intel","pm-manipulation","pm-pulse","polymarket","pr-skill-triage","pr-tracker","pvr-triage-monitor","pvr-watchlist","repo-revive","rug-scan","run-frequency-guard","rwa-pulse","self-review","signal-verdict","skill-enabler","sparkleware-catalog","spend-monitor","topic-momentum","tweet-digest","tx-explain","vuln-tracker","wallet-digest","wallet-profile","x402-monitor"],
+      "top_missing_categories": [["other", 34], ["dev", 11], ["crypto", 6]],
+      "unreadable": false,
+      "last_seen": "2026-11-15",
+      "classification_source": "live"
+    },
+    "damo-nu11/aeon-minebean": {
+      "missing_count": 51,
+      "missing_slugs": ["agent-displacement","batch-health","builder-map","competitor-launch-radar","compute-pulse","config-validator","contract-audit","deployer-trace","disclosure-tracker","ecosystem-pulse","engagement-act","feature","fleet-scorecard","fleet-skill-adoption","follow-up-patrol","fork-health-score","holder-concentration","idea-pipeline","idea-validator","janitor","launch-radar","mcp-pulse","memory-flush","memory-structural-dedupe","milestone-tracker","narrative-convergence","note-taking","pm-intel","pm-manipulation","pm-pulse","polymarket","pr-skill-triage","pr-tracker","pvr-triage-monitor","pvr-watchlist","repo-revive","rug-scan","run-frequency-guard","rwa-pulse","self-review","signal-verdict","skill-enabler","sparkleware-catalog","spend-monitor","topic-momentum","tweet-digest","tx-explain","vuln-tracker","wallet-digest","wallet-profile","x402-monitor"],
+      "top_missing_categories": [["other", 34], ["dev", 8], ["crypto", 6]],
+      "unreadable": false,
+      "last_seen": "2026-11-15",
+      "classification_source": "live"
+    },
+    "lawbworld-tech/aeon": {
+      "missing_count": 50,
+      "missing_slugs": ["agent-displacement","batch-health","builder-map","compute-pulse","config-validator","contract-audit","deployer-trace","disclosure-tracker","ecosystem-pulse","engagement-act","feature","fleet-scorecard","fleet-skill-adoption","follow-up-patrol","fork-health-score","holder-concentration","idea-pipeline","idea-validator","janitor","launch-radar","mcp-pulse","memory-flush","memory-structural-dedupe","milestone-tracker","narrative-convergence","note-taking","pm-intel","pm-manipulation","pm-pulse","polymarket","pr-skill-triage","pr-tracker","pvr-triage-monitor","pvr-watchlist","repo-revive","rug-scan","run-frequency-guard","rwa-pulse","self-review","signal-verdict","skill-enabler","sparkleware-catalog","spend-monitor","topic-momentum","tweet-digest","tx-explain","vuln-tracker","wallet-digest","wallet-profile","x402-monitor"],
+      "top_missing_categories": [["other", 33], ["dev", 8], ["crypto", 6]],
+      "unreadable": false,
+      "last_seen": "2026-11-15",
+      "classification_source": "live"
+    },
+    "youpsla/aeon": {
+      "missing_count": 50,
+      "missing_slugs": ["agent-displacement","batch-health","builder-map","compute-pulse","config-validator","contract-audit","deployer-trace","disclosure-tracker","ecosystem-pulse","engagement-act","feature","fleet-scorecard","fleet-skill-adoption","follow-up-patrol","fork-health-score","holder-concentration","idea-pipeline","idea-validator","janitor","launch-radar","mcp-pulse","memory-flush","memory-structural-dedupe","milestone-tracker","narrative-convergence","note-taking","pm-intel","pm-manipulation","pm-pulse","polymarket","pr-skill-triage","pr-tracker","pvr-triage-monitor","pvr-watchlist","repo-revive","rug-scan","run-frequency-guard","rwa-pulse","self-review","signal-verdict","skill-enabler","sparkleware-catalog","spend-monitor","topic-momentum","tweet-digest","tx-explain","vuln-tracker","wallet-digest","wallet-profile","x402-monitor"],
+      "top_missing_categories": [["other", 33], ["dev", 8], ["crypto", 6]],
+      "unreadable": false,
+      "last_seen": "2026-11-15",
+      "classification_source": "live"
+    },
+    "richard7463/aeon": {
+      "missing_count": 14,
+      "missing_slugs": ["contract-audit","deployer-trace","fleet-scorecard","follow-up-patrol","fork-health-score","holder-concentration","mcp-pulse","narrative-convergence","pr-skill-triage","rug-scan","sparkleware-catalog","spend-monitor","tx-explain","wallet-profile"],
+      "top_missing_categories": [["crypto", 6], ["dev", 5], ["productivity", 2]],
+      "unreadable": false,
+      "last_seen": "2026-11-15",
+      "classification_source": "live"
+    },
+    "NurstarK/aeon-upstream": {
+      "missing_count": 0,
+      "missing_slugs": [],
+      "top_missing_categories": [],
+      "unreadable": false,
+      "last_seen": "2026-11-15",
+      "classification_source": "live",
+      "extra_skills": ["approval-audit","capabilities-map","ecosystem-entrants","fund-flow","honeypot-check","investigation-report","linked-wallets","liquidpad-launch","lp-lock-check","pr-merge-queue"]
+    },
+    "beijiangqukuailian/aeon": {
+      "missing_count": 0,
+      "missing_slugs": [],
+      "top_missing_categories": [],
+      "unreadable": false,
+      "last_seen": "2026-11-15",
+      "classification_source": "live",
+      "extra_skills": ["approval-audit","capabilities-map","fund-flow","honeypot-check","investigation-report","linked-wallets","liquidpad-launch","lp-lock-check","pr-merge-queue"]
+    },
+    "opencolin/aeon": {
+      "missing_count": null,
+      "missing_slugs": [],
+      "top_missing_categories": [],
+      "unreadable": true,
+      "unreadable_reason": "404",
+      "last_seen": "2026-11-15",
+      "classification_source": "live"
+    },
+    "domosta/aeon": {
+      "missing_count": null,
+      "missing_slugs": [],
+      "top_missing_categories": [],
+      "unreadable": true,
+      "unreadable_reason": "404",
+      "last_seen": "2026-11-15",
+      "classification_source": "live"
+    },
+    "SuperFluouss/aeon-superfluouss": {
+      "missing_count": null,
+      "missing_slugs": [],
+      "top_missing_categories": [],
+      "unreadable": true,
+      "unreadable_reason": "404",
+      "last_seen": "2026-11-15",
+      "classification_source": "live"
+    },
+    "chandras19349/aeon": {
+      "missing_count": null,
+      "missing_slugs": [],
+      "top_missing_categories": [],
+      "unreadable": true,
+      "unreadable_reason": "404",
+      "last_seen": "2026-11-15",
+      "classification_source": "live"
+    },
+    "njfyanf9-a11y/aeon-njfyanf9-a11y": {
+      "missing_count": null,
+      "missing_slugs": [],
+      "top_missing_categories": [],
+      "unreadable": true,
+      "unreadable_reason": "404",
+      "last_seen": "2026-11-15",
+      "classification_source": "live"
+    },
+    "airdropia/aeon": {
+      "missing_count": null,
+      "missing_slugs": [],
+      "top_missing_categories": [],
+      "unreadable": true,
+      "unreadable_reason": "404",
+      "last_seen": "2026-11-15",
+      "classification_source": "live"
+    },
+    "o8613844-cpu/aeon-o8613844-cpu": {
+      "missing_count": null,
+      "missing_slugs": [],
+      "top_missing_categories": [],
+      "unreadable": true,
+      "unreadable_reason": "404",
+      "last_seen": "2026-11-15",
+      "classification_source": "live"
+    },
+    "icepy/aeon-token": {
+      "missing_count": null,
+      "missing_slugs": [],
+      "top_missing_categories": [],
+      "unreadable": true,
+      "unreadable_reason": "404",
+      "last_seen": "2026-11-15",
+      "classification_source": "live"
+    },
+    "mervwtf/aeon-mervwtf": {
+      "missing_count": null,
+      "missing_slugs": [],
+      "top_missing_categories": [],
+      "unreadable": true,
+      "unreadable_reason": "404",
+      "last_seen": "2026-11-15",
+      "classification_source": "live"
+    },
+    "FggDarkOnee420/Fgg-aeon": {
+      "missing_count": null,
+      "missing_slugs": [],
+      "top_missing_categories": [],
+      "unreadable": true,
+      "unreadable_reason": "404",
+      "last_seen": "2026-11-15",
+      "classification_source": "live"
+    },
+    "nhutminh159/aeon-nhutminh159": {
+      "missing_count": null,
+      "missing_slugs": [],
+      "top_missing_categories": [],
+      "unreadable": true,
+      "unreadable_reason": "404",
+      "last_seen": "2026-11-15",
+      "classification_source": "live"
+    },
+    "rauhaton/aeon-rauhaton": {
+      "missing_count": null,
+      "missing_slugs": [],
+      "top_missing_categories": [],
+      "unreadable": true,
+      "unreadable_reason": "404",
+      "last_seen": "2026-11-15",
+      "classification_source": "live"
+    },
+    "unifirer/aeon": {
+      "missing_count": null,
+      "missing_slugs": [],
+      "top_missing_categories": [],
+      "unreadable": true,
+      "unreadable_reason": "404",
+      "last_seen": "2026-11-15",
+      "classification_source": "live"
+    },
+    "stevenclaus00/aeon-AIGUY": {
+      "missing_count": null,
+      "missing_slugs": [],
+      "top_missing_categories": [],
+      "unreadable": true,
+      "unreadable_reason": "404",
+      "last_seen": "2026-11-15",
+      "classification_source": "live"
+    },
+    "Svector-anu/aeon": {
+      "missing_count": null,
+      "missing_slugs": [],
+      "top_missing_categories": [],
+      "unreadable": true,
+      "unreadable_reason": "404",
+      "last_seen": "2026-11-15",
+      "classification_source": "live"
+    },
+    "Blockchains/aeon": {
+      "missing_count": null,
+      "missing_slugs": [],
+      "top_missing_categories": [],
+      "unreadable": true,
+      "unreadable_reason": "404",
+      "last_seen": "2026-11-15",
+      "classification_source": "live"
+    },
+    "alexverify/aeon": {
+      "missing_count": null,
+      "missing_slugs": [],
+      "top_missing_categories": [],
+      "unreadable": true,
+      "unreadable_reason": "404",
+      "last_seen": "2026-11-15",
+      "classification_source": "live"
+    },
+    "anondevv69/bankr-space-aeon": {
+      "missing_count": null,
+      "missing_slugs": [],
+      "top_missing_categories": [],
+      "unreadable": true,
+      "unreadable_reason": "404",
+      "last_seen": "2026-11-15",
+      "classification_source": "live"
+    },
+    "nigelon11/aeon": {
+      "missing_count": 101,
+      "missing_slugs": ["agent-buzz","agent-displacement","ai-framework-watch","aixbt-pulse","builder-map","channel-recap","competitor-launch-radar","compute-pulse","config-validator","contract-audit","contributor-reward","contributor-spotlight","create-campaign","daily-routine","defi-monitor","deployer-trace","disclosure-tracker","engagement-act","evening-recap","external-feature","fleet-scorecard","fleet-skill-adoption","fleet-state","follow-up-patrol","fork-cohort","fork-contributor-leaderboard","fork-first-run-alert","fork-health-score","fork-release-tracker","fork-skill-digest","fork-skill-gap","github-issues","github-releases","hacker-news-digest","holder-concentration","huggingface-trending","idea-capture","idea-validator","janitor","list-digest","market-context-refresh","mcp-pulse","memory-structural-dedupe","milestone-tracker","monitor-kalshi","monitor-runners","morning-brief","on-chain-monitor","pm-intel","polymarket","polymarket-comments","pr-skill-triage","pr-tracker","price-threshold-alert","product-hunt-launch","project-lens","push-recap","pvr-triage-monitor","pvr-watchlist","refresh-x","remix-tweets","repo-actions","repo-article","repo-pulse","repo-revive","research-brief","rss-digest","rss-feed","rug-scan","run-frequency-guard","rwa-pulse","self-review","show-hn-draft","signal-verdict","skill-analytics","skill-enabler","skill-freshness","skill-graph","skill-leaderboard","skill-security-scan","skill-update-check","smithery-manifest","sparkleware-catalog","spend-monitor","star-momentum-alert","startup-idea","technical-explainer","thread-formatter","token-alert","token-report","topic-momentum","tweet-digest","tweet-roundup","update-gallery","v4-readiness","vercel-projects","vibecoding-digest","wallet-digest","weekly-review","weekly-shiplog","workflow-security-audit"],
+      "top_missing_categories": [["other", 55], ["dev", 19], ["productivity", 14]],
+      "unreadable": false,
+      "last_seen": "2026-11-08",
+      "classification_source": "live"
+    },
+    "gitlumen-team/aeon": {
+      "missing_count": 45,
+      "missing_slugs": ["ai-framework-watch","competitor-launch-radar","daily-routine","defi-monitor","evening-recap","feature","fleet-skill-adoption","follow-up-patrol","fork-contributor-leaderboard","fork-first-run-alert","fork-health-score","fork-release-tracker","fork-skill-digest","fork-skill-gap","github-issues","hacker-news-digest","market-context-refresh","memory-flush","memory-structural-dedupe","monitor-runners","morning-brief","note-taking","on-chain-monitor","pm-intel","polymarket","polymarket-comments","pr-skill-triage","price-threshold-alert","product-hunt-launch","pvr-triage-monitor","run-frequency-guard","show-hn-draft","skill-security-scan","skill-update-check","smithery-manifest","star-momentum-alert","thread-formatter","token-alert","token-report","v4-readiness","wallet-digest","weekly-review","weekly-shiplog","workflow-security-audit","write-tweet"],
+      "top_missing_categories": [["other", 15], ["dev", 9], ["productivity", 8]],
+      "unreadable": false,
+      "last_seen": "2026-11-08",
+      "classification_source": "live"
+    },
+    "ashneil12/aeon-upstream": {
+      "missing_count": 0,
+      "missing_slugs": [],
+      "top_missing_categories": [],
+      "unreadable": false,
+      "last_seen": "2026-11-08",
+      "classification_source": "live"
+    },
+    "aeoncity-hub/aeon": {
+      "missing_count": 0,
+      "missing_slugs": [],
+      "top_missing_categories": [],
+      "unreadable": false,
+      "last_seen": "2026-11-08",
+      "classification_source": "live"
+    },
+    "SorenMoussavian/SorenOS-Aeon": {
+      "missing_count": null,
+      "missing_slugs": [],
+      "top_missing_categories": [],
+      "unreadable": true,
+      "unreadable_reason": "404",
+      "last_seen": "2026-11-15",
+      "classification_source": "live"
+    },
+    "enuno/noesis-aeon": {
+      "missing_count": null,
+      "missing_slugs": [],
+      "top_missing_categories": [],
+      "unreadable": true,
+      "unreadable_reason": "404",
+      "last_seen": "2026-11-01",
+      "classification_source": "live"
+    },
+    "ether-btc/aeon": {
+      "missing_count": null,
+      "missing_slugs": [],
+      "top_missing_categories": [],
+      "unreadable": true,
+      "unreadable_reason": "404",
+      "last_seen": "2026-11-15",
+      "classification_source": "live"
+    },
+    "moosebizlab/aeon": {
+      "missing_count": null,
+      "missing_slugs": [],
+      "top_missing_categories": [],
+      "unreadable": true,
+      "unreadable_reason": "404",
+      "last_seen": "2026-11-01",
+      "classification_source": "live"
+    },
+    "00288/aeon": {
+      "missing_count": null,
+      "missing_slugs": [],
+      "top_missing_categories": [],
+      "unreadable": true,
+      "unreadable_reason": "404",
+      "last_seen": "2026-11-01",
+      "classification_source": "live"
+    },
+    "xiaozz8/aeon": {
+      "missing_count": null,
+      "missing_slugs": [],
+      "top_missing_categories": [],
+      "unreadable": true,
+      "unreadable_reason": "404",
+      "last_seen": "2026-11-01",
+      "classification_source": "live"
+    },
+    "gelo11/aeon": {
+      "missing_count": null,
+      "missing_slugs": [],
+      "top_missing_categories": [],
+      "unreadable": true,
+      "unreadable_reason": "404",
+      "last_seen": "2026-11-01",
+      "classification_source": "live"
+    },
+    "normancomics/aeon": {
+      "missing_count": null,
+      "missing_slugs": [],
+      "top_missing_categories": [],
+      "unreadable": true,
+      "unreadable_reason": "404",
+      "last_seen": "2026-11-01",
+      "classification_source": "live"
+    },
+    "MagIcKEarl/aeon": {
+      "missing_count": null,
+      "missing_slugs": [],
+      "top_missing_categories": [],
+      "unreadable": true,
+      "unreadable_reason": "404",
+      "last_seen": "2026-11-01",
+      "classification_source": "live"
+    },
+    "Domimueller85/aeon": {
+      "missing_count": null,
+      "missing_slugs": [],
+      "top_missing_categories": [],
+      "unreadable": true,
+      "unreadable_reason": "no-recent-runs",
+      "last_seen": "2026-11-15",
+      "classification_source": "live"
+    },
+    "stevenclaus00/aeon-AIGUY": {
+      "missing_count": null,
+      "missing_slugs": [],
+      "top_missing_categories": [],
+      "unreadable": true,
+      "unreadable_reason": "404",
+      "last_seen": "2026-11-15",
+      "classification_source": "live"
+    }
+  }
+}

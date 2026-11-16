@@ -1,0 +1,106 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Skill Freshness"
+      },
+      "children": [
+        "alert-status",
+        "sep1",
+        "heading-worst",
+        "worst-stack",
+        "sep2",
+        "heading-action",
+        "action-text",
+        "sep3",
+        "link-full"
+      ]
+    },
+    "alert-status": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "FRESHNESS_STALE",
+        "message": "4 of 32 deps flagged across 2 of 26 enabled consumers"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-worst": {
+      "type": "Heading",
+      "props": {
+        "text": "Worst Issues",
+        "level": "h3"
+      }
+    },
+    "worst-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "worst-item-1",
+        "worst-item-2",
+        "worst-item-3"
+      ]
+    },
+    "worst-item-1": {
+      "type": "Text",
+      "props": {
+        "text": "fleet-state ← articles/fork-cohort-*.md (MISSING, class articles/weekly, first seen 2026-10-31)"
+      }
+    },
+    "worst-item-2": {
+      "type": "Text",
+      "props": {
+        "text": "fleet-state ← articles/fork-release-*.md (MISSING, class articles/weekly, first seen 2026-10-31)"
+      }
+    },
+    "worst-item-3": {
+      "type": "Text",
+      "props": {
+        "text": "fleet-state ← articles/contributor-spotlight-*.md (MISSING, class articles/weekly, first seen 2026-10-31)"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-action": {
+      "type": "Heading",
+      "props": {
+        "text": "Action Required",
+        "level": "h3"
+      }
+    },
+    "action-text": {
+      "type": "Text",
+      "props": {
+        "text": "Check fork-cohort run history — ./scripts/skill-runs --skill fork-cohort --hours 168. All 3 Sunday producers (fork-cohort, fork-release-tracker, contributor-spotlight) left no articles on 2026-11-01. fleet-state runs today and will degrade. New flag: contributor-spotlight now also lacks its fork-cohort input."
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "link-full": {
+      "type": "Link",
+      "props": {
+        "label": "View full freshness report",
+        "href": "articles/skill-freshness-2026-11-02.md"
+      }
+    }
+  }
+}

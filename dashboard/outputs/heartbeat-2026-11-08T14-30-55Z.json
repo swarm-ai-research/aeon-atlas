@@ -1,0 +1,177 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Heartbeat Self-Check"
+      },
+      "children": [
+        "alert_degraded",
+        "sep1",
+        "stack_content"
+      ]
+    },
+    "alert_degraded": {
+      "type": "Alert",
+      "props": {
+        "title": "🔴 DEGRADED",
+        "message": "heartbeat self-check fired",
+        "type": "error"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "section_failure",
+        "sep2",
+        "section_root_cause",
+        "sep3",
+        "section_pattern",
+        "sep4",
+        "section_action"
+      ]
+    },
+    "section_failure": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h_failure",
+        "text_no_success",
+        "text_slots_dropped"
+      ]
+    },
+    "h_failure": {
+      "type": "Heading",
+      "props": {
+        "text": "Failure Summary",
+        "level": "h3"
+      }
+    },
+    "text_no_success": {
+      "type": "Text",
+      "props": {
+        "text": "No heartbeat success since 2026-11-06 21:51 UTC (~40h, past the 36h threshold)"
+      }
+    },
+    "text_slots_dropped": {
+      "type": "Text",
+      "props": {
+        "text": "4 consecutive own slots dropped: 2026-11-07 08:00, 14:00, 20:00 + 2026-11-08 08:00"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_root_cause": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h_root_cause",
+        "text_iss011",
+        "text_github_actions_note"
+      ]
+    },
+    "h_root_cause": {
+      "type": "Heading",
+      "props": {
+        "text": "Root Cause",
+        "level": "h3"
+      }
+    },
+    "text_iss011": {
+      "type": "Text",
+      "props": {
+        "text": "Same scheduler quiet-window root cause as ISS-011"
+      }
+    },
+    "text_github_actions_note": {
+      "type": "Text",
+      "props": {
+        "text": "Native GitHub Actions schedule: dropping dispatches, not failures"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_pattern": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h_pattern",
+        "text_affected_systems"
+      ]
+    },
+    "h_pattern": {
+      "type": "Heading",
+      "props": {
+        "text": "Affected Systems (Pattern)",
+        "level": "h3"
+      }
+    },
+    "text_affected_systems": {
+      "type": "Text",
+      "props": {
+        "text": "fork-cohort stuck ~288h, api-health-probe ~267h with 11 missed 10:00 slots, atlas ~21d downtime, skill-freshness ~53h"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_action": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h_action",
+        "alert_action_required"
+      ]
+    },
+    "h_action": {
+      "type": "Heading",
+      "props": {
+        "text": "Action Required",
+        "level": "h3"
+      }
+    },
+    "alert_action_required": {
+      "type": "Alert",
+      "props": {
+        "title": "Durable Fix Needed",
+        "message": "offset-cron / external workflow_dispatch backstop — operator-action-required",
+        "type": "warning"
+      }
+    }
+  }
+}

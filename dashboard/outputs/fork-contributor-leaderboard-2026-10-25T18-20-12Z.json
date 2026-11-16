@@ -1,0 +1,109 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Fork Contributor Leaderboard 2026-10-25"
+      },
+      "children": [
+        "content-stack"
+      ]
+    },
+    "content-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "highlight-ether",
+        "highlight-svector",
+        "separator-1",
+        "top5-heading",
+        "top5-table",
+        "separator-2",
+        "full-article-link"
+      ]
+    },
+    "highlight-ether": {
+      "type": "Text",
+      "props": {
+        "text": "ether-btc is 67 commits deep with an open PR for a persistent GitHub filing ledger - one merge away from breaking in.",
+        "variant": "lead"
+      }
+    },
+    "highlight-svector": {
+      "type": "Text",
+      "props": {
+        "text": "Svector-anu holds #1 with 78 merged PRs.",
+        "variant": "body"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "top5-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top 5 Contributors",
+        "level": "h3"
+      }
+    },
+    "top5-table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Rank",
+          "Contributor",
+          "Points"
+        ],
+        "rows": [
+          [
+            "1",
+            "Svector-anu",
+            "814pts"
+          ],
+          [
+            "2",
+            "antfleet-ops",
+            "149pts"
+          ],
+          [
+            "3",
+            "houndflow",
+            "98pts"
+          ],
+          [
+            "4",
+            "alexverify",
+            "85pts"
+          ],
+          [
+            "5",
+            "NurstarK",
+            "79pts"
+          ]
+        ]
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "full-article-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full Leaderboard",
+        "href": "articles/fork-contributor-leaderboard-2026-10-25.md",
+        "source": "Aeon"
+      }
+    }
+  }
+}

@@ -127,6 +127,16 @@ Optional enhancements for deeper insight:
 2. **follow-up-patrol** — Escalation audit: age items in MEMORY.md, alert on overdue CRITICAL/HIGH items
 3. **AI framework watch** — Weekly competitive intelligence on 9 AI agent frameworks + peer cohort
 4. **ecosystem-entrants** — New fork detection from ecosystem-watch integration
+## Phase 4: Strategic Intelligence & Backlog Management (In Progress)
+
+### Enabled (4 skills)
+1. **ai-framework-watch** (Mon 18:30 AEST / 08:30 UTC) — Weekly competitive intelligence digest across 9 AI agent frameworks + peer cohort. Tracks 7d/30d star deltas, releases, breaking changes, momentum signals.
+2. **follow-up-patrol** (Tue 21:00 AEST / 11:00 UTC) — Escalation audit: parses MEMORY.md follow-up section + issue tracker, ages items, alerts on overdue CRITICAL/HIGH items (>21d/>14d). Catch-all for open-loop backlog.
+3. **ecosystem-pulse** (Mon 21:00 AEST / 11:00 UTC) — Weekly liveness check of ECOSYSTEM.md projects: resolves each to GitHub repos, reports stars/forks/last-push buckets (ACTIVE/RECENT/COLD/X-only), 7d release window, WoW transitions. Gated notifications for ecosystem health.
+4. **fleet-scorecard** (Daily 23:00 AEST / 13:00 UTC) — Daily fleet-wide scorecard (self + every non-archived repo in memory/instances.json): runs, tokens (OpenRouter shape), est. cost, reliability, day-over-day deltas + alerts. Reads prefetch-fleet-scorecard.sh output.
+
+### Optional Future Enhancements
+1. **competitor-launch-radar** — New AI framework launch detection (lower priority: covered by fork analytics)
 
 ## Success Metrics (First Week: 2026-09-15)
 

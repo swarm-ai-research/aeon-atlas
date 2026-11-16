@@ -1,0 +1,107 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "Skill Leaderboard 2026-10-25"
+      },
+      "children": [
+        "header_stack",
+        "separator1",
+        "leaderboard_table",
+        "separator2",
+        "fleet_note"
+      ]
+    },
+    "header_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "configured_text",
+        "fork_status_badge"
+      ]
+    },
+    "configured_text": {
+      "type": "Text",
+      "props": {
+        "text": "62 configured forks of 64 active",
+        "variant": "body"
+      }
+    },
+    "fork_status_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "4 forks enabled aeon-update not in upstream",
+        "variant": "secondary"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "leaderboard_table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Rank",
+          "Skill",
+          "Forks",
+          "Usage %"
+        ],
+        "rows": [
+          [
+            "1",
+            "token-movers",
+            "8",
+            "12.9%"
+          ],
+          [
+            "2",
+            "narrative-tracker",
+            "6",
+            "9.7%"
+          ],
+          [
+            "3",
+            "token-pick",
+            "4",
+            "6.5%"
+          ],
+          [
+            "4",
+            "skill-health",
+            "4",
+            "6.5%"
+          ],
+          [
+            "5",
+            "aeon-update (fork-only)",
+            "4",
+            "6.5%"
+          ]
+        ]
+      }
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "fleet_note": {
+      "type": "Alert",
+      "props": {
+        "title": "Fleet-only",
+        "message": "aeon-update built independently in 4 forks",
+        "type": "info"
+      }
+    }
+  }
+}

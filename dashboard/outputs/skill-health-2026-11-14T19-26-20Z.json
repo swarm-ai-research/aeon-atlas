@@ -1,0 +1,112 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Skill Health — 2026-11-14",
+        "description": "HEALTH: OK — 23/26 skills healthy"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "status_section",
+        "sep1",
+        "issues_section",
+        "sep2",
+        "summary_section"
+      ]
+    },
+    "status_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "stat_healthy",
+        "text_criteria"
+      ]
+    },
+    "stat_healthy": {
+      "type": "Stat",
+      "props": {
+        "label": "skills healthy",
+        "value": "23/26"
+      }
+    },
+    "text_criteria": {
+      "type": "Text",
+      "props": {
+        "text": "All success_rate ≥ 0.92, 0 consecutive failures, no failed/degraded/flapping"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "issues_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "alert_fork",
+        "alert_no_data"
+      ]
+    },
+    "alert_fork": {
+      "type": "Alert",
+      "props": {
+        "title": "🕸 fork-cohort STUCK (~20d)",
+        "message": "Last status: 'dispatched', no outcome. Heartbeat P0. Next retry: Sun 11-15 19:00 UTC",
+        "type": "warning"
+      }
+    },
+    "alert_no_data": {
+      "type": "Alert",
+      "props": {
+        "title": "⚪ NO DATA (2)",
+        "message": "follow-up-patrol, workflow-security-audit — known weekly never-dispatched cohort",
+        "type": "info"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "summary_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_filed",
+        "text_open_issues"
+      ]
+    },
+    "text_filed": {
+      "type": "Text",
+      "props": {
+        "text": "Nothing filed/resolved by skill-health this run"
+      }
+    },
+    "text_open_issues": {
+      "type": "Text",
+      "props": {
+        "text": "Open issues: 1 (ISS-011 scheduler-gap, high · heartbeat-owned) · Resolved this run: 0"
+      }
+    }
+  }
+}

@@ -1,0 +1,299 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "heartbeat"
+      },
+      "children": [
+        "alert-status",
+        "sep-1",
+        "stat-quiet-time",
+        "sep-2",
+        "section-issue",
+        "sep-3",
+        "section-cause",
+        "sep-4",
+        "section-filed",
+        "sep-5",
+        "section-recovery",
+        "sep-6",
+        "section-fleet",
+        "sep-7",
+        "section-next"
+      ]
+    },
+    "alert-status": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "🔴 DEGRADED",
+        "message": "Heartbeat scheduler went quiet"
+      }
+    },
+    "sep-1": {
+      "type": "Separator"
+    },
+    "stat-quiet-time": {
+      "type": "Stat",
+      "props": {
+        "label": "Time quiet",
+        "value": "~36.5 hours"
+      }
+    },
+    "sep-2": {
+      "type": "Separator"
+    },
+    "section-issue": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-issue",
+        "stat-missed-slots",
+        "text-missed-times"
+      ]
+    },
+    "heading-issue": {
+      "type": "Heading",
+      "props": {
+        "text": "Missed Slots",
+        "level": "h3"
+      }
+    },
+    "stat-missed-slots": {
+      "type": "Stat",
+      "props": {
+        "label": "Missed on 2026-09-16",
+        "value": "3"
+      }
+    },
+    "text-missed-times": {
+      "type": "Text",
+      "props": {
+        "text": "Times: 08:00 / 14:00 / 20:00",
+        "variant": "body"
+      }
+    },
+    "sep-3": {
+      "type": "Separator"
+    },
+    "section-cause": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-cause",
+        "text-cause-type",
+        "stack-cause-sig"
+      ]
+    },
+    "heading-cause": {
+      "type": "Heading",
+      "props": {
+        "text": "Root Cause",
+        "level": "h3"
+      }
+    },
+    "text-cause-type": {
+      "type": "Text",
+      "props": {
+        "text": "Missed dispatch (not a crash)",
+        "variant": "body"
+      }
+    },
+    "stack-cause-sig": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "text-cause-sig",
+        "link-iss005"
+      ]
+    },
+    "text-cause-sig": {
+      "type": "Text",
+      "props": {
+        "text": "Same GitHub Actions cron signature as",
+        "variant": "caption"
+      }
+    },
+    "link-iss005": {
+      "type": "Link",
+      "props": {
+        "label": "ISS-005",
+        "href": "memory/issues/ISS-005.md"
+      }
+    },
+    "sep-4": {
+      "type": "Separator"
+    },
+    "section-filed": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-filed",
+        "stack-filed-issue",
+        "text-filed-action"
+      ]
+    },
+    "heading-filed": {
+      "type": "Heading",
+      "props": {
+        "text": "Issue Filed",
+        "level": "h3"
+      }
+    },
+    "stack-filed-issue": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "link-iss006",
+        "badge-severity"
+      ]
+    },
+    "link-iss006": {
+      "type": "Link",
+      "props": {
+        "label": "ISS-006",
+        "href": "memory/issues/ISS-006.md"
+      }
+    },
+    "badge-severity": {
+      "type": "Badge",
+      "props": {
+        "text": "high severity",
+        "variant": "destructive"
+      }
+    },
+    "text-filed-action": {
+      "type": "Text",
+      "props": {
+        "text": "Self-check crossed 36h threshold and filed issue",
+        "variant": "body"
+      }
+    },
+    "sep-5": {
+      "type": "Separator"
+    },
+    "section-recovery": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-recovery",
+        "text-recovery-time",
+        "badge-recovery-delay"
+      ]
+    },
+    "heading-recovery": {
+      "type": "Heading",
+      "props": {
+        "text": "Dispatch Recovered",
+        "level": "h3"
+      }
+    },
+    "text-recovery-time": {
+      "type": "Text",
+      "props": {
+        "text": "2026-09-17 08:00 slot",
+        "variant": "body"
+      }
+    },
+    "badge-recovery-delay": {
+      "type": "Badge",
+      "props": {
+        "text": "~2 hours late",
+        "variant": "outline"
+      }
+    },
+    "sep-6": {
+      "type": "Separator"
+    },
+    "section-fleet": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-fleet",
+        "badge-fleet-status",
+        "text-fleet-projects",
+        "text-fleet-prs"
+      ]
+    },
+    "heading-fleet": {
+      "type": "Heading",
+      "props": {
+        "text": "Fleet Status",
+        "level": "h3"
+      }
+    },
+    "badge-fleet-status": {
+      "type": "Badge",
+      "props": {
+        "text": "🟢 Otherwise green",
+        "variant": "secondary"
+      }
+    },
+    "text-fleet-projects": {
+      "type": "Text",
+      "props": {
+        "text": "Projects: atlas, atlas-layers, atlas-improve — 0 failing skills",
+        "variant": "body"
+      }
+    },
+    "text-fleet-prs": {
+      "type": "Text",
+      "props": {
+        "text": "No new PRs or issues",
+        "variant": "body"
+      }
+    },
+    "sep-7": {
+      "type": "Separator"
+    },
+    "section-next": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-next",
+        "text-next"
+      ]
+    },
+    "heading-next": {
+      "type": "Heading",
+      "props": {
+        "text": "Next Steps",
+        "level": "h3"
+      }
+    },
+    "text-next": {
+      "type": "Text",
+      "props": {
+        "text": "Watching next 2 slots for 3 clean in a row to resolve",
+        "variant": "body"
+      }
+    }
+  }
+}

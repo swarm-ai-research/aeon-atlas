@@ -1,20 +1,17 @@
-Heartbeat complete. All P0–P3 checks clean; no notification sent (nothing new or operator-actionable), status page regenerated.
-
 ## Summary
 
-**Result:** `HEARTBEAT_OK · STATUS_PAGE=WATCH · no notify` — 08:00 slot, ~1h36m late.
+Executed the **heartbeat** skill (11-15 20:00 slot, ran ~21:14 UTC, ~1h14m late). Overall verdict: **🔴 DEGRADED** (unchanged).
 
-**Checks:**
-- **P0 (failed/stuck skills):** all clear. No `failed` or `dispatched`-stuck entries, no `consecutive_failures ≥ 3`, no chronic failures. Heartbeat self-check: last success 2026-09-10 20:59 UTC (~12.6h ago), well under the 36h threshold.
-- **P1 (PRs/issues):** 11 open PRs (#13–#23 bot refreshes + #16 deslop), all stalled >24h and previously logged → deduped, no new ones. 0 GitHub issues, none urgent.
-- **P2 (memory follow-ups):** none flagged.
-- **P3 (missing skills):** all 4 enabled skills (heartbeat, atlas, atlas-layers, atlas-improve) have fresh state entries; none overdue.
-- **Scheduler note:** the 09-11 08:00 anchor recovered (fired late) after 09-10's 08:00 miss — no 2nd consecutive anchor miss, so no issue filed. Continuing to monitor the recurring ISS-005 late/skip signature.
+**Checks run (cron-state.json authoritative):**
+- **P0:** No `failed` skills, no `consecutive_failures ≥ 3`, no chronic failures. **🕸 fork-cohort still STUCK** (`dispatched` since 2026-10-25, ~21d) — contributes to DEGRADED, but **deduped** (continuous in logs since 10-26). **Self-check does NOT fire** — heartbeat last succeeded ~11.4h ago (< 36h).
+- **Notable change:** `workflow-security-audit` **recovered from never-run** — fired cleanly today (16:38→16:51, 1/1). `follow-up-patrol` is now the only never-run enabled skill.
+- **P1:** No open GitHub issues. 17 open PRs; **new #36** (`WORKFLOW_AUDIT_NEW_CRITICAL` auto-PR from today's audit, <24h — not stalled, owned by the audit skill's own notify). Rest are bot-managed, deduped.
+- **P2/P3:** Notification channels still 0/3 (Discord secret pending, old). All stale-skill breaches within-pattern and folded into **ISS-011** (open, high) — no fresh escalation, no edit.
 
-**Overall:** 🟡 WATCH (stalled PRs; no P0 fires).
+**Notification:** None sent — no fresh P0 escalation and no full resolution; all conditions deduped per ISS-011's re-notify rule.
 
 **Files modified:**
-- `docs/status.md` — regenerated (Overall 🟡 WATCH, Updated 2026-09-11 09:36 UTC, next run heartbeat 14:00 UTC; Token pulse omitted, no token report file).
-- `memory/logs/2026-09-11.md` — created with findings.
+- `docs/status.md` — regenerated (Overall 🔴 DEGRADED, Updated 2026-11-15 21:14 UTC, 1 open issue, next run fleet-skill-adoption 22:00 UTC; 26 enabled skills, workflow-security-audit now listed with an entry, Token pulse omitted — no token report / tracked token).
+- `memory/logs/2026-11-15.md` — appended the 20:00-slot heartbeat run log.
 
-**Follow-up:** none required. Next escalation trigger: a fresh 2nd-consecutive missed 08:00 anchor or 36h self-check staleness. Next weekly cohort test: Sunday 2026-09-13 04:00/05:00 UTC.
+**Follow-up (operator action, unchanged):** Durable offset-cron / external `workflow_dispatch` backstop for the native-`schedule:` dispatch gap (ISS-011); configure `DISCORD_WEBHOOK_URL` to unblock notifications. The status-page change lands on `main` via the workflow's auto-commit step — no manual git needed.

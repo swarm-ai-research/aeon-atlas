@@ -1,0 +1,236 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Heartbeat Self-Check",
+        "description": "System monitoring and incident status"
+      },
+      "children": [
+        "alert_degraded",
+        "separator_1",
+        "stack_metrics",
+        "separator_2",
+        "stack_scheduler",
+        "separator_3",
+        "stack_lineage",
+        "separator_4",
+        "stack_frozen",
+        "separator_5",
+        "alert_action"
+      ]
+    },
+    "alert_degraded": {
+      "type": "Alert",
+      "props": {
+        "title": "🔴 DEGRADED",
+        "message": "Heartbeat self-check fired (fresh P0). Full-day scheduler blackout detected.",
+        "type": "error"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_metrics": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_metrics",
+        "stat_last_success",
+        "stat_staleness",
+        "stat_threshold"
+      ]
+    },
+    "heading_metrics": {
+      "type": "Heading",
+      "props": {
+        "text": "Status Metrics",
+        "level": "h3"
+      }
+    },
+    "stat_last_success": {
+      "type": "Stat",
+      "props": {
+        "label": "Last Recorded Success",
+        "value": "2026-10-14 21:07 UTC"
+      }
+    },
+    "stat_staleness": {
+      "type": "Stat",
+      "props": {
+        "label": "Staleness Duration",
+        "value": "36.6 hours",
+        "delta": "+0.6h",
+        "trend": "up"
+      }
+    },
+    "stat_threshold": {
+      "type": "Stat",
+      "props": {
+        "label": "Threshold Exceeded",
+        "value": "36 hours"
+      }
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_scheduler": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_scheduler",
+        "text_blackout",
+        "text_affected_slots",
+        "text_catchup"
+      ]
+    },
+    "heading_scheduler": {
+      "type": "Heading",
+      "props": {
+        "text": "Scheduler Status",
+        "level": "h3"
+      }
+    },
+    "text_blackout": {
+      "type": "Text",
+      "props": {
+        "text": "Full-day scheduler blackout: All 10-15 slots (08:00/14:00/20:00) dropped"
+      }
+    },
+    "text_affected_slots": {
+      "type": "Text",
+      "props": {
+        "text": "Impact: Complete loss of slot execution across all scheduled windows"
+      }
+    },
+    "text_catchup": {
+      "type": "Text",
+      "props": {
+        "text": "Catch-up execution: 2026-10-16 08:00 ran approximately 1 hour 40 minutes late"
+      }
+    },
+    "separator_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_lineage": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_lineage",
+        "text_escalation_date",
+        "text_recurrence_count",
+        "text_issue_lineage",
+        "text_reset_count"
+      ]
+    },
+    "heading_lineage": {
+      "type": "Heading",
+      "props": {
+        "text": "Incident Lineage",
+        "level": "h3"
+      }
+    },
+    "text_escalation_date": {
+      "type": "Text",
+      "props": {
+        "text": "Concrete DEGRADED escalation flagged: 2026-10-13"
+      }
+    },
+    "text_recurrence_count": {
+      "type": "Text",
+      "props": {
+        "text": "Recurrence count: 12th occurrence of same pattern"
+      }
+    },
+    "text_issue_lineage": {
+      "type": "Text",
+      "props": {
+        "text": "Issue lineage: ISS-005 → ISS-009 (scheduler quiet-window root cause)"
+      }
+    },
+    "text_reset_count": {
+      "type": "Text",
+      "props": {
+        "text": "Per-slot self-resolve loop: Reset 5 times without persistent fix"
+      }
+    },
+    "separator_4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_frozen": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_frozen",
+        "text_frozen_service",
+        "text_frozen_duration",
+        "text_recovery_unverified"
+      ]
+    },
+    "heading_frozen": {
+      "type": "Heading",
+      "props": {
+        "text": "Frozen Service Status",
+        "level": "h3"
+      }
+    },
+    "text_frozen_service": {
+      "type": "Text",
+      "props": {
+        "text": "Frozen service: atlas/atlas-layers"
+      }
+    },
+    "text_frozen_duration": {
+      "type": "Text",
+      "props": {
+        "text": "Frozen since: 2026-09-27 (19 days ago)"
+      }
+    },
+    "text_recovery_unverified": {
+      "type": "Text",
+      "props": {
+        "text": "Cohort recovery: Unverified until 2026-10-18 (Sunday)"
+      }
+    },
+    "separator_5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "alert_action": {
+      "type": "Alert",
+      "props": {
+        "title": "⚠️ Operator Action Required",
+        "message": "Durable backstop (redundant offset cron / external workflow_dispatch) remains operator-action-required. Manual intervention needed to restore scheduler stability.",
+        "type": "warning"
+      }
+    }
+  }
+}

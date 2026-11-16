@@ -1,0 +1,167 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "heartbeat"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "alert_recovered",
+        "sep1",
+        "stack_runs",
+        "sep2",
+        "stack_fleet",
+        "sep3",
+        "alert_risk",
+        "sep4",
+        "stack_next"
+      ]
+    },
+    "alert_recovered": {
+      "type": "Alert",
+      "props": {
+        "title": "Recovered: ISS-006 resolved (high)",
+        "message": "The scheduler quiet window flagged at 08:00 has cleared",
+        "type": "success"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_runs": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_runs",
+        "text_slots",
+        "text_state",
+        "text_selfcheck"
+      ]
+    },
+    "heading_runs": {
+      "type": "Heading",
+      "props": {
+        "text": "Consecutive Runs",
+        "level": "h3"
+      }
+    },
+    "text_slots": {
+      "type": "Text",
+      "props": {
+        "text": "Heartbeat ran clean for 3 consecutive slots: 09-17 08:00, 14:00, 20:00"
+      }
+    },
+    "text_state": {
+      "type": "Text",
+      "props": {
+        "text": "State advancing normally"
+      }
+    },
+    "text_selfcheck": {
+      "type": "Text",
+      "props": {
+        "text": "Self-check no longer firing"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_fleet": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_fleet",
+        "text_fleet",
+        "text_caveat"
+      ]
+    },
+    "heading_fleet": {
+      "type": "Heading",
+      "props": {
+        "text": "Fleet Status",
+        "level": "h3"
+      }
+    },
+    "text_fleet": {
+      "type": "Text",
+      "props": {
+        "text": "Fleet: green"
+      }
+    },
+    "text_caveat": {
+      "type": "Text",
+      "props": {
+        "text": "Overall status: WATCH only from 11 long-stalled atlas PRs",
+        "variant": "muted"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "alert_risk": {
+      "type": "Alert",
+      "props": {
+        "title": "Standing Risk",
+        "message": "No durable cron fix landed. GitHub Actions best-effort scheduling could recur.",
+        "type": "warning"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_next": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_next",
+        "text_next_test"
+      ]
+    },
+    "heading_next": {
+      "type": "Heading",
+      "props": {
+        "text": "Next Test",
+        "level": "h3"
+      }
+    },
+    "text_next_test": {
+      "type": "Text",
+      "props": {
+        "text": "Sunday 09-20 atlas/atlas-layers weekly slots"
+      }
+    }
+  }
+}

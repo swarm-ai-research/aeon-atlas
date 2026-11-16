@@ -1,0 +1,214 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Ecosystem Pulse — 2026-10-26"
+      },
+      "children": [
+        "stats-group",
+        "sep-1",
+        "active-section",
+        "sep-2",
+        "top-section",
+        "sep-3",
+        "baseline-section",
+        "sep-4",
+        "links-section"
+      ]
+    },
+    "stats-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat-shipped",
+        "stat-total",
+        "stat-x-only",
+        "stat-auto-match"
+      ]
+    },
+    "stat-shipped": {
+      "type": "Stat",
+      "props": {
+        "label": "Projects shipped code this week",
+        "value": "2 of 10"
+      }
+    },
+    "stat-total": {
+      "type": "Stat",
+      "props": {
+        "label": "Total tracked in ECOSYSTEM.md",
+        "value": "47"
+      }
+    },
+    "stat-x-only": {
+      "type": "Stat",
+      "props": {
+        "label": "X-only projects",
+        "value": "37"
+      }
+    },
+    "stat-auto-match": {
+      "type": "Stat",
+      "props": {
+        "label": "Resolved via auto-match",
+        "value": "10"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "active-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "active-heading",
+        "active-miroshark",
+        "active-vexor"
+      ]
+    },
+    "active-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Active this week",
+        "level": "h3"
+      }
+    },
+    "active-miroshark": {
+      "type": "Text",
+      "props": {
+        "text": "MiroShark (★1,480 — pushed today)"
+      }
+    },
+    "active-vexor": {
+      "type": "Text",
+      "props": {
+        "text": "Vexor (★247 — pushed 2026-10-24)"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "top-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "top-heading",
+        "top-miroshark",
+        "top-vexor",
+        "top-researchswarm"
+      ]
+    },
+    "top-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top by stars",
+        "level": "h3"
+      }
+    },
+    "top-miroshark": {
+      "type": "Text",
+      "props": {
+        "text": "MiroShark (★1,480)"
+      }
+    },
+    "top-vexor": {
+      "type": "Text",
+      "props": {
+        "text": "Vexor (★247)"
+      }
+    },
+    "top-researchswarm": {
+      "type": "Text",
+      "props": {
+        "text": "ResearchSwarm (★25)"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "baseline-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "baseline-heading",
+        "baseline-note",
+        "baseline-action"
+      ]
+    },
+    "baseline-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Baseline snapshot",
+        "level": "h3"
+      }
+    },
+    "baseline-note": {
+      "type": "Text",
+      "props": {
+        "text": "First run. No prior state to diff against.",
+        "variant": "body"
+      }
+    },
+    "baseline-action": {
+      "type": "Text",
+      "props": {
+        "text": "37 of 47 projects have no resolvable GitHub repo; map them for verified tracking:"
+      }
+    },
+    "map-link": {
+      "type": "Link",
+      "props": {
+        "label": "memory/topics/ecosystem-pulse-map.json",
+        "href": "memory/topics/ecosystem-pulse-map.json"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "links-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "link-snapshot"
+      ]
+    },
+    "link-snapshot": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full snapshot",
+        "href": "articles/ecosystem-pulse-2026-10-26.md",
+        "source": "ecosystem-pulse"
+      }
+    }
+  }
+}

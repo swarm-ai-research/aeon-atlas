@@ -1,0 +1,94 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "New fork live — 2026-10-31 — njfyanf9-a11y/aeon-njfyanf9-a11y"
+      },
+      "children": [
+        "text-welcome",
+        "separator-1",
+        "stats-stack",
+        "separator-2",
+        "links-stack"
+      ]
+    },
+    "text-welcome": {
+      "type": "Text",
+      "props": {
+        "text": "@njfyanf9-a11y just ran their first workflow on Aeon. Welcome to the running fleet.",
+        "variant": "lead"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stats-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat-stars",
+        "text-first-run",
+        "text-when"
+      ]
+    },
+    "stat-stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars",
+        "value": "0"
+      }
+    },
+    "text-first-run": {
+      "type": "Text",
+      "props": {
+        "text": "First run: skill: fleet-control"
+      }
+    },
+    "text-when": {
+      "type": "Text",
+      "props": {
+        "text": "When: less than 1h ago"
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "links-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "link-fork",
+        "link-run"
+      ]
+    },
+    "link-fork": {
+      "type": "Link",
+      "props": {
+        "label": "Fork: njfyanf9-a11y/aeon-njfyanf9-a11y",
+        "href": "https://github.com/njfyanf9-a11y/aeon-njfyanf9-a11y"
+      }
+    },
+    "link-run": {
+      "type": "Link",
+      "props": {
+        "label": "Run: view on GitHub Actions",
+        "href": "https://github.com/njfyanf9-a11y/aeon-njfyanf9-a11y/actions/runs/41245954592"
+      }
+    }
+  }
+}

@@ -1,0 +1,179 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Skill Health — 2026-11-01"
+      },
+      "children": [
+        "main-stack"
+      ]
+    },
+    "main-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat-health",
+        "sep-1",
+        "section-no-data",
+        "sep-2",
+        "section-dispatch-gap",
+        "sep-3",
+        "section-evals",
+        "sep-4",
+        "section-summary"
+      ]
+    },
+    "stat-health": {
+      "type": "Stat",
+      "props": {
+        "label": "HEALTH",
+        "value": "OK — 20/26 skills metric-healthy"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-no-data": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-no-data",
+        "no-data-badges",
+        "text-no-data-note"
+      ]
+    },
+    "heading-no-data": {
+      "type": "Heading",
+      "props": {
+        "text": "⚪ NO DATA (5)",
+        "level": "h3"
+      }
+    },
+    "no-data-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-ai-framework",
+        "badge-fleet-state",
+        "badge-follow-up",
+        "badge-fork-skill",
+        "badge-workflow-security"
+      ]
+    },
+    "badge-ai-framework": {
+      "type": "Badge",
+      "props": {
+        "text": "ai-framework-watch",
+        "variant": "outline"
+      }
+    },
+    "badge-fleet-state": {
+      "type": "Badge",
+      "props": {
+        "text": "fleet-state",
+        "variant": "outline"
+      }
+    },
+    "badge-follow-up": {
+      "type": "Badge",
+      "props": {
+        "text": "follow-up-patrol",
+        "variant": "outline"
+      }
+    },
+    "badge-fork-skill": {
+      "type": "Badge",
+      "props": {
+        "text": "fork-skill-digest",
+        "variant": "outline"
+      }
+    },
+    "badge-workflow-security": {
+      "type": "Badge",
+      "props": {
+        "text": "workflow-security-audit",
+        "variant": "outline"
+      }
+    },
+    "text-no-data-note": {
+      "type": "Text",
+      "props": {
+        "text": "Known weekly never-dispatched cohort",
+        "variant": "caption"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-dispatch-gap": {
+      "type": "Alert",
+      "props": {
+        "title": "⚠️ Dispatch gap (metric-invisible, tracked in ISS-011)",
+        "message": "api-health-probe ~104h stale (4 missed 10:00 slots) and heartbeat dropped today's 08:00+14:00 slots. fork-first-run-alert + fleet-scorecard recovered. fork-cohort still STUCK since 10-25 (heartbeat P0; retry due 19:00 UTC).",
+        "type": "warning"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-evals": {
+      "type": "Text",
+      "props": {
+        "text": "✅ skill-evals cleared NO DATA (first eval run)",
+        "variant": "body"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-summary": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat-open-issues",
+        "stat-resolved"
+      ]
+    },
+    "stat-open-issues": {
+      "type": "Stat",
+      "props": {
+        "label": "Open issues",
+        "value": "1 (ISS-011)"
+      }
+    },
+    "stat-resolved": {
+      "type": "Stat",
+      "props": {
+        "label": "Resolved this run",
+        "value": "0"
+      }
+    }
+  }
+}

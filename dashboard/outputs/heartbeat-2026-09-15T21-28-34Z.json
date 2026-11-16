@@ -1,0 +1,147 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "heartbeat"
+      },
+      "children": [
+        "alert-prs",
+        "separator-1",
+        "stack-new-prs",
+        "separator-2",
+        "stack-older-prs",
+        "separator-3",
+        "stack-fleet-health"
+      ]
+    },
+    "alert-prs": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "🟡 New PRs need review",
+        "message": "First external human contributions since #16"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack-new-prs": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-new-prs",
+        "storylink-27",
+        "storylink-28"
+      ]
+    },
+    "heading-new-prs": {
+      "type": "Heading",
+      "props": {
+        "text": "New PRs (opened 2026-09-15)",
+        "level": "h3"
+      }
+    },
+    "storylink-27": {
+      "type": "StoryLink",
+      "props": {
+        "title": "#27 — CrystalArchitect: CrystalCore.OS dashboard, analytics + new skills",
+        "href": "https://github.com/aeon-atlas/aeon-atlas/pull/27",
+        "source": "GitHub"
+      }
+    },
+    "storylink-28": {
+      "type": "StoryLink",
+      "props": {
+        "title": "#28 — CrystalArchitect: Antimemetics Division interactive layer + music archive",
+        "href": "https://github.com/aeon-atlas/aeon-atlas/pull/28",
+        "source": "GitHub"
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack-older-prs": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-older-prs",
+        "text-older-prs"
+      ]
+    },
+    "heading-older-prs": {
+      "type": "Heading",
+      "props": {
+        "text": "Stalled PRs",
+        "level": "h3"
+      }
+    },
+    "text-older-prs": {
+      "type": "Text",
+      "props": {
+        "text": "11 older PRs (#13–#23, mostly bot atlas refreshes) still stalled"
+      }
+    },
+    "separator-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack-fleet-health": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-fleet-health",
+        "badge-health",
+        "stat-failed",
+        "stat-issues"
+      ]
+    },
+    "heading-fleet-health": {
+      "type": "Heading",
+      "props": {
+        "text": "Fleet Health",
+        "level": "h3"
+      }
+    },
+    "badge-health": {
+      "type": "Badge",
+      "props": {
+        "text": "🟢 Green",
+        "variant": "default"
+      }
+    },
+    "stat-failed": {
+      "type": "Stat",
+      "props": {
+        "label": "Failed/stuck skills",
+        "value": "0"
+      }
+    },
+    "stat-issues": {
+      "type": "Stat",
+      "props": {
+        "label": "Open issues",
+        "value": "0"
+      }
+    }
+  }
+}

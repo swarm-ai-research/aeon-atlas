@@ -1,25 +1,21 @@
 ---
 title: "AntFleet"
 tags: [operator]
-footprint: 7
+footprint: 2
 forks: 2
 stars: 0
 ---
 
 # AntFleet
 
-Operator profile: 3 atlas artifacts (2 forks, 1 pack, 0 ecosystem entries). Footprint **7**, **0 ★** across all forks.
+Operator profile: 2 atlas artifacts (2 forks, 0 packs, 0 ecosystem entries). Footprint **2**, **0 ★** across all forks.
 
 [GitHub profile](https://github.com/AntFleet)
 
 ## Forks (2)
 
-- [[forks/AntFleet-aeon|AntFleet/aeon]] — 0 ★
-- [[forks/AntFleet-aeon-bench|AntFleet/aeon-bench]] — 0 ★
-
-## Authored skill packs (1)
-
-- [[packs/antfleet-aeon-skills|AntFleet aeon-skills]] — 2 skills
+- [[forks/AntFleet-aeon|AntFleet/aeon]] — 0 ★ _(archived)_
+- [[forks/AntFleet-aeon-template|AntFleet/aeon-template]] — 0 ★ _(archived)_
 
 ## Get the badge
 

@@ -1,0 +1,199 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "heartbeat"
+      },
+      "children": [
+        "section-resolved",
+        "sep-1",
+        "section-fleet",
+        "sep-2",
+        "section-notes"
+      ]
+    },
+    "section-resolved": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-resolved",
+        "stack-slots",
+        "text-p0",
+        "text-recovered"
+      ]
+    },
+    "heading-resolved": {
+      "type": "Heading",
+      "props": {
+        "text": "🟢 RESOLVED: ISS-008 (scheduler quiet window)",
+        "level": "h3"
+      }
+    },
+    "stack-slots": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text-slot-1",
+        "text-slot-2",
+        "text-slot-3"
+      ]
+    },
+    "text-slot-1": {
+      "type": "Text",
+      "props": {
+        "text": "10-07 08:00 — clean slot"
+      }
+    },
+    "text-slot-2": {
+      "type": "Text",
+      "props": {
+        "text": "10-07 14:00 — clean slot"
+      }
+    },
+    "text-slot-3": {
+      "type": "Text",
+      "props": {
+        "text": "10-07 20:00 — clean slot"
+      }
+    },
+    "text-p0": {
+      "type": "Text",
+      "props": {
+        "text": "P0 clear throughout"
+      }
+    },
+    "text-recovered": {
+      "type": "Text",
+      "props": {
+        "text": "Dispatch path has recovered"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-fleet": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-fleet",
+        "badge-watch",
+        "stack-fleet-items"
+      ]
+    },
+    "heading-fleet": {
+      "type": "Heading",
+      "props": {
+        "text": "Fleet Status",
+        "level": "h3"
+      }
+    },
+    "badge-watch": {
+      "type": "Badge",
+      "props": {
+        "text": "🟡 WATCH",
+        "variant": "secondary"
+      }
+    },
+    "stack-fleet-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text-issues",
+        "text-skills",
+        "text-prs"
+      ]
+    },
+    "text-issues": {
+      "type": "Text",
+      "props": {
+        "text": "0 open issues"
+      }
+    },
+    "text-skills": {
+      "type": "Text",
+      "props": {
+        "text": "all 4 skills healthy (consec 0)"
+      }
+    },
+    "text-prs": {
+      "type": "Text",
+      "props": {
+        "text": "14 bot/atlas PRs stalled >24h (all previously logged)"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-notes": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-notes",
+        "stack-note-items",
+        "alert-action"
+      ]
+    },
+    "heading-notes": {
+      "type": "Heading",
+      "props": {
+        "text": "Observations & Action Items",
+        "level": "h3"
+      }
+    },
+    "stack-note-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text-note-1",
+        "text-note-2"
+      ]
+    },
+    "text-note-1": {
+      "type": "Text",
+      "props": {
+        "text": "self-resolve bar reset 4× this window"
+      }
+    },
+    "text-note-2": {
+      "type": "Text",
+      "props": {
+        "text": "10-05 saw a hung run"
+      }
+    },
+    "alert-action": {
+      "type": "Alert",
+      "props": {
+        "title": "Action Required",
+        "message": "durable backstop (redundant offset cron / external workflow_dispatch ping) is still operator-action-required",
+        "type": "warning"
+      }
+    }
+  }
+}

@@ -1,0 +1,182 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "AI Framework Watch — 2026-11-09"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "release-week-text",
+        "summary-badges",
+        "alert-coldstart",
+        "releases-heading",
+        "releases-table",
+        "separator-1",
+        "anchor-heading",
+        "anchor-metrics",
+        "separator-2",
+        "digest-link"
+      ]
+    },
+    "release-week-text": {
+      "type": "Text",
+      "props": {
+        "text": "RELEASE WEEK: 4 frameworks shipped — langgraph, crewai, mastra, pydantic-ai",
+        "variant": "lead"
+      }
+    },
+    "summary-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-frameworks",
+        "badge-releases",
+        "badge-breaking"
+      ]
+    },
+    "badge-frameworks": {
+      "type": "Badge",
+      "props": {
+        "text": "Tracked 9/9 frameworks",
+        "variant": "default"
+      }
+    },
+    "badge-releases": {
+      "type": "Badge",
+      "props": {
+        "text": "15 releases (7d)",
+        "variant": "default"
+      }
+    },
+    "badge-breaking": {
+      "type": "Badge",
+      "props": {
+        "text": "0 breaking flags",
+        "variant": "default"
+      }
+    },
+    "alert-coldstart": {
+      "type": "Alert",
+      "props": {
+        "title": "First run — COLD START",
+        "message": "Momentum baselines set; deltas begin next week.",
+        "type": "info"
+      }
+    },
+    "releases-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top releases (7d)",
+        "level": "h3"
+      }
+    },
+    "releases-table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Framework",
+          "Count",
+          "Details"
+        ],
+        "rows": [
+          [
+            "langchain-ai/langgraph",
+            "5 releases",
+            "1.2.20 + sdk/cli bumps (heavy patch cadence)"
+          ],
+          [
+            "crewAIInc/crewAI",
+            "5 releases",
+            "1.15.35 → 1.15.39 (daily shipping)"
+          ],
+          [
+            "pydantic/pydantic-ai",
+            "3 releases",
+            "v2.66.0 + v1.107.10 (dual v1/v2 track active)"
+          ],
+          [
+            "mastra-ai/mastra",
+            "2 releases",
+            "@mastra/core@1.82.0"
+          ]
+        ]
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "anchor-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Anchor (aeon)",
+        "level": "h3"
+      }
+    },
+    "anchor-metrics": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat-stars",
+        "stat-releases",
+        "stat-coverage"
+      ]
+    },
+    "stat-stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars",
+        "value": "789",
+        "delta": "+— this week"
+      }
+    },
+    "stat-releases": {
+      "type": "Stat",
+      "props": {
+        "label": "Releases (7d)",
+        "value": "0"
+      }
+    },
+    "stat-coverage": {
+      "type": "Stat",
+      "props": {
+        "label": "Coverage",
+        "value": "9/9"
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "digest-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full digest",
+        "href": "articles/ai-framework-watch-2026-11-09.md",
+        "source": "ai-framework-watch"
+      }
+    }
+  }
+}

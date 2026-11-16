@@ -1,0 +1,272 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Skill Health — 2026-11-09"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "status-section",
+        "sep-1",
+        "section-criteria",
+        "sep-2",
+        "section-nodata",
+        "sep-3",
+        "section-stuck",
+        "sep-4",
+        "section-tracking",
+        "sep-5",
+        "section-issues"
+      ]
+    },
+    "status-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-status",
+        "stat-healthy"
+      ]
+    },
+    "badge-status": {
+      "type": "Badge",
+      "props": {
+        "text": "HEALTH: OK",
+        "variant": "default"
+      }
+    },
+    "stat-healthy": {
+      "type": "Stat",
+      "props": {
+        "label": "Skills Healthy",
+        "value": "23"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-criteria": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-criteria",
+        "text-criteria"
+      ]
+    },
+    "heading-criteria": {
+      "type": "Heading",
+      "props": {
+        "text": "Health Criteria",
+        "level": "h3"
+      }
+    },
+    "text-criteria": {
+      "type": "Text",
+      "props": {
+        "text": "success_rate ≥ 0.92, 0 consecutive failures"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-nodata": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-nodata",
+        "text-nodata-skills",
+        "badge-dispatch",
+        "text-nodata-explanation"
+      ]
+    },
+    "heading-nodata": {
+      "type": "Heading",
+      "props": {
+        "text": "⚪ NO DATA",
+        "level": "h3"
+      }
+    },
+    "text-nodata-skills": {
+      "type": "Text",
+      "props": {
+        "text": "2 skills: follow-up-patrol, workflow-security-audit"
+      }
+    },
+    "badge-dispatch": {
+      "type": "Badge",
+      "props": {
+        "text": "DISPATCH-SKILL",
+        "variant": "outline"
+      }
+    },
+    "text-nodata-explanation": {
+      "type": "Text",
+      "props": {
+        "text": "Known never-dispatched weekly cohort. ai-framework-watch cleared this set on its first-ever run today."
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-stuck": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-stuck",
+        "alert-stuck"
+      ]
+    },
+    "heading-stuck": {
+      "type": "Heading",
+      "props": {
+        "text": "🕸 STUCK",
+        "level": "h3"
+      }
+    },
+    "alert-stuck": {
+      "type": "Alert",
+      "props": {
+        "title": "fork-cohort",
+        "message": "Dispatched ~372h with no outcome. (heartbeat P0, not a skill-health CRITICAL)",
+        "type": "warning"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-tracking": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-tracking",
+        "text-tracking"
+      ]
+    },
+    "heading-tracking": {
+      "type": "Heading",
+      "props": {
+        "text": "Issue Tracking",
+        "level": "h3"
+      }
+    },
+    "text-tracking": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-011 (high, open) tracks the scheduler dispatch-gap — heartbeat-owned. Its affected skills read metric-healthy because missed dispatches don't dent success-rate, so skill-health leaves it untouched (out of its reconciliation scope)."
+      }
+    },
+    "sep-5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-issues": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-issues",
+        "grid-issues"
+      ]
+    },
+    "heading-issues": {
+      "type": "Heading",
+      "props": {
+        "text": "This Run Summary",
+        "level": "h3"
+      }
+    },
+    "grid-issues": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stack-open",
+        "stat-filed",
+        "stat-resolved"
+      ]
+    },
+    "stack-open": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "stat-open",
+        "badge-iss011"
+      ]
+    },
+    "stat-open": {
+      "type": "Stat",
+      "props": {
+        "label": "Open Issues",
+        "value": "1"
+      }
+    },
+    "badge-iss011": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-011",
+        "variant": "outline"
+      }
+    },
+    "stat-filed": {
+      "type": "Stat",
+      "props": {
+        "label": "Filed",
+        "value": "0"
+      }
+    },
+    "stat-resolved": {
+      "type": "Stat",
+      "props": {
+        "label": "Resolved This Run",
+        "value": "0"
+      }
+    }
+  }
+}

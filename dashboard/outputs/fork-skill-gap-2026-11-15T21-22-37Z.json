@@ -1,0 +1,136 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Fork Skill Gap — 2026-11-15",
+        "description": "aeonfun/aeon"
+      },
+      "children": [
+        "alert_gap",
+        "sep1",
+        "stack_stats",
+        "sep2",
+        "heading_top3",
+        "table_forks",
+        "sep3",
+        "link_report"
+      ]
+    },
+    "alert_gap": {
+      "type": "Alert",
+      "props": {
+        "title": "WIDE_GAP",
+        "message": "5 forks each missing 50+ upstream skills",
+        "type": "warning"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_audited",
+        "stat_upstream",
+        "stat_median"
+      ]
+    },
+    "stat_audited": {
+      "type": "Stat",
+      "props": {
+        "label": "Forks Audited",
+        "value": "8 of 26"
+      }
+    },
+    "stat_upstream": {
+      "type": "Stat",
+      "props": {
+        "label": "Upstream Skills",
+        "value": "171"
+      }
+    },
+    "stat_median": {
+      "type": "Stat",
+      "props": {
+        "label": "Median Missing",
+        "value": "50"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_top3": {
+      "type": "Heading",
+      "props": {
+        "text": "Top 3 Forks by Gap",
+        "level": "h3"
+      }
+    },
+    "table_forks": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Fork",
+          "Owner",
+          "Missing",
+          "Other",
+          "Dev",
+          "Crypto"
+        ],
+        "rows": [
+          [
+            "Boodszw_Bread",
+            "@Boodszw",
+            "58",
+            "35",
+            "11",
+            "7"
+          ],
+          [
+            "blueagent-aeon",
+            "@madebyshun",
+            "53",
+            "34",
+            "11",
+            "6"
+          ],
+          [
+            "aeon-minebean",
+            "@damo-nu11",
+            "51",
+            "34",
+            "8",
+            "6"
+          ]
+        ]
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "link_report": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full report",
+        "href": "articles/fork-skill-gap-2026-11-15.md",
+        "source": "aeon-atlas"
+      }
+    }
+  }
+}

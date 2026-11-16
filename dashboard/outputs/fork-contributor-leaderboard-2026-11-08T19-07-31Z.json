@@ -1,0 +1,122 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Fork Contributor Leaderboard",
+        "description": "2026-11-08"
+      },
+      "children": [
+        "headline",
+        "sep1",
+        "top5_heading",
+        "table_top5",
+        "sep2",
+        "first_prs",
+        "top_reviewer",
+        "sep3",
+        "full_leaderboard"
+      ]
+    },
+    "headline": {
+      "type": "Alert",
+      "props": {
+        "title": "New Milestone",
+        "message": "sentinelhood reached 10 merged upstream PRs this week — first community operator to cross that mark — moving from #5 to #3.",
+        "type": "success"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "top5_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top 5",
+        "level": "h2"
+      }
+    },
+    "table_top5": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Rank",
+          "Contributor",
+          "Score",
+          "Details"
+        ],
+        "rows": [
+          [
+            "1",
+            "@Svector-anu",
+            "868",
+            "83 merged PRs, 2 reviews, 5 new skills"
+          ],
+          [
+            "2",
+            "@antfleet-ops",
+            "149",
+            "14 merged PRs"
+          ],
+          [
+            "3",
+            "@sentinelhood",
+            "125",
+            "10 merged PRs, 5 new skills"
+          ],
+          [
+            "4",
+            "@NurstarK",
+            "99",
+            "7 merged PRs, 1 fork commit, 5 new skills"
+          ],
+          [
+            "5",
+            "@houndflow",
+            "98",
+            "8 merged PRs, 6 open PRs"
+          ]
+        ]
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "first_prs": {
+      "type": "Text",
+      "props": {
+        "text": "First PRs this week: none",
+        "variant": "body"
+      }
+    },
+    "top_reviewer": {
+      "type": "Text",
+      "props": {
+        "text": "Top reviewer: @Svector-anu (2 comments)",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "full_leaderboard": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full leaderboard",
+        "href": "https://github.com/swarm-ai-research/aeon-atlas/blob/main/articles/fork-contributor-leaderboard-2026-11-08.md",
+        "source": "GitHub"
+      }
+    }
+  }
+}

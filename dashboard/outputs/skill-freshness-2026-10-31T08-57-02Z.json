@@ -1,0 +1,263 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Skill Freshness — 2026-10-31"
+      },
+      "children": [
+        "alert_status",
+        "stat_deps",
+        "sep1",
+        "heading_missing",
+        "stack_articles",
+        "sep2",
+        "heading_action",
+        "text_action",
+        "link_report"
+      ]
+    },
+    "alert_status": {
+      "type": "Alert",
+      "props": {
+        "title": "FRESHNESS_STALE",
+        "message": "3 of 31 dependencies flagged across 1 of 26 enabled consumers",
+        "type": "error"
+      },
+      "children": []
+    },
+    "stat_deps": {
+      "type": "Stat",
+      "props": {
+        "label": "Flagged Dependencies",
+        "value": "3 of 31"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading_missing": {
+      "type": "Heading",
+      "props": {
+        "text": "Missing Articles (Worst)",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "stack_articles": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "article1",
+        "article2",
+        "article3"
+      ]
+    },
+    "article1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "article1_title",
+        "article1_badges"
+      ]
+    },
+    "article1_title": {
+      "type": "Text",
+      "props": {
+        "text": "articles/fork-cohort-*.md",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "article1_badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_missing1",
+        "badge_class1",
+        "badge_sev1"
+      ]
+    },
+    "badge_missing1": {
+      "type": "Badge",
+      "props": {
+        "text": "MISSING",
+        "variant": "destructive"
+      },
+      "children": []
+    },
+    "badge_class1": {
+      "type": "Badge",
+      "props": {
+        "text": "articles/weekly",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "badge_sev1": {
+      "type": "Badge",
+      "props": {
+        "text": "MISSING",
+        "variant": "destructive"
+      },
+      "children": []
+    },
+    "article2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "article2_title",
+        "article2_badges"
+      ]
+    },
+    "article2_title": {
+      "type": "Text",
+      "props": {
+        "text": "articles/fork-release-*.md",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "article2_badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_missing2",
+        "badge_class2",
+        "badge_sev2"
+      ]
+    },
+    "badge_missing2": {
+      "type": "Badge",
+      "props": {
+        "text": "MISSING",
+        "variant": "destructive"
+      },
+      "children": []
+    },
+    "badge_class2": {
+      "type": "Badge",
+      "props": {
+        "text": "articles/weekly",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "badge_sev2": {
+      "type": "Badge",
+      "props": {
+        "text": "MISSING",
+        "variant": "destructive"
+      },
+      "children": []
+    },
+    "article3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "article3_title",
+        "article3_badges"
+      ]
+    },
+    "article3_title": {
+      "type": "Text",
+      "props": {
+        "text": "articles/contributor-spotlight-*.md",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "article3_badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_missing3",
+        "badge_class3",
+        "badge_sev3"
+      ]
+    },
+    "badge_missing3": {
+      "type": "Badge",
+      "props": {
+        "text": "MISSING",
+        "variant": "destructive"
+      },
+      "children": []
+    },
+    "badge_class3": {
+      "type": "Badge",
+      "props": {
+        "text": "articles/weekly",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "badge_sev3": {
+      "type": "Badge",
+      "props": {
+        "text": "MISSING",
+        "variant": "destructive"
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading_action": {
+      "type": "Heading",
+      "props": {
+        "text": "Action Required",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "text_action": {
+      "type": "Text",
+      "props": {
+        "text": "Check fork-cohort, fork-release-tracker, contributor-spotlight run history with ./scripts/skill-runs --hours 168. Sunday producers (last run expected 2026-10-25) left no articles on disk — fleet-state's Monday synthesis may be running blind.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "link_report": {
+      "type": "Link",
+      "props": {
+        "label": "View full report",
+        "href": "articles/skill-freshness-2026-10-31.md"
+      },
+      "children": []
+    }
+  }
+}

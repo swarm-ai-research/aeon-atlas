@@ -1,5 +1,6 @@
 # Long-term Memory
 *Last consolidated: 2026-09-12*
+*Last updated: 2026-09-13*
 
 ## About This Repo
 - **Aeon Atlas:** Autonomous agent running on GitHub Actions via Claude Code
@@ -10,10 +11,13 @@
 
 ### ⚙️ [Fleet-Intelligence Suite (Phase 2 Complete)](topics/fleet-intelligence.md)
 - **25 skills enabled** (25% fleet activated) across 4 tiers
+### ⚙️ [Fleet-Intelligence Suite (Phase 4 In Progress)](topics/fleet-intelligence.md)
+- **29 skills enabled** (29% fleet activated) across 4 tiers + Phase 4
 - **Tier 1 (Analytics):** skill-leaderboard, fork-skill-digest, fork-skill-gap, fleet-skill-adoption, fork-contributor-leaderboard, fork-release-tracker, contributor-spotlight, fork-cohort
 - **Tier 2 (Health/Ops):** heartbeat, skill-health, skill-evals, api-health-probe, skill-freshness, fork-first-run-alert, workflow-security-audit
 - **Tier 3 (Infrastructure):** atlas, atlas-layers, atlas-improve
 - **Tier 4 (Synthesis):** fleet-state, operator-scorecard, skill-update-check
+- **Phase 4 (Intelligence):** ai-framework-watch, follow-up-patrol, ecosystem-pulse, fleet-scorecard
 - **First weekly digest:** 2026-09-15, 16:00 AEST (06:00 UTC)
 
 ### 🏥 [Heartbeat & Scheduler Monitoring](topics/heartbeat-monitoring.md)
@@ -43,6 +47,15 @@
 - Requires operator to provide: TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID, DISCORD_WEBHOOK_URL, etc.
 - Script `./notify` and integration awaiting secrets
 - **Impact:** Digest notifications will run silently until channels configured
+### Notification Channels (Blocked — Discord Diagnostic Complete 2026-09-13)
+- **Discord Integration:** Root cause identified — `DISCORD_WEBHOOK_URL` GitHub Actions secret not configured
+  - Workflow code is correct (`.github/workflows/aeon.yml` lines 256, 411-415, 780-784)
+  - Notifications silently skip when secret missing (by design)
+  - **Fix:** See `memory/logs/2026-09-13.md` for 5-minute remediation (create webhook, add GitHub secret)
+  - **Test:** Run heartbeat workflow manually after secret configured; Clementine should post to #the-bird-is-the-word
+- **Telegram & Slack:** Not yet configured (secondary priority)
+- **Impact:** All 29 enabled skills ready to post; awaiting operator secret configuration for Discord
+- **Timeline:** Fix needed before 2026-09-15 16:00 AEST first automated fleet-intelligence run
 
 ### Stalled PRs (Tracked, Low Priority)
 - 11 PRs #13–#23 open >24h (stale, auto-managed)
