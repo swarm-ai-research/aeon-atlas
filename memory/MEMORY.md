@@ -1,4 +1,5 @@
 # Long-term Memory
+*Last consolidated: 2026-09-12*
 *Last updated: 2026-09-13*
 
 ## About This Repo
@@ -8,6 +9,8 @@
 
 ## Active Topics
 
+### ⚙️ [Fleet-Intelligence Suite (Phase 2 Complete)](topics/fleet-intelligence.md)
+- **25 skills enabled** (25% fleet activated) across 4 tiers
 ### ⚙️ [Fleet-Intelligence Suite (Phase 4 In Progress)](topics/fleet-intelligence.md)
 - **29 skills enabled** (29% fleet activated) across 4 tiers + Phase 4
 - **Tier 1 (Analytics):** skill-leaderboard, fork-skill-digest, fork-skill-gap, fleet-skill-adoption, fork-contributor-leaderboard, fork-release-tracker, contributor-spotlight, fork-cohort
@@ -39,6 +42,11 @@
 - ✓ Fork-fleet analytics foundation (4 tiers, 25 skills enabled)
 - ✓ Fleet-intelligence suite staged for 2026-09-15 first run
 
+### Notification Channels (Blocked)
+- No Telegram, Discord, Slack secrets configured
+- Requires operator to provide: TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID, DISCORD_WEBHOOK_URL, etc.
+- Script `./notify` and integration awaiting secrets
+- **Impact:** Digest notifications will run silently until channels configured
 ### Notification Channels (Blocked — Discord Diagnostic Complete 2026-09-13)
 - **Discord Integration:** Root cause identified — `DISCORD_WEBHOOK_URL` GitHub Actions secret not configured
   - Workflow code is correct (`.github/workflows/aeon.yml` lines 256, 411-415, 780-784)

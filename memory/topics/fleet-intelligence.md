@@ -120,6 +120,13 @@
 - Supported via gh CLI in GitHub Actions
 - No external blocking dependencies beyond GitHub
 
+## Next Steps (Phase 4 / Future)
+
+Optional enhancements for deeper insight:
+1. **fleet-scorecard** — Daily cost + reliability metrics across fork fleet
+2. **follow-up-patrol** — Escalation audit: age items in MEMORY.md, alert on overdue CRITICAL/HIGH items
+3. **AI framework watch** — Weekly competitive intelligence on 9 AI agent frameworks + peer cohort
+4. **ecosystem-entrants** — New fork detection from ecosystem-watch integration
 ## Phase 4: Strategic Intelligence & Backlog Management (In Progress)
 
 ### Enabled (4 skills)
