@@ -1,0 +1,117 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Skill Freshness — 2026-11-17"
+      },
+      "children": [
+        "alert-main",
+        "sep-1",
+        "heading-worst",
+        "stack-issues",
+        "sep-2",
+        "action-section"
+      ]
+    },
+    "alert-main": {
+      "type": "Alert",
+      "props": {
+        "title": "🔴 FRESHNESS_STALE",
+        "message": "5 of 32 deps flagged across 3 of 26 enabled consumers",
+        "type": "error"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading-worst": {
+      "type": "Heading",
+      "props": {
+        "text": "Worst",
+        "level": "h3"
+      }
+    },
+    "stack-issues": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "issue-1",
+        "issue-2",
+        "issue-3",
+        "issue-4"
+      ]
+    },
+    "issue-1": {
+      "type": "Text",
+      "props": {
+        "text": "fleet-state ← articles/fork-cohort-*.md (MISSING, 17d persistent, class articles/weekly)",
+        "variant": "body"
+      }
+    },
+    "issue-2": {
+      "type": "Text",
+      "props": {
+        "text": "fleet-state ← articles/fork-release-*.md (MISSING, 17d persistent, class articles/weekly)",
+        "variant": "body"
+      }
+    },
+    "issue-3": {
+      "type": "Text",
+      "props": {
+        "text": "contributor-spotlight ← articles/fork-cohort-*.md (MISSING, 15d persistent, class articles/weekly)",
+        "variant": "body"
+      }
+    },
+    "issue-4": {
+      "type": "Text",
+      "props": {
+        "text": "operator-scorecard ← articles/fork-contributor-leaderboard-*.md (216h, WARN — new flag, missed 2026-11-16 window)",
+        "variant": "body"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "action-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-action",
+        "text-action",
+        "link-report"
+      ]
+    },
+    "heading-action": {
+      "type": "Heading",
+      "props": {
+        "text": "Action",
+        "level": "h3"
+      }
+    },
+    "text-action": {
+      "type": "Text",
+      "props": {
+        "text": "Check fork-cohort run history with ./scripts/skill-runs --skill fork-cohort --hours 504",
+        "variant": "body"
+      }
+    },
+    "link-report": {
+      "type": "Link",
+      "props": {
+        "label": "Full Report",
+        "href": "articles/skill-freshness-2026-11-17.md"
+      }
+    }
+  }
+}
