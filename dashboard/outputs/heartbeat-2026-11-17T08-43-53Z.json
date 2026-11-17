@@ -1,0 +1,195 @@
+{
+  "root": "main-card",
+  "state": {},
+  "elements": {
+    "main-card": {
+      "type": "Card",
+      "props": {
+        "title": "Heartbeat — System Health",
+        "description": "Scheduler and skill health status check"
+      },
+      "children": [
+        "alert-degraded",
+        "sep1",
+        "findings-section",
+        "sep2",
+        "stale-section",
+        "sep3",
+        "summary-section"
+      ]
+    },
+    "alert-degraded": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "🔴 DEGRADED — ISS-011",
+        "message": "Scheduler quiet window"
+      }
+    },
+    "sep1": {
+      "type": "Separator"
+    },
+    "findings-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-findings",
+        "stat-blackout",
+        "stat-recovery",
+        "stat-selfcheck",
+        "stat-forkcohort"
+      ]
+    },
+    "heading-findings": {
+      "type": "Heading",
+      "props": {
+        "text": "Current Issues",
+        "level": "h3"
+      }
+    },
+    "stat-blackout": {
+      "type": "Stat",
+      "props": {
+        "label": "Heartbeat Blackout",
+        "value": "2026-11-16",
+        "delta": "All 3 slots dropped"
+      }
+    },
+    "stat-recovery": {
+      "type": "Stat",
+      "props": {
+        "label": "Recovery Started",
+        "value": "2026-11-17 08:00",
+        "trend": "up"
+      }
+    },
+    "stat-selfcheck": {
+      "type": "Stat",
+      "props": {
+        "label": "Self-check Interval",
+        "value": "~35.4h",
+        "delta": "36h threshold — third clear→re-dark cycle"
+      }
+    },
+    "stat-forkcohort": {
+      "type": "Stat",
+      "props": {
+        "label": "fork-cohort Status",
+        "value": "🕸 STUCK ~23 days",
+        "delta": "Dispatched since 2026-10-25"
+      }
+    },
+    "sep2": {
+      "type": "Separator"
+    },
+    "stale-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-stale",
+        "text-stale-intro",
+        "stale-items"
+      ]
+    },
+    "heading-stale": {
+      "type": "Heading",
+      "props": {
+        "text": "Stale Within native-schedule: Gap",
+        "level": "h3"
+      }
+    },
+    "text-stale-intro": {
+      "type": "Text",
+      "props": {
+        "text": "No failed skills, no API degradation detected."
+      }
+    },
+    "stale-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "item-api",
+        "item-fleet",
+        "item-freshness",
+        "item-atlas",
+        "item-weekly"
+      ]
+    },
+    "item-api": {
+      "type": "Text",
+      "props": {
+        "text": "• api-health-probe ~4.9 days"
+      }
+    },
+    "item-fleet": {
+      "type": "Text",
+      "props": {
+        "text": "• fleet-scorecard ~66 hours"
+      }
+    },
+    "item-freshness": {
+      "type": "Text",
+      "props": {
+        "text": "• skill-freshness ~47 hours"
+      }
+    },
+    "item-atlas": {
+      "type": "Text",
+      "props": {
+        "text": "• atlas ~30 days"
+      }
+    },
+    "item-weekly": {
+      "type": "Text",
+      "props": {
+        "text": "• Sunday/Monday weekly cohorts ~22–23 days"
+      }
+    },
+    "sep3": {
+      "type": "Separator"
+    },
+    "summary-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-action",
+        "alert-action",
+        "note-repair"
+      ]
+    },
+    "heading-action": {
+      "type": "Heading",
+      "props": {
+        "text": "Action Required",
+        "level": "h3"
+      }
+    },
+    "alert-action": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "Durable Fix Pending",
+        "message": "Offset-cron / external workflow_dispatch backstop — requires operator action. skill-repair is disabled."
+      }
+    },
+    "note-repair": {
+      "type": "Text",
+      "props": {
+        "text": "Repair automation cannot proceed until configuration is updated.",
+        "variant": "muted"
+      }
+    }
+  }
+}
