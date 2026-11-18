@@ -1,0 +1,177 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "heartbeat"
+      },
+      "children": [
+        "alert-status",
+        "sep1",
+        "stack-details"
+      ]
+    },
+    "alert-status": {
+      "type": "Alert",
+      "props": {
+        "title": "🔴 Aeon DEGRADED",
+        "message": "Scheduler blackout continues. Every heartbeat slot since the 11-17 08:00 run has dropped (11-17 14:00/20:00 + 11-18 08:00/14:00, 4 consecutive); only this manual 15:57 run broke the ~31h dark window.",
+        "type": "error"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack-details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "item-fork",
+        "sep2",
+        "item-stale-skills",
+        "sep3",
+        "item-root-cause"
+      ]
+    },
+    "item-fork": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-fork",
+        "text-fork"
+      ]
+    },
+    "heading-fork": {
+      "type": "Heading",
+      "props": {
+        "text": "fork-cohort Status",
+        "level": "h3"
+      }
+    },
+    "text-fork": {
+      "type": "Text",
+      "props": {
+        "text": "🕸 STUCK ~24d (dispatched since 10-25)",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "item-stale-skills": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-stale",
+        "text-stale-context",
+        "table-stale"
+      ]
+    },
+    "heading-stale": {
+      "type": "Heading",
+      "props": {
+        "text": "Stale Skills",
+        "level": "h3"
+      }
+    },
+    "text-stale-context": {
+      "type": "Text",
+      "props": {
+        "text": "In the same ISS-011 native-schedule gap:",
+        "variant": "caption"
+      }
+    },
+    "table-stale": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Skill",
+          "Last Run Age"
+        ],
+        "rows": [
+          [
+            "api-health-probe",
+            "~6.2d"
+          ],
+          [
+            "fleet-scorecard",
+            "~4.1d"
+          ],
+          [
+            "skill-health",
+            "~3.9d"
+          ],
+          [
+            "atlas (weekly)",
+            "~31d"
+          ],
+          [
+            "atlas-layers (weekly)",
+            "~17d"
+          ],
+          [
+            "Sun/Mon cohorts (weekly)",
+            "~23-24d"
+          ]
+        ]
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "item-root-cause": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-cause",
+        "text-cause",
+        "alert-action"
+      ]
+    },
+    "heading-cause": {
+      "type": "Heading",
+      "props": {
+        "text": "Root Cause & Next Steps",
+        "level": "h3"
+      }
+    },
+    "text-cause": {
+      "type": "Text",
+      "props": {
+        "text": "Root cause unchanged — GitHub Actions schedule: dropping slots. Durable offset-cron / external workflow_dispatch backstop still needs operator action. skill-repair disabled.",
+        "variant": "body"
+      }
+    },
+    "alert-action": {
+      "type": "Alert",
+      "props": {
+        "title": "⚠️ Operator Action Required",
+        "message": "Implement durable offset-cron / external workflow_dispatch backstop to resolve scheduler blackout",
+        "type": "warning"
+      }
+    }
+  }
+}
