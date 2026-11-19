@@ -1,0 +1,96 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "New fork live — 2026-11-19 — Bastiansure/aeon-bastiansure"
+      },
+      "children": [
+        "text-welcome",
+        "sep-1",
+        "stats-stack",
+        "sep-2",
+        "links-stack"
+      ]
+    },
+    "text-welcome": {
+      "type": "Text",
+      "props": {
+        "text": "@Bastiansure just ran their first workflow on Aeon. Welcome to the running fleet.",
+        "variant": "lead"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stats-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat-stars",
+        "stat-first-run",
+        "stat-when"
+      ]
+    },
+    "stat-stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars",
+        "value": "0"
+      }
+    },
+    "stat-first-run": {
+      "type": "Stat",
+      "props": {
+        "label": "First run",
+        "value": "poll"
+      }
+    },
+    "stat-when": {
+      "type": "Stat",
+      "props": {
+        "label": "When",
+        "value": "just now"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "links-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-fork",
+        "link-run"
+      ]
+    },
+    "link-fork": {
+      "type": "Link",
+      "props": {
+        "label": "Fork: Bastiansure/aeon-bastiansure",
+        "href": "https://github.com/Bastiansure/aeon-bastiansure"
+      }
+    },
+    "link-run": {
+      "type": "Link",
+      "props": {
+        "label": "Run: 44608963321",
+        "href": "https://github.com/Bastiansure/aeon-bastiansure/actions/runs/44608963321"
+      }
+    }
+  }
+}

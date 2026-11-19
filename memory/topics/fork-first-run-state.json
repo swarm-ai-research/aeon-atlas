@@ -1,7 +1,7 @@
 {
   "parent_repo": "aeonfun/aeon",
-  "last_run": "2026-11-15",
-  "last_status": "FORK_FIRST_RUN_ALERT_QUIET",
+  "last_run": "2026-11-19",
+  "last_status": "FORK_FIRST_RUN_ALERT_OK",
   "seen": {
     "domosta/aeon": {
       "first_seen_active_at": "2026-11-13",
@@ -235,6 +235,18 @@
       "first_seen_active_at": "2026-11-06",
       "first_seen_active_run_at": "2026-11-06T20:25:54Z",
       "announced_at": "2026-11-06",
+      "stargazers": 0
+    },
+    "aeonone/aeon-aeonone": {
+      "first_seen_active_at": "2026-11-19",
+      "first_seen_active_run_at": "2026-11-19T13:55:42Z",
+      "announced_at": "2026-11-19",
+      "stargazers": 0
+    },
+    "bastiansure/aeon-bastiansure": {
+      "first_seen_active_at": "2026-11-19",
+      "first_seen_active_run_at": "2026-11-19T20:28:13Z",
+      "announced_at": "2026-11-19",
       "stargazers": 0
     }
   }
