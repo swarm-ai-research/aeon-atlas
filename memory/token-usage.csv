@@ -376,3 +376,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-11-18,heartbeat,claude-opus-4-8,24,21776,752259,78729
 2026-11-19,fork-first-run-alert,claude-sonnet-4-6,41,18318,2143544,54544
 2026-11-20,skill-freshness,claude-sonnet-4-6,16,24533,824148,59511
+2026-11-21,skill-health,claude-opus-4-8,24,13688,633128,66265

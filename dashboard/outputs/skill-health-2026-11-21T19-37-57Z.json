@@ -1,0 +1,162 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Skill Health",
+        "description": "2026-11-21"
+      },
+      "children": [
+        "stat-health",
+        "sep1",
+        "status-stack",
+        "sep2",
+        "note-alert",
+        "sep3",
+        "summary-stack"
+      ]
+    },
+    "stat-health": {
+      "type": "Stat",
+      "props": {
+        "label": "HEALTH",
+        "value": "24/26",
+        "trend": "up"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "status-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "no-data-section",
+        "stuck-section",
+        "healthy-section"
+      ]
+    },
+    "no-data-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "no-data-badge",
+        "follow-up-patrol-text"
+      ]
+    },
+    "no-data-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "NO DATA (1)",
+        "variant": "outline"
+      }
+    },
+    "follow-up-patrol-text": {
+      "type": "Text",
+      "props": {
+        "text": "follow-up-patrol — DISPATCH-SKILL (never dispatched; next Tue 11-24 11:00)",
+        "variant": "body"
+      }
+    },
+    "stuck-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "stuck-badge",
+        "fork-cohort-text"
+      ]
+    },
+    "stuck-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "STUCK (1)",
+        "variant": "destructive"
+      }
+    },
+    "fork-cohort-text": {
+      "type": "Text",
+      "props": {
+        "text": "fork-cohort — dispatched ~27d, heartbeat P0 (next retry Sun 11-22 19:00)",
+        "variant": "body"
+      }
+    },
+    "healthy-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "healthy-badge",
+        "healthy-text"
+      ]
+    },
+    "healthy-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "HEALTHY: 24",
+        "variant": "secondary"
+      }
+    },
+    "healthy-text": {
+      "type": "Text",
+      "props": {
+        "text": "workflow-security-audit recovered from NO DATA",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "note-alert": {
+      "type": "Alert",
+      "props": {
+        "type": "info",
+        "title": "ISS-011 — Scheduler dispatch gap (high severity)",
+        "message": "Status: OPEN, heartbeat-owned. Affected skills read metric-HEALTHY because missed dispatches don't register as failures; not resolvable from success-rate telemetry."
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "summary-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "open-issues-stat",
+        "resolved-stat"
+      ]
+    },
+    "open-issues-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Open issues",
+        "value": "1"
+      }
+    },
+    "resolved-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Resolved this run",
+        "value": "0"
+      }
+    }
+  }
+}

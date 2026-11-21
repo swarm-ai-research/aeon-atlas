@@ -1,7 +1,10 @@
-*Skill Health — 2026-11-14*
-HEALTH: OK — 23/26 skills healthy (all success_rate ≥ 0.92, 0 consecutive failures, no failed/degraded/flapping).
+*Skill Health — 2026-11-21*
+HEALTH: OK — 24/26 skills metric-healthy
 
-🕸 fork-cohort STUCK ~20d (last_status 'dispatched', no outcome) — heartbeat P0, next retry Sun 11-15 19:00 UTC.
-⚪ NO DATA (2): follow-up-patrol, workflow-security-audit — known weekly never-dispatched cohort.
+⚪ NO DATA (1): follow-up-patrol — DISPATCH-SKILL (never dispatched; next Tue 11-24 11:00)
+🕸 STUCK (1): fork-cohort — dispatched ~27d, heartbeat P0 (next retry Sun 11-22 19:00)
+🟢 HEALTHY: 24 (workflow-security-audit recovered from NO DATA)
 
-Nothing filed/resolved by skill-health this run. Open issues: 1 (ISS-011 scheduler-gap, high · heartbeat-owned) · Resolved this run: 0
+Note: ISS-011 (scheduler dispatch gap, high) stays OPEN & heartbeat-owned — affected skills read metric-HEALTHY because missed dispatches don't register as failures; not resolvable from success-rate telemetry.
+
+Open issues: 1 · Resolved this run: 0
