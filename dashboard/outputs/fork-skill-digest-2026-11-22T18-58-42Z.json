@@ -1,0 +1,155 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Fork Skill Digest"
+      },
+      "children": [
+        "heading-date",
+        "alert-main",
+        "text-stats",
+        "separator-1",
+        "heading-disable",
+        "table-disable",
+        "separator-2",
+        "heading-new",
+        "stack-new-skills",
+        "separator-3",
+        "text-heaviest",
+        "separator-4",
+        "link-report"
+      ]
+    },
+    "heading-date": {
+      "type": "Heading",
+      "props": {
+        "text": "Fork Skill Digest — 2026-11-22",
+        "level": "h2"
+      }
+    },
+    "alert-main": {
+      "type": "Alert",
+      "props": {
+        "message": "58 forks disable operator-scorecard (upstream defaults on) — fleet is voting it as noise",
+        "type": "info"
+      }
+    },
+    "text-stats": {
+      "type": "Text",
+      "props": {
+        "text": "Scanned 61 active forks; 59 are configured.",
+        "variant": "body"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-disable": {
+      "type": "Heading",
+      "props": {
+        "text": "Flip disable (upstream on → fleet off):",
+        "level": "h3"
+      }
+    },
+    "table-disable": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Skill",
+          "Forks",
+          "Percentage"
+        ],
+        "rows": [
+          [
+            "operator-scorecard",
+            "58",
+            "98.3%"
+          ],
+          [
+            "skill-health",
+            "55",
+            "93.2%"
+          ]
+        ]
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-new": {
+      "type": "Heading",
+      "props": {
+        "text": "New fork-only skills:",
+        "level": "h3"
+      }
+    },
+    "stack-new-skills": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "item-domimueller",
+        "item-domosta",
+        "item-hypurr"
+      ]
+    },
+    "item-domimueller": {
+      "type": "Text",
+      "props": {
+        "text": "Domimueller85/aeon (43 skills, new heavy customizer)",
+        "variant": "body"
+      }
+    },
+    "item-domosta": {
+      "type": "Text",
+      "props": {
+        "text": "domosta/flovia",
+        "variant": "body"
+      }
+    },
+    "item-hypurr": {
+      "type": "Text",
+      "props": {
+        "text": "hypurr-inc/hyperliquid-market-monitor",
+        "variant": "body"
+      }
+    },
+    "separator-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "text-heaviest": {
+      "type": "Text",
+      "props": {
+        "text": "Heaviest customizer: Domimueller85/aeon (76 overrides, fork-only/content)",
+        "variant": "body"
+      }
+    },
+    "separator-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "link-report": {
+      "type": "Link",
+      "props": {
+        "label": "Full report",
+        "href": "https://github.com/aeonframework/aeon-atlas/blob/main/articles/fork-skill-digest-2026-11-22.md"
+      }
+    }
+  }
+}

@@ -1,1 +1,14 @@
-Fork Skill Digest 2026-11-08: 63 forks disable skill-health (upstream defaults on) — fleet is voting it as noise. Scanned 67 active forks; 66 configured (98.5%). Flip disable: skill-health 95.5%, operator-scorecard 95.5%. New fork-only: bounty-hunter (airdropia), mine-bean (damo-nu11), lawb-pool-monitor (lawbworld-tech), +35 more from duan521127. Heaviest customizer: duan521127/aeon (~66 overrides) NEW #1.
+*Fork Skill Digest — 2026-11-22*
+58 forks disable operator-scorecard (upstream defaults on) — fleet is voting it as noise
+
+Scanned 61 active forks; 59 are configured.
+
+Flip disable (upstream on → fleet off):
+- operator-scorecard — 58 forks (98.3%)
+- skill-health — 55 forks (93.2%)
+
+New fork-only skills: Domimueller85/aeon (43 skills, new heavy customizer), domosta/flovia, hypurr-inc/hyperliquid-market-monitor
+
+Heaviest customizer: Domimueller85/aeon (76 overrides, fork-only/content)
+
+Full report: https://github.com/aeonframework/aeon-atlas/blob/main/articles/fork-skill-digest-2026-11-22.md
