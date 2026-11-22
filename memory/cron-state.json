@@ -44,8 +44,8 @@
     "success_rate": 1
   },
   "skill-health": {
-    "last_dispatch": "2026-11-21T19:34:51Z",
-    "last_status": "success",
+    "last_dispatch": "2026-11-22T18:41:36Z",
+    "last_status": "dispatched",
     "last_success": "2026-11-21T19:38:18Z",
     "total_runs": 12,
     "total_successes": 12,
@@ -54,8 +54,8 @@
     "success_rate": 1
   },
   "skill-leaderboard": {
-    "last_dispatch": "2026-11-08T18:55:17Z",
-    "last_status": "success",
+    "last_dispatch": "2026-11-22T18:41:36Z",
+    "last_status": "dispatched",
     "last_success": "2026-11-08T19:09:47Z",
     "total_runs": 3,
     "total_successes": 3,
@@ -64,8 +64,8 @@
     "success_rate": 1
   },
   "fork-contributor-leaderboard": {
-    "last_dispatch": "2026-11-08T18:55:17Z",
-    "last_status": "success",
+    "last_dispatch": "2026-11-22T18:41:36Z",
+    "last_status": "dispatched",
     "last_success": "2026-11-08T19:07:51Z",
     "total_runs": 3,
     "total_successes": 3,
@@ -208,8 +208,8 @@
     "success_rate": 1
   },
   "fork-skill-digest": {
-    "last_dispatch": "2026-11-08T18:55:17Z",
-    "last_status": "success",
+    "last_dispatch": "2026-11-22T18:41:36Z",
+    "last_status": "dispatched",
     "last_success": "2026-11-08T19:13:21Z",
     "total_runs": 2,
     "total_successes": 2,
