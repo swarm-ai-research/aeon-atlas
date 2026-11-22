@@ -1,0 +1,119 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Skill Leaderboard",
+        "description": "2026-11-22"
+      },
+      "children": [
+        "alert-jump",
+        "separator1",
+        "text-intro",
+        "table-top5",
+        "separator2",
+        "text-fleet",
+        "link-report"
+      ]
+    },
+    "alert-jump": {
+      "type": "Alert",
+      "props": {
+        "type": "info",
+        "message": "defi-overview jumped from rank 8 to rank 2 this week"
+      },
+      "children": []
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "text-intro": {
+      "type": "Text",
+      "props": {
+        "text": "Top 5 across 55 configured forks (of 61 active):",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "table-top5": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Rank",
+          "Skill",
+          "Forks",
+          "%",
+          "Change"
+        ],
+        "rows": [
+          [
+            "1",
+            "heartbeat",
+            "55",
+            "100%",
+            ""
+          ],
+          [
+            "2",
+            "aeon-update ★",
+            "5",
+            "9.1%",
+            ""
+          ],
+          [
+            "2",
+            "defi-overview",
+            "5",
+            "9.1%",
+            "↑6"
+          ],
+          [
+            "4",
+            "narrative-tracker",
+            "5",
+            "9.1%",
+            ""
+          ],
+          [
+            "5",
+            "memory-flush",
+            "4",
+            "7.3%",
+            "↑3"
+          ]
+        ]
+      },
+      "children": []
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "text-fleet": {
+      "type": "Text",
+      "props": {
+        "text": "Fleet-only: aeon-update in 5 forks — weekly upstream-sync skill not yet in upstream",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "link-report": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full report",
+        "href": "https://github.com/swarm-ai-research/aeon-atlas/blob/main/articles/skill-leaderboard-2026-11-22.md",
+        "source": "GitHub"
+      },
+      "children": []
+    }
+  }
+}
