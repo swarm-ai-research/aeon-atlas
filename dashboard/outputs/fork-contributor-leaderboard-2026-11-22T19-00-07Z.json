@@ -1,0 +1,136 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Fork Contributor Leaderboard — 2026-11-22"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text-highlight",
+        "sep-1",
+        "heading-top5",
+        "table-top5",
+        "sep-2",
+        "stack-info",
+        "sep-3",
+        "link-full"
+      ]
+    },
+    "text-highlight": {
+      "type": "Text",
+      "props": {
+        "text": "vaubandev leapt 13 ranks to #6 — four merged Vauban Pack PRs this period, all infrastructure fixes that make the ecosystem more reliable."
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-top5": {
+      "type": "Heading",
+      "props": {
+        "text": "Top 5",
+        "level": "h3"
+      }
+    },
+    "table-top5": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Rank",
+          "Handle",
+          "Score",
+          "Details"
+        ],
+        "rows": [
+          [
+            "1",
+            "@Svector-anu",
+            "879",
+            "85 merged PRs, 2 reviews"
+          ],
+          [
+            "2",
+            "@sentinelhood",
+            "125",
+            "10 merged PRs, 5 new skills"
+          ],
+          [
+            "3",
+            "@NurstarK",
+            "106",
+            "8 merged PRs, 1 fork commit, 5 new skills"
+          ],
+          [
+            "4",
+            "@yusasecurity",
+            "85",
+            "6 merged PRs, all security/skill-scan hardening (new entry)"
+          ],
+          [
+            "5",
+            "@alexverify",
+            "85",
+            "6 merged PRs, 5 new skills"
+          ]
+        ]
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack-info": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text-first-prs",
+        "text-top-reviewer"
+      ]
+    },
+    "text-first-prs": {
+      "type": "Text",
+      "props": {
+        "text": "First PRs this week: none"
+      }
+    },
+    "text-top-reviewer": {
+      "type": "Text",
+      "props": {
+        "text": "Top reviewer: @Svector-anu (2 comments)"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "link-full": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full leaderboard",
+        "href": "https://github.com/swarm-ai-research/aeon-atlas/blob/main/articles/fork-contributor-leaderboard-2026-11-22.md"
+      }
+    }
+  }
+}
