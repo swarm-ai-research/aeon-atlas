@@ -1,10 +1,9 @@
-*Skill Health — 2026-11-21*
-HEALTH: OK — 24/26 skills metric-healthy
+*Skill Health — 2026-11-22*
+HEALTH: OK — 24/26 skills healthy
 
-⚪ NO DATA (1): follow-up-patrol — DISPATCH-SKILL (never dispatched; next Tue 11-24 11:00)
-🕸 STUCK (1): fork-cohort — dispatched ~27d, heartbeat P0 (next retry Sun 11-22 19:00)
-🟢 HEALTHY: 24 (workflow-security-audit recovered from NO DATA)
+No CRITICAL / DEGRADED / FLAPPING. Classification unchanged since 11-21.
 
-Note: ISS-011 (scheduler dispatch gap, high) stays OPEN & heartbeat-owned — affected skills read metric-HEALTHY because missed dispatches don't register as failures; not resolvable from success-rate telemetry.
+⚪ NO DATA (1): follow-up-patrol — DISPATCH-SKILL (next Tue 11-24 11:00)
+🕸 STUCK (1): fork-cohort — dispatched ~28d, no outcome (heartbeat P0; retry tonight 19:00 UTC)
 
-Open issues: 1 · Resolved this run: 0
+Open issues: 1 (ISS-011 high — scheduler dispatch gap, recovering) · Resolved this run: 0

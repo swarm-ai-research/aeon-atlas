@@ -1,0 +1,168 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Skill Health — 2026-11-22"
+      },
+      "children": [
+        "stats-stack",
+        "separator-1",
+        "items-section",
+        "separator-2",
+        "issues-section"
+      ]
+    },
+    "stats-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "health-stat",
+        "status-text"
+      ]
+    },
+    "health-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Skills Healthy",
+        "value": "24/26"
+      }
+    },
+    "status-text": {
+      "type": "Text",
+      "props": {
+        "text": "No CRITICAL / DEGRADED / FLAPPING. Classification unchanged since 11-21.",
+        "variant": "body"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "items-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "items-heading",
+        "no-data-item",
+        "stuck-item"
+      ]
+    },
+    "items-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Status Items",
+        "level": "h3"
+      }
+    },
+    "no-data-item": {
+      "type": "Alert",
+      "props": {
+        "title": "⚪ NO DATA (1)",
+        "message": "follow-up-patrol — DISPATCH-SKILL (next Tue 11-24 11:00)",
+        "type": "info"
+      }
+    },
+    "stuck-item": {
+      "type": "Alert",
+      "props": {
+        "title": "🕸 STUCK (1)",
+        "message": "fork-cohort — dispatched ~28d, no outcome (heartbeat P0; retry tonight 19:00 UTC)",
+        "type": "warning"
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "issues-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "issues-heading",
+        "open-issues",
+        "resolved-issues"
+      ]
+    },
+    "issues-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Issues",
+        "level": "h3"
+      }
+    },
+    "open-issues": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "open-label",
+        "open-badge",
+        "open-text"
+      ]
+    },
+    "open-label": {
+      "type": "Text",
+      "props": {
+        "text": "Open issues:",
+        "variant": "body"
+      }
+    },
+    "open-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "1",
+        "variant": "destructive"
+      }
+    },
+    "open-text": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-011 high — scheduler dispatch gap, recovering",
+        "variant": "body"
+      }
+    },
+    "resolved-issues": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "resolved-label",
+        "resolved-badge"
+      ]
+    },
+    "resolved-label": {
+      "type": "Text",
+      "props": {
+        "text": "Resolved this run:",
+        "variant": "body"
+      }
+    },
+    "resolved-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "0",
+        "variant": "secondary"
+      }
+    }
+  }
+}
