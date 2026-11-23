@@ -1,0 +1,217 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Fleet Skill Adoption",
+        "description": "2026-11-22 — aeonfun/aeon"
+      },
+      "children": [
+        "overview-text",
+        "sep-1",
+        "most-adopted-heading",
+        "most-adopted-table",
+        "sep-2",
+        "rising-heading",
+        "rising-stack",
+        "sep-3",
+        "falling-heading",
+        "falling-stack",
+        "sep-4",
+        "established-text",
+        "leaderboard-link"
+      ]
+    },
+    "overview-text": {
+      "type": "Text",
+      "props": {
+        "text": "27 active forks measured against 93 upstream skills",
+        "variant": "lead"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "most-adopted-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Most Adopted",
+        "level": "h2"
+      }
+    },
+    "most-adopted-table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Skill",
+          "Adoption",
+          "Forks"
+        ],
+        "rows": [
+          [
+            "heartbeat",
+            "96%",
+            "26/27"
+          ],
+          [
+            "aeon-update",
+            "15%",
+            "4/27"
+          ],
+          [
+            "auto-merge",
+            "11%",
+            "3/27"
+          ],
+          [
+            "auto-workflow",
+            "11%",
+            "3/27"
+          ],
+          [
+            "narrative-convergence",
+            "11%",
+            "3/27"
+          ],
+          [
+            "narrative-tracker",
+            "11%",
+            "3/27"
+          ],
+          [
+            "skill-health",
+            "11%",
+            "3/27"
+          ]
+        ]
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "rising-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Rising",
+        "level": "h2"
+      }
+    },
+    "rising-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat-nt",
+        "stat-sh",
+        "stat-ad",
+        "stat-ar",
+        "stat-nc"
+      ]
+    },
+    "stat-nt": {
+      "type": "Stat",
+      "props": {
+        "label": "narrative-tracker",
+        "value": "+11 pts",
+        "trend": "up"
+      }
+    },
+    "stat-sh": {
+      "type": "Stat",
+      "props": {
+        "label": "skill-health",
+        "value": "+11 pts",
+        "trend": "up"
+      }
+    },
+    "stat-ad": {
+      "type": "Stat",
+      "props": {
+        "label": "aeon-doctor",
+        "value": "+7 pts",
+        "trend": "up"
+      }
+    },
+    "stat-ar": {
+      "type": "Stat",
+      "props": {
+        "label": "autoresearch",
+        "value": "+7 pts",
+        "trend": "up"
+      }
+    },
+    "stat-nc": {
+      "type": "Stat",
+      "props": {
+        "label": "narrative-convergence",
+        "value": "+5 pts",
+        "trend": "up"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "falling-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Falling",
+        "level": "h2"
+      }
+    },
+    "falling-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat-bm",
+        "stat-dg"
+      ]
+    },
+    "stat-bm": {
+      "type": "Stat",
+      "props": {
+        "label": "base-mcp",
+        "value": "-6 pts",
+        "delta": "dropped to 0%",
+        "trend": "down"
+      }
+    },
+    "stat-dg": {
+      "type": "Stat",
+      "props": {
+        "label": "digest",
+        "value": "-6 pts",
+        "delta": "dropped to 0%",
+        "trend": "down"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "established-text": {
+      "type": "Text",
+      "props": {
+        "text": "48 established skills still at 0% fleet adoption",
+        "variant": "caption"
+      }
+    },
+    "leaderboard-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full leaderboard",
+        "href": "articles/fleet-skill-adoption-2026-11-22.md",
+        "source": "fleet-skill-adoption"
+      }
+    }
+  }
+}

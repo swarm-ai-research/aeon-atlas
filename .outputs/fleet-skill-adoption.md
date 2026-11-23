@@ -1,16 +1,15 @@
-*Fleet Skill Adoption — 2026-11-08 — aeonfun/aeon*
+*Fleet Skill Adoption — 2026-11-22 — aeonfun/aeon*
 
-18 active forks measured against 92 upstream skills.
+27 active forks measured against 93 upstream skills.
 
 Most adopted:
-1. heartbeat — 100% (18/18)
-2. aeon-update — 17% (3/18)
-3. auto-merge — 11% (2/18)
-4. auto-workflow — 11% (2/18)
-5. memory-flush — 11% (2/18)
+1. heartbeat — 96% (26/27)
+2. aeon-update — 15% (4/27)
+3. auto-merge / auto-workflow / narrative-convergence / narrative-tracker / skill-health — 11% each (3/27)
 
-Rising: memory-flush +11pts, base-mcp +6pts, narrative-convergence +6pts
-Declining: autoresearch −14pts, spawn-instance −8pts (+14 others — cohort expanded 7→18 forks)
-22 established skills still at 0% fleet adoption.
+Rising: narrative-tracker +11pts, skill-health +11pts, aeon-doctor +7pts, autoresearch +7pts, narrative-convergence +5pts
+Falling: base-mcp -6pts, digest -6pts (both dropped to 0%)
 
-Full leaderboard: articles/fleet-skill-adoption-2026-11-08.md
+48 established skills still at 0% fleet adoption.
+
+Full leaderboard: articles/fleet-skill-adoption-2026-11-22.md

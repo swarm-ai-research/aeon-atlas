@@ -1,0 +1,57 @@
+{
+  "parent": "aeonfun/aeon",
+  "last_run": "2026-11-08",
+  "last_status": "FLEET_SKILL_ADOPTION_OK",
+  "readable_forks": 18,
+  "upstream_skill_count": 92,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "readable_forks": 11,
+      "top10": [
+        {"slug": "heartbeat", "pct": 100},
+        {"slug": "aeon-update", "pct": 18},
+        {"slug": "auto-merge", "pct": 18},
+        {"slug": "auto-workflow", "pct": 18},
+        {"slug": "operator-scorecard", "pct": 18},
+        {"slug": "skill-health", "pct": 18},
+        {"slug": "aeon-doctor", "pct": 9},
+        {"slug": "arc-studio", "pct": 9},
+        {"slug": "article", "pct": 9},
+        {"slug": "autoresearch", "pct": 9}
+      ]
+    },
+    {
+      "date": "2026-11-01",
+      "readable_forks": 7,
+      "top10": [
+        {"slug": "heartbeat", "pct": 100},
+        {"slug": "auto-workflow", "pct": 14},
+        {"slug": "autoresearch", "pct": 14},
+        {"slug": "create-skill", "pct": 14},
+        {"slug": "defi-overview", "pct": 14},
+        {"slug": "deploy-prototype", "pct": 14},
+        {"slug": "distribute-tokens", "pct": 14},
+        {"slug": "fetch-tweets", "pct": 14},
+        {"slug": "last30", "pct": 14},
+        {"slug": "monitor-polymarket", "pct": 14}
+      ]
+    },
+    {
+      "date": "2026-11-08",
+      "readable_forks": 18,
+      "top10": [
+        {"slug": "heartbeat", "pct": 100},
+        {"slug": "aeon-update", "pct": 17},
+        {"slug": "auto-merge", "pct": 11},
+        {"slug": "auto-workflow", "pct": 11},
+        {"slug": "defi-overview", "pct": 11},
+        {"slug": "memory-flush", "pct": 11},
+        {"slug": "base-mcp", "pct": 6},
+        {"slug": "digest", "pct": 6},
+        {"slug": "fleet-control", "pct": 6},
+        {"slug": "fork-fleet", "pct": 6}
+      ]
+    }
+  ]
+}
