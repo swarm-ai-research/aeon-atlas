@@ -1,0 +1,286 @@
+{
+  "root": "card-heartbeat",
+  "state": {},
+  "elements": {
+    "card-heartbeat": {
+      "type": "Card",
+      "props": {
+        "title": "heartbeat",
+        "description": "System health self-check results"
+      },
+      "children": [
+        "alert-degraded",
+        "sep1",
+        "section-breach",
+        "sep2",
+        "section-fork",
+        "sep3",
+        "section-other-skills",
+        "sep4",
+        "section-stale",
+        "sep5",
+        "section-action"
+      ]
+    },
+    "alert-degraded": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "🔴 DEGRADED",
+        "message": "heartbeat self-check BREACHED (~77 hours, threshold >36 hours)"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-breach": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-breach",
+        "stat-breach-duration",
+        "text-recovery-collapsed",
+        "text-consecutive-dropped",
+        "text-timeline",
+        "text-first-landed",
+        "text-cadence-specific"
+      ]
+    },
+    "heading-breach": {
+      "type": "Heading",
+      "props": {
+        "text": "Heartbeat Breach Details",
+        "level": "h3"
+      }
+    },
+    "stat-breach-duration": {
+      "type": "Stat",
+      "props": {
+        "label": "Breach Duration",
+        "value": "~77 hours",
+        "delta": ">36 hour threshold exceeded"
+      }
+    },
+    "text-recovery-collapsed": {
+      "type": "Text",
+      "props": {
+        "text": "11-20 recovery collapsed"
+      }
+    },
+    "text-consecutive-dropped": {
+      "type": "Text",
+      "props": {
+        "text": "9 consecutive heartbeat slots dropped"
+      }
+    },
+    "text-timeline": {
+      "type": "Text",
+      "props": {
+        "text": "Timeline: 11-20 14:00 → 11-23 08:00"
+      }
+    },
+    "text-first-landed": {
+      "type": "Text",
+      "props": {
+        "text": "This is the first slot to land since",
+        "variant": "muted"
+      }
+    },
+    "text-cadence-specific": {
+      "type": "Text",
+      "props": {
+        "text": "Gap is heartbeat-cadence-specific — other skills dispatched fine",
+        "variant": "caption"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-fork": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-fork",
+        "stat-fork-status",
+        "text-fork-retry-dropped"
+      ]
+    },
+    "heading-fork": {
+      "type": "Heading",
+      "props": {
+        "text": "fork-cohort Status",
+        "level": "h3"
+      }
+    },
+    "stat-fork-status": {
+      "type": "Stat",
+      "props": {
+        "label": "Current Status",
+        "value": "🕸 STUCK",
+        "delta": "~28.7 days"
+      }
+    },
+    "text-fork-retry-dropped": {
+      "type": "Text",
+      "props": {
+        "text": "Retry dropped Sunday 11-22 19:00"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-other-skills": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-other",
+        "badge-api-health",
+        "badge-skill-health",
+        "text-sunday-content"
+      ]
+    },
+    "heading-other": {
+      "type": "Heading",
+      "props": {
+        "text": "Other Skills Status",
+        "level": "h3"
+      }
+    },
+    "badge-api-health": {
+      "type": "Badge",
+      "props": {
+        "text": "✓ api-health-probe recovered 11-22",
+        "variant": "outline"
+      }
+    },
+    "badge-skill-health": {
+      "type": "Badge",
+      "props": {
+        "text": "✓ skill-health recovered 11-22",
+        "variant": "outline"
+      }
+    },
+    "text-sunday-content": {
+      "type": "Text",
+      "props": {
+        "text": "Sunday content batch all landed"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-stale": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-stale",
+        "text-stale-intro",
+        "stat-fleet-scorecard",
+        "stat-fork-first-run-alert",
+        "stat-skill-freshness"
+      ]
+    },
+    "heading-stale": {
+      "type": "Heading",
+      "props": {
+        "text": "Stale Daily Skills",
+        "level": "h3"
+      }
+    },
+    "text-stale-intro": {
+      "type": "Text",
+      "props": {
+        "text": "Skills with outdated data:",
+        "variant": "caption"
+      }
+    },
+    "stat-fleet-scorecard": {
+      "type": "Stat",
+      "props": {
+        "label": "fleet-scorecard",
+        "value": "~9 days old",
+        "delta": "dominant",
+        "trend": "down"
+      }
+    },
+    "stat-fork-first-run-alert": {
+      "type": "Stat",
+      "props": {
+        "label": "fork-first-run-alert",
+        "value": "~3.7 days old",
+        "trend": "down"
+      }
+    },
+    "stat-skill-freshness": {
+      "type": "Stat",
+      "props": {
+        "label": "skill-freshness",
+        "value": "~3.2 days old",
+        "trend": "down"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-action": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-action",
+        "text-iss-011",
+        "alert-action-required"
+      ]
+    },
+    "heading-action": {
+      "type": "Heading",
+      "props": {
+        "text": "Issues & Actions",
+        "level": "h3"
+      }
+    },
+    "text-iss-011": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-011 open (high severity)"
+      }
+    },
+    "alert-action-required": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "Action Required",
+        "message": "durable offset-cron / external workflow_dispatch backstop still operator-action-required"
+      }
+    }
+  }
+}
