@@ -138,8 +138,8 @@
     "success_rate": 1
   },
   "api-health-probe": {
-    "last_dispatch": "2026-11-22T11:53:20Z",
-    "last_status": "success",
+    "last_dispatch": "2026-11-24T11:37:36Z",
+    "last_status": "dispatched",
     "last_success": "2026-11-22T11:57:12Z",
     "total_runs": 5,
     "total_successes": 5,
@@ -246,5 +246,9 @@
     "total_failures": 0,
     "consecutive_failures": 0,
     "success_rate": 1
+  },
+  "follow-up-patrol": {
+    "last_dispatch": "2026-11-24T11:37:36Z",
+    "last_status": "dispatched"
   }
 }
