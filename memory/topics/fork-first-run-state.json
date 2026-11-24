@@ -1,8 +1,32 @@
 {
   "parent_repo": "aeonfun/aeon",
-  "last_run": "2026-11-19",
+  "last_run": "2026-11-24",
   "last_status": "FORK_FIRST_RUN_ALERT_OK",
   "seen": {
+    "skalda555/aeon": {
+      "first_seen_active_at": "2026-11-24",
+      "first_seen_active_run_at": "2026-11-24T20:53:55Z",
+      "announced_at": "2026-11-24",
+      "stargazers": 1
+    },
+    "ukiyo-p/aeon": {
+      "first_seen_active_at": "2026-11-24",
+      "first_seen_active_run_at": "2026-11-24T07:06:14Z",
+      "announced_at": "2026-11-24",
+      "stargazers": 0
+    },
+    "camillateston/aeon": {
+      "first_seen_active_at": "2026-11-24",
+      "first_seen_active_run_at": "2026-11-24T18:13:51Z",
+      "announced_at": "2026-11-24",
+      "stargazers": 0
+    },
+    "kodawari10/aeon": {
+      "first_seen_active_at": "2026-11-24",
+      "first_seen_active_run_at": "2026-11-24T19:27:46Z",
+      "announced_at": "2026-11-24",
+      "stargazers": 0
+    },
     "domosta/aeon": {
       "first_seen_active_at": "2026-11-13",
       "first_seen_active_run_at": "2026-11-13T17:40:22Z",

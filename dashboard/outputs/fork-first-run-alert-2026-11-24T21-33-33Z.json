@@ -1,0 +1,117 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "4 new forks live — 2026-11-24"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_intro",
+        "sep1",
+        "stack_forks",
+        "sep2",
+        "parent_link",
+        "text_note"
+      ]
+    },
+    "text_intro": {
+      "type": "Text",
+      "props": {
+        "text": "The fleet picked up 4 first-time activators in the last day.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "stack_forks": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "fork1",
+        "fork2",
+        "fork3",
+        "fork4"
+      ]
+    },
+    "fork1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@Skalda555 — Skalda555/aeon",
+        "href": "https://github.com/Skalda555/aeon",
+        "source": "1 star"
+      },
+      "children": []
+    },
+    "fork2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@ukiyo-p — ukiyo-p/aeon",
+        "href": "https://github.com/ukiyo-p/aeon",
+        "source": "0 stars"
+      },
+      "children": []
+    },
+    "fork3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@CamillaTeston — CamillaTeston/aeon",
+        "href": "https://github.com/CamillaTeston/aeon",
+        "source": "0 stars"
+      },
+      "children": []
+    },
+    "fork4": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@Kodawari10 — Kodawari10/aeon",
+        "href": "https://github.com/Kodawari10/aeon",
+        "source": "0 stars"
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "parent_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Parent: aeonfun/aeon",
+        "href": "https://github.com/aeonfun/aeon"
+      },
+      "children": []
+    },
+    "text_note": {
+      "type": "Text",
+      "props": {
+        "text": "Full list will land in Sunday's fork-cohort digest.",
+        "variant": "caption"
+      },
+      "children": []
+    }
+  }
+}

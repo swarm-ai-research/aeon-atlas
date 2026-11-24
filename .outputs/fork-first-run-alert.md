@@ -1,10 +1,11 @@
-*New fork live — 2026-11-19 — Bastiansure/aeon-bastiansure*
+*4 new forks live — 2026-11-24*
 
-@Bastiansure just ran their first workflow on Aeon. Welcome to the running fleet.
+The fleet picked up 4 first-time activators in the last day.
 
-Stars: 0
-First run: poll
-When: just now
+- @Skalda555 — Skalda555/aeon (1 star)
+- @ukiyo-p — ukiyo-p/aeon (0 stars)
+- @CamillaTeston — CamillaTeston/aeon (0 stars)
+- @Kodawari10 — Kodawari10/aeon (0 stars)
 
-Fork: https://github.com/Bastiansure/aeon-bastiansure
-Run: https://github.com/Bastiansure/aeon-bastiansure/actions/runs/44608963321
+Parent: aeonfun/aeon
+Full list will land in Sunday's fork-cohort digest.
