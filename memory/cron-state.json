@@ -139,10 +139,10 @@
   },
   "api-health-probe": {
     "last_dispatch": "2026-11-24T11:37:36Z",
-    "last_status": "dispatched",
-    "last_success": "2026-11-22T11:57:12Z",
-    "total_runs": 5,
-    "total_successes": 5,
+    "last_status": "success",
+    "last_success": "2026-11-24T11:40:08Z",
+    "total_runs": 6,
+    "total_successes": 6,
     "total_failures": 0,
     "consecutive_failures": 0,
     "success_rate": 1
