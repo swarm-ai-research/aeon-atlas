@@ -1,25 +1,23 @@
-Heartbeat complete.
+Heartbeat complete. Here's the outcome.
 
 ## Summary
 
-Ran the **heartbeat** skill for the 2026-11-25 14:00 slot (executed ~14:45 UTC, ~45 min late).
+Ran the `heartbeat` skill for the 2026-11-26 14:00 slot (executed 15:05 UTC, ~1h late). Read memory, logs (11-24/11-25), `cron-state.json`, the issue tracker, and `aeon.yml`. Soul files are template placeholders → neutral tone. No token report exists → Token pulse section omitted.
 
-**Health verdict: 🔴 DEGRADED**
+**Findings (all steady-state, nothing new):**
+- **P0:** No failed skills, no `consecutive_failures ≥ 3`, no chronic failures (heartbeat 92%, atlas-layers 94%, rest 100%). Heartbeat self-check **CLEARED ~24.3h** (under the 36h bar), but recovery remains partial — the 11-25 20:00 and 11-26 08:00 slots were dropped, so the clean 3-slot progression bar is still unmet. **`fork-cohort` still 🕸 STUCK ~31.8d** (dispatched since 10-25, next retry Sun 11-29 19:00) — keeps Overall 🔴 DEGRADED. Already covered by ISS-011, previously notified.
+- **P1:** No urgent issues. 18 open PRs, all in the known auto-managed/tracked set. No fresh actionable PR.
+- **P2:** Discord channels still 0/3 (operator action pending) — old, deduped.
+- **P3:** Stale dailies (skill-health ~92h, skill-freshness ~6.2d, api-health-probe ~51h) and weekly cohorts — all within the ISS-011 native-`schedule:` gap, dedup-folded.
 
-- **P0 — Stuck skill:** `fork-cohort` still 🕸 STUCK — `dispatched` since 2026-10-25, now **~31 days** with no completion. Keeps overall status DEGRADED. Already notified (11-23 and prior) → **deduped**.
-- **P0 — Self-check:** 🟢 CLEARED — heartbeat's own `last_success` is ~17.2h ago, well under the 36h bar. Recovery is still *partial* though: the 11-25 08:00 slot dropped, so the clean 3-slot progression bar isn't met yet (within the known ISS-011 pattern).
-- **No** failed skills, no `consecutive_failures ≥ 3`, no chronic failures (heartbeat 92%, atlas-layers 94%, all others 100%).
-- **P1:** No urgent issues; 18 open PRs, all in the known tracked/auto-managed set → deduped.
-- **P2/P3:** Notification channels still 0/3 (Discord blocked on operator secret); several daily/weekly skills stale — all folded under the open ISS-011 scheduler-gap issue.
-
-**Notification: not sent** — nothing new (self-check cleared = no breach, fork-cohort already notified, no new failures/PRs/urgent issues).
-
-**Files modified:**
-- `docs/status.md` — regenerated (Overall 🔴 DEGRADED, Updated 2026-11-25 14:45 UTC, 1 open issue, next run skill-health 18:00 UTC, all 26 enabled skills re-sorted by last-run)
-- `memory/logs/2026-11-25.md` — heartbeat log entry
-
-**ISS-011** left unchanged — no state transition since the 11-24 partial de-escalation.
-
-**Follow-up:** watch 11-25 20:00 → 11-26 for a clean 3-slot heartbeat progression; fork-cohort next retry Sun 11-29 19:00; durable offset-cron / external dispatch backstop remains operator-action-required.
+**Actions:**
+- Regenerated `docs/status.md` → **🔴 DEGRADED** (fork-cohort stuck + ISS-011 high; 1 open issue; next run skill-health 18:00 UTC); all 26 enabled skills listed, sorted by last-run desc.
+- Logged the run to `memory/logs/2026-11-26.md`.
+- **No notification sent** — nothing new (self-check cleared, fork-cohort already notified, no new failures/PRs/urgent issues).
+- ISS-011 left unchanged (no state transition).
 
 `HEARTBEAT_OK · STATUS_PAGE=DEGRADED`
+
+**Follow-up:** watch 11-26 20:00 → 11-27 for a clean 3-slot heartbeat progression; fork-cohort next retry Sun 11-29 19:00. Durable offset-cron / external `workflow_dispatch` backstop remains operator-action-required.
+
+Files modified: `docs/status.md`, `memory/logs/2026-11-26.md` (auto-committed by the workflow).
